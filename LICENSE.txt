@@ -1,5 +1,5 @@
-Copyright (c) 2022 - 2025 Brenton James Maddocks BEng(CompSys).  
 Florence FSD - Concurrent (Multi-Threaded) Event Driven Server Assembly Library.
+Copyright (c) 2022 - 2025 Brenton James Maddocks BEng(CompSys).  
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -29,10 +29,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 //===
 
-Copyright (c) 2022 - 2025 Brenton James Maddocks BEng(CompSys). 
 Avril FSD - Request, Wait & Write-Enable For Threads At Stacks Library.
+Copyright (c) 2022 - 2025 Brenton James Maddocks BEng(CompSys). 
 
 //===
 
-Copyright (c) 2022 - 2025 Brenton James Maddocks BEng(CompSys). 
 Avril FSD - Request, Wait & Launch Next Free Concurrent Thread At Ends Library.
+Copyright (c) 2022 - 2025 Brenton James Maddocks BEng(CompSys). 
