@@ -1,4 +1,4 @@
-# LIBRARY Template For Avril Open Concurrent IO Server In Full Stack Development.
+# LIBRARY Template For Avril Open Concurrent IO Server In Full Stack Development Apps.
 ## Concurrent Server Boxed with Inputs and Outputs, Launchs a do thread for each praise.
 
 ### C# .NET Console.
