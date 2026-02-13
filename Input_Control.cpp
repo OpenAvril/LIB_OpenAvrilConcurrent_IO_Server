@@ -1,15 +1,15 @@
 #include "pch.h"
 
-Avril_FSD::Input_Control::Input_Control()
+OpenAvril::Input_Control::Input_Control()
 {
 
 }
-Avril_FSD::Input_Control::~Input_Control()
+OpenAvril::Input_Control::~Input_Control()
 {
 
 }
 
-void Avril_FSD::Input_Control::SelectSet_Input_Subset(Avril_FSD::Framework_Server* obj, __int8 praiseEventId)
+void OpenAvril::Input_Control::SelectSet_Input_Subset(OpenAvril::Framework_Server* obj, __int8 praiseEventId)
 {
     switch (praiseEventId)
     {

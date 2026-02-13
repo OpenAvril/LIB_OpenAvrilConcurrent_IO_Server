@@ -1,17 +1,17 @@
 #include "pch.h"
 
-Avril_FSD::Execute_Control* ptr_Execute_Control = NULL;
+OpenAvril::Execute_Control* ptr_Execute_Control = NULL;
 std::thread* ptr_Thread_WithCoreId[4] = { NULL, NULL, NULL, NULL };//NUMBER OF CORES
-Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* program_ConcurrentQue_Server = NULL;
-Avril_FSD::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* program_WriteEnableStack_ServerInputAction = NULL;
-Avril_FSD::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* program_WriteEnableStack_ServerOutputRecieve = NULL;
+OpenAvril::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* program_ConcurrentQue_Server = NULL;
+OpenAvril::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* program_WriteEnableStack_ServerInputAction = NULL;
+OpenAvril::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* program_WriteEnableStack_ServerOutputRecieve = NULL;
 
-Avril_FSD::Execute::Execute()
+OpenAvril::Execute::Execute()
 {
 
 }
 
-Avril_FSD::Execute::~Execute()
+OpenAvril::Execute::~Execute()
 {
     delete ptr_Execute_Control;
     for (int index = 0; index < 4; index++)
@@ -20,23 +20,23 @@ Avril_FSD::Execute::~Execute()
     }//NUMBER OF CORES
 }
 
-void Avril_FSD::Execute::Initialise_Control(__int8 number_Implemented_Cores)
+void OpenAvril::Execute::Initialise_Control(__int8 number_Implemented_Cores)
 {
-    Set_Control_Of_Execute(new class Avril_FSD::Execute_Control(number_Implemented_Cores));
+    Set_Control_Of_Execute(new class OpenAvril::Execute_Control(number_Implemented_Cores));
     while (Get_Control_Of_Execute() == NULL) { /* wait untill created */ }
 }
-void Avril_FSD::Execute::Initialise_Libraries()
+void OpenAvril::Execute::Initialise_Libraries()
 {
-    program_ConcurrentQue_Server = static_cast<Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Framework*>(Avril_FSD::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Initialise_LaunchEnableForConcurrentThreadsAt());
+    program_ConcurrentQue_Server = static_cast<OpenAvril::LaunchEnableForConcurrentThreadsAt_SERVER_Framework*>(OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Initialise_LaunchEnableForConcurrentThreadsAt());
     while (program_ConcurrentQue_Server == NULL) {}
 
-    program_WriteEnableStack_ServerInputAction = static_cast<Avril_FSD::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework*>(Avril_FSD::CLIBWriteEnableForThreadsAtSERVERINPUTACTION::Initialise_WriteEnable());
+    program_WriteEnableStack_ServerInputAction = static_cast<OpenAvril::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework*>(OpenAvril::CLIBWriteEnableForThreadsAtSERVERINPUTACTION::Initialise_WriteEnable());
     while (program_WriteEnableStack_ServerInputAction == NULL) {}
 
-    program_WriteEnableStack_ServerOutputRecieve = static_cast<Avril_FSD::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework*>(Avril_FSD::Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE::Initialise_WriteEnable());
+    program_WriteEnableStack_ServerOutputRecieve = static_cast<OpenAvril::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework*>(OpenAvril::Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE::Initialise_WriteEnable());
     while (program_WriteEnableStack_ServerOutputRecieve == NULL) {}
 }
-void Avril_FSD::Execute::Initialise_Threads(class Avril_FSD::Framework_Server* obj)
+void OpenAvril::Execute::Initialise_Threads(class OpenAvril::Framework_Server* obj)
 {
     for (__int8 coreId = 0; coreId < obj->Get_Server_Assembly()->Get_Global()->Get_NumCores(); coreId++)
     {
@@ -44,27 +44,27 @@ void Avril_FSD::Execute::Initialise_Threads(class Avril_FSD::Framework_Server* o
     }
 }
 
-Avril_FSD::Execute_Control* Avril_FSD::Execute::Get_Control_Of_Execute()
+OpenAvril::Execute_Control* OpenAvril::Execute::Get_Control_Of_Execute()
 {
     return ptr_Execute_Control;
 }
 
-Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* Avril_FSD::Execute::Get_Program_ConcurrentQue_Server()
+OpenAvril::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* OpenAvril::Execute::Get_Program_ConcurrentQue_Server()
 {
     return program_ConcurrentQue_Server;
 }
 
-Avril_FSD::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* Avril_FSD::Execute::Get_Program_WriteEnable_ServerInputAction()
+OpenAvril::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* OpenAvril::Execute::Get_Program_WriteEnable_ServerInputAction()
 {
     return program_WriteEnableStack_ServerInputAction;
 }
 
-Avril_FSD::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* Avril_FSD::Execute::Get_Program_WriteEnable_ServerOutputRecieve()
+OpenAvril::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* OpenAvril::Execute::Get_Program_WriteEnable_ServerOutputRecieve()
 {
     return program_WriteEnableStack_ServerOutputRecieve;
 }
 
-void Avril_FSD::Execute::Set_Control_Of_Execute(Avril_FSD::Execute_Control* execute_Control)
+void OpenAvril::Execute::Set_Control_Of_Execute(OpenAvril::Execute_Control* execute_Control)
 {
     ptr_Execute_Control = execute_Control;
 }

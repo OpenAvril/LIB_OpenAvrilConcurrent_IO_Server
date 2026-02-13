@@ -1,16 +1,16 @@
 #include "pch.h"
 
-Avril_FSD::Praise1_Algorithm::Praise1_Algorithm()
+OpenAvril::Praise1_Algorithm::Praise1_Algorithm()
 {
 }
 
-Avril_FSD::Praise1_Algorithm::~Praise1_Algorithm()
+OpenAvril::Praise1_Algorithm::~Praise1_Algorithm()
 {
 }
 
-void Avril_FSD::Praise1_Algorithm::Do_Praise(Avril_FSD::Framework_Server* obj, char playerId, Avril_FSD::Praise1_Input* in_SubSet, Avril_FSD::Praise1_Output* out_SubSet)
+void OpenAvril::Praise1_Algorithm::Do_Praise(OpenAvril::Framework_Server* obj, char playerId, OpenAvril::Praise1_Input* in_SubSet, OpenAvril::Praise1_Output* out_SubSet)
 {
-    Avril_FSD::Player* selectedPlayer = obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_player(playerId);
+    OpenAvril::Player* selectedPlayer = obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_player(playerId);
     if (selectedPlayer->Get_isFirstMouseMove())
     {
         std::vector<float> mousePosition = {in_SubSet->Get_mouse_X(), in_SubSet->Get_mouse_Y()};

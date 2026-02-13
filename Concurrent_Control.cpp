@@ -1,15 +1,15 @@
 #include "pch.h"
 
-Avril_FSD::Concurrent_Control::Concurrent_Control()
+OpenAvril::Concurrent_Control::Concurrent_Control()
 {
 
 }
-Avril_FSD::Concurrent_Control::~Concurrent_Control()
+OpenAvril::Concurrent_Control::~Concurrent_Control()
 {
 
 }
 
-void Avril_FSD::Concurrent_Control::SelectSet_Algorithm_Subset(Avril_FSD::Framework_Server* obj, __int8 ptr_praiseEventId, __int8 concurrent_coreId)
+void OpenAvril::Concurrent_Control::SelectSet_Algorithm_Subset(OpenAvril::Framework_Server* obj, __int8 ptr_praiseEventId, __int8 concurrent_coreId)
 {
 	switch (ptr_praiseEventId)
 	{

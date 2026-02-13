@@ -1,15 +1,15 @@
 #include "pch.h"
 
-Avril_FSD::Output_Control::Output_Control()
+OpenAvril::Output_Control::Output_Control()
 {
-	std::cout << "entered => Avril_FSD::Output_Control::Output_Control()" << std::endl;
+	std::cout << "entered => OpenAvril::Output_Control::Output_Control()" << std::endl;
 }
-Avril_FSD::Output_Control::~Output_Control()
+OpenAvril::Output_Control::~Output_Control()
 {
 
 }
 
-void Avril_FSD::Output_Control::SelectSet_Output_Subset(Avril_FSD::Framework_Server* obj, __int8 ptr_praiseEventId, __int8 concurrent_coreId)
+void OpenAvril::Output_Control::SelectSet_Output_Subset(OpenAvril::Framework_Server* obj, __int8 ptr_praiseEventId, __int8 concurrent_coreId)
 {
 	switch (ptr_praiseEventId)
 	{

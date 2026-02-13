@@ -1,6 +1,6 @@
 #pragma once
 
-namespace Avril_FSD
+namespace OpenAvril
 {
     class Algorithms
     {
@@ -14,8 +14,8 @@ namespace Avril_FSD
     private:
         static class Concurrent* Get_New_Concurrent();
         
-        static void Set_Concurrent(class Avril_FSD::Concurrent* concurrent, __int8 indexCount);
-        static void Set_New_Concurrent(class Avril_FSD::Concurrent* concurrent);
-        static void Set_User_Algorithms(class Avril_FSD::User_Alg* user_Algorithms);
+        static void Set_Concurrent(class OpenAvril::Concurrent* concurrent, __int8 indexCount);
+        static void Set_New_Concurrent(class OpenAvril::Concurrent* concurrent);
+        static void Set_User_Algorithms(class OpenAvril::User_Alg* user_Algorithms);
     };
 }
