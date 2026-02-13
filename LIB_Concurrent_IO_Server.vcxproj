@@ -24,6 +24,7 @@
     <ProjectGuid>{b8deff8f-f498-49bd-9fe8-aa75364b514f}</ProjectGuid>
     <RootNamespace>LIBConcurrentIOServer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>LIB_OpenAvrilConcurrent_IO_Server</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
