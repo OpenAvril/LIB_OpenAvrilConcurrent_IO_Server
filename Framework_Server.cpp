@@ -23,7 +23,7 @@
 	void OpenAvril::Framework_Server::Initialise_Program(OpenAvril::Framework_Server* obj)
 	{
 		std::cout << "entered => OpenAvril::Framework_Server::Initialise_Program()" << std::endl;
-		obj->Get_ptr_Server()->Get_Algorithms()->Initialise(obj->Get_ptr_Server()->Get_Global()->Get_NumCores());
+		obj->Get_ptr_Server()->Get_ptr_Algorithms()->Initialise_list_Of_ptr_Concurrnet(obj->Get_ptr_Server()->Get_Global()->Get_NumCores());
 		std::cout << "INIT Server" << std::endl;
 		obj->Get_ptr_Server()->Get_Data()->Initialise(obj->Get_ptr_Server()->Get_Global()->Get_NumCores());
 		obj->Get_ptr_Server()->Get_Execute()->Initialise_Libraries();

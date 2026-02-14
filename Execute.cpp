@@ -40,7 +40,7 @@ void OpenAvril::Execute::Initialise_Threads(class OpenAvril::Framework_Server* o
 {
     for (__int8 coreId = 0; coreId < obj->Get_Server_Assembly()->Get_Global()->Get_NumCores(); coreId++)
     {
-        ptr_Thread_WithCoreId[coreId] = new std::thread(obj->Get_Server_Assembly()->Get_Algorithms()->Get_Concurrent(coreId)->Thread_Concurrency, obj, coreId);
+        ptr_Thread_WithCoreId[coreId] = new std::thread(obj->Get_Server_Assembly()->Get_ptr_Algorithms()->Get_Concurrent(coreId)->Thread_Concurrency, obj, coreId);
     }
 }
 

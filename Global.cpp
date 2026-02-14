@@ -1,24 +1,52 @@
 #include "pch.h"
 
-__int8 OpenAvril::Global::number_Implemented_Cores = NULL;
-__int8 OpenAvril::Global::number_Praise_Events = NULL;
+// classes.
 
-OpenAvril::Global::Global()
-{
-    number_Implemented_Cores = __int8(4);//NUMBER OF CORES
-    number_Praise_Events = __int8(2);
-}
+// registers.
+    __int8 _number_Of_Implemented_Cores = NULL;
+    __int8 _number_Of_Praise_Events = NULL;
 
-OpenAvril::Global::~Global()
+// constructor.
+    OpenAvril::Global::Global()
+    {
+        Create_number_Of_Implemented_Cores();
+        Create_number_Of_Praise_Events();
+    }
+
+// destructor.
+    OpenAvril::Global::~Global()
 {
         
 }
 
-__int8 OpenAvril::Global::Get_NumCores()
+// public.
+    // get.
+    __int8 OpenAvril::Global::Get_number_Of_Implemented_Cores()
+    {
+        return _number_Of_Implemented_Cores;
+    }
+    __int8 OpenAvril::Global::Get_number_Of_Praise_Events()
+    {
+        return 0;
+    }
+    // set.
+
+// private.
+    void OpenAvril::Global::Create_number_Of_Implemented_Cores()
+    {
+        Set_number_Of_Implemented_Cores(__int8(4));//NUMBER OF CONCURRENT THREADS
+    }
+    void OpenAvril::Global::Create_number_Of_Praise_Events()
+    {
+        Set_number_Of_Praise_Events(__int8(3));//NUMBER OF PRAISES
+    }
+    // get.
+    // set.
+    void OpenAvril::Global::Set_number_Of_Implemented_Cores(__int8 newValue)
 {
-    return number_Implemented_Cores;
+    _number_Of_Implemented_Cores = newValue;
 }
-__int8 OpenAvril::Global::Get_NumPraiseEvetns()
+    void OpenAvril::Global::Set_number_Of_Praise_Events(__int8 newValue)
 {
-    return number_Praise_Events;
+    _number_Of_Praise_Events = newValue;
 }
