@@ -9,9 +9,9 @@ bool state_OutBufferToWrite = true;
 class OpenAvril::Input* ptr_EmptyBuffer_Input = NULL;
 class OpenAvril::Output* ptr_EmptyBuffer_Output = NULL;
 class OpenAvril::Input* ptr_Buffer_InputDouble[2] = { NULL, NULL };
-class OpenAvril::Input* ptr_Buffer_InputReference_ForCore[4] = { NULL, NULL, NULL, NULL };//NUMBER OF CONCURRENT CORES
+class OpenAvril::Input* ptr_Buffer_InputReference_ForCore[4] = { NULL, NULL, NULL, NULL };//NUMBER OF CONCURRENT THREADS
 class OpenAvril::Output* ptr_Buffer_OutputDouble[2] = { NULL, NULL };
-class OpenAvril::Output* ptr_Buffer_OutputReference_ForCore[4] = { NULL, NULL, NULL, NULL };//NUMBER OF CONCURRENT CORES
+class OpenAvril::Output* ptr_Buffer_OutputReference_ForCore[4] = { NULL, NULL, NULL, NULL };//NUMBER OF CONCURRENT THREADS
 
 //buffer sub sets
 class OpenAvril::User_I* ptr_User_I = NULL;
@@ -79,7 +79,7 @@ OpenAvril::Data::~Data()
         delete ptr_Buffer_InputDouble[index];
         delete ptr_Buffer_OutputDouble[index];
     }
-    for (int index = 0; index < 3; index++)//NUMBER OF CONCURRENT CORES
+    for (int index = 0; index < 3; index++)//NUMBER OF CONCURRENT THREADS
     {
         delete ptr_Buffer_InputReference_ForCore[index];
         delete ptr_Buffer_OutputReference_ForCore[index];
