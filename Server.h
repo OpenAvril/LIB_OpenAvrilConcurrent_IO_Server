@@ -4,6 +4,21 @@ namespace OpenAvril
 {
     class Server
     {
+        // calsses.
+
+// registers.
+
+// constructor.
+
+// destructor.
+
+// public.
+    // get.
+    // set.
+
+// private.
+    // get.
+    // set.
     public:
         Server();
         virtual ~Server();
