@@ -91,7 +91,7 @@ void OpenAvril::CLIBServerIOConcurrnecy::Set_flag_IsNewOutputDataReady(OpenAvril
 
 __int8 OpenAvril::CLIBServerIOConcurrnecy::Get_PraiseEventId(class OpenAvril::Framework_Server* obj)
 {
-    _PraiseEventId = obj->Get_Server_Assembly()->Get_Data()->GetBuffer_OutputBackDouble()->Get_out_praiseEventId();
+    _PraiseEventId = obj->Get_Server_Assembly()->Get_Data()->Get_doubleBuffer_Input()->Get_out_praiseEventId();
     return _PraiseEventId;
 }
 void OpenAvril::CLIBServerIOConcurrnecy::Set_PraiseEventId(class OpenAvril::Framework_Server* obj, __int8 value)

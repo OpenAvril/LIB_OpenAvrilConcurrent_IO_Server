@@ -1,274 +1,198 @@
 #include "pch.h"
 
-class OpenAvril::Data_Control* ptr_Data_Control = NULL;
-class OpenAvril::GameInstance* ptr_GameInstance = NULL;
-//buffers
-bool state_InBufferToWrite = true;
-bool state_OutBufferToWrite = true;
+// classes.
+    class OpenAvril::Data_Control* _ptr_Data_Control = NULL;
+    class OpenAvril::GameInstance* _ptr_GameInstance = NULL;
+    class OpenAvril::User_I* _ptr_User_I = NULL;
+    class OpenAvril::User_O* _ptr_User_O = NULL;
 
-class OpenAvril::Input* ptr_EmptyBuffer_Input = NULL;
-class OpenAvril::Output* ptr_EmptyBuffer_Output = NULL;
-class OpenAvril::Input* ptr_Buffer_InputDouble[2] = { NULL, NULL };
-class OpenAvril::Input* ptr_Buffer_InputReference_ForCore[4] = { NULL, NULL, NULL, NULL };//NUMBER OF CONCURRENT THREADS
-class OpenAvril::Output* ptr_Buffer_OutputDouble[2] = { NULL, NULL };
-class OpenAvril::Output* ptr_Buffer_OutputReference_ForCore[4] = { NULL, NULL, NULL, NULL };//NUMBER OF CONCURRENT THREADS
+// registers.
+    std::list<class OpenAvril::Input*> _buffer_Input_ReferenceForThread = { new OpenAvril::Input(), new OpenAvril::Input(), new OpenAvril::Input(), new OpenAvril::Input() };//NUMBER OF CONCURRENT THREADS
+    std::list<class OpenAvril::Output*> _buffer_Output_ReferenceForThread = { new OpenAvril::Output(), new OpenAvril::Output(), new OpenAvril::Output(), new OpenAvril::Output() };//NUMBER OF CONCURRENT THREADS
+    std::list<class OpenAvril::Input*> _doubleBuffer_Input = { new OpenAvril::Input(), new OpenAvril::Input() };
+    std::list<class OpenAvril::Output*> _doubleBuffer_Output = { new OpenAvril::Output(), new OpenAvril::Output() };
+    std::vector<class OpenAvril::Input*> _stack_Of_InputPraise = { NULL };
+    std::vector<class OpenAvril::Output*> _stack_Of_OutputPraise = { NULL };
+// pointers.
+    std::list<class OpenAvril::Input*>* _ptr_buffer_Input_ReferenceForThread = NULL;
+    std::list<class OpenAvril::Output*>* _ptr_buffer_Output_ReferenceForThread = NULL;
+    std::list<class OpenAvril::Input*>* _ptr_doubleBuffer_Input = NULL;
+    std::list<class OpenAvril::Output*>* _ptr_doubleBuffer_Output = NULL;
+    std::vector<class OpenAvril::Input*>* _ptr_stack_Of_InputPraise = NULL;
+    std::vector<class OpenAvril::Output*>* _ptr_stack_Of_OutputPraise = NULL;
 
-//buffer sub sets
-class OpenAvril::User_I* ptr_User_I = NULL;
-class OpenAvril::User_O* ptr_User_O = NULL;
-
-std::vector<class OpenAvril::Input*>* ptr_Stack_InputPraise = NULL;
-std::vector<class OpenAvril::Output*>* ptr_Stack_OutputPraise = NULL;
-
-OpenAvril::Data::Data()
-{
-    std::cout << "entered => Data()" << std::endl;
-    Set_EmptyBuffer_Input(new class OpenAvril::Input());
-    while (Get_New_InputBuffer() == NULL) { }
-    Get_New_InputBuffer()->Initialise_Control();
-
-    std::cout << "entered => Data() ALPHA" << std::endl;
-    Set_EmptyBuffer_Output(new class OpenAvril::Output());
-    std::cout << "entered => Data() ALPHA BRAVO" << std::endl;
-    while (Get_New_OutputBuffer() == NULL) { }
-    std::cout << "entered => Data() ALPHA CHARLIE" << std::endl;
-    Get_New_OutputBuffer()->Initialise_Control();
-
-    std::cout << "entered => Data() BRAVO" << std::endl;
-    Set_Buffer_InputDouble(GetState_InputBuffer(), Get_New_InputBuffer());
-    Set_Buffer_InputDouble(!GetState_InputBuffer(), Get_New_InputBuffer());
-    while (GetBuffer_InputFrontDouble() == NULL) {}
-    while (GetBuffer_InputBackDouble() == NULL) {}
-
-    std::cout << "entered => Data() CHARLIE" << std::endl;
-    Set_Buffer_OututDouble(GetState_OutputBuffer(), Get_New_OutputBuffer());
-    Set_Buffer_OututDouble(!GetState_OutputBuffer(), Get_New_OutputBuffer());
-    while (GetBuffer_OutputFrontDouble() == NULL) {}
-    while (GetBuffer_OutputBackDouble() == NULL) {}
+// constructor.
+    OpenAvril::Data::Data()
+    {
+        Create_ptr_GameInstance();
+        Create_ptr_User_I();
+        Create_ptr_User_O();
+        Create_side_To_Write_For_doubleBuffer_Input();
+        Create_side_To_Write_For_doubleBuffer_Output();
+        Create_stack_Of_InputPraise();
+        Create_stack_Of_OutputPraise();
+        Create_ptr_buffer_Input_ReferenceForThread();
+        Create_ptr_buffer_Output_ReferenceForThread();
+        Create_ptr_doubleBuffer_Input();
+        Create_ptr_doubleBuffer_Output();
+        Create_ptr_stack_Of_InputPraise();
+        Create_ptr_stack_Of_OutputPraise();
+    }
     
-    std::cout << "entered => Data() DELTA" << std::endl;
-    Set_Stack_InputPraise(new std::vector<class OpenAvril::Input*>);
-    while (Get_Stack_InputPraise() == NULL) { }
-    Get_Stack_InputPraise()->resize(1);
-    Get_Stack_InputPraise()->at(0) = Get_New_InputBuffer();
-
-    std::cout << "entered => Data() ECHO" << std::endl;
-    Set_Stack_OutputPraise(new std::vector<class OpenAvril::Output*>);
-    while (Get_Stack_OutputPraise() == NULL) { }
-    Get_Stack_OutputPraise()->resize(1);
-    Get_Stack_OutputPraise()->at(0) = Get_New_OutputBuffer();
-
-    std::cout << "entered => Data() FOXTROT" << std::endl;
-    Set_User_I(new User_I());
-    while (Get_User_I() == NULL) { }
-
-    std::cout << "entered => Data() GIGA" << std::endl;
-    Set_User_O(new User_O());
-    while (Get_User_O() == NULL) { }
-}
-
-OpenAvril::Data::~Data()
-{
-    delete ptr_Data_Control;
-    delete ptr_GameInstance;
-    
-    delete ptr_EmptyBuffer_Input;
-    delete ptr_EmptyBuffer_Output;
-    for (int index = 0; index < 2; index++)
+// destructor.
+    OpenAvril::Data::~Data()
     {
-        delete ptr_Buffer_InputDouble[index];
-        delete ptr_Buffer_OutputDouble[index];
+
     }
-    for (int index = 0; index < 3; index++)//NUMBER OF CONCURRENT THREADS
+
+// public.
+    void OpenAvril::Data::Initialise_Control(OpenAvril::Data* data)
     {
-        delete ptr_Buffer_InputReference_ForCore[index];
-        delete ptr_Buffer_OutputReference_ForCore[index];
+        data->Set_ptr_Data_Control(new class OpenAvril::Data_Control());
+        while (data->Get_ptr_Data_Control() == NULL) {}
     }
-    delete ptr_User_I;
-    delete ptr_User_O;
-    delete ptr_Stack_InputPraise;
-    delete ptr_Stack_OutputPraise;
-
-}
-
-void OpenAvril::Data::Initialise(__int8 number_Implemented_Cores)
-{
-    for (__int8 index = 0; index < number_Implemented_Cores; index++)//Number Of Cores
+    // get.
+    bool OpenAvril::Data::Get_doubleBuffer_Input_BACK()
     {
-        Set_Buffer_InputReference_ForCore(index, Get_New_InputBuffer());
-        while (Get_InputRefferenceOfCore(index) == NULL) {}
+        return &_ptr_doubleBuffer_Input[Get_ptr_Data_Control()->Get_side_To_Write_For_doubleBuffer_Output()];
     }
-    for (__int8 index = 0; index < number_Implemented_Cores; index++)
+    bool OpenAvril::Data::Get_doubleBuffer_Input_FRONT()
     {
-        Set_Buffer_OutputReference_ForCore(index, Get_New_OutputBuffer());
-        while (Get_OutputRefferenceOfCore(index) == NULL) {}
+        return &_ptr_doubleBuffer_Input[Get_ptr_Data_Control()->Get_side_To_Write_For_doubleBuffer_Input()];
     }
-}
-
-void OpenAvril::Data::Initialise_Control()
-{
-    Set_Data_Control(new class OpenAvril::Data_Control());
-    while (Get_Data_Control() == NULL) { }
-}
-void OpenAvril::Data::Initialise_GameInstance()
-{
-    Set_GameInstance(new class OpenAvril::GameInstance());
-    while (Get_GameInstance() == NULL) { }
-}
-
-__int8 OpenAvril::Data::BoolToInt(bool bufferSide)
-{
-    __int8 temp = 2;
-    if(bufferSide)
+    bool OpenAvril::Data::Get_doubleBuffer_Output_BACK()
     {
-        temp = 1;
+        return &_ptr_doubleBuffer_Output[Get_ptr_Data_Control()->Get_side_To_Write_For_doubleBuffer_Input()];
     }
-    else
+    bool OpenAvril::Data::Get_doubleBuffer_Output_FRONT()
     {
-        temp = 0;
+        return &_ptr_doubleBuffer_Output[Get_ptr_Data_Control()->Get_side_To_Write_For_doubleBuffer_Output()];
     }
-    return temp;
-}
+    class OpenAvril::Input* OpenAvril::Data::Get_Item_Of_buffer_Input_ReferenceForThread(__int8 threadID)
+    {
+        auto temp = _ptr_buffer_Input_ReferenceForThread->begin();
+        std::advance(temp, threadID);
+        return *temp;
+    }
+    class OpenAvril::Output* OpenAvril::Data::Get_Item_Of_buffer_Output_ReferenceForThread(__int8 threadID)
+    {
+        auto temp = _ptr_buffer_Output_ReferenceForThread->begin();
+        std::advance(temp, threadID);
+        return *temp;
+    }
+    // set.
 
-void OpenAvril::Data::Flip_Input_DoubleBuffer()
-{
-    Set_state_InBufferToWrite(!GetState_InputBuffer());
-}
-void OpenAvril::Data::Flip_Output_DoubleBuffer()
-{
-    Set_state_OutBufferToWrite(!GetState_OutputBuffer());
-}
-OpenAvril::Data_Control* OpenAvril::Data::Get_Data_Control()
-{
-    return ptr_Data_Control;
-}
-OpenAvril::GameInstance* OpenAvril::Data::Get_GameInstance()
-{
-    return ptr_GameInstance;
-}
-OpenAvril::Input* OpenAvril::Data::GetBuffer_InputFrontDouble()
-{
-    return ptr_Buffer_InputDouble[GetState_InputBuffer()];
-}
-OpenAvril::Input* OpenAvril::Data::GetBuffer_InputBackDouble()
-{
-    return ptr_Buffer_InputDouble[!GetState_OutputBuffer()];
-}
-OpenAvril::Input* OpenAvril::Data::Get_InputRefferenceOfCore(__int8 concurrent_coreId)
-{
-    return ptr_Buffer_InputReference_ForCore[concurrent_coreId];
-}
-OpenAvril::Output* OpenAvril::Data::GetBuffer_OutputFrontDouble()
-{
-    return ptr_Buffer_OutputDouble[BoolToInt(GetState_InputBuffer())];
-}
-OpenAvril::Output* OpenAvril::Data::GetBuffer_OutputBackDouble()
-{
-    return ptr_Buffer_OutputDouble[BoolToInt(GetState_OutputBuffer())];
-}
-OpenAvril::Output* OpenAvril::Data::Get_OutputRefferenceOfCore(__int8 concurrent_coreId)
-{
-    return ptr_Buffer_OutputReference_ForCore[concurrent_coreId];
-}
-OpenAvril::Input* OpenAvril::Data::Get_New_InputBuffer()
-{
-    return ptr_EmptyBuffer_Input;
-}
-OpenAvril::Output* OpenAvril::Data::Get_New_OutputBuffer()
-{
-    return ptr_EmptyBuffer_Output;
-}
-bool OpenAvril::Data::GetState_InputBuffer()
-{
-    return state_InBufferToWrite;
-}
-bool OpenAvril::Data::GetState_OutputBuffer()
-{
-    return state_OutBufferToWrite;
-}
-std::vector<class OpenAvril::Input*>* OpenAvril::Data::Get_Stack_InputPraise()
-{
-    return ptr_Stack_InputPraise;
-}
-std::vector<class OpenAvril::Output*>* OpenAvril::Data::Get_Stack_OutputPraise()
-{
-    return ptr_Stack_OutputPraise;
-}
-OpenAvril::User_I* OpenAvril::Data::Get_User_I()
-{
-    return ptr_User_I;
-}
-OpenAvril::User_O* OpenAvril::Data::Get_User_O()
-{
-    return ptr_User_O;
-}
+// private.
+    void OpenAvril::Data::Create_ptr_Data_Control()
+    {
+        Set_ptr_Data_Control(new class OpenAvril::Data_Control());
+        while (Get_ptr_Data_Control() == NULL) {}
+    }
+    void OpenAvril::Data::Create_ptr_GameInstance()
+    {
+        Set_ptr_GameInstance(new class OpenAvril::GameInstance());
+        while (Get_ptr_GameInstance() == NULL) {}
+    }
+    void OpenAvril::Data::Create_ptr_User_I()
+    {
+        Set_ptr_User_I(new class OpenAvril::User_I());
+        while (Get_ptr_User_I() == NULL) { }
+    }
+    void OpenAvril::Data::Create_ptr_User_O()
+    {
+        Set_ptr_User_O(new class OpenAvril::User_O());
+        while (Get_ptr_User_O() == NULL) {}
+    }
+    void OpenAvril::Data::Create_ptr_buffer_Input_ReferenceForThread()
+    {
+        _ptr_buffer_Input_ReferenceForThread = &_buffer_Input_ReferenceForThread;
+    }
+    void OpenAvril::Data::Create_ptr_buffer_Output_ReferenceForThread()
+    {
+        _ptr_buffer_Output_ReferenceForThread = &_buffer_Output_ReferenceForThread;
+    }
+    void OpenAvril::Data::Create_ptr_doubleBuffer_Input()
+    {
+        _ptr_doubleBuffer_Input = &_doubleBuffer_Input;
+    }
+    void OpenAvril::Data::Create_ptr_doubleBuffer_Output()
+    {
+        _ptr_doubleBuffer_Output = &_doubleBuffer_Output;
+    }
+    void OpenAvril::Data::Create_ptr_stack_Of_InputPraise()
+    {
+        _ptr_stack_Of_InputPraise = &_stack_Of_InputPraise;
+    }
+    void OpenAvril::Data::Create_ptr_stack_Of_OutputPraise()
+    {
+        _ptr_stack_Of_OutputPraise = &_stack_Of_OutputPraise;
+    }
+    void OpenAvril::Data::Create_stack_Of_InputPraise()
+    {
+        std::vector<class OpenAvril::Input*> _stack_Of_InputPraise = { new class OpenAvril::Input() };
+        while (Get_ptr_stack_Of_InputPraise() == NULL) {}
+    }
+    void OpenAvril::Data::Create_stack_Of_OutputPraise()
+    {
+        std::vector<class OpenAvril::Output*> _stack_Of_OutputPraise = { new class OpenAvril::Output() };
+        while (Get_ptr_stack_Of_OutputPraise() == NULL) {}
+    }
+    // get.
+    std::list<class OpenAvril::Input*> OpenAvril::Data::Get_buffer_Input_ReferenceForThread()
+    {
+        return _buffer_Input_ReferenceForThread;
+    }
+    std::list<class OpenAvril::Output*> OpenAvril::Data::Get_buffer_Output_ReferenceForThread()
+    {
+        return _buffer_Output_ReferenceForThread;
+    }
+    OpenAvril::Data_Control* OpenAvril::Data::Get_ptr_Data_Control()
+    {
+        return _ptr_Data_Control;
+    }
+    OpenAvril::GameInstance* OpenAvril::Data::Get_ptr_GameInstance()
+    {
+        return _ptr_GameInstance;
+    }
+    OpenAvril::User_I* OpenAvril::Data::Get_ptr_User_I()
+    {
+        return _ptr_User_I;
+    }
+    OpenAvril::User_O* OpenAvril::Data::Get_ptr_User_O()
+    {
+        return _ptr_User_O;
+    }
+    std::vector<class OpenAvril::Input*>* OpenAvril::Data::Get_ptr_stack_Of_InputPraise()
+    {
+        return _ptr_stack_Of_InputPraise;
+    }
+    std::vector<class OpenAvril::Output*>* OpenAvril::Data::Get_ptr_stack_Of_OutputPraise()
+    {
+        return _ptr_stack_Of_OutputPraise;
+    }
 
-void OpenAvril::Data::Set_Data_Control(OpenAvril::Data_Control* data_Control)
-{
-    ptr_Data_Control = data_Control;
-}
-void OpenAvril::Data::Set_GameInstance(OpenAvril::GameInstance* gameInstance)
-{
-    ptr_GameInstance = gameInstance;
-}
-void OpenAvril::Data::Set_EmptyBuffer_Input(OpenAvril::Input* emptyBuffer_Input)
-{
-    ptr_EmptyBuffer_Input = emptyBuffer_Input;
-}
-void OpenAvril::Data::Set_EmptyBuffer_Output(OpenAvril::Output* emptyBuffer_Output)
-{
-    std::cout << "entered => Data() Set_EmptyBuffer_Output()" << std::endl;
-    ptr_EmptyBuffer_Output = emptyBuffer_Output;
-}
-void OpenAvril::Data::Set_Buffer_InputDouble(bool state, OpenAvril::Input* buffer_InputDouble)
-{
-    ptr_Buffer_InputDouble[BoolToInt(state)] = buffer_InputDouble;
-}
-void OpenAvril::Data::Set_Buffer_InputReference_ForCore(__int8 index, OpenAvril::Input* buffer_InputReference_ForCore)
-{
-    ptr_Buffer_InputReference_ForCore[index] = buffer_InputReference_ForCore;
-}
-void OpenAvril::Data::Set_Buffer_OututDouble(bool state, OpenAvril::Output* buffer_OututDouble)
-{
-    ptr_Buffer_OutputDouble[BoolToInt(state)] = buffer_OututDouble;
-}
-void OpenAvril::Data::Set_Buffer_OutputReference_ForCore(__int8 index, OpenAvril::Output* buffer_OutputReference_ForCore)
-{
-    ptr_Buffer_OutputReference_ForCore[index] = buffer_OutputReference_ForCore;
-}
-void OpenAvril::Data::Set_Stack_InputPraise(std::vector<class OpenAvril::Input*>* stack_InputPraise)
-{
-    ptr_Stack_InputPraise = stack_InputPraise;
-}
-void OpenAvril::Data::Set_Stack_OutputPraise(std::vector<class OpenAvril::Output*>* stack_OutputPraise)
-{
-    ptr_Stack_OutputPraise = stack_OutputPraise;
-}
-
-void OpenAvril::Data::Set_User_I(OpenAvril::User_I* user_Input)
-{
-    ptr_User_I = user_Input;
-}
-void OpenAvril::Data::Set_User_O(OpenAvril::User_O* user_Output)
-{
-    ptr_User_O = user_Output;
-}
-
-void OpenAvril::Data::Set_InputRefferenceOfCore(__int8 concurrent_coreId, OpenAvril::Input* value_Input)
-{
-    ptr_Buffer_InputReference_ForCore[concurrent_coreId] = value_Input;
-}
-
-void OpenAvril::Data::Set_OutputRefferenceOfCore(__int8 concurrent_coreId, OpenAvril::Output* value_Output)
-{
-    ptr_Buffer_OutputReference_ForCore[concurrent_coreId] = value_Output;
-}
-
-void OpenAvril::Data::Set_state_InBufferToWrite(bool value)
-{
-    state_InBufferToWrite = value;
-}
-void OpenAvril::Data::Set_state_OutBufferToWrite(bool value)
-{
-    state_OutBufferToWrite = value;
-}
+    // set.
+    void OpenAvril::Data::Set_ptr_Data_Control(class OpenAvril::Data_Control* newClass)
+    {
+        _ptr_Data_Control = newClass;
+    }
+    void OpenAvril::Data::Set_ptr_GameInstance(class OpenAvril::GameInstance* newClass)
+    {
+        _ptr_GameInstance = newClass;
+    }
+    void OpenAvril::Data::Set_ptr_User_I(class OpenAvril::User_I* newClass)
+    {
+        _ptr_User_I = newClass;
+    }
+    void OpenAvril::Data::Set_ptr_User_O(class OpenAvril::User_O* newClass)
+    {
+        _ptr_User_O = newClass;
+    }
+    void OpenAvril::Data::Set_ptr_stack_Of_InputPraise(std::vector<class OpenAvril::Input*>* newStack)
+    {
+        _ptr_stack_Of_InputPraise = newStack;
+    }
+    void OpenAvril::Data::Set_ptr_stack_Of_OutputPraise(std::vector<class OpenAvril::Output*>* newStack)
+    {
+        _ptr_stack_Of_OutputPraise = newStack;
+    }

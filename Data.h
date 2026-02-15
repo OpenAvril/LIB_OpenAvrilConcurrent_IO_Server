@@ -4,57 +4,56 @@ namespace OpenAvril
 {
     class Data
     {
+// classes.
+
+// registers.
+
     public:
+// constructor.
         Data();
+
+// destructor.
         virtual ~Data();
-        void Initialise(__int8 number_Implemented_Cores);
-        void Initialise_Control();
-        class Data_Control* Get_Data_Control();
 
-        void Initialise_GameInstance();
-        class GameInstance* Get_GameInstance();
-        static __int8 BoolToInt(bool bufferSide);
-        
-        void Flip_Input_DoubleBuffer();
-        void Flip_Output_DoubleBuffer();
-        class Input* GetBuffer_InputFrontDouble();
-        class Input* GetBuffer_InputBackDouble();
-        class Input* Get_InputRefferenceOfCore(__int8 concurrent_coreId);
-        class Output* GetBuffer_OutputFrontDouble();
-        class Output* GetBuffer_OutputBackDouble();
-        class Output* Get_OutputRefferenceOfCore(__int8 concurrent_coreId);
-        class Input* Get_New_InputBuffer();
-        class Output* Get_New_OutputBuffer();
-        bool GetState_InputBuffer();
-        bool GetState_OutputBuffer();
-        std::vector<class OpenAvril::Input*>* Get_Stack_InputPraise();
-        std::vector<class OpenAvril::Output*>* Get_Stack_OutputPraise();
-        
-        class User_I* Get_User_I();
-        class User_O* Get_User_O();
-
-    protected:
-
-    private:
-        static void Set_GameInstance(class OpenAvril::GameInstance* gameInstance);
-        static void Set_Data_Control(class OpenAvril::Data_Control* data_Control);
-    //buffers
-        static void Set_EmptyBuffer_Input(class OpenAvril::Input* emptyBuffer_Input);
-        static void Set_EmptyBuffer_Output(class OpenAvril::Output* emptyBuffer_Output);
-        static void Set_Buffer_InputDouble(bool state, class OpenAvril::Input* buffer_InputDouble);
-        static void Set_Buffer_InputReference_ForCore(__int8 index, class OpenAvril::Input* buffer_InputReference_ForCore);
-        static void Set_Buffer_OututDouble(bool state, class OpenAvril::Output* buffer_OututDouble);
-        static void Set_Buffer_OutputReference_ForCore(__int8 index, class OpenAvril::Output* buffer_OutputReference_ForCore);
-        static void Set_Stack_InputPraise(std::vector<class OpenAvril::Input*>* stack_InputPraise);
-        static void Set_Stack_OutputPraise(std::vector<class OpenAvril::Output*>* stack_OutputPraise);
-    //buffer sub sets
-        static void Set_User_I(class OpenAvril::User_I* user_Input);
-        static void Set_User_O(class OpenAvril::User_O* user_Output);
-
-        void Set_InputRefferenceOfCore(__int8 concurrent_coreId, class OpenAvril::Input* value_Input);
-        void Set_OutputRefferenceOfCore(__int8 concurrent_coreId, class OpenAvril::Output* value_Output);
-
-        static void Set_state_InBufferToWrite(bool value);
-        static void Set_state_OutBufferToWrite(bool value);
+// public.
+        void Initialise_Control(Data* data);
+    // get.
+        bool Get_doubleBuffer_Input_BACK();
+        bool Get_doubleBuffer_Input_FRONT();
+        bool Get_doubleBuffer_Output_BACK();
+        bool Get_doubleBuffer_Output_FRONT();
+        class OpenAvril::Input* Get_Item_Of_buffer_Input_ReferenceForThread(__int8 threadID);
+        class OpenAvril::Output* Get_Item_Of_buffer_Output_ReferenceForThread(__int8 threadID);
+    // set.
+ 
+// private.
+        void Create_ptr_Data_Control();
+        void Create_ptr_GameInstance();
+        void Create_ptr_User_I();
+        void Create_ptr_User_O();
+        void Create_ptr_buffer_Input_ReferenceForThread();
+        void Create_ptr_buffer_Output_ReferenceForThread();
+        void Create_ptr_doubleBuffer_Input();
+        void Create_ptr_doubleBuffer_Output();
+        void Create_ptr_stack_Of_InputPraise();
+        void Create_ptr_stack_Of_OutputPraise();
+        void Create_stack_Of_InputPraise();
+        void Create_stack_Of_OutputPraise();
+    // get.
+        std::list<class OpenAvril::Input*> Get_buffer_Input_ReferenceForThread();
+        std::list<class OpenAvril::Output*> Get_buffer_Output_ReferenceForThread();
+        class Data_Control* Get_ptr_Data_Control();
+        class GameInstance* Get_ptr_GameInstance();
+        class User_I* Get_ptr_User_I();
+        class User_O* Get_ptr_User_O();
+        std::vector<class Input*>* Get_ptr_stack_Of_InputPraise();
+        std::vector<class Output*>* Get_ptr_stack_Of_OutputPraise();
+    // set.
+        void Set_ptr_Data_Control(class Data_Control* newClass);
+        void Set_ptr_GameInstance(class GameInstance* newClass);
+        void Set_ptr_User_I(class User_I* newClass);
+        void Set_ptr_User_O(class User_O* newClass);
+        void Set_ptr_stack_Of_InputPraise(std::vector<class Input*>* newStack);
+        void Set_ptr_stack_Of_OutputPraise(std::vector<class Output*>* newStack);
     };
 }

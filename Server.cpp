@@ -16,7 +16,7 @@
 		Create_ptr_Data();
         Get_ptr_Data()->Initialise_Control();
 		Create_ptr_Execute();
-        Get_ptr_Execute()->Initialise_Control(Get_ptr_Global()->Get_NumCores());
+        Get_ptr_Execute()->Initialise_Control(Get_ptr_Global()->Get_number_Of_Implemented_Cores());
     }
 
 // destructor.
