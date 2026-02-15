@@ -36,11 +36,11 @@ void OpenAvril::Execute::Initialise_Libraries()
     program_WriteEnableStack_ServerOutputRecieve = static_cast<OpenAvril::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework*>(OpenAvril::Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE::Initialise_WriteEnable());
     while (program_WriteEnableStack_ServerOutputRecieve == NULL) {}
 }
-void OpenAvril::Execute::Initialise_Threads(class OpenAvril::Framework_Server* obj)
+void OpenAvril::Execute::Initialise_Threads(OpenAvril::Framework_Server* obj)
 {
-    for (__int8 coreId = 0; coreId < obj->Get_Server_Assembly()->Get_Global()->Get_NumCores(); coreId++)
+    for (__int8 coreId = 0; coreId < obj->Get_ptr_Server()->Get_ptr_Global()->Get_number_Of_Implemented_Cores(); coreId++)
     {
-        ptr_Thread_WithCoreId[coreId] = new std::thread(obj->Get_Server_Assembly()->Get_ptr_Algorithms()->Get_Concurrent(coreId)->Thread_Concurrency, obj, coreId);
+        ptr_Thread_WithCoreId[coreId] = new std::thread(obj->Get_ptr_Server()->Get_ptr_Algorithms()->Get_Item_On_list_Of_ptr_Concurrent(coreId)->Thread_Concurrency, obj, coreId);
     }
 }
 

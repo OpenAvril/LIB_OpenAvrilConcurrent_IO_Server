@@ -10,7 +10,7 @@ OpenAvril::Praise1_Algorithm::~Praise1_Algorithm()
 
 void OpenAvril::Praise1_Algorithm::Do_Praise(OpenAvril::Framework_Server* obj, char playerId, OpenAvril::Praise1_Input* in_SubSet, OpenAvril::Praise1_Output* out_SubSet)
 {
-    OpenAvril::Player* selectedPlayer = obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_player(playerId);
+    OpenAvril::Player* selectedPlayer = obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_GameInstance()->Get_player(playerId);
     if (selectedPlayer->Get_isFirstMouseMove())
     {
         std::vector<float> mousePosition = {in_SubSet->Get_mouse_X(), in_SubSet->Get_mouse_Y()};
@@ -23,19 +23,19 @@ void OpenAvril::Praise1_Algorithm::Do_Praise(OpenAvril::Framework_Server* obj, c
         switch (selectedPlayer->Get_cameraSelector())
         {
         case false:
-            if ((in_SubSet->Get_mouse_X() != (float)(obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_settings()->Get_screenSize_X() / 2))
-                || (in_SubSet->Get_mouse_Y() != (float)(obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_settings()->Get_screenSize_Y() / 2)))
+            if ((in_SubSet->Get_mouse_X() != (float)(obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_GameInstance()->Get_settings()->Get_screenSize_X() / 2))
+                || (in_SubSet->Get_mouse_Y() != (float)(obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_GameInstance()->Get_settings()->Get_screenSize_Y() / 2)))
             {
                 float sensitivity = selectedPlayer->Get_sensitivity();
-                float anglePerPixle = obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_settings()->Get_fov() / obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_settings()->Get_screenSize_Y();
-                float deltaX = anglePerPixle * (in_SubSet->Get_mouse_X() - (obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_settings()->Get_screenSize_X() / 2));
-                float deltaY = anglePerPixle * (in_SubSet->Get_mouse_Y() - (obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_settings()->Get_screenSize_Y() / 2));
+                float anglePerPixle = obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_GameInstance()->Get_settings()->Get_fov() / obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_GameInstance()->Get_settings()->Get_screenSize_Y();
+                float deltaX = anglePerPixle * (in_SubSet->Get_mouse_X() - (obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_GameInstance()->Get_settings()->Get_screenSize_X() / 2));
+                float deltaY = anglePerPixle * (in_SubSet->Get_mouse_Y() - (obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_GameInstance()->Get_settings()->Get_screenSize_Y() / 2));
                 selectedPlayer->Get_camera_FP()->Update_Yaw(deltaX);
                 selectedPlayer->Get_camera_FP()->Update_Pitch(deltaY);
                 selectedPlayer->Get_camera_FP()->UpdateVectors(selectedPlayer->Get_camera_FP()->Get_pitch(), selectedPlayer->Get_camera_FP()->Get_yaw());
 
-                selectedPlayer->Set_mouse_Position_X((obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_settings()->Get_screenSize_X() / 2));
-                selectedPlayer->Set_mouse_Position_Y((obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_settings()->Get_screenSize_Y() / 2));
+                selectedPlayer->Set_mouse_Position_X((obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_GameInstance()->Get_settings()->Get_screenSize_X() / 2));
+                selectedPlayer->Set_mouse_Position_Y((obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_GameInstance()->Get_settings()->Get_screenSize_Y() / 2));
             }
             break;
 

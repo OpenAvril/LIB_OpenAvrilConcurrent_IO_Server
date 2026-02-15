@@ -14,7 +14,7 @@
 		Create_ptr_Global();
 		Create_ptr_Algorithms();
 		Create_ptr_Data();
-        Get_ptr_Data()->Initialise_Control();
+        Get_ptr_Data()->Initialise_Control(Get_ptr_Data());
 		Create_ptr_Execute();
         Get_ptr_Execute()->Initialise_Control(Get_ptr_Global()->Get_number_Of_Implemented_Cores());
     }

@@ -18,11 +18,8 @@
 // destructor.
     OpenAvril::Algorithms::~Algorithms()
     {
-        for (__int8 threadID = 0; threadID < 4; threadID++)//NUMBER OF CONCURRENT THREADS
-        {
-            delete _list_Of_ptr_Concurrent[threadID];
-        }
         delete _ptr_User_Algorithms;;
+        delete _ptr_list_Of_ptr_Concurrent;
     }
 
 // public.

@@ -23,15 +23,15 @@
 	void OpenAvril::Framework_Server::Initialise_Program(OpenAvril::Framework_Server* obj)
 	{
 		std::cout << "entered => OpenAvril::Framework_Server::Initialise_Program()" << std::endl;
-		obj->Get_ptr_Server()->Get_ptr_Algorithms()->Initialise_list_Of_ptr_Concurrnet(obj->Get_ptr_Server()->Get_Global()->Get_NumCores());
+		obj->Get_ptr_Server()->Get_ptr_Algorithms()->Initialise_list_Of_ptr_Concurrnet(obj->Get_ptr_Server()->Create_ptr_Global()->Get_number_Of_Implemented_Cores());
 		std::cout << "INIT Server" << std::endl;
-		obj->Get_ptr_Server()->Get_Data()->Initialise(obj->Get_ptr_Server()->Get_Global()->Get_NumCores());
-		obj->Get_ptr_Server()->Get_Execute()->Initialise_Libraries();
+		obj->Get_ptr_Server()->Get_ptr_Data()->Initialise(obj->Get_ptr_Server()->Create_ptr_Global()->Get_number_Of_Implemented_Cores());
+		obj->Get_ptr_Server()->Get_ptr_Execute()->Initialise_Libraries();
 		std::cout << "INIT Libraries" << std::endl;
-		obj->Get_ptr_Server()->Get_Data()->Initialise_GameInstance();
+		obj->Get_ptr_Server()->Get_ptr_Data()->Initialise_GameInstance();
 		std::cout << "ITIT Game Instance" << std::endl;
 
-		obj->Get_ptr_Server()->Get_Execute()->Initialise_Threads(obj);
+		obj->Get_ptr_Server()->Get_ptr_Execute()->Initialise_Threads(obj);
 		std::cout << "INIT Thread(s)" << std::endl;
 	}
 	// get.

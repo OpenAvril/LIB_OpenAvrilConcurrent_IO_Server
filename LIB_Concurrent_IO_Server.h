@@ -21,13 +21,13 @@ namespace OpenAvril
 		static void Initalise_Programs(class OpenAvril::Framework_Server* obj);
 		static void Flip_InBufferToWrite(class OpenAvril::Framework_Server* obj);
 		static void Flip_OutBufferToWrite(class OpenAvril::Framework_Server* obj);
-		static bool Get_flag_IsStackLoaded_Server_InputAction(class OpenAvril::Framework_Server* obj);
-		static bool Get_flag_IsStackLoaded_Server_OutputRecieve(class OpenAvril::Framework_Server* obj);
+		static bool Get_flag_isStackLoaded_Server_InputAction(class OpenAvril::Framework_Server* obj);
+		static bool Get_flag_isLoaded_Stack_OutputSend(class OpenAvril::Framework_Server* obj);
 		static bool Get_flag_IsInitialised_Avril_FSD_ServerConcurrency(class OpenAvril::Framework_Server* obj);
 		static void* Get_program_WriteEnableStack_ServerInputAction();
 		static void* Get_program_WriteEnableStack_ServerOutputRecieve();
-		static void Pop_Stack_Output(class OpenAvril::Framework_Server* obj);
-		static void Push_Stack_InputPraises(class OpenAvril::Framework_Server* obj);
+		static void Pop_From_Stack_Of_Output(class OpenAvril::Framework_Server* obj);
+		static void Push_To_Stack_Of_Input(class OpenAvril::Framework_Server* obj);
 		static void Select_Set_Intput_Subset(class OpenAvril::Framework_Server* obj, __int8 praiseEventId);
 		static void Set_flag_IsNewInputDataReady(class OpenAvril::Framework_Server* obj, bool value);
 		static void Set_flag_IsNewOutputDataReady(class OpenAvril::Framework_Server* obj, bool value);

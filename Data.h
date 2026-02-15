@@ -18,12 +18,14 @@ namespace OpenAvril
 // public.
         void Initialise_Control(Data* data);
     // get.
-        bool Get_doubleBuffer_Input_BACK();
-        bool Get_doubleBuffer_Input_FRONT();
-        bool Get_doubleBuffer_Output_BACK();
-        bool Get_doubleBuffer_Output_FRONT();
-        class OpenAvril::Input* Get_Item_Of_buffer_Input_ReferenceForThread(__int8 threadID);
-        class OpenAvril::Output* Get_Item_Of_buffer_Output_ReferenceForThread(__int8 threadID);
+        class Input* Get_doubleBuffer_Input_BACK();
+        class Input* Get_doubleBuffer_Input_FRONT();
+        class Output* Get_doubleBuffer_Output_BACK();
+        class Output* Get_doubleBuffer_Output_FRONT();
+        class Input* Get_Item_Of_buffer_Input_ReferenceForThread(__int8 threadID);
+        class Output* Get_Item_Of_buffer_Output_ReferenceForThread(__int8 threadID);
+        class Input* Get_Item_On_stack_Of_InputPraise(__int8 slot);
+        class Output* Get_Item_On_stack_Of_OutputPraise(__int8 slot);
     // set.
  
 // private.
@@ -40,8 +42,10 @@ namespace OpenAvril
         void Create_stack_Of_InputPraise();
         void Create_stack_Of_OutputPraise();
     // get.
-        std::list<class OpenAvril::Input*> Get_buffer_Input_ReferenceForThread();
-        std::list<class OpenAvril::Output*> Get_buffer_Output_ReferenceForThread();
+        std::list<class Input*> Get_buffer_Input_ReferenceForThread();
+        std::list<class Output*> Get_buffer_Output_ReferenceForThread();
+        std::list<class Input*>* Get_ptr_doubleBuffer_Input();
+        std::list<class Output*>* Get_ptr_doubleBuffer_Output();
         class Data_Control* Get_ptr_Data_Control();
         class GameInstance* Get_ptr_GameInstance();
         class User_I* Get_ptr_User_I();

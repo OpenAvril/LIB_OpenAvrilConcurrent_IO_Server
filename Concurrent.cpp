@@ -17,10 +17,10 @@ OpenAvril::Concurrent::~Concurrent()
 void OpenAvril::Concurrent::Initialise_Control()
 {
     Set_Concurrent_Control(new class OpenAvril::Concurrent_Control());
-    while (Get_Concurrent_Control() == NULL) { }
+    while (Get_Item_On_list_Of_ptr_Concurrent_Control() == NULL) { }
 }
 
-OpenAvril::Concurrent_Control* OpenAvril::Concurrent::Get_Concurrent_Control()
+OpenAvril::Concurrent_Control* OpenAvril::Concurrent::Get_Item_On_list_Of_ptr_Concurrent_Control()
 {
     return ptr_Concurrent_Control;
 }
@@ -28,58 +28,58 @@ OpenAvril::Concurrent_Control* OpenAvril::Concurrent::Get_Concurrent_Control()
 void OpenAvril::Concurrent::Thread_Concurrency(OpenAvril::Framework_Server* obj, __int8 concurrent_coreId)
 {
     bool doneOnce = true;
-    while (obj->Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_ThreadInitialised(concurrent_coreId) == true)
+    while (obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Control_Of_Execute()->GetFlag_ThreadInitialised(concurrent_coreId) == true)
     {
         if (doneOnce == true)
         {
-            obj->Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->SetConditionCodeOfThisThreadedCore(concurrent_coreId);
+            obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Control_Of_Execute()->SetConditionCodeOfThisThreadedCore(concurrent_coreId);
             doneOnce = false;
         }
 
     }
     std::cout << "Thread Initialised: ID=" << (concurrent_coreId) << " => Thread_Concurrency()" << std::endl;//TestBench
-    while (obj->Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_SystemInitialised(obj) == true)
+    while (obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Control_Of_Execute()->GetFlag_SystemInitialised(obj) == true)
     {
 
     }
     std::cout << "Thread Starting " << (concurrent_coreId) << " => Thread_Concurrency()" << std::endl;//TestBench
-    while (obj->Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_SystemInitialised(obj) == false)
+    while (obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Control_Of_Execute()->GetFlag_SystemInitialised(obj) == false)
     {
-        switch (OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_Flag_ConcurrentCoreState(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server(), concurrent_coreId))
+        switch (OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_Flag_ConcurrentCoreState(obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Program_ConcurrentQue_Server(), concurrent_coreId))
         {
         case false:
 
             break;
 
         case true:
-            if(obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Get_flag_IsStackLoaded_Server_InputAction() == true)
+            if(obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Data_Control()->Get_flag_isLoaded_Stack_InputAction() == true)
             {
-                    OpenAvril::CLIBWriteEnableForThreadsAtSERVERINPUTACTION::Write_Start(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerInputAction(), (__int8)(concurrent_coreId + (__int8)1));
-                    obj->Get_Server_Assembly()->Get_Data()->Get_OutputRefferenceOfCore(concurrent_coreId)->Get_control_Of_Output()->SelectSet_Output_Subset(obj, obj->Get_Server_Assembly()->Get_Data()->Get_OutputRefferenceOfCore(concurrent_coreId)->Get_out_praiseEventId(), concurrent_coreId);
-                    obj->Get_Server_Assembly()->Get_ptr_Algorithms()->Get_Concurrent(concurrent_coreId)->Get_Concurrent_Control()->SelectSet_Algorithm_Subset(obj, obj->Get_Server_Assembly()->Get_Data()->Get_Item_Of_buffer_Input_ReferenceForThread(concurrent_coreId)->GetPraiseEventId(), concurrent_coreId);
-                    obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Store_Praise_In_Data_To_GameInstance_Data(obj, obj->Get_Server_Assembly()->Get_Data()->Get_ptr_stack_Of_InputPraise());
-                    obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Pop_Stack_InputPraises(obj, concurrent_coreId);
-                    OpenAvril::CLIBWriteEnableForThreadsAtSERVERINPUTACTION::Write_End(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerInputAction(), (__int8)(concurrent_coreId + (__int8)1));
-                    obj->Get_Server_Assembly()->Get_ptr_Algorithms()->Get_Concurrent(concurrent_coreId)->Do_Concurrent_Algorithm_For_PraiseEventId(
+                    OpenAvril::CLIBWriteEnableForThreadsAtSERVERINPUTACTION::Write_Start(obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Program_WriteEnable_ServerInputAction(), (__int8)(concurrent_coreId + (__int8)1));
+                    obj->Get_ptr_Server()->Get_ptr_Data()->Get_Item_Of_buffer_Output_ReferenceForThread(concurrent_coreId)->Get_control_Of_Output()->SelectSet_Output_Subset(obj, obj->Get_ptr_Server()->Get_ptr_Data()->Get_Item_Of_buffer_Output_ReferenceForThread(concurrent_coreId)->Get_out_praiseEventId(), concurrent_coreId);
+                    obj->Get_ptr_Server()->Get_ptr_Algorithms()->Get_Item_On_list_Of_ptr_Concurrent(concurrent_coreId)->Get_Item_On_list_Of_ptr_Concurrent_Control()->SelectSet_Algorithm_Subset(obj, obj->Get_ptr_Server()->Get_ptr_Data()->Get_Item_Of_buffer_Input_ReferenceForThread(concurrent_coreId)->GetPraiseEventId(), concurrent_coreId);
+                    obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Data_Control()->Store_Input_To_GameInstance(obj->Get_ptr_Server()->Get_ptr_Data(), obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_stack_Of_InputPraise());
+                    obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Data_Control()->Pop_From_Stack_Of_Input(obj->Get_ptr_Server()->Get_ptr_Data(), concurrent_coreId);
+                    OpenAvril::CLIBWriteEnableForThreadsAtSERVERINPUTACTION::Write_End(obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Program_WriteEnable_ServerInputAction(), (__int8)(concurrent_coreId + (__int8)1));
+                    obj->Get_ptr_Server()->Get_ptr_Algorithms()->Get_Item_On_list_Of_ptr_Concurrent(concurrent_coreId)->Do_Concurrent_Algorithm_For_PraiseEventId(
                         obj,
-                        obj->Get_Server_Assembly()->Get_Data()->Get_Item_Of_buffer_Input_ReferenceForThread(concurrent_coreId)->Get_playerId(),
-                        obj->Get_Server_Assembly()->Get_Data()->Get_Item_Of_buffer_Input_ReferenceForThread(concurrent_coreId)->GetPraiseEventId(),
-                        obj->Get_Server_Assembly()->Get_ptr_Algorithms()->Get_Concurrent(concurrent_coreId)->Get_Algorithm_Subset(),
-                        obj->Get_Server_Assembly()->Get_Data()->Get_Item_Of_buffer_Input_ReferenceForThread(concurrent_coreId)->Get_InputBuffer_Subset(),
-                        obj->Get_Server_Assembly()->Get_Data()->Get_OutputRefferenceOfCore(concurrent_coreId)->Get_praiseOutputBuffer_Subset()
+                        obj->Get_ptr_Server()->Get_ptr_Data()->Get_Item_Of_buffer_Input_ReferenceForThread(concurrent_coreId)->Get_playerId(),
+                        obj->Get_ptr_Server()->Get_ptr_Data()->Get_Item_Of_buffer_Input_ReferenceForThread(concurrent_coreId)->GetPraiseEventId(),
+                        obj->Get_ptr_Server()->Get_ptr_Algorithms()->Get_Item_On_list_Of_ptr_Concurrent(concurrent_coreId)->Get_Algorithm_Subset(),
+                        obj->Get_ptr_Server()->Get_ptr_Data()->Get_Item_Of_buffer_Input_ReferenceForThread(concurrent_coreId)->Get_InputBuffer_Subset(),
+                        obj->Get_ptr_Server()->Get_ptr_Data()->Get_Item_Of_buffer_Output_ReferenceForThread(concurrent_coreId)->Get_praiseOutputBuffer_Subset()
                     );
-                    OpenAvril::Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE::Write_Start(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerOutputRecieve(), (__int8)(concurrent_coreId + (__int8)1));
-                    obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Push_Stack_Output(obj, concurrent_coreId);
-                    obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Store_Praise_Out_Data_To_GameInstance_Data(obj, obj->Get_Server_Assembly()->Get_Data()->Get_Stack_OutputPraise());
-                    OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Thread_End(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server(), concurrent_coreId);
-                    if (obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Get_flag_IsStackLoaded_Server_OutputRecieve() == true)
+                    OpenAvril::Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE::Write_Start(obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Program_WriteEnable_ServerOutputRecieve(), (__int8)(concurrent_coreId + (__int8)1));
+                    obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Data_Control()->Push_To_Stack_Of_Output(obj->Get_ptr_Server()->Get_ptr_Data(), concurrent_coreId);
+                    obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Data_Control()->Store_Output_To_GameInstance(obj->Get_ptr_Server()->Get_ptr_Data(), obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_stack_Of_OutputPraise());
+                    OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Thread_End(obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Program_ConcurrentQue_Server(), concurrent_coreId);
+                    if (obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Data_Control()->Get_flag_isLoaded_Stack_OutputSend() == true)
                     {
-                        if (OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_Flag_ConcurrentCoreState(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server(), OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_coreId_To_Launch(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server())) == OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_Flag_Idle(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()))
+                        if (OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_Flag_ConcurrentCoreState(obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Program_ConcurrentQue_Server(), OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_coreId_To_Launch(obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Program_ConcurrentQue_Server())) == OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_Flag_Idle(obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Program_ConcurrentQue_Server()))
                         {
-                            OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Request_Wait_Launch(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server(), OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_coreId_To_Launch(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()));
+                            OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Request_Wait_Launch(obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Program_ConcurrentQue_Server(), OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_coreId_To_Launch(obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Program_ConcurrentQue_Server()));
                         }
                     }
-                   OpenAvril::Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE::Write_End(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerOutputRecieve(), (__int8)(concurrent_coreId + (__int8)1));
+                   OpenAvril::Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE::Write_End(obj->Get_ptr_Server()->Get_ptr_Execute()->Get_Program_WriteEnable_ServerOutputRecieve(), (__int8)(concurrent_coreId + (__int8)1));
                 //}
             }
             break;
