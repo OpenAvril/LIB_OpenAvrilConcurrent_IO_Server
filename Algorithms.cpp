@@ -26,7 +26,9 @@
     // get.
     OpenAvril::Concurrent* OpenAvril::Algorithms::Get_Item_On_list_Of_ptr_Concurrent(__int8 threadID)
     {
-
+        auto temp = _ptr_list_Of_ptr_Concurrent->begin();
+        std::advance(temp, threadID);
+        return *temp;
     }
     std::list<class OpenAvril::Concurrent*>* OpenAvril::Algorithms::Get_ptr_list_Of_ptr_Concurrent()
     {

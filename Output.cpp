@@ -1,7 +1,7 @@
 #include "pch.h"
 
-OpenAvril::Output_Control* ptr_control_Of_Output = NULL;
-OpenAvril::Object* ptr_praiseOutputBuffer_Subset = NULL;
+class OpenAvril::Output_Control* ptr_control_Of_Output = NULL;
+class OpenAvril::Object* ptr_praiseOutputBuffer_Subset = NULL;
 __int8 _out_praiseEventId;
 __int8 _out_playerId;
 

@@ -27,22 +27,22 @@ namespace OpenAvril
     // get.
         bool Get_flag_isLoaded_Stack_InputAction();
         bool Get_flag_isLoaded_Stack_OutputSend();
-        __int8 Get_STATE_Of_WRITE_For_doubleBuffer_Input();
-        __int8 Get_STATE_Of_WRITE_For_doubleBuffer_Output();
+        __int8 Get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input();
+        __int8 Get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output();
     // set.
+        void Set_flag_isLoaded_Stack_InputAction(bool value);
+        void Set_flag_isLoaded_Stack_OutputSend(bool value);
 
     private:
 // private.
         __int8 BoolToInt(bool bufferSide);
         void Create_flag_isLoaded_Stack_InputAction();
         void Create_flag_isLoaded_Stack_OutputSend();
-        void Create_side_To_Write_For_doubleBuffer_Input();
-        void Create_side_To_Write_For_doubleBuffer_Output();
+        void Create_side_To_Write_For_list_Of_doubleBuffer_Input();
+        void Create_side_To_Write_For_list_Of_doubleBuffer_Output();
     // get.
     // set.
-        void Set_flag_isLoaded_Stack_InputAction(bool value);
-        void Set_flag_isLoaded_Stack_OutputSend(bool value);
-        void Set_STATE_Of_WRITE_For_doubleBuffer_Input(bool value);
-        void Set_STATE_Of_WRITE_For_doubleBuffer_Output(bool value);
+        void Set_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input(bool value);
+        void Set_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output(bool value);
     };
 }
