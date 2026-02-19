@@ -130,13 +130,21 @@
     {
         return _flag_isLoaded_Stack_OutputSend;
     }
+    __int8 OpenAvril::Data_Control::Get_STATE_Of_READ_For_list_Of_doubleBuffer_Input()
+    {
+        return BoolToInt(!_side_To_Write_For_list_Of_doubleBuffer_Input);
+    }
+    __int8 OpenAvril::Data_Control::Get_STATE_Of_READ_For_list_Of_doubleBuffer_Output()
+    {
+        return BoolToInt(!_side_To_Write_For_list_Of_doubleBuffer_Output);;
+    }
     __int8 OpenAvril::Data_Control::Get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input()
     {
         return BoolToInt(_side_To_Write_For_list_Of_doubleBuffer_Input);
     }
     __int8 OpenAvril::Data_Control::Get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output()
     {
-        return BoolToInt(_side_To_Write_For_list_Of_doubleBuffer_Input);
+        return BoolToInt(_side_To_Write_For_list_Of_doubleBuffer_Output);
     }
     // set.
     void OpenAvril::Data_Control::Set_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input(bool value)

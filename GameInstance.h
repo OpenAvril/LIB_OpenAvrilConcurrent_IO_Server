@@ -4,17 +4,33 @@ namespace OpenAvril
 {
     class GameInstance
     {
+// classes.
+
+// registers.
+
+// pointers.
+
     public:
+// constructor.
         GameInstance();
+
+// destructor.
         virtual ~GameInstance();
-
-        class Player* Get_player(__int8 playerId);
-        class Settings* Get_settings();
-
-    protected:
+        
+// public.
+    // get.
+        class Settings* Get_ptr_Settings();
+        class OpenAvril::Player* Get_Item_On_ptr_vector_Of_player(__int8 playerId);
+    // set.
 
     private:
-        static void Set_player(class Player* player);
-        static void Set_settings(class Settings* settings);
+// private.
+        void Create_ptr_Settings();
+        void Create_ptr_vector_Of_player();
+        void Create_vector_Of_player();
+    // get.
+        std::vector<class OpenAvril::Player*>* Get_ptr_vector_Of_player();
+    // set.
+        static void Set_ptr_Settings(class Settings* settings);
     };
 }

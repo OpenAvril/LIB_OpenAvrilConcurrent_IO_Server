@@ -27,6 +27,8 @@ namespace OpenAvril
     // get.
         bool Get_flag_isLoaded_Stack_InputAction();
         bool Get_flag_isLoaded_Stack_OutputSend();
+        __int8 Get_STATE_Of_READ_For_list_Of_doubleBuffer_Input();
+        __int8 Get_STATE_Of_READ_For_list_Of_doubleBuffer_Output();
         __int8 Get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input();
         __int8 Get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output();
     // set.

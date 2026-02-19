@@ -22,8 +22,11 @@
 // desructor.
     OpenAvril::Execute::~Execute()
 {
-    delete ptr_Execute_Control;
+    delete _ptr_Execute_Control;
     delete _ptr_list_Of_Threads;
+    delete _program_ConcurrentQue_Server;
+    delete _program_WriteEnableStack_ServerInputAction;
+    delete _program_WriteEnableStack_ServerOutputRecieve;
 }
 
 // public.
