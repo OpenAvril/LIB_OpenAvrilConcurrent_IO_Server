@@ -82,7 +82,7 @@
         std::advance(temp, Get_ptr_Data_Control()->Get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output());
         return *temp;
     }
-    OpenAvril::Data_Control* OpenAvril::Data::Get_ptr_Data_Control()
+    class OpenAvril::Data_Control* OpenAvril::Data::Get_ptr_Data_Control()
     {
         return _ptr_Data_Control;
     }
