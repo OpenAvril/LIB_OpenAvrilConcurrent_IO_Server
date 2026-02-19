@@ -34,8 +34,8 @@
     }
     void OpenAvril::Data_Control::Pop_From_Stack_Of_Input(OpenAvril::Data* data, __int8 concurrentThreadID)
     {
-        class OpenAvril::Input* referenceForCore = data->Get_Item_Of_list_Of_buffer_Input_ReferenceForThread(concurrentThreadID);
-        class OpenAvril::Input* inputSlot = data->Get_Item_On_vector_Of_stack_Of_InputPraise(1);
+        class OpenAvril::Input* referenceForCore = data->Get_ptr_Item_Of_list_Of_buffer_Input_ReferenceForThread(concurrentThreadID);
+        class OpenAvril::Input* inputSlot = data->Get_ptr_Item_On_vector_Of_stack_Of_InputPraise(1);
         referenceForCore = inputSlot;
         data->Get_ptr_vector_Of_stack_Of_InputPraise()->erase(data->Get_ptr_vector_Of_stack_Of_InputPraise()->begin() + 1);
         if (sizeof(data->Get_ptr_vector_Of_stack_Of_InputPraise()) < 2)
@@ -49,7 +49,7 @@
     }
     void OpenAvril::Data_Control::Pop_From_Stack_Of_Output(OpenAvril::Data* data)
     {
-        class OpenAvril::Output* distributeBuffer = data->Get_doubleBuffer_Output_BACK();
+        class OpenAvril::Output* distributeBuffer = data->Get_doubleBuffer_Output_READ();
         class OpenAvril::Output* outputSlot = data->Get_Item_On_vector_Of_stack_Of_OutputPraise(1);
         distributeBuffer = outputSlot;
         data->Get_ptr_vector_Of_stack_Of_OutputPraise()->erase(data->Get_ptr_vector_Of_stack_Of_OutputPraise()->begin() + 1);
@@ -64,7 +64,7 @@
     }
     void OpenAvril::Data_Control::Push_To_Stack_Of_Input(OpenAvril::Data* data)
     {
-        class OpenAvril::Input* inputBuffer = data->Get_doubleBuffer_Input_BACK();
+        class OpenAvril::Input* inputBuffer = data->Get_doubleBuffer_Input_READ();
         std::vector<class OpenAvril::Input*>* inputStackt = data->Get_ptr_vector_Of_stack_Of_InputPraise();
         inputStackt->push_back(inputBuffer);
         if (sizeof(inputStackt) < 2)
@@ -78,7 +78,7 @@
     }
     void OpenAvril::Data_Control::Push_To_Stack_Of_Output(OpenAvril::Data* data, __int8 concurrentThreadID)
     {
-        class OpenAvril::Output* referenceForCore = data->Get_Item_Of_list_Of_buffer_Output_ReferenceForThread(concurrentThreadID);
+        class OpenAvril::Output* referenceForCore = data->Get_ptr_Item_Of_list_Of_buffer_Output_ReferenceForThread(concurrentThreadID);
         std::vector<class OpenAvril::Output*>* outputStack = data->Get_ptr_vector_Of_stack_Of_OutputPraise();
         outputStack->push_back(referenceForCore);
         if (sizeof(outputStack) < 2)

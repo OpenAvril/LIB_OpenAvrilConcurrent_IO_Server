@@ -8,7 +8,7 @@ namespace OpenAvril
         Concurrent();
         virtual ~Concurrent();
         void Initialise_Control();
-        class Concurrent_Control* Get_Item_On_list_Of_ptr_Concurrent_Control();
+        class Concurrent_Control* Get_ptr_Item_On_list_Of_ptr_Concurrent_Control();
 
         static void Thread_Concurrency(class OpenAvril::Framework_Server* obj, __int8 concurrent_coreId);
         void Do_Concurrent_Algorithm_For_PraiseEventId(class OpenAvril::Framework_Server* obj, char playerId, __int8 ptr_praiseEventId, class Object* ptr_Algorithm_Subset, class Object* ptr_Input_Subset, class Object* ptr_Output_Subset);

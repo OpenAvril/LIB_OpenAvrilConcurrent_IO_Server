@@ -14,19 +14,19 @@ void OpenAvril::Input_Control::SelectSet_Input_Subset(OpenAvril::Framework_Serve
     switch (praiseEventId)
     {
     case 0:
-        obj->Get_ptr_Server()->Get_ptr_Data()->Get_doubleBuffer_Input_FRONT()->Set_Subset_InputBuffer(
+        obj->Get_ptr_Server()->Get_ptr_Data()->Get_doubleBuffer_Input_WRITE()->Set_Subset_InputBuffer(
             obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_User_I()->Get_Praise0_Input()
         );
         break;
 
     case 1:
-        obj->Get_ptr_Server()->Get_ptr_Data()->Get_doubleBuffer_Input_FRONT()->Set_Subset_InputBuffer(
+        obj->Get_ptr_Server()->Get_ptr_Data()->Get_doubleBuffer_Input_WRITE()->Set_Subset_InputBuffer(
             obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_User_I()->Get_Praise1_Input()
         );
         break;
 
     case 2:
-        obj->Get_ptr_Server()->Get_ptr_Data()->Get_doubleBuffer_Input_FRONT()->Set_Subset_InputBuffer(
+        obj->Get_ptr_Server()->Get_ptr_Data()->Get_doubleBuffer_Input_WRITE()->Set_Subset_InputBuffer(
             obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_User_I()->Get_Praise2_Input()
         );
         break;

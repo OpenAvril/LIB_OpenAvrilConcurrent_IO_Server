@@ -14,19 +14,19 @@ void OpenAvril::Output_Control::SelectSet_Output_Subset(OpenAvril::Framework_Ser
 	switch (ptr_praiseEventId)
 	{
 	case 0:
-		obj->Get_ptr_Server()->Get_ptr_Data()->Get_Item_Of_list_Of_buffer_Output_ReferenceForThread(concurrent_coreId)->Set_OutputBuffer_Subset(
+		obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Item_Of_list_Of_buffer_Output_ReferenceForThread(concurrent_coreId)->Set_OutputBuffer_Subset(
 			obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_User_O()->Get_Praise0_Output()
 		);
 		break;
 
 	case 1:
-		obj->Get_ptr_Server()->Get_ptr_Data()->Get_Item_Of_list_Of_buffer_Output_ReferenceForThread(concurrent_coreId)->Set_OutputBuffer_Subset(
+		obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Item_Of_list_Of_buffer_Output_ReferenceForThread(concurrent_coreId)->Set_OutputBuffer_Subset(
 			obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_User_O()->Get_Praise1_Output()
 		);
 		break;
 
 	case 2:
-		obj->Get_ptr_Server()->Get_ptr_Data()->Get_Item_Of_list_Of_buffer_Output_ReferenceForThread(concurrent_coreId)->Set_OutputBuffer_Subset(
+		obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Item_Of_list_Of_buffer_Output_ReferenceForThread(concurrent_coreId)->Set_OutputBuffer_Subset(
 			obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_User_O()->Get_Praise2_Output()
 		);
 		break;
