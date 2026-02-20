@@ -16,17 +16,17 @@ namespace OpenAvril
         virtual ~Framework_Server();
 
 // public.
-        void Initialise_Program(Framework_Server* obj);
+        void initialise_Program(Framework_Server* obj);
     // get.
-        class Server* Get_ptr_Server();
+        class Server* get_ptr_Server();
     // set.
 
     private:
 // private.
-        void Create_ptr_Server();
+        void create_ptr_Server();
     // get.
     // set.
-        void Set_ptr_Server(Server* server);
+        void set_ptr_Server(Server* server);
     };
 }
 

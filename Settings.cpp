@@ -19,44 +19,44 @@ OpenAvril::Settings::~Settings()
 {
 }
 
-float OpenAvril::Settings::Get_fov()
+float OpenAvril::Settings::get_fov()
 {
 	return _fov;
 }
-int OpenAvril::Settings::Get_refreshRate()
+int OpenAvril::Settings::get_refreshRate()
 {
 	return _refreshRate;
 }
-bool OpenAvril::Settings::Get_systemInitialised()
+bool OpenAvril::Settings::get_systemInitialised()
 {
 	return _systemInitialised;
 }
-float OpenAvril::Settings::Get_screenSize_X()
+float OpenAvril::Settings::get_screenSize_X()
 {
 	return _screenSize_X;
 }
-float OpenAvril::Settings::Get_screenSize_Y()
+float OpenAvril::Settings::get_screenSize_Y()
 {
 	return _screenSize_Y;
 }
 
-void OpenAvril::Settings::Set_fov(float fov)
+void OpenAvril::Settings::set_fov(float fov)
 {
 	_fov = fov;
 }
-void OpenAvril::Settings::Set_refreshRate(int refreshRate)
+void OpenAvril::Settings::set_refreshRate(int refreshRate)
 {
 	_refreshRate = refreshRate;
 }
-void OpenAvril::Settings::Set_systemInitialised(bool isSystemInitialised)
+void OpenAvril::Settings::set_systemInitialised(bool isSystemInitialised)
 {
 	_systemInitialised = isSystemInitialised;
 }
-void OpenAvril::Settings::Set_screenSize_X(float screenSize_X)
+void OpenAvril::Settings::set_screenSize_X(float screenSize_X)
 {
 	_screenSize_X = screenSize_X;
 }
-void OpenAvril::Settings::Set_screenSize_Y(float screenSize_Y)
+void OpenAvril::Settings::set_screenSize_Y(float screenSize_Y)
 {
 	_screenSize_Y = screenSize_Y;
 }

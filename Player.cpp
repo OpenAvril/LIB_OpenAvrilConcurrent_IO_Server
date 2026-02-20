@@ -15,7 +15,7 @@ Eigen::Vector3d _player_up;
 
 OpenAvril::Player::Player()
 {
-	Set_camera_FP(new class OpenAvril::FirstPersonCamera());
+	set_camera_FP(new class OpenAvril::FirstPersonCamera());
 
 	_isFirstMove = true;
 	_isFirstMouseMove = false;
@@ -32,109 +32,109 @@ OpenAvril::Player::~Player()
 {
 }
 
-OpenAvril::FirstPersonCamera* OpenAvril::Player::Get_camera_FP()
+OpenAvril::FirstPersonCamera* OpenAvril::Player::get_camera_FP()
 {
 	return _camera_FP;
 }
 
-bool OpenAvril::Player::Get_isFirstMove()
+bool OpenAvril::Player::get_isFirstMove()
 {
 	return _isFirstMove;
 }
-bool OpenAvril::Player::Get_isFirstMouseMove()
+bool OpenAvril::Player::get_isFirstMouseMove()
 {
 	return _isFirstMouseMove;
 }
-bool OpenAvril::Player::Get_cameraSelector()
+bool OpenAvril::Player::get_cameraSelector()
 {
 	return _cameraSelector;
 }
-float OpenAvril::Player::Get_cameraSpeed()
+float OpenAvril::Player::get_cameraSpeed()
 {
 	return _cameraSpeed;
 }
-float OpenAvril::Player::Get_sensitivity()
+float OpenAvril::Player::get_sensitivity()
 {
 	return _sensitivity;
 }
-std::vector<float> OpenAvril::Player::Get_player_Position()
+std::vector<float> OpenAvril::Player::get_player_Position()
 {
 	return _player_Position;
 }
-std::vector<float> OpenAvril::Player::Get_mouse_Position()
+std::vector<float> OpenAvril::Player::get_mouse_Position()
 {
 	return _player_mouse_Position;
 }
 
-Eigen::Vector3d OpenAvril::Player::Get_Front()
+Eigen::Vector3d OpenAvril::Player::get_Front()
 {
 	return _player_front;
 }
-Eigen::Vector3d OpenAvril::Player::Get_Right()
+Eigen::Vector3d OpenAvril::Player::get_Right()
 {
 	return _player_right;
 }
-Eigen::Vector3d OpenAvril::Player::Get_Up()
+Eigen::Vector3d OpenAvril::Player::get_Up()
 {
 	return _player_up;
 }
 
-void OpenAvril::Player::Set_camera_FP(OpenAvril::FirstPersonCamera* camera)
+void OpenAvril::Player::set_camera_FP(OpenAvril::FirstPersonCamera* camera)
 {
 	_camera_FP = camera;
 }
-void OpenAvril::Player::Set_isFirstMove(bool value)
+void OpenAvril::Player::set_isFirstMove(bool value)
 {
 	_isFirstMove = value;
 }
 
-void OpenAvril::Player::Set_isFirstMouseMove(bool value)
+void OpenAvril::Player::set_isFirstMouseMove(bool value)
 {
 	_isFirstMouseMove = value;
 }
 
-void OpenAvril::Player::Set_cameraSpeed(float cameraSpeed)
+void OpenAvril::Player::set_cameraSpeed(float cameraSpeed)
 {
 	_cameraSpeed = cameraSpeed;
 }
 
-void OpenAvril::Player::Set_sensitivity(float sensitivity)
+void OpenAvril::Player::set_sensitivity(float sensitivity)
 {
 	_sensitivity = sensitivity;
 }
 
-void OpenAvril::Player::Set_player_Position_X(float position_X)
+void OpenAvril::Player::set_player_Position_X(float position_X)
 {
 	_player_Position.at(0) = position_X;
 }
-void OpenAvril::Player::Set_player_Position_Y(float position_Y)
+void OpenAvril::Player::set_player_Position_Y(float position_Y)
 {
 	_player_Position.at(1) = position_Y;
 }
-void OpenAvril::Player::Set_player_Position_Z(float position_Z)
+void OpenAvril::Player::set_player_Position_Z(float position_Z)
 {
 	_player_Position.at(2) = position_Z;
 }
-void OpenAvril::Player::Set_mouse_Position_X(float position_X)
+void OpenAvril::Player::set_mouse_Position_X(float position_X)
 {
 	_player_mouse_Position.at(0) = position_X;
 }
-void OpenAvril::Player::Set_mouse_Position_Y(float position_Y)
+void OpenAvril::Player::set_mouse_Position_Y(float position_Y)
 {
 	_player_mouse_Position.at(1) = position_Y;
 }
 
-void OpenAvril::Player::Set_front(Eigen::Vector3d front)
+void OpenAvril::Player::set_front(Eigen::Vector3d front)
 {
 	_player_front = front;
 }
 
-void OpenAvril::Player::Set_right(Eigen::Vector3d right)
+void OpenAvril::Player::set_right(Eigen::Vector3d right)
 {
 	_player_right = right;
 }
 
-void OpenAvril::Player::Set_up(Eigen::Vector3d up)
+void OpenAvril::Player::set_up(Eigen::Vector3d up)
 {
 	_player_up = up;
 }

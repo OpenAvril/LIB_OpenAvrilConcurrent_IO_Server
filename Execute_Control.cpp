@@ -17,7 +17,7 @@ OpenAvril::Execute_Control::~Execute_Control()
 bool OpenAvril::Execute_Control::GetFlag_SystemInitialised(OpenAvril::Framework_Server* obj)
 {
 	flag_SystemInitialised = false;
-	for (int index = 0; index < obj->Get_ptr_Server()->Get_ptr_Global()->Get_number_Of_Implemented_Cores(); index++)
+	for (int index = 0; index < obj->get_ptr_Server()->get_ptr_Global()->get_number_Of_Implemented_Cores(); index++)
 	{
 		if (flag_ThreadInitialised[index] == true)
 		{

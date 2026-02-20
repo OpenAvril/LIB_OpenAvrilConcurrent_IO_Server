@@ -12,8 +12,8 @@
 // constructor.
 	OpenAvril::GameInstance::GameInstance()
 	{
-		Create_ptr_Settings();
-		Create_vector_Of_player();
+		create_ptr_Settings();
+		create_vector_Of_player();
 	}
 
 // destructor.
@@ -25,48 +25,48 @@
 
 // public.
 	// get.
-	OpenAvril::Settings* OpenAvril::GameInstance::Get_ptr_Settings()
+	OpenAvril::Settings* OpenAvril::GameInstance::get_ptr_Settings()
 {
 	return _ptr_Settings;
 }
-	class OpenAvril::Player* OpenAvril::GameInstance::Get_Item_On_ptr_vector_Of_player(__int8 playerId)
+	class OpenAvril::Player* OpenAvril::GameInstance::get_Item_On_ptr_vector_Of_player(__int8 playerId)
 {
-	auto temp = Get_ptr_vector_Of_player()->begin();
+	auto temp = get_ptr_vector_Of_player()->begin();
 	std::advance(temp, playerId);
 	return *temp;
 }
 	// set.
 
 // private.
-	void OpenAvril::GameInstance::Create_ptr_Settings()
+	void OpenAvril::GameInstance::create_ptr_Settings()
 {
-	Set_settings(new class OpenAvril::Settings());
-	while (Get_settings() == NULL) {}
+	set_settings(new class OpenAvril::Settings());
+	while (get_settings() == NULL) {}
 }
-	void OpenAvril::GameInstance::Create_ptr_vector_Of_player()
+	void OpenAvril::GameInstance::create_ptr_vector_Of_player()
 {
 	_ptr_vector_Of_player = &_vector_Of_player;
 }
-	void OpenAvril::GameInstance::Create_vector_Of_player()
+	void OpenAvril::GameInstance::create_vector_Of_player()
 {
 	std::vector<class OpenAvril::Player*> _vector_Of_player = { NULL, NULL };
 	OpenAvril::Player* newTemp = new class OpenAvril::Player();
 	while (newTemp == NULL) {}
 	std::vector<class OpenAvril::Player*> _vector_Of_stack_Of_InputPraise = { newTemp, newTemp };
-	Create_ptr_vector_Of_player();
-	for (__int8 index = 0; index < sizeof(Get_ptr_vector_Of_player()); index++)
+	create_ptr_vector_Of_player();
+	for (__int8 index = 0; index < sizeof(get_ptr_vector_Of_player()); index++)
 	{
-		while (Get_Item_On_ptr_vector_Of_player(index) == NULL) {}
+		while (get_Item_On_ptr_vector_Of_player(index) == NULL) {}
 	}
 	delete newTemp;
 }
 	// get.
-	std::vector<class OpenAvril::Player*>* OpenAvril::GameInstance::Get_ptr_vector_Of_player()
+	std::vector<class OpenAvril::Player*>* OpenAvril::GameInstance::get_ptr_vector_Of_player()
 {
 	return _ptr_vector_Of_player;
 }
 	// set.
-	void OpenAvril::GameInstance::Set_ptr_Settings(class OpenAvril::Settings* settings)
+	void OpenAvril::GameInstance::set_ptr_Settings(class OpenAvril::Settings* settings)
 {
 	_ptr_Settings = settings;
 }

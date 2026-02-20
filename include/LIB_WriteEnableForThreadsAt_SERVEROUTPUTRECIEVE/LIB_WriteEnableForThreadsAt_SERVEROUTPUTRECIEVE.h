@@ -9,12 +9,12 @@ namespace OpenAvril
 	class LIBWRITEENABLEFORTHREADSATSERVEROUTPUTRECIEVE_API Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE {
 	public:
 		Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE();
-		static void* Initialise_WriteEnable();
+		static void* initialise_WriteEnable();
 		static void Write_End(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, unsigned char coreId);
 		static void Write_Start(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, unsigned char coreId);
 
 	private:
-		static class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* Get_Framework_WriteEnable();
-		static void Set_writeEnable(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* writeEnable);
+		static class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* get_Framework_WriteEnable();
+		static void set_writeEnable(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* writeEnable);
 	};
 }

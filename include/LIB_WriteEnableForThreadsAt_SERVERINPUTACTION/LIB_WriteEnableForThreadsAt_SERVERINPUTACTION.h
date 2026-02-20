@@ -18,13 +18,13 @@ namespace OpenAvril
 	public:
 		CLIBWriteEnableForThreadsAtSERVERINPUTACTION(void);
 		// TODO: add your methods here.
-		static void* Initialise_WriteEnable();
+		static void* initialise_WriteEnable();
 		static void Write_End(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, unsigned char coreId);
 		static void Write_Start(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, unsigned char coreId);
 
 	private:
-		static class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* Get_Framework_WriteEnable();
-		static void Set_writeEnable(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* writeEnable);
+		static class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* get_Framework_WriteEnable();
+		static void set_writeEnable(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* writeEnable);
 	};
 }
 

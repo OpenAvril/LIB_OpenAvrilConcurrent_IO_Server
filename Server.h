@@ -16,24 +16,24 @@ namespace OpenAvril
         virtual ~Server();
 
 // public.
-		void Create_ptr_Algorithms();
-		void Create_ptr_Data();
-		void Create_ptr_Execute();
-		void Create_ptr_Global();
+		void create_ptr_Algorithms();
+		void create_ptr_Data();
+		void create_ptr_Execute();
+		void create_ptr_Global();
     // get.
-        class Algorithms* Get_ptr_Algorithms();
-        class Data* Get_ptr_Data();
-        class Execute* Get_ptr_Execute();
-        class Global* Get_ptr_Global();
+        class Algorithms* get_ptr_Algorithms();
+        class Data* get_ptr_Data();
+        class Execute* get_ptr_Execute();
+        class Global* get_ptr_Global();
     // set.
 
     private:
 // private.
     // get.
     // set.
-        void Set_ptr_Algorithms(class Algorithms* algorithms);
-        void Set_ptr_Data(class Data* data);
-        void Set_ptr_Execute(class Execute* execute);
-        void Set_ptr_Global(class Global* global);
+        void set_ptr_Algorithms(class Algorithms* algorithms);
+        void set_ptr_Data(class Data* data);
+        void set_ptr_Execute(class Execute* execute);
+        void set_ptr_Global(class Global* global);
     };
 }

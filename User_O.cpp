@@ -11,9 +11,9 @@
 // constructor.
 	OpenAvril::User_O::User_O()
 	{
-		Create_Praise0_Output();
-		Create_Praise1_Output();
-		Create_Praise2_Output();
+		create_Praise0_Output();
+		create_Praise1_Output();
+		create_Praise2_Output();
 	}
 
 // destructor.
@@ -26,47 +26,47 @@
 
 // public.
 	// get.
-	class OpenAvril::Praise0_Output* OpenAvril::User_O::Get_Praise0_Output()
+	class OpenAvril::Praise0_Output* OpenAvril::User_O::get_Praise0_Output()
 	{
 		return ptr_Praise0_Output;
 	}
-	class OpenAvril::Praise1_Output* OpenAvril::User_O::Get_Praise1_Output()
+	class OpenAvril::Praise1_Output* OpenAvril::User_O::get_Praise1_Output()
 	{
 		return ptr_Praise1_Output;
 	}
-	class OpenAvril::Praise2_Output* OpenAvril::User_O::Get_Praise2_Output()
+	class OpenAvril::Praise2_Output* OpenAvril::User_O::get_Praise2_Output()
 	{
 		return ptr_Praise2_Output;
 	}
 	// set.
 
 // private.
-	void OpenAvril::User_O::Create_Praise0_Output()
+	void OpenAvril::User_O::create_Praise0_Output()
 	{
-		Set_Praise0_Output(new class OpenAvril::Praise0_Output());
-		while (Get_Praise0_Output() == NULL) {}
+		set_Praise0_Output(new class OpenAvril::Praise0_Output());
+		while (get_Praise0_Output() == NULL) {}
 	}
-	void OpenAvril::User_O::Create_Praise1_Output()
+	void OpenAvril::User_O::create_Praise1_Output()
 	{
-		Set_Praise1_Output(new class OpenAvril::Praise1_Output());
-		while (Get_Praise1_Output() == NULL) {}
+		set_Praise1_Output(new class OpenAvril::Praise1_Output());
+		while (get_Praise1_Output() == NULL) {}
 	}
-	void OpenAvril::User_O::Create_Praise2_Output()
+	void OpenAvril::User_O::create_Praise2_Output()
 	{
-		Set_Praise2_Output(new class OpenAvril::Praise2_Output());
-		while (Get_Praise2_Output() == NULL) {}
+		set_Praise2_Output(new class OpenAvril::Praise2_Output());
+		while (get_Praise2_Output() == NULL) {}
 	}
 	// get.
 	// set.
-	void OpenAvril::User_O::Set_Praise0_Output(OpenAvril::Praise0_Output* praise0_O)
+	void OpenAvril::User_O::set_Praise0_Output(OpenAvril::Praise0_Output* praise0_O)
 	{
 		ptr_Praise0_Output = praise0_O;
 	}
-	void OpenAvril::User_O::Set_Praise1_Output(OpenAvril::Praise1_Output* praise1_O)
+	void OpenAvril::User_O::set_Praise1_Output(OpenAvril::Praise1_Output* praise1_O)
 	{
 		ptr_Praise1_Output = praise1_O;
 	}
-	void OpenAvril::User_O::Set_Praise2_Output(OpenAvril::Praise2_Output* praise2_O)
+	void OpenAvril::User_O::set_Praise2_Output(OpenAvril::Praise2_Output* praise2_O)
 	{
 		ptr_Praise2_Output = praise2_O;
 }

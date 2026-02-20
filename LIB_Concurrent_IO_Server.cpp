@@ -22,90 +22,90 @@ bool _Praise0_Output_IsPingActive;
 // Praise 1 Data
 
 
-void* OpenAvril::CLIBServerIOConcurrnecy::Initialise_Server_Concurrency()
+void* OpenAvril::CLIBServerIOConcurrnecy::initialise_Server_Concurrency()
 {
     _Server_Assembly = new class OpenAvril::Framework_Server();
     while (_Server_Assembly == NULL) {}
     return (void*)_Server_Assembly;
 }
-void OpenAvril::CLIBServerIOConcurrnecy::Initalise_Programs(OpenAvril::Framework_Server* obj)
+void OpenAvril::CLIBServerIOConcurrnecy::initalise_Programs(OpenAvril::Framework_Server* obj)
 {
-    obj->Initialise_Program(obj);
+    obj->initialise_Program(obj);
 }
-void OpenAvril::CLIBServerIOConcurrnecy::Flip_InBufferToWrite(OpenAvril::Framework_Server* obj)
+void OpenAvril::CLIBServerIOConcurrnecy::flip_InBufferToWrite(OpenAvril::Framework_Server* obj)
 {
-    obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Data_Control()->Flip_Input_DoubleBuffer();
-}
-
-void OpenAvril::CLIBServerIOConcurrnecy::Flip_OutBufferToWrite(OpenAvril::Framework_Server* obj)
-{
-    obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Data_Control()->Flip_Output_DoubleBuffer();
+    obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->flip_Input_DoubleBuffer();
 }
 
-bool OpenAvril::CLIBServerIOConcurrnecy::Get_flag_isStackLoaded_Server_InputAction(class OpenAvril::Framework_Server* obj)
+void OpenAvril::CLIBServerIOConcurrnecy::flip_OutBufferToWrite(OpenAvril::Framework_Server* obj)
 {
-    _flag_IsStackLoaded_Server_InputAction = obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Data_Control()->Get_flag_isLoaded_Stack_InputAction();
+    obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->flip_Output_DoubleBuffer();
+}
+
+bool OpenAvril::CLIBServerIOConcurrnecy::get_flag_isStackLoaded_Server_InputAction(class OpenAvril::Framework_Server* obj)
+{
+    _flag_IsStackLoaded_Server_InputAction = obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->get_flag_isLoaded_Stack_InputAction();
     return _flag_IsStackLoaded_Server_InputAction;
 }
-bool OpenAvril::CLIBServerIOConcurrnecy::Get_flag_isLoaded_Stack_OutputSend(class OpenAvril::Framework_Server* obj)
+bool OpenAvril::CLIBServerIOConcurrnecy::get_flag_isLoaded_Stack_OutputSend(class OpenAvril::Framework_Server* obj)
 {
-    _flag_IsStackLoaded_Server_OutputRecieve = obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Data_Control()->Get_flag_isLoaded_Stack_OutputSend();
+    _flag_IsStackLoaded_Server_OutputRecieve = obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->get_flag_isLoaded_Stack_OutputSend();
     return _flag_IsStackLoaded_Server_OutputRecieve;
 }
-bool OpenAvril::CLIBServerIOConcurrnecy::Get_flag_IsInitialised_Avril_FSD_ServerConcurrency(class OpenAvril::Framework_Server* obj)
+bool OpenAvril::CLIBServerIOConcurrnecy::get_flag_IsInitialised_OpenAvrilConcurrency(class OpenAvril::Framework_Server* obj)
 {
-    _flag_IsInitialised_Avril_FSD_ServerAssembly = obj->Get_ptr_Server()->Get_ptr_Execute()->Get_ptr_Execute_Control()->GetFlag_SystemInitialised(obj);
+    _flag_IsInitialised_Avril_FSD_ServerAssembly = obj->get_ptr_Server()->get_ptr_Execute()->get_ptr_Execute_Control()->GetFlag_SystemInitialised(obj);
     return _flag_IsInitialised_Avril_FSD_ServerAssembly;
 }
-void* OpenAvril::CLIBServerIOConcurrnecy::Get_program_WriteEnableStack_ServerInputAction()
+void* OpenAvril::CLIBServerIOConcurrnecy::get_program_WriteEnableStack_ServerInputAction()
 {
     return (void*)programHandleId_WriteEnalbe_ServerInputAction;
 }
-void* OpenAvril::CLIBServerIOConcurrnecy::Get_program_WriteEnableStack_ServerOutputRecieve()
+void* OpenAvril::CLIBServerIOConcurrnecy::get_program_WriteEnableStack_ServerOutputRecieve()
 {
     return (void*)programHandleId_WriteEnalbe_ServerOutputRecieve;
 }
-void OpenAvril::CLIBServerIOConcurrnecy::Pop_From_Stack_Of_Output(class OpenAvril::Framework_Server* obj)
+void OpenAvril::CLIBServerIOConcurrnecy::pop_From_Stack_Of_Output(class OpenAvril::Framework_Server* obj)
 {
-    obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Data_Control()->Pop_From_Stack_Of_Output(obj->Get_ptr_Server()->Get_ptr_Data());
+    obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->pop_From_Stack_Of_Output(obj->get_ptr_Server()->get_ptr_Data());
 }
-void OpenAvril::CLIBServerIOConcurrnecy::Push_To_Stack_Of_Input(class OpenAvril::Framework_Server* obj)
+void OpenAvril::CLIBServerIOConcurrnecy::push_To_Stack_Of_Input(class OpenAvril::Framework_Server* obj)
 {
-    obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_Data_Control()->Push_To_Stack_Of_Input(obj->Get_ptr_Server()->Get_ptr_Data());
-}
-
-void OpenAvril::CLIBServerIOConcurrnecy::Select_Set_Intput_Subset(class OpenAvril::Framework_Server* obj, __int8 praiseEventId)
-{
-    obj->Get_ptr_Server()->Get_ptr_Data()->Get_doubleBuffer_Input_WRITE()->Get_Input_Control()->SelectSet_Input_Subset(obj, praiseEventId);
+    obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->push_To_Stack_Of_Input(obj->get_ptr_Server()->get_ptr_Data());
 }
 
-__int8 OpenAvril::CLIBServerIOConcurrnecy::Get_PraiseEventId(class OpenAvril::Framework_Server* obj)
+void OpenAvril::CLIBServerIOConcurrnecy::select_set_Intput_Subset(class OpenAvril::Framework_Server* obj, __int8 praiseEventId)
 {
-    _PraiseEventId = obj->Get_ptr_Server()->Get_ptr_Data()->Get_doubleBuffer_Output_WRITE()->Get_out_praiseEventId();
+    obj->get_ptr_Server()->get_ptr_Data()->get_doubleBuffer_Input_WRITE()->get_Input_Control()->Selectset_Input_Subset(obj, praiseEventId);
+}
+
+__int8 OpenAvril::CLIBServerIOConcurrnecy::get_PraiseEventId(class OpenAvril::Framework_Server* obj)
+{
+    _PraiseEventId = obj->get_ptr_Server()->get_ptr_Data()->get_doubleBuffer_Output_WRITE()->get_out_praiseEventId();
     return _PraiseEventId;
 }
-void OpenAvril::CLIBServerIOConcurrnecy::Set_PraiseEventId(class OpenAvril::Framework_Server* obj, __int8 value)
+void OpenAvril::CLIBServerIOConcurrnecy::set_PraiseEventId(class OpenAvril::Framework_Server* obj, __int8 value)
 {
-    obj->Get_ptr_Server()->Get_ptr_Data()->Get_doubleBuffer_Input_WRITE()->Set_in_praiseEventId(value);
+    obj->get_ptr_Server()->get_ptr_Data()->get_doubleBuffer_Input_WRITE()->set_in_praiseEventId(value);
 }
 //
-bool OpenAvril::CLIBServerIOConcurrnecy::Get_Praise0_Input_IsPingActive(class OpenAvril::Framework_Server* obj)
+bool OpenAvril::CLIBServerIOConcurrnecy::get_Praise0_Input_IsPingActive(class OpenAvril::Framework_Server* obj)
 {
-    _Praise0_Input_IsPingActive = obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_User_I()->Get_Praise0_Input()->Get_ping_Active();
+    _Praise0_Input_IsPingActive = obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_I()->get_Praise0_Input()->get_ping_Active();
     return _Praise0_Input_IsPingActive;
 }
-void OpenAvril::CLIBServerIOConcurrnecy::Set_Praise0_Input_IsPingActive(class OpenAvril::Framework_Server* obj, bool value)
+void OpenAvril::CLIBServerIOConcurrnecy::set_Praise0_Input_IsPingActive(class OpenAvril::Framework_Server* obj, bool value)
 {
-    obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_User_I()->Get_Praise0_Input()->Set_ping_Active(value);
+    obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_I()->get_Praise0_Input()->set_ping_Active(value);
 }
-bool OpenAvril::CLIBServerIOConcurrnecy::Get_Praise0_Output_IsPingActive(class OpenAvril::Framework_Server* obj)
+bool OpenAvril::CLIBServerIOConcurrnecy::get_Praise0_Output_IsPingActive(class OpenAvril::Framework_Server* obj)
 {
-    _Praise0_Output_IsPingActive = obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_User_O()->Get_Praise0_Output()->Get_ping_Active();
+    _Praise0_Output_IsPingActive = obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_O()->get_Praise0_Output()->get_ping_Active();
     return _Praise0_Output_IsPingActive;
 }
-void OpenAvril::CLIBServerIOConcurrnecy::Set_Praise0_Output_IsPingActive(class OpenAvril::Framework_Server* obj, bool value)
+void OpenAvril::CLIBServerIOConcurrnecy::set_Praise0_Output_IsPingActive(class OpenAvril::Framework_Server* obj, bool value)
 {
-    obj->Get_ptr_Server()->Get_ptr_Data()->Get_ptr_User_O()->Get_Praise0_Output()->Set_ping_Active(value);
+    obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_O()->get_Praise0_Output()->set_ping_Active(value);
 }
 //
 

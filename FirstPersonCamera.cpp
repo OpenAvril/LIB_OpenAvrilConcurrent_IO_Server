@@ -21,26 +21,26 @@ OpenAvril::FirstPersonCamera::~FirstPersonCamera()
 
 void OpenAvril::FirstPersonCamera::Update_Pitch(float deltaDegY)
 {
-    Set_pitch(Get_pitch() + (float)((PI / 180) * deltaDegY));
-    if (Get_pitch() > (float)(PI / 180) * 85)
+    set_pitch(get_pitch() + (float)((PI / 180) * deltaDegY));
+    if (get_pitch() > (float)(PI / 180) * 85)
     {
-        Set_pitch((float)(PI / 180) * 85);
+        set_pitch((float)(PI / 180) * 85);
     }
-    if (Get_pitch() <= (PI / 180) * -85)
+    if (get_pitch() <= (PI / 180) * -85)
     {
-        Set_pitch((float)(PI / 180) * -85);
+        set_pitch((float)(PI / 180) * -85);
     }
 }
 void OpenAvril::FirstPersonCamera::Update_Yaw(float deltaDegX)
 {
-    Set_yaw(Get_yaw() + (float)((PI / 180) * deltaDegX));
-    if (Get_yaw() > (float)(PI / 180) * 180)
+    set_yaw(get_yaw() + (float)((PI / 180) * deltaDegX));
+    if (get_yaw() > (float)(PI / 180) * 180)
     {
-        Set_yaw(Get_yaw() - (float)(PI * 2));
+        set_yaw(get_yaw() - (float)(PI * 2));
     }
-    if (Get_yaw() <= (PI / 180) * -180)
+    if (get_yaw() <= (PI / 180) * -180)
     {
-        Set_yaw(Get_yaw() + (float)(PI * 2));
+        set_yaw(get_yaw() + (float)(PI * 2));
     }
 }
 void OpenAvril::FirstPersonCamera::UpdateVectors(float pitch, float yaw)
@@ -52,52 +52,52 @@ void OpenAvril::FirstPersonCamera::UpdateVectors(float pitch, float yaw)
     _camera_right = _camera_fowards.cross(_camera_up);
 }
 
-Eigen::Vector3d OpenAvril::FirstPersonCamera::Get_offset()
+Eigen::Vector3d OpenAvril::FirstPersonCamera::get_offset()
 {
 	return _offset;
 }
-float OpenAvril::FirstPersonCamera::Get_pitch()
+float OpenAvril::FirstPersonCamera::get_pitch()
 {
 	return _pitch;
 }
-float OpenAvril::FirstPersonCamera::Get_yaw()
+float OpenAvril::FirstPersonCamera::get_yaw()
 {
 	return _yaw;
 }
-Eigen::Vector3d OpenAvril::FirstPersonCamera::Get_fowards()
+Eigen::Vector3d OpenAvril::FirstPersonCamera::get_fowards()
 {
 	return _camera_fowards;
 }
-Eigen::Vector3d OpenAvril::FirstPersonCamera::Get_up()
+Eigen::Vector3d OpenAvril::FirstPersonCamera::get_up()
 {
 	return _camera_up;
 }
-Eigen::Vector3d OpenAvril::FirstPersonCamera::Get_right()
+Eigen::Vector3d OpenAvril::FirstPersonCamera::get_right()
 {
 	return _camera_right;
 }
 
-void OpenAvril::FirstPersonCamera::Set_offset(Eigen::Vector3d offset)
+void OpenAvril::FirstPersonCamera::set_offset(Eigen::Vector3d offset)
 {
 	_offset = offset;
 }
-void OpenAvril::FirstPersonCamera::Set_pitch(float pitch)
+void OpenAvril::FirstPersonCamera::set_pitch(float pitch)
 {
 	_pitch = pitch;
 }
-void OpenAvril::FirstPersonCamera::Set_yaw(float yaw)
+void OpenAvril::FirstPersonCamera::set_yaw(float yaw)
 {
 	_yaw = yaw;
 }
-void OpenAvril::FirstPersonCamera::Set_fowards(Eigen::Vector3d fowards)
+void OpenAvril::FirstPersonCamera::set_fowards(Eigen::Vector3d fowards)
 {
 	_camera_fowards = fowards;
 }
-void OpenAvril::FirstPersonCamera::Set_up(Eigen::Vector3d up)
+void OpenAvril::FirstPersonCamera::set_up(Eigen::Vector3d up)
 {
 	_camera_up = up;
 }
-void OpenAvril::FirstPersonCamera::Set_right(Eigen::Vector3d right)
+void OpenAvril::FirstPersonCamera::set_right(Eigen::Vector3d right)
 {
 	_camera_right = right;
 }

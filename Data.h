@@ -16,57 +16,57 @@ namespace OpenAvril
         virtual ~Data();
 
 // public.
-        void Initialise_Control(Data* data);
+        void initialise_Control(Data* data);
     // get.
-        class Input* Get_doubleBuffer_Input_READ();
-        class Input* Get_doubleBuffer_Input_WRITE();
-        class Output* Get_doubleBuffer_Output_READ();
-        class Output* Get_doubleBuffer_Output_WRITE();
-        class Data_Control* Get_ptr_Data_Control();
-        class Input* Get_ptr_Item_Of_list_Of_buffer_Input_ReferenceForThread(__int8 threadID);
-        class Output* Get_ptr_Item_Of_list_Of_buffer_Output_ReferenceForThread(__int8 threadID);
-        class Input* Get_ptr_Item_On_vector_Of_stack_Of_InputPraise(__int8 slot);
-        class Output* Get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(__int8 slot);
+        class Input* get_doubleBuffer_Input_READ();
+        class Input* get_doubleBuffer_Input_WRITE();
+        class Output* get_doubleBuffer_Output_READ();
+        class Output* get_doubleBuffer_Output_WRITE();
+        class Data_Control* get_ptr_Data_Control();
+        class Input* get_ptr_Item_Of_list_Of_buffer_Input_ReferenceForThread(__int8 threadID);
+        class Output* get_ptr_Item_Of_list_Of_buffer_Output_ReferenceForThread(__int8 threadID);
+        class Input* get_ptr_Item_On_vector_Of_stack_Of_InputPraise(__int8 slot);
+        class Output* get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(__int8 slot);
     // set.
  
 // private.
-        void Create_ptr_Data_Control();
-        void Create_ptr_GameInstance();
-        void Create_ptr_User_I();
-        void Create_ptr_User_O();
-        void Create_list_Of_buffer_Input_ReferenceForThread();
-        void Create_list_Of_buffer_Output_ReferenceForThread();
-        void Create_list_Of_doubleBuffer_Input();          
-        void Create_list_Of_doubleBuffer_Output();
-        void Create_vector_Of_stack_Of_InputPraise();
-        void Create_vector_Of_stack_Of_OutputPraise();
-        void Create_ptr_list_Of_buffer_Input_ReferenceForThread();
-        void Create_ptr_list_Of_buffer_Output_ReferenceForThread();
-        void Create_ptr_list_Of_doubleBuffer_Input();
-        void Create_ptr_list_Of_doubleBuffer_Output();
-        void Create_ptr_vector_Of_stack_Of_InputPraise();
-        void Create_ptr_vector_Of_stack_Of_OutputPraise();
+        void create_ptr_Data_Control();
+        void create_ptr_GameInstance();
+        void create_ptr_User_I();
+        void create_ptr_User_O();
+        void create_list_Of_buffer_Input_ReferenceForThread();
+        void create_list_Of_buffer_Output_ReferenceForThread();
+        void create_list_Of_doubleBuffer_Input();          
+        void create_list_Of_doubleBuffer_Output();
+        void create_vector_Of_stack_Of_InputPraise();
+        void create_vector_Of_stack_Of_OutputPraise();
+        void create_ptr_list_Of_buffer_Input_ReferenceForThread();
+        void create_ptr_list_Of_buffer_Output_ReferenceForThread();
+        void create_ptr_list_Of_doubleBuffer_Input();
+        void create_ptr_list_Of_doubleBuffer_Output();
+        void create_ptr_vector_Of_stack_Of_InputPraise();
+        void create_ptr_vector_Of_stack_Of_OutputPraise();
     // get.
 
-        class GameInstance* Get_ptr_GameInstance();
-        std::list<class Input*>* Get_ptr_list_Of_buffer_Input_ReferenceForThread();
-        std::list<class Output*>* Get_ptr_list_Of_buffer_Output_ReferenceForThread();
-        std::list<class Input*>* Get_ptr_list_Of_doubleBuffer_Input();
-        std::list<class Output*>* Get_ptr_list_Of_doubleBuffer_Output();
-        class User_I* Get_ptr_User_I();
-        class User_O* Get_ptr_User_O();
-        std::vector<class Input*>* Get_ptr_vector_Of_stack_Of_InputPraise();
-        std::vector<class Output*>* Get_ptr_vector_Of_stack_Of_OutputPraise();
+        class GameInstance* get_ptr_GameInstance();
+        std::list<class Input*>* get_ptr_list_Of_buffer_Input_ReferenceForThread();
+        std::list<class Output*>* get_ptr_list_Of_buffer_Output_ReferenceForThread();
+        std::list<class Input*>* get_ptr_list_Of_doubleBuffer_Input();
+        std::list<class Output*>* get_ptr_list_Of_doubleBuffer_Output();
+        class User_I* get_ptr_User_I();
+        class User_O* get_ptr_User_O();
+        std::vector<class Input*>* get_ptr_vector_Of_stack_Of_InputPraise();
+        std::vector<class Output*>* get_ptr_vector_Of_stack_Of_OutputPraise();
     // set.
-        void Set_ptr_Data_Control(class Data_Control* newClass);
-        void Set_ptr_GameInstance(class GameInstance* newClass);
-        void Set_ptr_list_Of_buffer_Input_ReferenceForThread(std::list<class Input*>* newListPtr);
-        void Set_ptr_list_Of_buffer_Output_ReferenceForThread(std::list<class Output*>* newListPtr);
-        void Set_ptr_list_Of_doubleBuffer_Input(std::list<class Input*>* newListPtr);
-        void Set_ptr_list_Of_doubleBuffer_Output(std::list<class Output*>* newListPtr);
-        void Set_ptr_User_I(class User_I* newClass);
-        void Set_ptr_User_O(class User_O* newClass);
-        void Set_ptr_vector_Of_stack_Of_InputPraise(std::vector<class Input*>* newStack);
-        void Set_ptr_vector_Of_stack_Of_OutputPraise(std::vector<class Output*>* newStack);
+        void set_ptr_Data_Control(class Data_Control* newClass);
+        void set_ptr_GameInstance(class GameInstance* newClass);
+        void set_ptr_list_Of_buffer_Input_ReferenceForThread(std::list<class Input*>* newListPtr);
+        void set_ptr_list_Of_buffer_Output_ReferenceForThread(std::list<class Output*>* newListPtr);
+        void set_ptr_list_Of_doubleBuffer_Input(std::list<class Input*>* newListPtr);
+        void set_ptr_list_Of_doubleBuffer_Output(std::list<class Output*>* newListPtr);
+        void set_ptr_User_I(class User_I* newClass);
+        void set_ptr_User_O(class User_O* newClass);
+        void set_ptr_vector_Of_stack_Of_InputPraise(std::vector<class Input*>* newStack);
+        void set_ptr_vector_Of_stack_Of_OutputPraise(std::vector<class Output*>* newStack);
     };
 }
