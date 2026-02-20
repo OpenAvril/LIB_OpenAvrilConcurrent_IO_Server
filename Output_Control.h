@@ -4,6 +4,21 @@ namespace OpenAvril
 {
     class Output_Control
     {
+// calsses.
+
+// registers.
+
+// constructor.
+
+// destructor.
+
+// public.
+    // get.
+    // set.
+
+// private.
+    // get.
+    // set.
     public:
         Output_Control();
         virtual ~Output_Control();

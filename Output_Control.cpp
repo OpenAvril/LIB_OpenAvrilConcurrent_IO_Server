@@ -1,5 +1,21 @@
 #include "pch.h"
 
+// calsses.
+
+// registers.
+
+// constructor.
+
+// destructor.
+
+// public.
+	// get.
+	// set.
+
+// private.
+	// get.
+	// set.
+
 OpenAvril::Output_Control::Output_Control()
 {
 	std::cout << "entered => OpenAvril::Output_Control::Output_Control()" << std::endl;

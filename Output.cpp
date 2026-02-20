@@ -64,8 +64,8 @@
     }
     void OpenAvril::Output::create_list_Of_Praise_Out_Subsets()
     {
-        std::list<OpenAvril::Object*> _list_Of_Praise_Out_Subsets = { NULL, NULL, NULL };
-        std::list<OpenAvril::Object*>* _ptr_list_Of_Praise_Out_Subsets = new std::list<class OpenAvril::Object*>(3);//NUMBER OF PRAISES.
+        std::list<OpenAvril::Object*> _list_Of_Praise_Out_Subsets = { NULL };
+        std::list<OpenAvril::Object*>* _ptr_list_Of_Praise_Out_Subsets = new std::list<class OpenAvril::Object*>(1);//NUMBER OF PRAISES.
         while (_ptr_list_Of_Praise_Out_Subsets == NULL) {}
         for (__int8 praiseID = 0; praiseID < sizeof(_list_Of_Praise_Out_Subsets); praiseID++)
         {
@@ -78,8 +78,6 @@
         }
         create_ptr_list_Of_Praise_Out_Subsets();
         set_Subset_OutputBuffer(new class OpenAvril::Praise0_Output());
-        set_Subset_OutputBuffer(new class OpenAvril::Praise1_Output());
-        set_Subset_OutputBuffer(new class OpenAvril::Praise2_Output());
     }
     void OpenAvril::Output::create_ptr_list_Of_Praise_Out_Subsets()
     {
@@ -114,19 +112,5 @@
         auto temp = _ptr_list_Of_Praise_Out_Subsets->begin();
         std::advance(temp, 0);
         *temp = reinterpret_cast<OpenAvril::Object*>(praise0_value);
-        while (*temp == NULL) {}
-    }
-    void OpenAvril::Output::set_Subset_OutputBuffer(OpenAvril::Praise1_Output* praise1_value)
-    {
-        auto temp = _ptr_list_Of_Praise_Out_Subsets->begin();
-        std::advance(temp, 1);
-        *temp = reinterpret_cast<OpenAvril::Object*>(praise1_value);
-        while (*temp == NULL) {}
-    }
-    void OpenAvril::Output::set_Subset_OutputBuffer(OpenAvril::Praise2_Output* praise2_value)
-    {
-        auto temp = _ptr_list_Of_Praise_Out_Subsets->begin();
-        std::advance(temp, 2);
-        *temp = reinterpret_cast<OpenAvril::Object*>(praise2_value);
         while (*temp == NULL) {}
     }

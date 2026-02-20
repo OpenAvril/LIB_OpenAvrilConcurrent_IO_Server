@@ -37,7 +37,5 @@ namespace OpenAvril
         void set_out_playerId(__int8 praiseEventId);
         void set_ptr_Output_Control(class Output_Control* newClass);
         void set_Subset_OutputBuffer(class Praise0_Output* value);
-        void set_Subset_OutputBuffer(class Praise1_Output* value);
-        void set_Subset_OutputBuffer(class Praise2_Output* value);
     };
 }

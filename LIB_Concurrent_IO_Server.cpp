@@ -32,12 +32,12 @@ void OpenAvril::CLIBServerIOConcurrnecy::initalise_Programs(OpenAvril::Framework
 {
     obj->initialise_Program(obj);
 }
-void OpenAvril::CLIBServerIOConcurrnecy::flip_InBufferToWrite(OpenAvril::Framework_Server* obj)
+void OpenAvril::CLIBServerIOConcurrnecy::flip_Input_DoubleBuffer(OpenAvril::Framework_Server* obj)
 {
     obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->flip_Input_DoubleBuffer();
 }
 
-void OpenAvril::CLIBServerIOConcurrnecy::flip_OutBufferToWrite(OpenAvril::Framework_Server* obj)
+void OpenAvril::CLIBServerIOConcurrnecy::flip_Output_DoubleBuffer(OpenAvril::Framework_Server* obj)
 {
     obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->flip_Output_DoubleBuffer();
 }
@@ -76,7 +76,7 @@ void OpenAvril::CLIBServerIOConcurrnecy::push_To_Stack_Of_Input(class OpenAvril:
 
 void OpenAvril::CLIBServerIOConcurrnecy::select_set_Intput_Subset(class OpenAvril::Framework_Server* obj, __int8 praiseEventId)
 {
-    obj->get_ptr_Server()->get_ptr_Data()->get_doubleBuffer_Input_WRITE()->get_Input_Control()->Selectset_Input_Subset(obj, praiseEventId);
+    obj->get_ptr_Server()->get_ptr_Data()->get_doubleBuffer_Input_WRITE()->get_ptr_Input_Control()->Selectset_Input_Subset(obj, praiseEventId);
 }
 
 __int8 OpenAvril::CLIBServerIOConcurrnecy::get_PraiseEventId(class OpenAvril::Framework_Server* obj)

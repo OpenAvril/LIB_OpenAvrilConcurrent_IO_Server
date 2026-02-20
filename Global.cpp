@@ -1,4 +1,6 @@
 #include "pch.h"
+// enums.
+    public enum Axis { X, Y, Z };
 
 // classes.
 
