@@ -42,7 +42,6 @@ namespace OpenAvril
         void set_program_WriteEnableStack_ServerInputAction(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* pgmID);
         void set_program_WriteEnableStack_ServerOutputRecieve(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* pgmID);
         void set_ptr_Execute_Control(class Execute_Control* execute_Control);
-        void set_ptr_list_Of_Threads()
-        
+        void set_ptr_list_Of_Threads();
     };
 }

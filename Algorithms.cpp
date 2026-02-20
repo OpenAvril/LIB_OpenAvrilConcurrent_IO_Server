@@ -43,7 +43,7 @@
     // set.
 
 // private.
-    void OpenAvril::Algorithms::create_ptr_list_Of_ptr_Concurrent()
+    void OpenAvril::Algorithms::create_list_Of_ptr_Concurrent()
     {
         OpenAvril::Concurrent* tempNew = new class OpenAvril::Concurrent();
         while (tempNew == NULL) {}
@@ -54,7 +54,7 @@
             while(get_ptr_Item_On_list_Of_ptr_Concurrent(threadID) == NULL) { }
         }
     }
-      void OpenAvril::Algorithms::create_ptr_User_Algorithms()
+    void OpenAvril::Algorithms::create_ptr_User_Algorithms()
     {
         set_ptr_User_Algorithms(new class OpenAvril::User_Alg());
         while (get_ptr_User_Algorithms() == NULL) {}

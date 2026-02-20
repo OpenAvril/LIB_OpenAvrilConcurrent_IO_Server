@@ -1,59 +1,77 @@
 #include "pch.h"
 
-OpenAvril::Concurrent_Control* ptr_Concurrent_Control = NULL;
-OpenAvril::Object* ptr_Algorithms_Subset = NULL;
+// calsses.
+    OpenAvril::Concurrent_Control* ptr_Concurrent_Control = NULL;
 
-OpenAvril::Concurrent::Concurrent()
-{
-    std::cout << "entered => OpenAvril::Concurrent::Concurrent()" << std::endl;
-}
+// registers.
+    std::list<class Object*> _list_Of_ptr_Algorithms_Subset = { NULL };
 
-OpenAvril::Concurrent::~Concurrent()
-{
-    delete ptr_Concurrent_Control;
-    delete ptr_Algorithms_Subset;
-}
+// pointers.
+    std::list<class Object*>* _ptr_list_Of_ptr_Algorithms_Subset = NULL;
 
-void OpenAvril::Concurrent::initialise_Control()
-{
-    set_Concurrent_Control(new class OpenAvril::Concurrent_Control());
-    while (get_ptr_Item_On_list_Of_ptr_Concurrent_Control() == NULL) { }
-}
-
-OpenAvril::Concurrent_Control* OpenAvril::Concurrent::get_ptr_Item_On_list_Of_ptr_Concurrent_Control()
-{
-    return ptr_Concurrent_Control;
-}
-
-void OpenAvril::Concurrent::Thread_Concurrency(OpenAvril::Framework_Server* obj, __int8 concurrent_coreId)
-{
-    bool doneOnce = true;
-    while (obj->get_ptr_Server()->get_ptr_Execute()->get_ptr_Execute_Control()->GetFlag_ThreadInitialised(concurrent_coreId) == true)
+// constructor.
+    OpenAvril::Concurrent::Concurrent()
     {
-        if (doneOnce == true)
-        {
-            obj->get_ptr_Server()->get_ptr_Execute()->get_ptr_Execute_Control()->SetConditionCodeOfThisThreadedCore(concurrent_coreId);
-            doneOnce = false;
-        }
-
+        std::cout << "entered => OpenAvril::Concurrent::Concurrent()" << std::endl;
+        create_list_Of_ptr_Algorithms_Subset();
     }
-    std::cout << "Thread Initialised: ID=" << (concurrent_coreId) << " => Thread_Concurrency()" << std::endl;//TestBench
-    while (obj->get_ptr_Server()->get_ptr_Execute()->get_ptr_Execute_Control()->GetFlag_SystemInitialised(obj) == true)
-    {
 
+// destructor.
+    OpenAvril::Concurrent::~Concurrent()
+    {
+        delete ptr_Concurrent_Control;
+        delete _ptr_list_Of_ptr_Algorithms_Subset;
     }
-    std::cout << "Thread Starting " << (concurrent_coreId) << " => Thread_Concurrency()" << std::endl;//TestBench
-    while (obj->get_ptr_Server()->get_ptr_Execute()->get_ptr_Execute_Control()->GetFlag_SystemInitialised(obj) == false)
-    {
-        switch (OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::get_Flag_ConcurrentCoreState(obj->get_ptr_Server()->get_ptr_Execute()->get_Program_ConcurrentQue_Server(), concurrent_coreId))
-        {
-        case false:
 
+// public.
+    void OpenAvril::Concurrent::do_Concurrent_Algorithm_For_PraiseEventId(OpenAvril::Framework_Server* obj, char playerId, __int8 ptr_praiseEventId, Object* ptr_Algorithm_Subset, Object* ptr_Input_Subset, Object* ptr_Output_Subset)
+    {
+        OpenAvril::Praise0_Algorithm* ptr_Algorithm_Subset_Praise0 = NULL;
+        OpenAvril::Praise0_Input* ptr_Input_Subset_Praise0 = NULL;
+        OpenAvril::Praise0_Output* ptr_Output_Subset_Praise0 = NULL;
+        switch (ptr_praiseEventId)
+        {
+        case 0:
+            ptr_Algorithm_Subset_Praise0 = reinterpret_cast <OpenAvril::Praise0_Algorithm*> (ptr_Algorithm_Subset);
+            ptr_Input_Subset_Praise0 = reinterpret_cast <OpenAvril::Praise0_Input*> (ptr_Input_Subset);
+            ptr_Output_Subset_Praise0 = reinterpret_cast <OpenAvril::Praise0_Output*> (ptr_Output_Subset);
+            ptr_Algorithm_Subset_Praise0->Do_Praise(ptr_Input_Subset_Praise0, ptr_Output_Subset_Praise0);
             break;
-
-        case true:
-            if(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->get_flag_isLoaded_Stack_InputAction() == true)
+        }
+    }
+    void OpenAvril::Concurrent::initialise_Control()
+    {
+        create_ptr_Concurrent_Control();
+    }
+    void OpenAvril::Concurrent::thread_Concurrency(OpenAvril::Framework_Server* obj, __int8 concurrent_coreId)
+    {
+        bool doneOnce = true;
+        while (obj->get_ptr_Server()->get_ptr_Execute()->get_ptr_Execute_Control()->GetFlag_ThreadInitialised(concurrent_coreId) == true)
+        {
+            if (doneOnce == true)
             {
+                obj->get_ptr_Server()->get_ptr_Execute()->get_ptr_Execute_Control()->SetConditionCodeOfThisThreadedCore(concurrent_coreId);
+                doneOnce = false;
+            }
+
+        }
+        std::cout << "Thread Initialised: ID=" << (concurrent_coreId) << " => Thread_Concurrency()" << std::endl;//TestBench
+        while (obj->get_ptr_Server()->get_ptr_Execute()->get_ptr_Execute_Control()->GetFlag_SystemInitialised(obj) == true)
+        {
+
+        }
+        std::cout << "Thread Starting " << (concurrent_coreId) << " => Thread_Concurrency()" << std::endl;//TestBench
+        while (obj->get_ptr_Server()->get_ptr_Execute()->get_ptr_Execute_Control()->GetFlag_SystemInitialised(obj) == false)
+        {
+            switch (OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::get_Flag_ConcurrentCoreState(obj->get_ptr_Server()->get_ptr_Execute()->get_Program_ConcurrentQue_Server(), concurrent_coreId))
+            {
+            case false:
+
+                break;
+
+            case true:
+                if (obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->get_flag_isLoaded_Stack_InputAction() == true)
+                {
                     OpenAvril::CLIBWriteEnableForThreadsAtSERVERINPUTACTION::Write_Start(obj->get_ptr_Server()->get_ptr_Execute()->get_Program_WriteEnable_ServerInputAction(), (__int8)(concurrent_coreId + (__int8)1));
                     obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_Of_list_Of_buffer_Output_ReferenceForThread(concurrent_coreId)->get_control_Of_Output()->Selectset_Output_Subset(obj, obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_Of_list_Of_buffer_Output_ReferenceForThread(concurrent_coreId)->get_out_praiseEventId(), concurrent_coreId);
                     obj->get_ptr_Server()->get_ptr_Algorithms()->get_ptr_Item_On_list_Of_ptr_Concurrent(concurrent_coreId)->get_ptr_Item_On_list_Of_ptr_Concurrent_Control()->Selectset_Algorithm_Subset(obj, obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_Of_list_Of_buffer_Input_ReferenceForThread(concurrent_coreId)->GetPraiseEventId(), concurrent_coreId);
@@ -79,81 +97,64 @@ void OpenAvril::Concurrent::Thread_Concurrency(OpenAvril::Framework_Server* obj,
                             OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Request_Wait_Launch(obj->get_ptr_Server()->get_ptr_Execute()->get_Program_ConcurrentQue_Server(), OpenAvril::CLIBLaunchEnableForConcurrentThreadsAtSERVER::get_coreId_To_Launch(obj->get_ptr_Server()->get_ptr_Execute()->get_Program_ConcurrentQue_Server()));
                         }
                     }
-                   OpenAvril::Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE::Write_End(obj->get_ptr_Server()->get_ptr_Execute()->get_Program_WriteEnable_ServerOutputRecieve(), (__int8)(concurrent_coreId + (__int8)1));
-                //}
+                    OpenAvril::Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE::Write_End(obj->get_ptr_Server()->get_ptr_Execute()->get_Program_WriteEnable_ServerOutputRecieve(), (__int8)(concurrent_coreId + (__int8)1));
+                    //}
+                }
+                break;
             }
-            break;
         }
     }
-}
 
-void OpenAvril::Concurrent::Do_Concurrent_Algorithm_For_PraiseEventId(
-    OpenAvril::Framework_Server* obj,
-    char playerId,
-    __int8 ptr_praiseEventId,
-    Object* ptr_Algorithm_Subset,
-    Object* ptr_Input_Subset,
-    Object* ptr_Output_Subset
-)
-{
-    OpenAvril::Praise0_Algorithm* ptr_Algorithm_Subset_Praise0 = NULL;
-    OpenAvril::Praise0_Input* ptr_Input_Subset_Praise0 = NULL;
-    OpenAvril::Praise0_Output* ptr_Output_Subset_Praise0 = NULL;
-    OpenAvril::Praise1_Algorithm* ptr_Algorithm_Subset_Praise1 = NULL;
-    OpenAvril::Praise1_Input* ptr_Input_Subset_Praise1 = NULL;
-    OpenAvril::Praise1_Output* ptr_Output_Subset_Praise1 = NULL;
-    OpenAvril::Praise2_Algorithm* ptr_Algorithm_Subset_Praise2 = NULL;
-    OpenAvril::Praise2_Input* ptr_Input_Subset_Praise2 = NULL;
-    OpenAvril::Praise2_Output* ptr_Output_Subset_Praise2 = NULL;
-    switch (ptr_praiseEventId)
+    // get.
+    OpenAvril::Concurrent_Control* OpenAvril::Concurrent::get_ptr_Concurrent_Control()
     {
-    case 0:
-        ptr_Algorithm_Subset_Praise0 = reinterpret_cast <OpenAvril::Praise0_Algorithm*> (ptr_Algorithm_Subset);
-        ptr_Input_Subset_Praise0 = reinterpret_cast <OpenAvril::Praise0_Input*> (ptr_Input_Subset);
-        ptr_Output_Subset_Praise0 = reinterpret_cast <OpenAvril::Praise0_Output*> (ptr_Output_Subset);
-        ptr_Algorithm_Subset_Praise0->Do_Praise(
-            ptr_Input_Subset_Praise0,
-            ptr_Output_Subset_Praise0
-        );
-        break;
-
-    case 1: 
-        ptr_Algorithm_Subset_Praise1 = reinterpret_cast <OpenAvril::Praise1_Algorithm*> (ptr_Algorithm_Subset);
-        ptr_Input_Subset_Praise1 = reinterpret_cast <OpenAvril::Praise1_Input*> (ptr_Input_Subset);
-        ptr_Output_Subset_Praise1 = reinterpret_cast <OpenAvril::Praise1_Output*> (ptr_Output_Subset);
-        ptr_Algorithm_Subset_Praise1->Do_Praise(obj, playerId, ptr_Input_Subset_Praise1, ptr_Output_Subset_Praise1);
-        break;
-
-    case 2:
-        ptr_Algorithm_Subset_Praise2 = reinterpret_cast <OpenAvril::Praise2_Algorithm*> (ptr_Algorithm_Subset);
-        ptr_Input_Subset_Praise2 = reinterpret_cast <OpenAvril::Praise2_Input*> (ptr_Input_Subset);
-        ptr_Output_Subset_Praise2 = reinterpret_cast <OpenAvril::Praise2_Output*> (ptr_Output_Subset);
-        ptr_Algorithm_Subset_Praise2->Do_Praise(
-            ptr_Input_Subset_Praise2,
-            ptr_Output_Subset_Praise2
-        );
-        break;
+        return ptr_Concurrent_Control;
     }
-}
+    class Object* OpenAvril::Concurrent::get_ptr_Item_On_list_Of_ptr_Algorithms_Subset(__int8 praiseID)
+    {
+        auto temp = _ptr_list_Of_ptr_Algorithms_Subset->begin();
+        std::advance(temp, praiseID);
+        return *temp;
+    }
+    // set.
 
-OpenAvril::Object* OpenAvril::Concurrent::get_Algorithm_Subset()
-{
-    return ptr_Algorithms_Subset;
-}
-
-void OpenAvril::Concurrent::set_Algorithm_Subset(Praise0_Algorithm* praise0_algorithm)
-{
-    ptr_Algorithms_Subset = reinterpret_cast<OpenAvril::Object*>(praise0_algorithm);
-}
-void OpenAvril::Concurrent::set_Algorithm_Subset(Praise1_Algorithm* praise1_algorithm)
-{
-    ptr_Algorithms_Subset = reinterpret_cast<OpenAvril::Object*>(praise1_algorithm);
-}
-void OpenAvril::Concurrent::set_Algorithm_Subset(Praise2_Algorithm* praise2_algorithm)
-{
-    ptr_Algorithms_Subset = reinterpret_cast<OpenAvril::Object*>(praise2_algorithm);
-}
-void OpenAvril::Concurrent::set_Concurrent_Control(Concurrent_Control* concurrent_control)
-{
-    ptr_Concurrent_Control = concurrent_control;
-}
+// private.
+    void OpenAvril::Concurrent::create_ptr_Concurrent_Control()
+    {
+        set_ptr_Concurrent_Control(new class OpenAvril::Concurrent_Control());
+        while (get_ptr_Concurrent_Control() == NULL) {}
+    }
+    void OpenAvril::Concurrent::create_list_Of_ptr_Algorithms_Subset()
+    {
+        std::list<OpenAvril::Object*> _list_Of_ptr_Algorithms_Subset = { NULL };
+        std::list<OpenAvril::Object*>* _ptr_list_Of_ptr_Algorithms_Subset = new std::list<class OpenAvril::Object*>(1);//NUMBER OF PRAISES.
+        while (get_ptr_list_Of_ptr_Algorithms_Subset() == NULL) {}
+        for (__int8 praiseID = 0; praiseID < sizeof(_list_Of_ptr_Algorithms_Subset); praiseID++)
+        {
+            while (get_ptr_Item_On_list_Of_ptr_Algorithms_Subset(praiseID) == NULL) {}
+            auto temp1 = _ptr_list_Of_ptr_Algorithms_Subset->begin();
+            std::advance(temp1, praiseID);
+            auto temp2 = _list_Of_ptr_Algorithms_Subset.begin();
+            std::advance(temp2, praiseID);
+            temp2 = temp1;
+        }
+        create_ptr_list_Of_Praise_In_Subsets();
+        set_Algorithm_Subset(new class OpenAvril::Praise0_Input());
+        
+    }
+    // get.
+    std::list<class Object*>* OpenAvril::Concurrent::get_ptr_list_Of_ptr_Algorithms_Subset()
+    {
+        return _ptr_list_Of_ptr_Algorithms_Subset;
+    }
+    // set.
+    void OpenAvril::Concurrent::set_ptr_Concurrent_Control(OpenAvril::Concurrent_Control* concurrent_control)
+    {
+        ptr_Concurrent_Control = concurrent_control;
+    }
+    void OpenAvril::Concurrent::set_Algorithm_Subset(Praise0_Algorithm* praise0_algorithm)
+    {
+        auto temp = _ptr_list_Of_ptr_Algorithms_Subset->begin();
+        std::advance(temp, 0);
+        *temp = reinterpret_cast<OpenAvril::Object*>(praise0_algorithm);
+    }

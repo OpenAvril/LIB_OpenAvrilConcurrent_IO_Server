@@ -24,7 +24,7 @@ namespace OpenAvril
 
     private:
 // private.
-        void create_ptr_list_Of_ptr_Concurrent();
+        void create_list_Of_ptr_Concurrent();
         void create_ptr_User_Algorithms();
         void create_ptr_list_Of_ptr_Concurrent();
 	// get.
