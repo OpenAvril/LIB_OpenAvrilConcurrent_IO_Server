@@ -15,8 +15,6 @@ Version 17.13.4.
 ## Dependencies.
 ### WriteEnableForThreadsAtStacks.
  - https://github.com/OpenAvril/LIB_WriteEnableForThreadsAt_STACK
-#### Similar Repositiry.
- - https://github.com/cameron314/readerwriterqueue
    
 ### LaunchEnableForConcurrentThreadsAtEnds
  - https://github.com/OpenAvril/LIB_LaunchEnableForConcurrentThreadsAt_END
