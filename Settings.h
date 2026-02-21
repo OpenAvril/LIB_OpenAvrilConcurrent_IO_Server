@@ -4,21 +4,39 @@ namespace OpenAvril
 {
 	class Settings
 	{
+// calsses.
+
+// registers.
+
 	public:
+// constructor.
 		Settings();
+
+// destructor.
 		virtual ~Settings();
 
+// public.
+	// get.
 		float get_fov();
 		int get_refreshRate();
-		bool get_systemInitialised();
 		float get_screenSize_X();
 		float get_screenSize_Y();
+		bool get_systemInitialised();
+	// set.
 
-		void set_fov(float fov);
-		void set_refreshRate(int refreshRate);
-		void set_systemInitialised(bool isSystemInitialised);
-		void set_screenSize_X(float screenSize_X);
-		void set_screenSize_Y(float screenSize_Y);
+// private.
+		void create_fov();
+		void create_refreshRate();
+		void create_screenSize_X();
+		void create_screenSize_Y();
+		void create_systemInitialised();
+	// get.
+	// set.
+		void set_fov(float newFOV);
+		void set_refreshRate(int newRefreshRate);
+		void set_screenSize_X(float newScreenWidth);
+		void set_screenSize_Y(float newScreenHeight);
+		void set_systemInitialised(bool init);
 	};
 }
 
