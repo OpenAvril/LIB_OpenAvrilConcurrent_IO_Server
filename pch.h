@@ -10,7 +10,6 @@
 // add headers that you want to pre-compile here
 #include <array>
 #include <cstddef>
-#include <Eigen/Dense>
 #include <iostream>
 #include <list>
 #include <math.h>

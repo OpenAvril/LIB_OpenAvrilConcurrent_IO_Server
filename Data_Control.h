@@ -16,28 +16,26 @@ namespace OpenAvril
         virtual ~Data_Control();
 
 // public.
+        uint8_t boolToInt(bool bufferSide);
         void flip_Input_DoubleBuffer();
         void flip_Output_DoubleBuffer();
-        void Pop_From_Stack_Of_Input(class OpenAvril::Data* obj, __int8 concurrentThreadID);
+        void Pop_From_Stack_Of_Input(class OpenAvril::Data* obj, uint8_t concurrentThreadID);
         void pop_From_Stack_Of_Output(class OpenAvril::Data* obj);
         void push_To_Stack_Of_Input(class OpenAvril::Data* obj);
-        void push_To_Stack_Of_Output(class OpenAvril::Data* obj, __int8 concurrentThreadID);
-        void Store_Input_To_GameInstance(class OpenAvril::Data* obj, std::vector<class OpenAvril::Input*>* stack);
-        void Store_Output_To_GameInstance(class OpenAvril::Data* obj, std::vector<class OpenAvril::Output*>* stack);
+        void push_To_Stack_Of_Output(class OpenAvril::Data* obj, uint8_t concurrentThreadID);
     // get.
         bool get_flag_isLoaded_Stack_InputAction();
         bool get_flag_isLoaded_Stack_OutputSend();
-        __int8 get_STATE_Of_READ_For_list_Of_doubleBuffer_Input();
-        __int8 get_STATE_Of_READ_For_list_Of_doubleBuffer_Output();
-        __int8 get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input();
-        __int8 get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output();
+        uint8_t get_STATE_Of_READ_For_list_Of_doubleBuffer_Input();
+        uint8_t get_STATE_Of_READ_For_list_Of_doubleBuffer_Output();
+        uint8_t get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input();
+        uint8_t get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output();
     // set.
         void set_flag_isLoaded_Stack_InputAction(bool value);
         void set_flag_isLoaded_Stack_OutputSend(bool value);
 
     private:
 // private.
-        __int8 BoolToInt(bool bufferSide);
         void create_flag_isLoaded_Stack_InputAction();
         void create_flag_isLoaded_Stack_OutputSend();
         void create_side_To_Write_For_list_Of_doubleBuffer_Input();

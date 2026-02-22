@@ -13,7 +13,7 @@ bool _flag_IsStackLoaded_Server_OutputRecieve;
 bool _flag_IsInitialised_Avril_FSD_ServerAssembly;
 
 // Praise Event Id
-__int8 _PraiseEventId;
+uint8_t _PraiseEventId;
 
 // Praise 0 Data
 bool _Praise0_Input_IsPingActive;
@@ -37,11 +37,6 @@ void OpenAvril::CLIBServerIOConcurrnecy::flip_Input_DoubleBuffer(OpenAvril::Fram
     obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->flip_Input_DoubleBuffer();
 }
 
-void OpenAvril::CLIBServerIOConcurrnecy::flip_Output_DoubleBuffer(OpenAvril::Framework_Server* obj)
-{
-    obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->flip_Output_DoubleBuffer();
-}
-
 bool OpenAvril::CLIBServerIOConcurrnecy::get_flag_isStackLoaded_Server_InputAction(class OpenAvril::Framework_Server* obj)
 {
     _flag_IsStackLoaded_Server_InputAction = obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->get_flag_isLoaded_Stack_InputAction();
@@ -54,7 +49,7 @@ bool OpenAvril::CLIBServerIOConcurrnecy::get_flag_isLoaded_Stack_OutputSend(clas
 }
 bool OpenAvril::CLIBServerIOConcurrnecy::get_flag_IsInitialised_OpenAvrilConcurrency(class OpenAvril::Framework_Server* obj)
 {
-    _flag_IsInitialised_Avril_FSD_ServerAssembly = obj->get_ptr_Server()->get_ptr_Execute()->get_ptr_Execute_Control()->GetFlag_SystemInitialised(obj);
+    _flag_IsInitialised_Avril_FSD_ServerAssembly = obj->get_ptr_Server()->get_ptr_Execute()->get_ptr_Execute_Control()->get_flag_is_SystemInitialised();
     return _flag_IsInitialised_Avril_FSD_ServerAssembly;
 }
 void* OpenAvril::CLIBServerIOConcurrnecy::get_program_WriteEnableStack_ServerInputAction()
@@ -74,17 +69,17 @@ void OpenAvril::CLIBServerIOConcurrnecy::push_To_Stack_Of_Input(class OpenAvril:
     obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->push_To_Stack_Of_Input(obj->get_ptr_Server()->get_ptr_Data());
 }
 
-void OpenAvril::CLIBServerIOConcurrnecy::select_set_Intput_Subset(class OpenAvril::Framework_Server* obj, __int8 praiseEventId)
+void OpenAvril::CLIBServerIOConcurrnecy::select_set_Intput_Subset(class OpenAvril::Framework_Server* obj, uint8_t praiseEventId)
 {
     obj->get_ptr_Server()->get_ptr_Data()->get_doubleBuffer_Input_WRITE()->get_ptr_Input_Control()->Selectset_Input_Subset(obj, praiseEventId);
 }
 
-__int8 OpenAvril::CLIBServerIOConcurrnecy::get_PraiseEventId(class OpenAvril::Framework_Server* obj)
+uint8_t OpenAvril::CLIBServerIOConcurrnecy::get_PraiseEventId(class OpenAvril::Framework_Server* obj)
 {
     _PraiseEventId = obj->get_ptr_Server()->get_ptr_Data()->get_doubleBuffer_Output_WRITE()->get_out_praiseEventId();
     return _PraiseEventId;
 }
-void OpenAvril::CLIBServerIOConcurrnecy::set_PraiseEventId(class OpenAvril::Framework_Server* obj, __int8 value)
+void OpenAvril::CLIBServerIOConcurrnecy::set_PraiseEventId(class OpenAvril::Framework_Server* obj, uint8_t value)
 {
     obj->get_ptr_Server()->get_ptr_Data()->get_doubleBuffer_Input_WRITE()->set_in_praiseEventId(value);
 }

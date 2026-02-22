@@ -16,7 +16,7 @@ namespace OpenAvril
         virtual ~Input_Control();
 
 // public.
-        void Selectset_Input_Subset(class Framework_Server* obj, __int8 ptr_praiseEventId);
+        void Selectset_Input_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId);
     // get.
     // set.
 

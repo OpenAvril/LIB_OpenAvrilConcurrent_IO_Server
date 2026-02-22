@@ -16,7 +16,7 @@ namespace OpenAvril
     virtual ~Output_Control();
 
 // public.
-    void Selectset_Output_Subset(class Framework_Server* obj, __int8 ptr_praiseEventId, __int8 concurrent_coreId);
+    void Selectset_Output_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId, uint8_t concurrent_threadID);
     // get.
     // set.
 

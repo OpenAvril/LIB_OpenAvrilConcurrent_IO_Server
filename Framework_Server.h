@@ -29,20 +29,3 @@ namespace OpenAvril
         void set_ptr_Server(Server* server);
     };
 }
-
-
-// calsses.
-
-// registers.
-
-// constructor.
-
-// destructor.
-
-// public.
-    // get.
-    // set.
-
-// private.
-    // get.
-    // set.

@@ -17,21 +17,21 @@ namespace OpenAvril
 		public:
 			CLIBLaunchEnableForConcurrentThreadsAtSERVER(void);
 			// TODO: add your methods here.
-			static void* initialise_LaunchEnableForConcurrentThreadsAt();
+			static void* Initialise_LaunchEnableForConcurrentThreadsAt();
 
 			static void Request_Wait_Launch(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId);
 			static void Thread_End(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework*, unsigned char concurrent_CoreId);
 
-			static __int8 get_coreId_To_Launch(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
-			static bool get_Flag_Active(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
-			static bool get_Flag_ConcurrentCoreState(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId);
-			static bool get_Flag_Idle(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
-			static bool get_State_LaunchBit(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
-			static void set_state_ConcurrentCore(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId, bool value);
+			static __int8 Get_coreId_To_Launch(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
+			static bool Get_Flag_Active(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
+			static bool Get_Flag_ConcurrentCoreState(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId);
+			static bool Get_Flag_Idle(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
+			static bool Get_State_LaunchBit(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
+			static void Set_state_ConcurrentCore(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId, bool value);
 
 		private:
-			static class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* get_LaunchEnableForConcurrentThreadsAt_SERVER_Framework();
-			static void set_LaunchEnableForConcurrentThreadsAt_SERVER_Framework(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* framework);
+			static class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* Get_LaunchEnableForConcurrentThreadsAt_SERVER_Framework();
+			static void Set_LaunchEnableForConcurrentThreadsAt_SERVER_Framework(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* framework);
 	};
 }
 extern LIBLAUNCHENABLEFORCONCURRENTTHREADSATSERVER_API int nLIBLaunchEnableForConcurrentThreadsAtSERVER;

@@ -7,9 +7,9 @@ namespace OpenAvril
     public:
         WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework();
         virtual ~WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework();
-        class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE* get_writeEnable();
+        class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE* Get_writeEnable();
 
     private:
-        static void set_writeEnable(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE* writeEnable);
+        static void Set_writeEnable(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE* writeEnable);
     };
 }

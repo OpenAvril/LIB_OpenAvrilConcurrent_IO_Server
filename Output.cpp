@@ -1,11 +1,11 @@
-#include "pch.h"create_out_praiseEventId
+#include "pch.h"
 
 // calsses.
     OpenAvril::Output_Control* _ptr_Output_Control = NULL;
 
 // registers.
-    __int8 _out_praiseEventId = NULL;
-    __int8 _out_playerId = NULL;
+    uint8_t _out_praiseEventId = NULL;
+    uint8_t _out_playerId = NULL;
     std::list<OpenAvril::Object*> _list_Of_Praise_Out_Subsets = { NULL };
 
 // pointers.
@@ -34,11 +34,11 @@
         while (get_ptr_Output_Control() == NULL) {}
     }
     // get.
-    __int8 OpenAvril::Output::get_out_praiseEventId()
+    uint8_t OpenAvril::Output::get_out_praiseEventId()
     {
         return _out_praiseEventId;
     }
-    __int8 OpenAvril::Output::get_out_playerId()
+    uint8_t OpenAvril::Output::get_out_playerId()
     {
         return _out_playerId;
     }
@@ -56,18 +56,18 @@
     }
     void OpenAvril::Output::create_out_praiseEventId()
     {
-        set_out_praiseEventId(INT_MAX);
+        set_out_praiseEventId(255);
     }
     void OpenAvril::Output::create_out_playerId()
     {
-        set_out_playerId(INT_MAX);
+        set_out_playerId(255);
     }
     void OpenAvril::Output::create_list_Of_Praise_Out_Subsets()
     {
         std::list<OpenAvril::Object*> _list_Of_Praise_Out_Subsets = { NULL };
         std::list<OpenAvril::Object*>* _ptr_list_Of_Praise_Out_Subsets = new std::list<class OpenAvril::Object*>(1);//NUMBER OF PRAISES.
         while (_ptr_list_Of_Praise_Out_Subsets == NULL) {}
-        for (__int8 praiseID = 0; praiseID < sizeof(_list_Of_Praise_Out_Subsets); praiseID++)
+        for (uint8_t praiseID = 0; praiseID < sizeof(_list_Of_Praise_Out_Subsets); praiseID++)
         {
             while (get_ptr_Item_On_list_Of_Praise_Out_Subsets(praiseID) == NULL) {}
             auto temp1 = _ptr_list_Of_Praise_Out_Subsets->begin();
@@ -84,22 +84,22 @@
         _ptr_list_Of_Praise_Out_Subsets = &_list_Of_Praise_Out_Subsets;
     }
     // get.
-    __int8 OpenAvril::Output::get_lenght_Of_list_Of_Praise_Out_Subsets()
+    uint8_t OpenAvril::Output::get_lenght_Of_list_Of_Praise_Out_Subsets()
     {
         return sizeof(_list_Of_Praise_Out_Subsets);
     }
-    class OpenAvril::Object* OpenAvril::Output::get_ptr_Item_On_list_Of_Praise_Out_Subsets(__int8 praiseID)
+    class OpenAvril::Object* OpenAvril::Output::get_ptr_Item_On_list_Of_Praise_Out_Subsets(uint8_t praiseID)
     {
         auto temp = _ptr_list_Of_Praise_Out_Subsets->begin();
         std::advance(temp, praiseID);
         return *temp;
     }
     // set.
-    void OpenAvril::Output::set_out_praiseEventId(__int8 value)
+    void OpenAvril::Output::set_out_praiseEventId(uint8_t value)
     {
         _out_praiseEventId = value;
     }
-    void OpenAvril::Output::set_out_playerId(__int8 value)
+    void OpenAvril::Output::set_out_playerId(uint8_t value)
     {
         _out_playerId = value;
     }

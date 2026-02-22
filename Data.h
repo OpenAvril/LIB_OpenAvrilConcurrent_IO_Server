@@ -23,15 +23,14 @@ namespace OpenAvril
         class Output* get_doubleBuffer_Output_READ();
         class Output* get_doubleBuffer_Output_WRITE();
         class Data_Control* get_ptr_Data_Control();
-        class Input* get_ptr_Item_Of_list_Of_buffer_Input_ReferenceForThread(__int8 threadID);
-        class Output* get_ptr_Item_Of_list_Of_buffer_Output_ReferenceForThread(__int8 threadID);
-        class Input* get_ptr_Item_On_vector_Of_stack_Of_InputPraise(__int8 slot);
-        class Output* get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(__int8 slot);
+        class Input* get_ptr_Item_Of_list_Of_buffer_Input_ReferenceForThread(uint8_t threadID);
+        class Output* get_ptr_Item_Of_list_Of_buffer_Output_ReferenceForThread(uint8_t threadID);
+        class Input* get_ptr_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot);
+        class Output* get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot);
     // set.
  
 // private.
         void create_ptr_Data_Control();
-        void create_ptr_GameInstance();
         void create_ptr_User_I();
         void create_ptr_User_O();
         void create_list_Of_buffer_Input_ReferenceForThread();
@@ -47,8 +46,6 @@ namespace OpenAvril
         void create_ptr_vector_Of_stack_Of_InputPraise();
         void create_ptr_vector_Of_stack_Of_OutputPraise();
     // get.
-
-        class GameInstance* get_ptr_GameInstance();
         std::list<class Input*>* get_ptr_list_Of_buffer_Input_ReferenceForThread();
         std::list<class Output*>* get_ptr_list_Of_buffer_Output_ReferenceForThread();
         std::list<class Input*>* get_ptr_list_Of_doubleBuffer_Input();
@@ -59,7 +56,6 @@ namespace OpenAvril
         std::vector<class Output*>* get_ptr_vector_Of_stack_Of_OutputPraise();
     // set.
         void set_ptr_Data_Control(class Data_Control* newClass);
-        void set_ptr_GameInstance(class GameInstance* newClass);
         void set_ptr_list_Of_buffer_Input_ReferenceForThread(std::list<class Input*>* newListPtr);
         void set_ptr_list_Of_buffer_Output_ReferenceForThread(std::list<class Output*>* newListPtr);
         void set_ptr_list_Of_doubleBuffer_Input(std::list<class Input*>* newListPtr);

@@ -14,6 +14,7 @@
     {
         std::cout << "entered => Algorithms()" << std::endl;
 		create_ptr_User_Algorithms();
+        create_list_Of_ptr_Concurrent();
         std::cout << "exiting => Algorithms()" << std::endl;
     }
 
@@ -26,7 +27,7 @@
 
 // public.
     // get.
-    OpenAvril::Concurrent* OpenAvril::Algorithms::get_ptr_Item_On_list_Of_ptr_Concurrent(__int8 threadID)
+    OpenAvril::Concurrent* OpenAvril::Algorithms::get_ptr_Item_On_list_Of_ptr_Concurrent(uint8_t threadID)
     {
         auto temp = _ptr_list_Of_ptr_Concurrent->begin();
         std::advance(temp, threadID);
@@ -49,7 +50,7 @@
         while (tempNew == NULL) {}
         std::list<class OpenAvril::Concurrent*> _list_Of_ptr_Concurrent = { tempNew , tempNew, tempNew, tempNew };
         create_ptr_list_Of_ptr_Concurrent();
-        for (__int8 threadID = 0; threadID < sizeof(_list_Of_ptr_Concurrent); threadID++)//NUMBER OF CONCURRENT THREADS
+        for (uint8_t threadID = 0; threadID < sizeof(_list_Of_ptr_Concurrent); threadID++)//NUMBER OF CONCURRENT THREADS
         {
             while(get_ptr_Item_On_list_Of_ptr_Concurrent(threadID) == NULL) { }
         }
@@ -73,10 +74,6 @@
     void OpenAvril::Algorithms::set_ptr_list_Of_ptr_Concurrent(std::list<class OpenAvril::Concurrent*>* newList)
     {
         _ptr_list_Of_ptr_Concurrent = newList;
-    }
-    void OpenAvril::Algorithms::set_ptr_list_Of_ptr_Concurrent(std::list<class OpenAvril::Concurrent*>* ptr_List)
-    {
-        _ptr_list_Of_ptr_Concurrent = ptr_List;
     }
     void OpenAvril::Algorithms::set_ptr_User_Algorithms(User_Alg* user_Algorithms)
     {

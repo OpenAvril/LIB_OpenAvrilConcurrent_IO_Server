@@ -19,7 +19,6 @@
     <None Include="LIBLaunchEnableForConcurrentThreadsAtSERVER.dll" />
     <None Include="LIBWriteEnableForThreadsAtSERVERINPUTACTION.dll" />
     <None Include="LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.dll" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">

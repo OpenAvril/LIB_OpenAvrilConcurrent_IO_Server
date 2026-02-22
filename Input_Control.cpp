@@ -17,14 +17,14 @@
     }
 
 // public.
-    void OpenAvril::Input_Control::Selectset_Input_Subset(OpenAvril::Framework_Server* obj, __int8 praiseEventId)
+    void OpenAvril::Input_Control::Selectset_Input_Subset(OpenAvril::Framework_Server* obj, uint8_t praiseEventId)
     {
-    switch (praiseEventId)
-    {
-    case 0:
-        obj->get_ptr_Server()->get_ptr_Data()->get_doubleBuffer_Input_WRITE()->set_Subset_InputBuffer(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_I()->get_Praise0_Input());
-        break;
-    }
+        switch (praiseEventId)
+        {
+        case 0:
+            obj->get_ptr_Server()->get_ptr_Data()->get_doubleBuffer_Input_WRITE()->set_Subset_InputBuffer(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_I()->get_Praise0_Input());
+            break;
+        }
     }
     // get.
     // set.

@@ -4,8 +4,8 @@
     OpenAvril::Input_Control* _ptr_Input_Control = NULL;
 
 // registers.
-    __int8 _in_praiseEventId = NULL;
-    __int8 _in_playerId = NULL;
+    uint8_t _in_praiseEventId = NULL;
+    uint8_t _in_playerId = NULL;
     std::list<OpenAvril::Object*> _list_Of_Praise_In_Subsets = { NULL };
 
 // pointers.
@@ -34,17 +34,23 @@
         while (get_ptr_Input_Control() == NULL) {}
     }
     // get.
-    __int8 OpenAvril::Input::get_in_praiseEventId()
+    uint8_t OpenAvril::Input::get_in_praiseEventId()
     {
         return _in_praiseEventId;
     }
-    __int8 OpenAvril::Input::get_in_playerId()
+    uint8_t OpenAvril::Input::get_in_playerId()
     {
         return _in_playerId;
     }
     class OpenAvril::Input_Control* OpenAvril::Input::get_ptr_Input_Control()
     {
         return _ptr_Input_Control;
+    }
+    class OpenAvril::Object* OpenAvril::Input::get_ptr_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID)
+    {
+        auto temp = _ptr_list_Of_Praise_In_Subsets->begin();
+        std::advance(temp, praiseID);
+        return *temp;
     }
     // set.
 
@@ -56,18 +62,18 @@
     }
     void OpenAvril::Input::create_in_praiseEventId()
     {
-        set_in_praiseEventId(INT_MAX);
+        set_in_praiseEventId(255);
     }
     void OpenAvril::Input::create_in_playerId()
     {
-        set_in_playerId(INT_MAX);
+        set_in_playerId(255);
     }
     void OpenAvril::Input::create_list_Of_Praise_In_Subsets()
     {
         std::list<OpenAvril::Object*> _list_Of_Praise_In_Subsets = { NULL };
         std::list<OpenAvril::Object*>* _ptr_list_Of_Praise_In_Subsets = new std::list<class OpenAvril::Object*>(1);//NUMBER OF PRAISES.
         while(_ptr_list_Of_Praise_In_Subsets == NULL) { }
-        for (__int8 praiseID = 0; praiseID < sizeof(_list_Of_Praise_In_Subsets); praiseID++)
+        for (uint8_t praiseID = 0; praiseID < sizeof(_list_Of_Praise_In_Subsets); praiseID++)
         {
             while (get_ptr_Item_On_list_Of_Praise_In_Subsets(praiseID) == NULL) {}
             auto temp1 = _ptr_list_Of_Praise_In_Subsets->begin();
@@ -84,22 +90,16 @@
         _ptr_list_Of_Praise_In_Subsets = &_list_Of_Praise_In_Subsets;
     }
     // get.
-    __int8 OpenAvril::Input::get_lenght_Of_list_Of_Praise_In_Subsets()
+    uint8_t OpenAvril::Input::get_lenght_Of_list_Of_Praise_In_Subsets()
     {
         return sizeof(_list_Of_Praise_In_Subsets);
     }
-    class OpenAvril::Object* OpenAvril::Input::get_ptr_Item_On_list_Of_Praise_In_Subsets(__int8 praiseID)
-    {
-        auto temp = _ptr_list_Of_Praise_In_Subsets->begin();
-        std::advance(temp, praiseID);
-        return *temp;
-    }
     // set.
-    void OpenAvril::Input::set_in_praiseEventId(__int8 value)
+    void OpenAvril::Input::set_in_praiseEventId(uint8_t value)
     {
         _in_praiseEventId = value;
     }
-    void OpenAvril::Input::set_in_playerId(__int8 value)
+    void OpenAvril::Input::set_in_playerId(uint8_t value)
     {
         _in_playerId = value;
     }

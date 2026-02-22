@@ -17,7 +17,7 @@ namespace OpenAvril
 
 // public.
     // get.
-		class Concurrent* get_ptr_Item_On_list_Of_ptr_Concurrent(__int8 threadID);
+		class Concurrent* get_ptr_Item_On_list_Of_ptr_Concurrent(uint8_t threadID);
         std::list<class Concurrent*>* get_ptr_list_Of_ptr_Concurrent();
         class User_Alg* get_ptr_User_Algorithms();
     // set.
