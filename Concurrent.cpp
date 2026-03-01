@@ -2,9 +2,9 @@
 
 // pointers.
     // classes.
-    OpenAvrilConcurrency::Concurrent_Control* _ptr_Concurrent_Control = NULL;
+    static class OpenAvrilConcurrency::Concurrent_Control* _ptr_Concurrent_Control = NULL;
     // registers.
-    std::list<class OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Concurrent::_ptr_list_Of_ptr_Algorithms_Subset = NULL;
+    static std::list<class OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Concurrent::_ptr_list_Of_ptr_Algorithms_Subset = NULL;
 
 // constructor.
     OpenAvrilConcurrency::Concurrent::Concurrent()

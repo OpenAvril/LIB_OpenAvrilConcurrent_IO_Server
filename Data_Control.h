@@ -41,7 +41,6 @@ namespace OpenAvrilConcurrency
     private:
 // private.
     // dynamic.
-    
         // get.
         // set.
     // static.
@@ -50,17 +49,16 @@ namespace OpenAvrilConcurrency
         static void stat_create_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(bool* newINITIALISED_Bool);
         static void stat_create_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(bool* newINITIALISED_Bool);
         // get.
-        static bool* stat_get_ptr_flag_isLoaded_Stack_InputAction();
-        static bool* stat_get_ptr_flag_isLoaded_Stack_OutputSend();
-        static bool* stat_get_ptr_side_To_Write_For_array_Of_doubleBuffer_Input();
-        static bool* stat_get_ptr_side_To_Write_For_array_Of_doubleBuffer_Output();
+        static bool* stat_get_Item_flag_isLoaded_Stack_InputAction();
+        static bool* stat_get_Item_flag_isLoaded_Stack_OutputSend();
+        static bool* stat_get_Item_side_To_Write_For_array_Of_doubleBuffer_Input();
+        static bool* stat_get_Item_side_To_Write_For_array_Of_doubleBuffer_Input();
         // set.
         static void stat_set_ptr_flag_isLoaded_Stack_InputAction(bool* newPtr);
         static void stat_set_ptr_flag_isLoaded_Stack_OutputSend(bool* newPtr);
         static void stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(bool newvalue);
         static void stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(bool newvalue);
     // pointers.
-        // classes.
         // registers.
         static bool* _ptr_flag_isLoaded_Stack_InputAction;
         static bool* _ptr_flag_isLoaded_Stack_OutputSend;

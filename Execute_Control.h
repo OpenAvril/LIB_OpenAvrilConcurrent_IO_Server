@@ -39,7 +39,6 @@ namespace OpenAvrilConcurrency
         void stat_set_flag_is_SystemInitialised(bool* newFlag);
         void set_Item_On_list_Of_flag_ThreadInitialised(uint8_t threadID, bool* newFlag);
     // pointers.
-        // classes.
         // registers.
         static bool* _ptr_flag_is_SystemInitialised;
         static std::array<bool, 4>* _ptr_list_Of_flag_ThreadInitialised;//NUMBER OF THREADS

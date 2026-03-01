@@ -14,7 +14,9 @@ namespace OpenAvrilConcurrency
 // public.
 	// dynamic.
 		// get.
+		double get_Item_output_Value();
 		// set.
+		void set_Item_output_Value(double* newValue);
 	// static.
 		// get.
 		// set.
@@ -28,7 +30,7 @@ namespace OpenAvrilConcurrency
 		// get.
 		static double* stat_get_ptr_output_Value();
 		// set.
-		static void stat_set_output_Value(double newValue);
+		static void stat_set_Item_output_Value(double newValue);
 	// pointers.
 		// classes.
 		// registers.

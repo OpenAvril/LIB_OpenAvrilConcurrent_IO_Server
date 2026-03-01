@@ -40,7 +40,6 @@ namespace OpenAvrilConcurrency
         static class Global* stat_get_ptr_Global();
         // set.
     // pointers.
-        // classes.
         // registers.
     };
 }

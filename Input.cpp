@@ -2,11 +2,11 @@
 
 // pointers.
     // calsses.
-    OpenAvrilConcurrency::Input_Control* _ptr_Input_Control = NULL;
+    static OpenAvrilConcurrency::Input_Control* _ptr_Input_Control = NULL;
     // registers.
-    uint8_t* OpenAvrilConcurrency::Input::_ptr_in_praiseEventId = NULL;
-    uint8_t* OpenAvrilConcurrency::Input::_ptr_in_playerId = NULL;
-    std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Input::_ptr_list_Of_Praise_In_Subsets = { NULL };
+    static uint8_t* OpenAvrilConcurrency::Input::_ptr_in_praiseEventId = NULL;
+    static uint8_t* OpenAvrilConcurrency::Input::_ptr_in_playerId = NULL;
+    static std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Input::_ptr_list_Of_Praise_In_Subsets = { NULL };
 
 // constructor.
     OpenAvrilConcurrency::Input::Input()

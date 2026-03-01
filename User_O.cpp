@@ -2,7 +2,7 @@
 
 // pointers.
 	// classes.	
-	class OpenAvrilConcurrency::Praise0_Output* _ptr_Praise0_Output = NULL;
+	static class OpenAvrilConcurrency::Praise0_Output* _ptr_Praise0_Output = NULL;
 	// registers.
 
 // constructor.

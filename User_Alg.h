@@ -36,7 +36,6 @@ namespace OpenAvrilConcurrency
 		static void stat_set_ptr_Praise0_Algorithm(class Praise0_Algorithm* praise0_A);
 		static void stat_set_ptr_Item_On_list_Of_Praise_Alg_Subsets(uint8_t praiseID, class Object* newPtr);
 	// pointers.
-		// classes.
 		// registers.
 		static std::list<class Object*>* _ptr_list_Of_Praise_Alg_Subsets;
 	};

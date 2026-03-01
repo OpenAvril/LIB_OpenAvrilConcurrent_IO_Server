@@ -46,8 +46,6 @@ namespace OpenAvrilConcurrency
         static void stat_set_ptr_Execute_Control(class Execute_Control* newClass);
         static void stat_set_Item_On_array_Of_ptr_list_Of_Threads(OpenAvrilConcurrency::Framework_Server* obj, uint8_t threadID);
     // pointers.
-        // programs.
-        // classes.
         // registers.
         static std::list<std::thread*>* _ptr_array_Of_ptr_list_Of_Threads;
     };

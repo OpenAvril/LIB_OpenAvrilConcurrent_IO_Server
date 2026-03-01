@@ -3,8 +3,8 @@
 // pointers.
 	// classes.
 	// registers.
-	bool* OpenAvrilConcurrency::Execute_Control::_ptr_flag_is_SystemInitialised = NULL;
-	std::array<bool, 4>* OpenAvrilConcurrency::Execute_Control::_ptr_list_Of_flag_ThreadInitialised = { NULL };//NUMBER OF THREADS
+	static bool* OpenAvrilConcurrency::Execute_Control::_ptr_flag_is_SystemInitialised = NULL;
+	static std::array<bool, 4>* OpenAvrilConcurrency::Execute_Control::_ptr_list_Of_flag_ThreadInitialised = { NULL };//NUMBER OF THREADS
 
 // constructor.
 	OpenAvrilConcurrency::Execute_Control::Execute_Control(uint8_t number_Implemented_Cores)

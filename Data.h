@@ -21,10 +21,10 @@ namespace OpenAvrilConcurrency
         void initialise_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot, class OpenAvrilConcurrency::Input* newINITIALISED_Input);
         void initialise_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot, class OpenAvrilConcurrency::Output* newINITIALISED_Output);
         // get.
-        class Input* get_ptr_array_Of_doubleBuffer_Input_READ();
-        class Input* get_ptr_array_Of_doubleBuffer_Input_WRITE();
-        class Output* get_ptr_array_Of_doubleBuffer_Output_READ();
-        class Output* get_ptr_array_Of_doubleBuffer_Output_WRITE();
+        class Input* stat_get_ptr_Item_array_Of_doubleBuffer_Input_READ();
+        class Input* stat_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE();
+        class Output* stat_get_ptr_Item_array_Of_doubleBuffer_Output_READ();
+        class Output* stat_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE();
         class Data_Control* get_ptr_Data_Control();
         class Input* get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t threadID);
         class Output* get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(uint8_t threadID);
@@ -57,10 +57,10 @@ namespace OpenAvrilConcurrency
         static void stat_create_ptr_User_I();
         static  void stat_create_ptr_User_O();
         // get.
-        static class Input* stat_get_ptr_array_Of_doubleBuffer_Input_READ();
-        static class Input* stat_get_ptr_array_Of_doubleBuffer_Input_WRITE();
-        static class Output* stat_ptr_array_Of_doubleBuffer_Output_READ();
-        static class Output* stat_ptr_array_Of_doubleBuffer_Output_WRITE();
+        static class Input* stat_get_ptr_Item_array_Of_doubleBuffer_Input_READ();
+        static class Input* stat_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE();
+        static class Output* stat_get_ptr_Item_array_Of_doubleBuffer_Output_READ();
+        static class Output* stat_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE();
         static class Data_Control* stat_get_ptr_Data_Control();
         static std::array<class OpenAvrilConcurrency::Input*, 3>* stat_get_ptr_array_Of_buffer_Input_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
         static std::array<class OpenAvrilConcurrency::Output*, 3>* stat_get_ptr_array_Of_buffer_Output_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
@@ -75,11 +75,13 @@ namespace OpenAvrilConcurrency
         static class User_I* stat_get_ptr_User_I();
         static class User_O* stat_get_ptr_User_O();
         // set.
-        static void stat_set_ptr_Data_Control(class Data_Control* newClass);
-        static void stat_set_ptr_User_I(class User_I* newClass);
-        static void stat_set_ptr_User_O(class User_O* newClass); 
+        static void stat_set_ptr_Item_array_Of_doubleBuffer_Input_WRITE(uint8_t side, class Input* newClass);
+        static void stat_set_ptr_Item_array_Of_doubleBuffer_Output_WRITE(uint8_t side, class Output* newClass);
+        static void stat_set_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t concurrentThreadID, class Input* newCLass);
+        static void stat_set_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(uint8_t concurrentThreadID, class Output* newCLass);
+        static void stat_set_ptr_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot, class Input* newCLass);
+        static void stat_set_ptr_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot, class Output* newCLass);
     // pointers.
-        // classes.
         // registers.
         static std::array<class Input*, 3>* _ptr_array_Of_buffer_Input_ReferenceForThread;//NUMBER OF CONCURRENT THREADS.
         static std::array<class Output*, 3>* _ptr_array_Of_buffer_Output_ReferenceForThread;//NUMBER OF CONCURRENT THREADS.

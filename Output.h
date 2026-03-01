@@ -47,8 +47,7 @@ namespace OpenAvrilConcurrency
         static  void stat_set_ptr_out_praiseEventId(uint8_t* new_uint8_t);
         static  void stat_set_ptr_Output_Control(class Output_Control* newClass);
         static void stat_set_Item_On_list_Of_Praise_Out_Subsets(uint8_t praiseID, class Object* newObject);
-        // pooutters.
-        // calsses.
+    // pointers.
         // registers.
         static uint8_t* _ptr_out_praiseEventId;
         static uint8_t* _ptr_out_playerId;

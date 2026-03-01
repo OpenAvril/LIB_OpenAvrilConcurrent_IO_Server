@@ -9,8 +9,8 @@
 // pointers.
     // classes.
     // registers.
-    uint8_t* OpenAvrilConcurrency::Global::_ptr_number_Of_Implemented_Cores = NULL;
-    uint8_t* OpenAvrilConcurrency::Global::_ptr_number_Of_Praise_Events = NULL;
+    static uint8_t* OpenAvrilConcurrency::Global::_ptr_number_Of_Implemented_Cores = NULL;
+    static uint8_t* OpenAvrilConcurrency::Global::_ptr_number_Of_Praise_Events = NULL;
     
 // constructor.
     OpenAvrilConcurrency::Global::Global()
@@ -69,7 +69,7 @@
     void OpenAvrilConcurrency::Global::stat_create_number_Of_Implemented_Cores(uint8_t* newDEFAULT_Value)
     {
         std::cout << "entered member function OpenAvrilConcurrency::Global::stat_create_number_Of_Implemented_Cores()." << std::endl;
-        uint8_t* _ptr_number_Of_Implemented_Cores = new uint8_t(NULL);
+        static uint8_t* _ptr_number_Of_Implemented_Cores = new uint8_t(NULL);
         std::cout << "alpha." << std::endl;
         while (_ptr_number_Of_Implemented_Cores == NULL) {}
         std::cout << "bravo." << std::endl;
@@ -79,7 +79,7 @@
     void OpenAvrilConcurrency::Global::stat_create_number_Of_Praise_Events(uint8_t* newDEFAULT_Value)
     {
         std::cout << "entered OpenAvrilConcurrency::Global::stat_create_number_Of_Praise_Events()." << std::endl;
-        uint8_t* _ptr_number_Of_Praise_Events = new uint8_t(NULL);
+        static uint8_t* _ptr_number_Of_Praise_Events = new uint8_t(NULL);
         std::cout << "alpha." << std::endl;
         while (_ptr_number_Of_Praise_Events == NULL) {}
         std::cout << "bravo." << std::endl;

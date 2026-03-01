@@ -6,9 +6,9 @@
     static class OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* _program_WriteEnable_ServerInputAction = NULL;
     static class OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* _program_WriteEnable_ServerOutputRecieve = NULL;
     // classes.
-    OpenAvrilConcurrency::Execute_Control* _ptr_Execute_Control = NULL;
+    static OpenAvrilConcurrency::Execute_Control* _ptr_Execute_Control = NULL;
     // registers.
-    std::list<std::thread*>* OpenAvrilConcurrency::Execute::_ptr_array_Of_ptr_list_Of_Threads = NULL;
+    static std::list<std::thread*>* OpenAvrilConcurrency::Execute::_ptr_array_Of_ptr_list_Of_Threads = NULL;
 
 // constructor.
     OpenAvrilConcurrency::Execute::Execute()

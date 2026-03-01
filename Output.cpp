@@ -2,11 +2,11 @@
 
 // pointers.
     // calsses.
-    OpenAvrilConcurrency::Output_Control* _ptr_Output_Control = NULL;
+    static class OpenAvrilConcurrency::Output_Control* _ptr_Output_Control = NULL;
     // registers.
-    uint8_t* OpenAvrilConcurrency::Output::_ptr_out_praiseEventId = NULL;
-    uint8_t* OpenAvrilConcurrency::Output::_ptr_out_playerId = NULL;
-    std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Output::_ptr_list_Of_Praise_Out_Subsets = { NULL };
+    static uint8_t* OpenAvrilConcurrency::Output::_ptr_out_praiseEventId = NULL;
+    static uint8_t* OpenAvrilConcurrency::Output::_ptr_out_playerId = NULL;
+    static std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Output::_ptr_list_Of_Praise_Out_Subsets = { NULL };
 
 // constructor.
     OpenAvrilConcurrency::Output::Output()

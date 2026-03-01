@@ -38,7 +38,6 @@ namespace OpenAvrilConcurrency
 		static void stat_set_input_Value_A(double* newValue);
 		static void stat_set_input_Value_B(double* newValue);
 	// pointers.
-		// classes.
 		// registers.
 		static double* _ptr_input_Value_A;
 		static double* _ptr_input_Value_B;

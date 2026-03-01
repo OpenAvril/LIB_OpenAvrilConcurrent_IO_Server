@@ -1,9 +1,8 @@
 #include "pch.h"
-// classes.
-
-// registers.
 
 // pointers.
+    // classes. 
+    // registers.
 
 // constructor.
     OpenAvrilConcurrency::Input_Control::Input_Control()
@@ -32,7 +31,7 @@
         switch (praiseEventId)
         {
         case 0:
-            obj->get_ptr_Server()->get_ptr_Data()->get_ptr_array_Of_doubleBuffer_Input_WRITE()->set_Subset_With_InputSubet(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_I()->get_ptr_Praise0_Input());
+            obj->get_ptr_Server()->get_ptr_Data()->stat_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->set_Subset_With_InputSubet(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_I()->get_ptr_Praise0_Input());
             break;
         }
     }

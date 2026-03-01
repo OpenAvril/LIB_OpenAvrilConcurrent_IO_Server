@@ -2,9 +2,9 @@
 
 // pointers.
 	// classes.
-	OpenAvrilConcurrency::Praise0_Algorithm* _ptr_Praise0_Algorithm = NULL;
+	static class OpenAvrilConcurrency::Praise0_Algorithm* _ptr_Praise0_Algorithm = NULL;
 	// registers.
-	std::list<class OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::User_Alg::_ptr_list_Of_Praise_Alg_Subsets = { NULL };
+	static std::list<class OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::User_Alg::_ptr_list_Of_Praise_Alg_Subsets = { NULL };
 
 // constructor.
 	OpenAvrilConcurrency::User_Alg::User_Alg()

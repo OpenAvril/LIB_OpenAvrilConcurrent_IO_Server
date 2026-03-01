@@ -4,7 +4,7 @@
     // classes.
     static class OpenAvrilConcurrency::User_Alg* _ptr_User_Algorithms = NULL;
     // registers.
-    std::list<class OpenAvrilConcurrency::Concurrent*>* OpenAvrilConcurrency::Algorithms::_ptr_list_Of_ptr_Concurrent = NULL;
+    static std::list<class OpenAvrilConcurrency::Concurrent*>* OpenAvrilConcurrency::Algorithms::_ptr_list_Of_ptr_Concurrent = NULL;
 
 // constructor.
     OpenAvrilConcurrency::Algorithms::Algorithms()
@@ -52,7 +52,7 @@
     // static.
     void OpenAvrilConcurrency::Algorithms::stat_create_ptr_list_Of_ptr_Concurrent(OpenAvrilConcurrency::Concurrent* newDEFAULT_Concurrent)
     {
-        std::list<class OpenAvrilConcurrency::Concurrent*>* _list_Of_ptr_Concurrent = new std::list<class OpenAvrilConcurrency::Concurrent*>();
+        static std::list<class OpenAvrilConcurrency::Concurrent*>* _list_Of_ptr_Concurrent = new std::list<class OpenAvrilConcurrency::Concurrent*>();
         while (stat_get_ptr_list_Of_ptr_Concurrent() == NULL) {}
         *_list_Of_ptr_Concurrent = { newDEFAULT_Concurrent , newDEFAULT_Concurrent, newDEFAULT_Concurrent };
         for (uint8_t concurrentThreadID = 0; concurrentThreadID < sizeof(*stat_get_ptr_list_Of_ptr_Concurrent()); concurrentThreadID++)
@@ -62,7 +62,7 @@
     }
     void OpenAvrilConcurrency::Algorithms::stat_create_ptr_User_Algorithms()
     {
-        class OpenAvrilConcurrency::User_Alg* _ptr_User_Algorithms = new class OpenAvrilConcurrency::User_Alg();
+        static class OpenAvrilConcurrency::User_Alg* _ptr_User_Algorithms = new class OpenAvrilConcurrency::User_Alg();
         while (stat_get_ptr_User_Algorithms() == NULL) {}
     }
         // get.
@@ -87,7 +87,3 @@
         std::advance(temp, concurrentThreadID);
         *temp = newClass;
     }
-    void OpenAvrilConcurrency::Algorithms::stat_set_ptr_User_Algorithms(OpenAvrilConcurrency::User_Alg* newClass)
-    {
-        *_ptr_User_Algorithms = *newClass;
-    }        
