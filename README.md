@@ -617,5 +617,5 @@ public void Thread_Concurrent(byte threadId)
  - https://github.com/OpenAvril/TESTBENCH_OpenAvril
 ### using Branch => https://github.com/OpenAvril/LIB_OpenAvrilConcurrent_IO_Server/tree/TestBench
 
-## Prospecting In A Neural Network AI IO Device.
+## Prospecting In A Neural Network Iintiligence IO Device.
  - https://github.com/OpenAvril/OpenAvrilNNI_Design_Suite
