@@ -16,7 +16,7 @@ namespace OpenAvrilConcurrency
         void initialise_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID, class Concurrent* newINITIALISED_Concurrent);
         // get.
         class Concurrent* get_ptr_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID);
-        class User_Alg* get_ptr_User_Algorithms();
+        class User_Algorithm* get_ptr_User_Algorithmorithms();
         // set.
     // static.
         // get.
@@ -29,11 +29,11 @@ namespace OpenAvrilConcurrency
         // set.
     // static.
         static  void stat_create_ptr_list_Of_ptr_Concurrent(class Concurrent* newDEFAULT_Concurrent);
-        static void stat_create_ptr_User_Algorithms();
+        static void stat_create_ptr_User_Algorithmorithms();
         // get.
         static class Concurrent* stat_get_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID);
         static std::list<class Concurrent*>* stat_get_ptr_list_Of_ptr_Concurrent();
-        static class User_Alg* stat_get_ptr_User_Algorithms();
+        static class User_Algorithm* stat_get_ptr_User_Algorithmorithms();
         // set.
         static void stat_set_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID, class Concurrent* newClass);
     // pointers.

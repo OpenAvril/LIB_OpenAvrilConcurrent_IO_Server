@@ -4,7 +4,7 @@
     // classes.
     static class OpenAvrilConcurrency::Concurrent_Control* _ptr_Concurrent_Control = NULL;
     // registers.
-    static std::list<class OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Concurrent::_ptr_list_Of_ptr_Algorithms_Subset = NULL;
+    static std::list<class OpenAvrilConcurrency::Object*>* _ptr_list_Of_ptr_Algorithms_Subset = NULL;
 
 // constructor.
     OpenAvrilConcurrency::Concurrent::Concurrent()
@@ -98,7 +98,7 @@
                         obj,
                         obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_in_playerId(),
                         obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_in_praiseEventId(),
-                        obj->get_ptr_Server()->get_ptr_Algorithms()->get_ptr_User_Algorithms()->get_ptr_Item_On_ptr_list_Of_ptr_Algorithms_Subset(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_in_praiseEventId()),
+                        obj->get_ptr_Server()->get_ptr_Algorithms()->get_ptr_User_Algorithmorithms()->get_ptr_Item_On_ptr_list_Of_ptr_Algorithms_Subset(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_in_praiseEventId()),
                         obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_ptr_Item_On_list_Of_Praise_In_Subsets(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_in_praiseEventId()),
                         obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrent_threadID)->get_ptr_Item_On_list_Of_Praise_Out_Subsets(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_in_praiseEventId())
                     );

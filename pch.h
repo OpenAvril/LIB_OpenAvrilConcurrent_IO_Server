@@ -10,6 +10,7 @@
 // add headers that you want to pre-compile here
 #include <array>
 #include <cstddef>
+#include <cstdint>
 #include <iostream>
 #include <list>
 #include <math.h>
@@ -29,13 +30,13 @@
 #include "Data_Control.h"
 #include "Input.h"
 #include "Input_Control.h"
-#include "User_I.h"
+#include "User_Input.h"
 #include "Praise0_Input.h"
 #include "Output.h"
 #include "Output_Control.h"
-#include "User_O.h"
+#include "User_Output.h"
 #include "Praise0_Output.h"
-#include "User_Alg.h"
+#include "User_Alogorithm.h"
 #include "Praise0_Algorithm.h"
 #include "Execute.h"
 #include "include/LIB_LaunchEnableForConcurrentThreadsAt_SERVER/LIB_LaunchEnableForConcurrentThreadsAt_SERVER.h"

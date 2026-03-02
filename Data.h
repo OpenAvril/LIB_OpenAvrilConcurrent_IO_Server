@@ -21,10 +21,10 @@ namespace OpenAvrilConcurrency
         void initialise_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot, class OpenAvrilConcurrency::Input* newINITIALISED_Input);
         void initialise_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot, class OpenAvrilConcurrency::Output* newINITIALISED_Output);
         // get.
-        class Input* stat_get_ptr_Item_array_Of_doubleBuffer_Input_READ();
-        class Input* stat_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE();
-        class Output* stat_get_ptr_Item_array_Of_doubleBuffer_Output_READ();
-        class Output* stat_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE();
+        class Input* get_ptr_Item_array_Of_doubleBuffer_Input_READ();
+        class Input* get_ptr_Item_array_Of_doubleBuffer_Input_WRITE();
+        class Output* get_ptr_Item_array_Of_doubleBuffer_Output_READ();
+        class Output* get_ptr_Item_array_Of_doubleBuffer_Output_WRITE();
         class Data_Control* get_ptr_Data_Control();
         class Input* get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t threadID);
         class Output* get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(uint8_t threadID);

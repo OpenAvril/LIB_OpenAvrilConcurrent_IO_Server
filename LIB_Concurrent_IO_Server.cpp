@@ -20,8 +20,8 @@
 // public.
 	void* OpenAvrilConcurrency::CLIBConcurrentServerIO::generate_Program()
 	{
-		static class OpenAvrilConcurrency::Framework_Server* stat_get_ptr_Framework_Server = new class OpenAvrilConcurrency::Framework_Server();
-		while (stat_get_ptr_Framework_Server == NULL) {}
+		static class OpenAvrilConcurrency::Framework_Server* _ptr_Framework_Server = new class OpenAvrilConcurrency::Framework_Server();
+		while (stat_get_ptr_Framework_Server() == NULL) {}
 		stat_get_ptr_Framework_Server()->initialise_Program(stat_get_ptr_Framework_Server());
 		return (void*)stat_get_ptr_Framework_Server();;
 	}
@@ -64,15 +64,15 @@
 	}
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::select_set_Intput_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId)
 	{
-		obj->get_ptr_Server()->get_ptr_Data()->stat_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->get_ptr_Input_Control()->select_And_Set_Input_Subset(obj, praiseEventId);
+		obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->get_ptr_Input_Control()->select_And_Set_Input_Subset(obj, praiseEventId);
 	}
 	uint8_t OpenAvrilConcurrency::CLIBConcurrentServerIO::get_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		return obj->get_ptr_Server()->get_ptr_Data()->stat_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE()->get_out_praiseEventId();
+		return obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_array_Of_doubleBuffer_Output_WRITE()->get_out_praiseEventId();
 	}
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::set_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj, uint8_t value)
 	{
-		obj->get_ptr_Server()->get_ptr_Data()->stat_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->get_ptr_Item_On_list_Of_Praise_In_Subsets(obj->get_ptr_Server()->get_ptr_Data()->stat_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->get_in_praiseEventId());
+		obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->get_ptr_Item_On_list_Of_Praise_In_Subsets(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->get_in_praiseEventId());
 	}
 		// get.
 		// set.
