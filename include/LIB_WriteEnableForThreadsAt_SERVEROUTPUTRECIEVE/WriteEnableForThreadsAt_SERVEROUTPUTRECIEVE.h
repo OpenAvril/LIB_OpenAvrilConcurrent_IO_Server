@@ -30,17 +30,17 @@ namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE
         // get.
         // set.
     // static.
-        static void stat_create_CLASS_Global();
+        static void stat_create_CLASS_ptr_Global();
         static void stat_create_ptr_WriteEnable_Control();
         // get.
-        static class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global* stat_get_ptr_CLASS_Global();
+        static class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global* stat_get_CLASS_ptr_Global();
         static class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Control* stat_get_ptr_WriteEnable_Control();
         // set.
-        static void stat_set_ptr_Global(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global* global);
+        static void stat_set_CLASS_ptr_Global(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global* global);
         static void stat_set_ptr_WriteEnable_Control(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Control* writeEnableControl);
     // pointers.
         // classes.
-        static class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global* _ptr_Global;
+        static class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global* _CLASS_ptr_Global;
         static class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Control* _ptr_WriteEnable_Control;
         // registers.
     };

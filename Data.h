@@ -21,7 +21,7 @@ namespace OpenAvrilConcurrency
         void initialise_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot, class OpenAvrilConcurrency::Input* newINITIALISED_Input);
         void initialise_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot, class OpenAvrilConcurrency::Output* newINITIALISED_Output);
         // get.
-        class Data_Control* get_ptr_CLASS_Data_Control();
+        class Data_Control* get_CLASS_ptr_Data_Control();
         class Input* get_ptr_Item_array_Of_doubleBuffer_Input_READ(class Framework_Server* obj);
         class Input* get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(class Framework_Server* obj);
         class Output* get_ptr_Item_array_Of_doubleBuffer_Output_READ(class Framework_Server* obj);
@@ -76,7 +76,7 @@ namespace OpenAvrilConcurrency
             // get.
             // set.
 
-        static void stat_create_CLASS_Data_Control();
+        static void stat_create_CLASS_ptr_Data_Control();
         static void stat_create_ptr_array_Of_buffer_Input_ReferenceForThread(Input* newDEFAULT_Input);
         static void stat_create_ptr_array_Of_buffer_Output_ReferenceForThread(Output* newDEFAULT_Output);
         static void stat_create_ptr_vector_Of_stack_Of_InputPraise(Input* newDEFAULT_Input);
@@ -88,7 +88,7 @@ namespace OpenAvrilConcurrency
         static class Input* stat_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(uint8_t side);
         static class Output* stat_get_ptr_Item_array_Of_doubleBuffer_Output_READ(uint8_t side);
         static class Output* stat_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE(uint8_t side);
-        static class Data_Control* stat_get_ptr_CLASS_Data_Control();
+        static class Data_Control* stat_get_CLASS_ptr_Data_Control();
         static std::array<class OpenAvrilConcurrency::Input*, 3>* stat_get_ptr_array_Of_buffer_Input_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
         static std::array<class OpenAvrilConcurrency::Output*, 3>* stat_get_ptr_array_Of_buffer_Output_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
         static std::array<class OpenAvrilConcurrency::Input*, 2>* stat_get_ptr_array_Of_doubleBuffer_Input();

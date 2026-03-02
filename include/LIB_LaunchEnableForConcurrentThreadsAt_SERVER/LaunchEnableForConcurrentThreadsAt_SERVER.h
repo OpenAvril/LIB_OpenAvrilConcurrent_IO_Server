@@ -30,13 +30,13 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER
         // get.
         // set.
     // static.
-        static void stat_create_CLASS_Global();
+        static void stat_create_CLASS_ptr_Global();
         static void stat_create_ptr_LaunchConcurrency_Control(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
         // get.
-        static class LaunchEnableForConcurrentThreadsAt_SERVER_Global* stat_get_ptr_CLASS_Global();
+        static class LaunchEnableForConcurrentThreadsAt_SERVER_Global* stat_get_CLASS_ptr_Global();
         static class LaunchEnableForConcurrentThreadsAt_SERVER_Control* stat_get_ptr_LaunchConcurrency_Control();
         // set.
-        static void stat_set_ptr_Global(class LaunchEnableForConcurrentThreadsAt_SERVER_Global* newClass);
+        static void stat_set_CLASS_ptr_Global(class LaunchEnableForConcurrentThreadsAt_SERVER_Global* newClass);
         static void stat_set_ptr_LaunchConcurrency_Control(class LaunchEnableForConcurrentThreadsAt_SERVER_Control* newClass);
     // pointers.
         // classes.
