@@ -25,7 +25,7 @@
 		switch (praiseEventId)
 		{
 		case 0:
-			obj->get_ptr_Server()->get_ptr_Data()->stat_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE()->set_Subset_With_OutputSubet(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_O()->get_ptr_Praise0_Output()); 
+			obj->get_ptr_Server()->get_ptr_Data()->stat_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE()->set_Subset_With_OutputSubet(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_Output()->get_ptr_Praise0_Output()); 
 			break;
 		}
 	}
