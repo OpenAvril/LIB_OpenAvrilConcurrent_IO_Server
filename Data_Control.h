@@ -42,6 +42,19 @@ namespace OpenAvrilConcurrency
         // get.
         // set.
     // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+// private.
+    // dynamic.
+        // get.
+        // set.
+    // static.
         // registers.
         static void stat_create_ptr_flag_isLoaded_Stack_InputAction(bool* newINITIALISED_Bool);
         static void stat_create_ptr_flag_isLoaded_Stack_OutputSend(bool* newINITIALISED_Bool);

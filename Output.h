@@ -27,10 +27,19 @@ namespace OpenAvrilConcurrency
         // set.
 
     private:
-        // private.
-            // dynamic.
-                // get.
-                // set.
+// private.
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
         // static.
         static void stat_create_ptr_out_playerId(uint8_t* newDEFAULT_uint8_t);
         static void stat_create_ptr_out_praiseEventId(uint8_t* newDEFAULT_uint8_t);

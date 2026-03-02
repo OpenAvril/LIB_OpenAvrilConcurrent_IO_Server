@@ -25,7 +25,7 @@
 		switch (praiseEventId)
 		{
 		case 0:
-			obj->get_ptr_Server()->get_ptr_CLASS_Algorithms()->get_ptr_Item_On_list_Of_ptr_Concurrent(concurrent_threadID)->get_ptr_Concurrent_Control()->selectset_Algorithm_Subset(obj, praiseEventId, concurrent_threadID);
+			obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Algorithms()->get_CLASS_ptr_Item_On_list_Of_ptr_Concurrent(concurrent_threadID)->get_CLASS_ptr_Concurrent_Control()->selectset_Algorithm_Subset(obj, praiseEventId, concurrent_threadID);
 			break;
 		}
 	}

@@ -27,6 +27,19 @@ namespace OpenAvrilConcurrency
     // dynamic.
         // get.
         // set.
+    // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+// private.
+    // dynamic.
+        // get.
+        // set.
         
     // static.
         void stat_create_flag_is_SystemInitialised(bool* newDEFAULT_Bool);

@@ -15,7 +15,7 @@ namespace OpenAvrilConcurrency
     // dynamic.
         void initialise_Program(class Framework_Server* obj);
         // get.
-        class Server* get_ptr_Server();
+        class Server* get_CLASS_ptr_Server();
         // set.
     // static.
         // get.
@@ -28,15 +28,14 @@ namespace OpenAvrilConcurrency
         // set.
     // static.
         // classes.
-        static void stat_create_CLASS_Server();
+            // create.
+        static void stat_create_CLASS_ptr_Server();
             // get.
+        static class Server* stat_get_CLASS_ptr_Server();
             // set.
         // registers.
+            // create.
             // get.
-            // set.
-        // pointers.
-            // get.
-        static class Server* stat_get_ptr_CLASS_Server();
             // set.
     };
 }

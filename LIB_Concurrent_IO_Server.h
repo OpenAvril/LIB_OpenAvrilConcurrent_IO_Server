@@ -50,14 +50,13 @@ namespace OpenAvrilConcurrency
 		// set.
 	// static.
 		// classes.
+			// create.
 			// get.
+		static class OpenAvrilConcurrency::Framework_Server* stat_get_CLASS_ptr_Framework_Server();
 			// set.
 		// registers.
+			// create.
 			// get.
-			// set.
-		// pointers.
-			// get.
-		static class OpenAvrilConcurrency::Framework_Server* stat_get_ptr_REG_Framework_Server();
 			// set.
 	};
 }

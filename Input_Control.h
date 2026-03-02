@@ -26,6 +26,19 @@ namespace OpenAvrilConcurrency
 		// get.
 		// set.
 	// static.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+// private.
+	// dynamic.
+		// get.
+		// set.
+	// static.
 		// get.
 		// set.
 	// pointers.

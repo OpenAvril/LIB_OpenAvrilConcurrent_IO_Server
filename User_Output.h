@@ -27,6 +27,19 @@ namespace OpenAvrilConcurrency
 		// get.
 		// set.
 	// static.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+// private.
+	// dynamic.
+		// get.
+		// set.
+	// static.
 		static void stat_create_ptr_Praise0_Output();
 		static void stat_create_ptr_list_Of_Praise_Output_Subsets(class Object* newDEFAULT_Object);
 		// get.

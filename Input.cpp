@@ -34,7 +34,7 @@
     }
     void OpenAvrilConcurrency::Input::initialise_list_Of_Praise_In_Subsets(Framework_Server* obj)
     {
-        set_Subset_With_InputSubet(obj->get_ptr_Server()->get_ptr_CLASS_Data()->get_ptr_User_Input()->get_ptr_Praise0_Input());
+        set_Subset_With_InputSubet(obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Data()->get_ptr_User_Input()->get_ptr_Praise0_Input());
     }
     // get.
     uint8_t OpenAvrilConcurrency::Input::get_in_praiseEventId()

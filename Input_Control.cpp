@@ -31,7 +31,7 @@
         switch (praiseEventId)
         {
         case 0:
-            obj->get_ptr_Server()->get_ptr_CLASS_Data()->stat_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->set_Subset_With_InputSubet(obj->get_ptr_Server()->get_ptr_CLASS_Data()->get_ptr_User_Input()->get_ptr_Praise0_Input());
+            obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Data()->stat_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->set_Subset_With_InputSubet(obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Data()->get_ptr_User_Input()->get_ptr_Praise0_Input());
             break;
         }
     }

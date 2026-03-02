@@ -132,6 +132,6 @@
     {
         auto temp = stat_get_ptr_array_Of_ptr_list_Of_Threads()->begin();
         std::advance(temp, threadID);
-        *temp = new std::thread(obj->get_ptr_Server()->get_ptr_CLASS_Algorithms()->get_ptr_Item_On_list_Of_ptr_Concurrent(threadID)->thread_Concurrency, obj, threadID);
+        *temp = new std::thread(obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Algorithms()->get_CLASS_ptr_Item_On_list_Of_ptr_Concurrent(threadID)->thread_Concurrency, obj, threadID);
     }
  

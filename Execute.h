@@ -33,6 +33,19 @@ namespace OpenAvrilConcurrency
         // get.
         // set.
     // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+// private.
+    // dynamic.
+        // get.
+        // set.
+    // static.
         static void stat_create_CLASS_Execute_Control(uint8_t number_Implemented_Cores);
         static void stat_create_ptr_array_Of_ptr_list_Of_Threads();
         // get.

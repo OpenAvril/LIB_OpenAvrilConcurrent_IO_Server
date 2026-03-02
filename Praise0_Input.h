@@ -29,6 +29,19 @@ namespace OpenAvrilConcurrency
 		// get.
 		// set.
 	// static.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+// private.
+	// dynamic.
+		// get.
+		// set.
+	// static.
 		static void stat_create_ptr_input_Value_A(double* newDEFAULT_Double);
 		static void stat_create_ptr_input_Value_B(double* newDEFAULT_Double);
 		// get.

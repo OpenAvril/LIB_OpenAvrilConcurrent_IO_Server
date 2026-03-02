@@ -30,6 +30,19 @@ namespace OpenAvrilConcurrency
         // set.
     // static.
         // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+// private.
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        // classes.
         static void stat_create_CLASS_Algorithms();
         static void stat_create_CLASS_Data();
         static void stat_create_CLASS_Execute();

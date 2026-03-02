@@ -32,6 +32,19 @@ namespace OpenAvrilConcurrency
         // get.
         // set.
     // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+// private.
+    // dynamic.
+        // get.
+        // set.
+    // static.
         static void stat_create_ptr_in_playerId(uint8_t* newDEFAULT_uint8_t);
         static void stat_create_ptr_in_praiseEventId(uint8_t* newDEFAULT_uint8_t);
         static void stat_create_ptr_Input_Control();
