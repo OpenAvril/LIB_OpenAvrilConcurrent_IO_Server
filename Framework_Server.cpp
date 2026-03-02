@@ -9,7 +9,7 @@
 	OpenAvrilConcurrency::Framework_Server::Framework_Server()
 	{
 		std::cout << "entered constructor of OpenAvrilConcurrency::Framework_Server::Framework_Server()" << std::endl;
-		stat_create_ptr_Server();
+		stat_create_CLASS_Server();
 		std::cout << "exiting constructor of OpenAvrilConcurrency::Framework_Server::Framework_Server()Created => Created Server Assembly()" << std::endl;
 	}
 
@@ -28,18 +28,18 @@
 		uint8_t* newINITIALISED_Value = new uint8_t(UINT8_MAX);
 		while (newINITIALISED_Value) {}
 		*newINITIALISED_Value = uint8_t(4);
-		obj->get_ptr_Server()->get_ptr_Global()->initialise_number_Of_Implemented_Cores(newINITIALISED_Value);
+		obj->get_ptr_Server()->get_ptr_CLASS_Global()->initialise_REG_Item_number_Of_Implemented_Cores(newINITIALISED_Value);
 		*newINITIALISED_Value = uint8_t(1);
-		obj->get_ptr_Server()->get_ptr_Global()->initialise_number_Of_Praise_Events(newINITIALISED_Value);
+		obj->get_ptr_Server()->get_ptr_CLASS_Global()->initialise_REG_Item_number_Of_Praise_Events(newINITIALISED_Value);
 		delete newINITIALISED_Value;
 		// algorithms.
 			// concurrent.
 		OpenAvrilConcurrency::Concurrent* newINITIALISED_Concurrent = new class OpenAvrilConcurrency::Concurrent();
 		while (newINITIALISED_Concurrent == NULL) {}
 		newINITIALISED_Concurrent->initialise_Control();
-		for (uint8_t concurrentThreadID = 0; concurrentThreadID < sizeof((obj->get_ptr_Server()->get_ptr_Global()->get_number_Of_Implemented_Cores() - 1)); concurrentThreadID++)
+		for (uint8_t concurrentThreadID = 0; concurrentThreadID < sizeof((obj->get_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Implemented_Cores() - 1)); concurrentThreadID++)
 		{
-			obj->get_ptr_Server()->get_ptr_Algorithms()->initialise_Item_On_list_Of_ptr_Concurrent(concurrentThreadID, newINITIALISED_Concurrent);
+			obj->get_ptr_Server()->get_ptr_CLASS_Algorithms()->initialise_Item_On_list_Of_ptr_Concurrent(concurrentThreadID, newINITIALISED_Concurrent);
 		}
 		delete newINITIALISED_Concurrent;
 		// data.
@@ -47,34 +47,34 @@
 		OpenAvrilConcurrency::Input* newINITIALISED_Input = new class OpenAvrilConcurrency::Input();
 		while (newINITIALISED_Input == NULL) {}
 		newINITIALISED_Input->initialise_Control();
-		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->get_ptr_Server()->get_ptr_Global()->get_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
+		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->get_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
 		{
-			obj->get_ptr_Server()->get_ptr_Data()->initialise_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrentThreadID, newINITIALISED_Input);
+			obj->get_ptr_Server()->get_ptr_CLASS_Data()->initialise_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrentThreadID, newINITIALISED_Input);
 		}
 		for (uint8_t sideID = 0; sideID < uint8_t(2); sideID++)
 		{
-			obj->get_ptr_Server()->get_ptr_Data()->initialise_Item_On_array_Of_doubleBuffer_Input(sideID, newINITIALISED_Input);
+			obj->get_ptr_Server()->get_ptr_CLASS_Data()->initialise_Item_On_array_Of_doubleBuffer_Input(sideID, newINITIALISED_Input);
 		}
-		for (uint8_t slotID = 0; slotID < obj->get_ptr_Server()->get_ptr_Global()->_get_number_Of_Praise_Events(); slotID++)
+		for (uint8_t slotID = 0; slotID < obj->get_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Praise_Events(); slotID++)
 		{
-			obj->get_ptr_Server()->get_ptr_Data()->initialise_Item_On_vector_Of_stack_Of_InputPraise(slotID, newINITIALISED_Input);
+			obj->get_ptr_Server()->get_ptr_CLASS_Data()->initialise_Item_On_vector_Of_stack_Of_InputPraise(slotID, newINITIALISED_Input);
 		}
 		delete newINITIALISED_Input;
 			// output.
 		OpenAvrilConcurrency::Output* newINITIALISED_Output = new class OpenAvrilConcurrency::Output();
 		while (newINITIALISED_Output == NULL) {}
 		newINITIALISED_Output->initialise_Control();
-		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->get_ptr_Server()->get_ptr_Global()->get_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
+		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->get_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
 		{
-			obj->get_ptr_Server()->get_ptr_Data()->initialise_Item_On_array_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrentThreadID, newINITIALISED_Output);
+			obj->get_ptr_Server()->get_ptr_CLASS_Data()->initialise_Item_On_array_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrentThreadID, newINITIALISED_Output);
 		}
 		for (uint8_t sideID = 0; sideID < uint8_t(2); sideID++)
 		{
-			obj->get_ptr_Server()->get_ptr_Data()->initialise_Item_On_array_Of_doubleBuffer_Output(sideID, newINITIALISED_Output);
+			obj->get_ptr_Server()->get_ptr_CLASS_Data()->initialise_Item_On_array_Of_doubleBuffer_Output(sideID, newINITIALISED_Output);
 		}
-		for (uint8_t slotID = 0; slotID < obj->get_ptr_Server()->get_ptr_Global()->_get_number_Of_Praise_Events(); slotID++)
+		for (uint8_t slotID = 0; slotID < obj->get_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Praise_Events(); slotID++)
 		{
-			obj->get_ptr_Server()->get_ptr_Data()->initialise_Item_On_vector_Of_stack_Of_OutputPraise(slotID, newINITIALISED_Output);
+			obj->get_ptr_Server()->get_ptr_CLASS_Data()->initialise_Item_On_vector_Of_stack_Of_OutputPraise(slotID, newINITIALISED_Output);
 		}
 		delete newINITIALISED_Output;
 		
@@ -85,15 +85,15 @@
 
 
 		std::cout << "entered => OpenAvrilConcurrency::Framework_Server::initialise_Program()" << std::endl;
-		obj->get_ptr_Server()->get_ptr_Execute()->initialise_Libraries();
+		obj->get_ptr_Server()->get_ptr_CLASS_Execute()->initialise_Libraries();
 		std::cout << "INIT Libraries" << std::endl;
-		obj->get_ptr_Server()->get_ptr_Execute()->initialise_Threads(obj);
+		obj->get_ptr_Server()->get_ptr_CLASS_Execute()->initialise_Threads(obj);
 		std::cout << "INIT Thread(s)" << std::endl;
 	}
 		// get.
 	OpenAvrilConcurrency::Server* OpenAvrilConcurrency::Framework_Server::get_ptr_Server()
 	{
-		return stat_get_ptr_Server();
+		return stat_get_ptr_CLASS_Server();
 	}
 		// set.
 	// static.
@@ -105,13 +105,13 @@
 		// get.
 		// set.
 	// static.
-	void OpenAvrilConcurrency::Framework_Server::stat_create_ptr_Server()
+	void OpenAvrilConcurrency::Framework_Server::stat_create_CLASS_Server()
 	{
 		static class OpenAvrilConcurrency::Server* _ptr_Server = new class OpenAvrilConcurrency::Server();
-		while (stat_get_ptr_Server() == NULL) {}
+		while (stat_get_ptr_CLASS_Server() == NULL) {}
 	}
 		// get.
-	OpenAvrilConcurrency::Server* OpenAvrilConcurrency::Framework_Server::stat_get_ptr_Server()
+	OpenAvrilConcurrency::Server* OpenAvrilConcurrency::Framework_Server::stat_get_ptr_CLASS_Server()
 	{
 		return _ptr_Server;
 	}

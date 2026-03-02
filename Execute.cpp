@@ -29,7 +29,7 @@
     // dynamic.
     void OpenAvrilConcurrency::Execute::initialise_Control(uint8_t number_Implemented_Cores)
     {
-        stat_create_ptr_Execute_Control(number_Implemented_Cores);
+        stat_create_CLASS_Execute_Control(number_Implemented_Cores);
     }
     void OpenAvrilConcurrency::Execute::initialise_Libraries()
     {
@@ -78,10 +78,10 @@
         // get.
         // set.
     // static.
-    void OpenAvrilConcurrency::Execute::stat_create_ptr_Execute_Control(uint8_t number_Implemented_Cores)
+    void OpenAvrilConcurrency::Execute::stat_create_CLASS_Execute_Control(uint8_t number_Implemented_Cores)
     {
         static class OpenAvrilConcurrency::Execute_Control* _ptr_Execute_Control = new class OpenAvrilConcurrency::Execute_Control(number_Implemented_Cores);
-        while (stat_get_ptr_Execute_Control() == NULL) { }
+        while (stat_get_ptr_CLASS_Execute_Control() == NULL) { }
     }
     void OpenAvrilConcurrency::Execute::stat_create_ptr_array_Of_ptr_list_Of_Threads()
     {
@@ -93,7 +93,7 @@
         }
     }
         // get.
-    OpenAvrilConcurrency::Execute_Control* OpenAvrilConcurrency::Execute::stat_get_ptr_Execute_Control()
+    OpenAvrilConcurrency::Execute_Control* OpenAvrilConcurrency::Execute::stat_get_ptr_CLASS_Execute_Control()
     {
         return _ptr_Execute_Control;
     }
@@ -107,7 +107,7 @@
     {
         return _ptr_array_Of_ptr_list_Of_Threads;
     }
-    OpenAvrilConcurrency::Execute_Control* OpenAvrilConcurrency::Execute::get_ptr_Execute_Control()
+    OpenAvrilConcurrency::Execute_Control* OpenAvrilConcurrency::Execute::get_ptr_CLASS_Execute_Control()
     {
         return _ptr_Execute_Control;
     }
@@ -132,6 +132,6 @@
     {
         auto temp = stat_get_ptr_array_Of_ptr_list_Of_Threads()->begin();
         std::advance(temp, threadID);
-        *temp = new std::thread(obj->get_ptr_Server()->get_ptr_Algorithms()->get_ptr_Item_On_list_Of_ptr_Concurrent(threadID)->thread_Concurrency, obj, threadID);
+        *temp = new std::thread(obj->get_ptr_Server()->get_ptr_CLASS_Algorithms()->get_ptr_Item_On_list_Of_ptr_Concurrent(threadID)->thread_Concurrency, obj, threadID);
     }
  

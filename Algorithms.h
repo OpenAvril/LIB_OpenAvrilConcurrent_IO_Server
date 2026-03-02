@@ -28,6 +28,15 @@ namespace OpenAvrilConcurrency
         // get.
         // set.
     // static.
+        // classes.
+            // get.
+            // set.
+        // registers.
+            // get.
+            // set.
+        // pointers.
+            // get.
+            // set.
         static  void stat_create_ptr_list_Of_ptr_Concurrent(class Concurrent* newDEFAULT_Concurrent);
         static void stat_create_ptr_User_Algorithmorithms();
         // get.

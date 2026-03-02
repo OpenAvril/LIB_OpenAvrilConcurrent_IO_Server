@@ -12,21 +12,21 @@
     OpenAvrilConcurrency::Server::Server()
     {
         std::cout << "entered constructor of OpenAvrilConcurrency::Server::Server()" << std::endl;
-        stat_create_ptr_Global();
-        while (stat_get_ptr_Global() == NULL) {}
+        stat_create_CLASS_Global();
+        while (stat_get_ptr_CLASS_Global() == NULL) {}
         std::cout << "alpha." << std::endl;
-        stat_create_ptr_Algorithms();
-        while (stat_get_ptr_Algorithms() == NULL) {}
+        stat_create_CLASS_Algorithms();
+        while (stat_get_ptr_CLASS_Algorithms() == NULL) {}
         std::cout << "bravo." << std::endl;
-        stat_create_ptr_Data();
-        while (stat_get_ptr_Data() == NULL) {}
+        stat_create_CLASS_Data();
+        while (stat_get_ptr_CLASS_Data() == NULL) {}
         std::cout << "charlie." << std::endl;
-        stat_get_ptr_Data()->initialise_Control();
+        stat_get_ptr_CLASS_Data()->initialise_Control();
         std::cout << "delta." << std::endl;
-        stat_create_ptr_Execute();
-        while (stat_get_ptr_Execute() == NULL) {}
+        stat_create_CLASS_Execute();
+        while (stat_get_ptr_CLASS_Execute() == NULL) {}
         std::cout << "echo." << std::endl;
-        stat_get_ptr_Execute()->initialise_Control(stat_get_ptr_Global()->get_number_Of_Implemented_Cores());
+        stat_get_ptr_CLASS_Execute()->initialise_Control(stat_get_ptr_CLASS_Global()->get_REG_Item_number_Of_Implemented_Cores());
         std::cout << "exiting constructor of OpenAvrilConcurrency::Server::Server()" << std::endl;
     }
 
@@ -42,21 +42,21 @@
 // public.
     // dynamic.
         // get.
-        OpenAvrilConcurrency::Algorithms* OpenAvrilConcurrency::Server::get_ptr_Algorithms()
+        OpenAvrilConcurrency::Algorithms* OpenAvrilConcurrency::Server::get_ptr_CLASS_Algorithms()
         {
-            return stat_get_ptr_Algorithms();
+            return stat_get_ptr_CLASS_Algorithms();
         }
-        OpenAvrilConcurrency::Data* OpenAvrilConcurrency::Server::get_ptr_Data()
+        OpenAvrilConcurrency::Data* OpenAvrilConcurrency::Server::get_ptr_CLASS_Data()
         {
-            return stat_get_ptr_Data();
+            return stat_get_ptr_CLASS_Data();
         }
-        OpenAvrilConcurrency::Execute* OpenAvrilConcurrency::Server::get_ptr_Execute()
+        OpenAvrilConcurrency::Execute* OpenAvrilConcurrency::Server::get_ptr_CLASS_Execute()
         {
-            return stat_get_ptr_Execute();
+            return stat_get_ptr_CLASS_Execute();
         }
-        OpenAvrilConcurrency::Global* OpenAvrilConcurrency::Server::get_ptr_Global()
+        OpenAvrilConcurrency::Global* OpenAvrilConcurrency::Server::get_ptr_CLASS_Global()
         {
-            return stat_get_ptr_Global();
+            return stat_get_ptr_CLASS_Global();
         }
         // set.
     // static.
@@ -68,40 +68,40 @@
         // get.
         // set.
     // static.
-    void OpenAvrilConcurrency::Server::stat_create_ptr_Algorithms()
+    void OpenAvrilConcurrency::Server::stat_create_CLASS_Algorithms()
     {
         static class OpenAvrilConcurrency::Algorithms* _ptr_Algorithms = new class OpenAvrilConcurrency::Algorithms();
-        while (stat_get_ptr_Algorithms() == NULL) {}
+        while (stat_get_ptr_CLASS_Algorithms() == NULL) {}
     }
-    void OpenAvrilConcurrency::Server::stat_create_ptr_Data()
+    void OpenAvrilConcurrency::Server::stat_create_CLASS_Data()
     {
         static class OpenAvrilConcurrency::Data* _ptr_Data = new class OpenAvrilConcurrency::Data();
-        while (stat_get_ptr_Data() == NULL) {}
+        while (stat_get_ptr_CLASS_Data() == NULL) {}
     }
-    void OpenAvrilConcurrency::Server::stat_create_ptr_Execute()
+    void OpenAvrilConcurrency::Server::stat_create_CLASS_Execute()
     {
         static class OpenAvrilConcurrency::Execute* _ptr_Execute = new class OpenAvrilConcurrency::Execute();
-        while (stat_get_ptr_Execute() == NULL) {}
+        while (stat_get_ptr_CLASS_Execute() == NULL) {}
     }
-    void OpenAvrilConcurrency::Server::stat_create_ptr_Global()
+    void OpenAvrilConcurrency::Server::stat_create_CLASS_Global()
     {
         static class OpenAvrilConcurrency::Global* _ptr_Global = new class OpenAvrilConcurrency::Global();
-        while (stat_get_ptr_Global() == NULL) {}
+        while (stat_get_ptr_CLASS_Global() == NULL) {}
     }
         // get.
-    OpenAvrilConcurrency::Algorithms* OpenAvrilConcurrency::Server::stat_get_ptr_Algorithms()
+    OpenAvrilConcurrency::Algorithms* OpenAvrilConcurrency::Server::stat_get_ptr_CLASS_Algorithms()
     {
         return _ptr_Algorithms;
     }
-    OpenAvrilConcurrency::Data* OpenAvrilConcurrency::Server::stat_get_ptr_Data()
+    OpenAvrilConcurrency::Data* OpenAvrilConcurrency::Server::stat_get_ptr_CLASS_Data()
     {
         return _ptr_Data;
     }
-    OpenAvrilConcurrency::Execute* OpenAvrilConcurrency::Server::stat_get_ptr_Execute()
+    OpenAvrilConcurrency::Execute* OpenAvrilConcurrency::Server::stat_get_ptr_CLASS_Execute()
     {
         return _ptr_Execute;
     }
-    OpenAvrilConcurrency::Global* OpenAvrilConcurrency::Server::stat_get_ptr_Global()
+    OpenAvrilConcurrency::Global* OpenAvrilConcurrency::Server::stat_get_ptr_CLASS_Global()
     {
         return _ptr_Global;
     }
