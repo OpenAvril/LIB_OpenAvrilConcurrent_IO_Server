@@ -84,7 +84,7 @@
     }
     void OpenAvrilConcurrency::Data_Control::pop_From_Stack_Of_Output(OpenAvrilConcurrency::Data* data)
     {
-        class OpenAvrilConcurrency::Output* distributeBuffer = data->stat_get_ptr_Item_array_Of_doubleBuffer_Output_READ();
+        class OpenAvrilConcurrency::Output* distributeBuffer = data->stat_REG_get_ptr_Item_array_Of_doubleBuffer_Output_READ();
         class OpenAvrilConcurrency::Output* outputSlot = data->get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(1);
         distributeBuffer = outputSlot;
         data->get_ptr_vector_Of_stack_Of_OutputPraise()->erase(data->get_ptr_vector_Of_stack_Of_OutputPraise()->begin() + 1);
@@ -99,7 +99,7 @@
     }
     void OpenAvrilConcurrency::Data_Control::push_To_Stack_Of_Input(OpenAvrilConcurrency::Data* data)
     {
-        class OpenAvrilConcurrency::Input* inputBuffer = data->stat_get_ptr_Item_array_Of_doubleBuffer_Input_READ();
+        class OpenAvrilConcurrency::Input* inputBuffer = data->stat_REG_get_ptr_Item_array_Of_doubleBuffer_Input_READ();
         std::vector<class OpenAvrilConcurrency::Input*>* inputStackt = data->get_ptr_vector_Of_stack_Of_InputPraise();
         inputStackt->push_back(inputBuffer);
         if (sizeof(inputStackt) < 2)

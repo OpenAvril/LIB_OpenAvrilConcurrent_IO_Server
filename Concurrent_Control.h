@@ -27,30 +27,16 @@ namespace OpenAvrilConcurrency
 	private:
 // private.
 	// dynamic.
-		// get.
-		// set.
-	// static.
-		// classes.
-			// create.
-			// get.
-			// set.
-		// registers.
-			// create.
-			// get.
-			// set.
-// private.
-	// dynamic.
-		// get.
 		void selectset_Algorithm_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId, uint8_t concurrent_threadID);
+		// get.
 		// set.
 	// static.
 		// classes.
+			// create.
 			// get.
 			// set.
 		// registers.
-			// get.
-			// set.
-		// pointers.
+			// create.
 			// get.
 			// set.
     };

@@ -34,16 +34,16 @@ namespace OpenAvrilConcurrency
             // get.
             // set.
         // registers.
-        static uint8_t* _ptr_number_Of_Implemented_Cores;
-        static uint8_t* _ptr_number_Of_Praise_Events;
+        static uint8_t* _stat_REG_ptr_number_Of_Implemented_Cores;
+        static uint8_t* _stat_REG__ptr_number_Of_Praise_Events;
             // create.
-        static void stat_create_REG_number_Of_Implemented_Cores(uint8_t* newDEFAULT_Value);
-        static void stat_create_REG_number_Of_Praise_Events(uint8_t* newDEFAULT_Value);
+        static void stat_REG_create_number_Of_Implemented_Cores(uint8_t* newDEFAULT_Value);
+        static void stat_REG_create_number_Of_Praise_Events(uint8_t* newDEFAULT_Value);
             // get.
-        static uint8_t stat_get_REG_Item_number_Of_Implemented_Cores();
-        static uint8_t statget_REG_Item_number_Of_Praise_Events();
+        static uint8_t stat_REG_get_Item_number_Of_Implemented_Cores();
+        static uint8_t stat_REG_get_Item_number_Of_Praise_Events();
             // set.
-        static void stat_set_REG_Item_number_Of_Implemented_Cores(uint8_t* newValue);
-        static void stat_set_REG_Item_number_Of_Praise_Events(uint8_t* newValue);
+        static void stat_REG_set_Item_number_Of_Implemented_Cores(uint8_t* newValue);
+        static void stat_REG_set_Item_number_Of_Praise_Events(uint8_t* newValue);
     };
 }

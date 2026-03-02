@@ -21,9 +21,9 @@
 	void* OpenAvrilConcurrency::CLIBConcurrentServerIO::generate_Program()
 	{
 		static class OpenAvrilConcurrency::Framework_Server* _CLASS_ptr_Framework_Server = new class OpenAvrilConcurrency::Framework_Server();
-		while (stat_get_CLASS_ptr_Framework_Server() == NULL) {}
-		stat_get_CLASS_ptr_Framework_Server()->initialise_Program(stat_get_CLASS_ptr_Framework_Server());
-		return (void*)stat_get_CLASS_ptr_Framework_Server();;
+		while (stat_CLASS_get_ptr_Framework_Server() == NULL) {}
+		stat_CLASS_get_ptr_Framework_Server()->initialise_Program(stat_CLASS_get_ptr_Framework_Server());
+		return (void*)stat_CLASS_get_ptr_Framework_Server();;
 	}
 	// dynamic.
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::initalise_Program(OpenAvrilConcurrency::Framework_Server* obj)
@@ -86,7 +86,7 @@
 		// set.
 	// static.
 		// get.
-	OpenAvrilConcurrency::Framework_Server* OpenAvrilConcurrency::CLIBConcurrentServerIO::stat_get_CLASS_ptr_Framework_Server()
+	OpenAvrilConcurrency::Framework_Server* OpenAvrilConcurrency::CLIBConcurrentServerIO::stat_CLASS_get_ptr_Framework_Server()
 	{
 		return _CLASS_ptr_Framework_Server;
 	}

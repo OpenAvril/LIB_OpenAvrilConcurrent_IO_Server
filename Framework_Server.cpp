@@ -9,7 +9,7 @@
 	OpenAvrilConcurrency::Framework_Server::Framework_Server()
 	{
 		std::cout << "entered constructor of OpenAvrilConcurrency::Framework_Server::Framework_Server()" << std::endl;
-		stat_create_CLASS_ptr_Server();
+		stat_CLASS_create_ptr_Server();
 		std::cout << "exiting constructor of OpenAvrilConcurrency::Framework_Server::Framework_Server()Created => Created Server Assembly()" << std::endl;
 	}
 
@@ -90,7 +90,7 @@
 		// get.
 	OpenAvrilConcurrency::Server* OpenAvrilConcurrency::Framework_Server::get_CLASS_ptr_Server()
 	{
-		return stat_get_CLASS_ptr_Server();
+		return stat_CLASS_get_ptr_Server();
 	}
 		// set.
 	// static.
@@ -102,13 +102,13 @@
 		// get.
 		// set.
 	// static.
-	void OpenAvrilConcurrency::Framework_Server::stat_create_CLASS_ptr_Server()
+	void OpenAvrilConcurrency::Framework_Server::stat_CLASS_create_ptr_Server()
 	{
 		static class OpenAvrilConcurrency::Server* _CLASS_ptr_Server = new class OpenAvrilConcurrency::Server();
-		while (stat_get_CLASS_ptr_Server() == NULL) {}
+		while (stat_CLASS_get_ptr_Server() == NULL) {}
 	}
 		// get.
-	OpenAvrilConcurrency::Server* OpenAvrilConcurrency::Framework_Server::stat_get_CLASS_ptr_Server()
+	OpenAvrilConcurrency::Server* OpenAvrilConcurrency::Framework_Server::stat_CLASS_get_ptr_Server()
 	{
 		return _CLASS_ptr_Server;
 	}
