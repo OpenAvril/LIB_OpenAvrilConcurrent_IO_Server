@@ -1,74 +1,74 @@
 #include "pch.h"
 
-
 // pointers.
 	// classes.
-	static class OpenAvrilConcurrency::Algorithm* _ptr_Praise0_Alogorithm = NULL;
+static class OpenAvrilConcurrency::Praise0_Algorithm* _stat_REG_ptr_Praise0_Algorithm = NULL;
 // registers.
-	static std::list<class Object*>* _ptr_list_Of_Praise_Alogorithm_Subsets = { NULL };
+static std::list<class Object*>* _stat_REG_ptr_list_Of_ptr_PraiseAlgorithmSubsets = { NULL };
 
 // constructor.
-	OpenAvrilConcurrency::User_Alogorithm::User_Alogorithm()
-	{
-		std::cout << "entered => User_Alogorithm()" << std::endl;
-		stat_create_ptr_Algorithm();
-		std::cout << "exiting => User_Alogorithm()" << std::endl;
-	}
+OpenAvrilConcurrency::User_Algorithm::User_Algorithm()
+{
+	std::cout << "entered => User_Algorithm()" << std::endl;
+	stat_REG_create_ptr_Praise0_Algorithm();
+	std::cout << "exiting => User_Algorithm()" << std::endl;
+}
 
 // destructor.
-	OpenAvrilConcurrency::User_Alogorithm::~User_Alogorithm()
-	{
-		delete _ptr_Praise0_Alogorithm;
-		delete _ptr_list_Of_Praise_Alogorithm_Subsets;
-	}
+OpenAvrilConcurrency::User_Algorithm::~User_Algorithm()
+{
+	delete _stat_REG_ptr_Praise0_Algorithm;
+}
 
 // public.
 	// dynamic.
 		// get.
-	Object* OpenAvrilConcurrency::User_Alogorithm::get_ptr_Item_For_Subset_In_list_Of_Praise_Alogorithm_Subsets(uint8_t praiseID)
-	{
-		return stat_set_ptr_Item_For_Subset_In_list_Of_Praise_Alogorithm_Subsets(praiseID);
-	}
+class Object* OpenAvrilConcurrency::User_Algorithm::get_REG_ptr_Item_On_List_Of_stat_REG_ptr_list_Of_ptr_PraiseAlgorithmSubsets(uint8_t praiseID)
+{
+	return stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseAlgorithmSubsets(praiseID);
+}
 // set.
-// static.
-	// get.
-	// set.
 
 // private.
 	// dynamic.
 		// get.
 		// set.
 	// static.
-	void OpenAvrilConcurrency::User_Alogorithm::stat_create_ptr_Algorithm()
-	{
-		static class OpenAvrilConcurrency::Praise0_Algorithm* _ptr_Algorithm = new class OpenAvrilConcurrency::Praise0_Algorithm();
-		while (stat_get_ptr_Algorithm() == NULL) {}
-	}
-	void OpenAvrilConcurrency::User_Alogorithm::stat_create_ptr_list_Of_Praise_Alogorithm_Subsets(Object* newDEFAULT_Object)
-	{
-		static std::list<class Object*>* _ptr_list_Of_Praise_Alogorithm_Subsets = new std::list<class Object*>();
-		while (stat_get_ptr_Algorithm() == NULL) {}
-		_ptr_list_Of_Praise_Alogorithm_Subsets->resize(1);//NUMBER OF PRAISES.
-	}
+		// classes.
+			// create.
+void OpenAvrilConcurrency::User_Algorithm::stat_REG_create_ptr_Praise0_Algorithm()
+{
+	OpenAvrilConcurrency::Praise0_Algorithm* _stat_REG_ptr_Praise0_Algorithm = new class OpenAvrilConcurrency::Praise0_Algorithm();
+	while (stat_REG_get_ptr_Praise0_Algorithm() == NULL) {}
+}
 // get.
-	OpenAvrilConcurrency::Algorithm* OpenAvrilConcurrency::User_Alogorithm::stat_get_ptr_Algorithm()
-	{
-		return _ptr_Algorithm;
-	}
-	Object* OpenAvrilConcurrency::User_Alogorithm::stat_set_ptr_Item_For_Subset_In_list_Of_Praise_Alogorithm_Subsets(uint8_t praiseID)
-	{
-		auto temp = stat_get_ptr_list_Of_Praise_Alogorithm_Subsets()->begin();
-		std::advance(temp, praiseID);
-		return *temp;
-	}
-	std::list<class Object*>* OpenAvrilConcurrency::User_Alogorithm::stat_get_ptr_list_Of_Praise_Alogorithm_Subsets()
-	{
-		return _ptr_list_Of_Praise_Alogorithm_Subsets;
-	}
+OpenAvrilConcurrency::Praise0_Algorithm* OpenAvrilConcurrency::User_Algorithm::stat_REG_get_ptr_Praise0_Algorithm()
+{
+	return _stat_REG_ptr_Praise0_Algorithm;
+}
 // set.
-	void OpenAvrilConcurrency::User_Alogorithm::stat_set_ptr_Item_For_Subset_In_list_Of_Praise_Alogorithm_Subsets(uint8_t praiseID, Object* newPtr)
-	{
-		auto temp = stat_get_ptr_list_Of_Praise_Alogorithm_Subsets()->begin();
-		std::advance(temp, praiseID);
-		*temp = newPtr;
-	}
+// registers.
+	// create.
+void OpenAvrilConcurrency::User_Algorithm::stat_REG_create_ptr_list_Of_ptr_PraiseAlgorithmSubsets(Object* newDEFAULT_Object)
+{
+	OpenAvrilConcurrency::Praise0_Algorithm* _stat_REG_ptr_Praise0_Algorithm = new class OpenAvrilConcurrency::Praise0_Algorithm();
+	while (stat_REG_get_ptr_list_Of_ptr_PraiseAlgorithmSubsets() == NULL) {}
+}
+// get.
+Object* stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseAlgorithmSubsets(uint8_t praiseID)
+{
+	auto temp = stat_REG_get_ptr_list_Of_ptr_PraiseAlgorithmSubsets()->begin();
+	std::advance(temp, praiseID);
+	return *temp;
+}
+std::list<class Object*>* stat_REG_get_ptr_list_Of_ptr_PraiseAlgorithmSubsets()
+{
+	return _stat_REG_ptr_list_Of_ptr_PraiseAlgorithmSubsets;
+}
+// set.
+void OpenAvrilConcurrency::User_Algorithm::stat_REG_set_ptr_Item_For_Subset_In_list_Of_PraiseAlgorithmSubsets(uint8_t praiseID, Object* newClass)
+{
+	auto temp = stat_REG_get_ptr_list_Of_ptr_PraiseAlgorithmSubsets()->begin();
+	std::advance(temp, praiseID);
+	*temp = newClass;
+}

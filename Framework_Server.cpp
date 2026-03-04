@@ -2,7 +2,7 @@
 
 // pointers.
 	// classes.
-	static class OpenAvrilConcurrency::Server* _CLASS_ptr_Server = NULL;
+	static class OpenAvrilConcurrency::Server* _stat_CLASS_ptr_Server = NULL;
 	// registers.
 
 // constructor.
@@ -16,7 +16,7 @@
 // destructor.
 	OpenAvrilConcurrency::Framework_Server::~Framework_Server()
 	{
-		delete _CLASS_ptr_Server;
+		delete _stat_CLASS_ptr_Server;
 	}
 
 // public.
@@ -106,13 +106,13 @@
 			// create.
 	void OpenAvrilConcurrency::Framework_Server::stat_CLASS_create_ptr_Server()
 	{
-		static class OpenAvrilConcurrency::Server* _CLASS_ptr_Server = new class OpenAvrilConcurrency::Server();
+		static class OpenAvrilConcurrency::Server* _stat_CLASS_ptr_Server = new class OpenAvrilConcurrency::Server();
 		while (stat_CLASS_get_ptr_Server() == NULL) {}
 	}
 			// get.
 	OpenAvrilConcurrency::Server* OpenAvrilConcurrency::Framework_Server::stat_CLASS_get_ptr_Server()
 	{
-		return _CLASS_ptr_Server;
+		return _stat_CLASS_ptr_Server;
 	}
 			// set.
 		// registers.

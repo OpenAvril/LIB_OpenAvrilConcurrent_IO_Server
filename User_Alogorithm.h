@@ -3,53 +3,41 @@
 
 namespace OpenAvrilConcurrency
 {
-	class User_Alogorithm
+	class User_Algorithm
 	{
 	public:
-	// constructor.
-		User_Alogorithm();
+		// constructor.
+		User_Algorithm();
 
-	// destructor.
-		virtual ~User_Alogorithm();
+		// destructor.
+		virtual ~User_Algorithm();
 
-// public.
-	// dynamic.
-		// get.
-		class Object* get_ptr_Item_For_Subset_In_list_Of_Praise_Alogorithm_Subsets(uint8_t praiseID);
-		// set.
-	// static.
-		// get.
+		// public.
+			// dynamic.
+				// get.
+		class Object* get_REG_ptr_Item_On_List_Of_stat_REG_ptr_list_Of_ptr_PraiseAlgorithmSubsets(uint8_t praiseID);
 		// set.
 
 	private:
-// private.
-	// dynamic.
+		// private.
+			// dynamic.
+				// get.
+				// set.
+			// static.
+				// classes.
+					// create.
+		static void stat_REG_create_ptr_Praise0_Algorithm();
 		// get.
+		static class Praise0_Algorithm* stat_REG_get_ptr_Praise0_Algorithm();
 		// set.
-	// static.
-		// classes.
-			// create.
-			// get.
-			// set.
-		// registers.
-			// create.
-			// get.
-			// set.
-// private.
-	// dynamic.
+	// registers.
+		static std::list<class Object*>* _stat_REG_ptr_list_Of_ptr_PraiseAlgorithmSubsets;
+		// create.
+		static void stat_REG_create_ptr_list_Of_ptr_PraiseAlgorithmSubsets(class Object* newDEFAULT_Object);
 		// get.
+		static class Object* stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseAlgorithmSubsets(uint8_t praiseID);
+		static std::list<class Object*>* stat_REG_get_ptr_list_Of_ptr_PraiseAlgorithmSubsets();
 		// set.
-	// static.
-		static void stat_create_ptr_Algorithm();
-		static void stat_create_ptr_list_Of_Praise_Alogorithm_Subsets(class Object* newDEFAULT_Object);
-		// get.
-		static class Algorithm* stat_get_ptr_Algorithm();
-		static class Object* stat_set_ptr_Item_For_Subset_In_list_Of_Praise_Alogorithm_Subsets(uint8_t praiseID);
-		static std::list<class Object*>* stat_get_ptr_list_Of_Praise_Alogorithm_Subsets();
-		// set.
-		static void stat_set_ptr_Item_For_Subset_In_list_Of_Praise_Alogorithm_Subsets(uint8_t praiseID, class Object* newPtr);
-	// pointers.
-		// registers.
-		static std::list<class Object*>* _ptr_list_Of_Praise_Alogorithm_Subsets;
+		static void stat_REG_set_ptr_Item_For_Subset_In_list_Of_PraiseAlgorithmSubsets(uint8_t praiseID, class Object* newClass);
 	};
 }

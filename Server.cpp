@@ -59,9 +59,6 @@
             return stat_CLASS_get_ptr_Global();
         }
         // set.
-    // static.
-        // get.
-        // set.
 
 // private.
     // dynamic.

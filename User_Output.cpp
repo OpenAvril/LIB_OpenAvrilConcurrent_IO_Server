@@ -27,7 +27,7 @@
 	{
 		return stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseOutputSubsets(praiseID);
 	}
-	// set.
+		// set.
 
 // private.
 	// dynamic.

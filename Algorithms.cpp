@@ -54,7 +54,7 @@
             // create.
     void OpenAvrilConcurrency::Algorithms::stat_CLASS_create_ptr_User_Algorithmorithms()
     {
-        static class OpenAvrilConcurrency::User_Alogorithm* _stat_CLASS_ptr_User_Algorithmorithms = new class OpenAvrilConcurrency::User_Alogorithm();
+        static class OpenAvrilConcurrency::User_Algorithm* _stat_CLASS_ptr_User_Algorithmorithms = new class OpenAvrilConcurrency::User_Alogorithm();
         while (stat_CLASS_get_ptr_User_Algorithmorithms() == NULL) {}
     }
             // get.

@@ -57,9 +57,6 @@
         return stat_REG_get_Item_number_Of_Praise_Events();
     }
         // set.
-    // static.
-        // get.
-        // set.
 
 // private.
     // dynamic.

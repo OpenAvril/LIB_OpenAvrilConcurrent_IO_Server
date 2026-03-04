@@ -32,15 +32,15 @@
 	}
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::flip_Input_DoubleBuffer(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->flip_Input_DoubleBuffer();
+		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->flip_Input_DoubleBuffer(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data());
 	}
 	bool OpenAvrilConcurrency::CLIBConcurrentServerIO::get_flag_isStackLoaded_Server_InputAction(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		return obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->get_ptr_flag_isLoaded_Stack_InputAction();
+		return obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->get_REG_Item_flag_isLoaded_Stack_InputAction();
 	}
 	bool OpenAvrilConcurrency::CLIBConcurrentServerIO::get_flag_isLoaded_Stack_OutputSend(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		return obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->get_ptr_flag_isLoaded_Stack_OutputSend();
+		return obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->get_REG_Item_flag_isLoaded_Stack_OutputSend();
 	}
 	bool OpenAvrilConcurrency::CLIBConcurrentServerIO::get_flag_IsInitialised_OpenAvrilConcurrencyConcurrency(OpenAvrilConcurrency::Framework_Server* obj)
 	{
