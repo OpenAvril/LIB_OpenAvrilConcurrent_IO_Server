@@ -39,9 +39,6 @@ namespace OpenAvrilConcurrency
 		
 		// get.
 		// set.
-	// static.
-		// get.
-		// set.
 
 	private:
 // private.

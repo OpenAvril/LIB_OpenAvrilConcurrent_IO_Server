@@ -17,9 +17,6 @@ namespace OpenAvrilConcurrency
         // get.
         class Server* get_CLASS_ptr_Server();
         // set.
-    // static.
-        // get.
-        // set.
 
     private:
 // private.

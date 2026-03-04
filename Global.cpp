@@ -66,6 +66,8 @@
         // get.
         // set.
     // static.
+        // classes.
+            // create.
     void OpenAvrilConcurrency::Global::stat_REG_create_number_Of_Implemented_Cores(uint8_t* newDEFAULT_Value)
     {
         std::cout << "entered member function OpenAvrilConcurrency::Global::stat_REG_create_number_Of_Implemented_Cores()." << std::endl;
@@ -86,7 +88,7 @@
         *_stat_REG__ptr_number_Of_Praise_Events = *newDEFAULT_Value;
         std::cout << "exiting OpenAvrilConcurrency::Global::stat_REG_create_number_Of_Praise_Events()." << std::endl;
     }
-        // get.
+            // get.
     uint8_t OpenAvrilConcurrency::Global::stat_REG_get_Item_number_Of_Implemented_Cores()
     {
         return *_stat_REG_ptr_number_Of_Implemented_Cores;
@@ -95,7 +97,7 @@
     {
         return *_stat_REG__ptr_number_Of_Praise_Events;
     }
-        // set.
+            // set.
     void OpenAvrilConcurrency::Global::stat_REG_set_Item_number_Of_Implemented_Cores(uint8_t* newValue)
     {
         *_stat_REG_ptr_number_Of_Implemented_Cores = *newValue;
@@ -104,3 +106,7 @@
     {
         *_stat_REG__ptr_number_Of_Praise_Events = *newValue;
     }
+        // registers.
+            // create.
+            // get.
+            // set.

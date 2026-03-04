@@ -13,7 +13,7 @@ namespace OpenAvrilConcurrency
 
 // public.
     // dynamic.
-        void initialise_Control(uint8_t number_Implemented_Cores);
+        void initialise_CLASS_Control(uint8_t number_Implemented_Cores);
         void initialise_Libraries();
         void initialise_Threads(class Framework_Server* obj);
         void initialise_ptr_array_Of_ptr_list_Of_Threads(class Framework_Server* obj, uint8_t threadId);
@@ -33,11 +33,16 @@ namespace OpenAvrilConcurrency
         // get.
         // set.
     // static.
+        // programs.
+            // create.
+            // get.
+            // set.
         // classes.
             // create.
             // get.
             // set.
         // registers.
+        static std::list<std::thread*>* _stat_REG_ptr_array_Of_ptr_list_Of_Threads;
             // create.
             // get.
             // set.
@@ -60,6 +65,6 @@ namespace OpenAvrilConcurrency
         static void stat_set_Item_On_array_Of_ptr_list_Of_Threads(OpenAvrilConcurrency::Framework_Server* obj, uint8_t threadID);
     // pointers.
         // registers.
-        static std::list<std::thread*>* _ptr_array_Of_ptr_list_Of_Threads;
+        static std::list<std::thread*>* _stat_REG_ptr_array_Of_ptr_list_Of_Threads;
     };
 }

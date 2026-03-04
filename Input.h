@@ -13,7 +13,7 @@ namespace OpenAvrilConcurrency
 
 // public.
     // dynamic.
-        void initialise_Control();
+        void initialise_CLASS_Control();
         void initialise_list_Of_Praise_In_Subsets(class Framework_Server* obj);
         // get.
         uint8_t get_in_praiseEventId();

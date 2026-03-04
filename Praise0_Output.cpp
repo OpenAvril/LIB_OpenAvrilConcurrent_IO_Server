@@ -3,12 +3,12 @@
 // pointers.
 	// classes.
 	// registers.
-	static double* _ptr_output_Value = NULL;
+	static double* _REG_ptr_output_Value = NULL;
 
 // constructor.
 	OpenAvrilConcurrency::Praise0_Output::Praise0_Output()
 	{
-		stat_create_ptr_output_Value();
+		stat_create_REG_ptr_output_Value();
 	}
 
 // destructor.
@@ -20,13 +20,13 @@
 // public.
 	// dynamic.
 		// get.
-	double OpenAvrilConcurrency::Praise0_Output::get_Item_output_Value()
+	double OpenAvrilConcurrency::Praise0_Output::get_REG_ptr_output_Value()
 	{
-		return *stat_get_ptr_output_Value();
+		return stat_get_REG_ptr_output_Value();
 	}
-	void OpenAvrilConcurrency::Praise0_Output::set_Item_output_Value(double* newValue)
+	void OpenAvrilConcurrency::Praise0_Output::set_REG_ptr_output_Value(double* newValue)
 	{
-		stat_set_Item_output_Value(*newValue);
+		stat_set_REG_ptr_output_Value(*newValue);
 	}
 		// set.
 	// static.
@@ -38,17 +38,18 @@
 		// get.
 		// set.
 	// static.
-	void OpenAvrilConcurrency::Praise0_Output::stat_create_ptr_output_Value()
+	void OpenAvrilConcurrency::Praise0_Output::stat_create_REG_ptr_output_Value()
 	{
-
+		double* _REG_ptr_output_Value = new double(NULL);
+		stat_set_REG_ptr_output_Value(0.0);
 	}
 		// get.
-	double* OpenAvrilConcurrency::Praise0_Output::stat_get_ptr_output_Value()
+	double OpenAvrilConcurrency::Praise0_Output::stat_get_REG_ptr_output_Value()
 	{
-		return _ptr_output_Value;
+		return *_REG_ptr_output_Value;
 	}
 		// set.
-	void OpenAvrilConcurrency::Praise0_Output::stat_set_Item_output_Value(double newValue)
+	void OpenAvrilConcurrency::Praise0_Output::stat_set_REG_ptr_output_Value(double newValue)
 	{
-		*_ptr_output_Value = newValue;
+		*_REG_ptr_output_Value = newValue;
 	}

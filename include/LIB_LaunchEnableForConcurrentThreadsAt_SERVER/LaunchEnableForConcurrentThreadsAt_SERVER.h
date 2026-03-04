@@ -13,7 +13,7 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER
 
 // public.
     // dynamic.
-        void initialise_Control(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
+        void initialise_CLASS_Control(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
         void thread_Start(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrentThreadID);
         void thread_End(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrentThreadID);
         // get.

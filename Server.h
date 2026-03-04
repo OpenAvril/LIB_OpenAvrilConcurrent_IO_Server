@@ -19,9 +19,6 @@ namespace OpenAvrilConcurrency
         class Execute* get_CLASS_ptr_Execute();
         class Global* get_ptr_CLASS_Global();
         // set.
-    // static.
-        // get.
-        // set.
 
     private:
 // private.

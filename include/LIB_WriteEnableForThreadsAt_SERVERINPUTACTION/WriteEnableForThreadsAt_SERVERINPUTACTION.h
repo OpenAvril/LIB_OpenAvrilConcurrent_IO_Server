@@ -13,7 +13,7 @@ namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION
 
 // public.
     // dynamic.
-        void initialise_Control(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj);
+        void initialise_CLASS_Control(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj);
         void write_End(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, uint8_t coreId);
         void write_Start(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, uint8_t coreId);
         // get.

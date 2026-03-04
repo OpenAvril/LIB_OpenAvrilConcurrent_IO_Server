@@ -64,15 +64,15 @@
 	}
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::select_set_Intput_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId)
 	{
-		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->get_ptr_Input_Control()->select_And_Set_Input_Subset(obj, praiseEventId);
+		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->get_ptr_Input_Control()->select_And_Set_Input_Subset(obj, praiseEventId);
 	}
 	uint8_t OpenAvrilConcurrency::CLIBConcurrentServerIO::get_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		return obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_ptr_Item_array_Of_doubleBuffer_Output_WRITE()->get_out_praiseEventId();
+		return obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_array_Of_doubleBuffer_Output_WRITE()->get_out_praiseEventId();
 	}
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::set_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj, uint8_t value)
 	{
-		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->get_ptr_Item_On_list_Of_Praise_In_Subsets(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->get_in_praiseEventId());
+		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->get_ptr_Item_On_list_Of_Praise_In_Subsets(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_array_Of_doubleBuffer_Input_WRITE()->get_in_praiseEventId());
 	}
 		// get.
 		// set.
@@ -85,9 +85,15 @@
 		// get.
 		// set.
 	// static.
-		// get.
+		// classes.
+			// create.
+			// get.
 	OpenAvrilConcurrency::Framework_Server* OpenAvrilConcurrency::CLIBConcurrentServerIO::stat_CLASS_get_ptr_Framework_Server()
 	{
 		return _CLASS_ptr_Framework_Server;
 	}
-		// set.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.

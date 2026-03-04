@@ -19,9 +19,6 @@ namespace OpenAvrilConcurrency
         uint8_t get_REG_Item_number_Of_Implemented_Cores();
         uint8_t get_REG_Item_number_Of_Praise_Events();
         // set.
-    // static.
-        // get.
-        // set.
 
     private:
 // private.

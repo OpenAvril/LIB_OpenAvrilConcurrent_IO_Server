@@ -4,9 +4,9 @@
     // calsses.
     static class OpenAvrilConcurrency::Output_Control* _ptr_Output_Control = NULL;
     // registers.
-    static uint8_t* OpenAvrilConcurrency::Output::_ptr_out_praiseEventId = NULL;
-    static uint8_t* OpenAvrilConcurrency::Output::_ptr_out_playerId = NULL;
-    static std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Output::_ptr_list_Of_Praise_Out_Subsets = { NULL };
+    static uint8_t* _ptr_out_praiseEventId = NULL;
+    static uint8_t* _ptr_out_playerId = NULL;
+    static std::list<OpenAvrilConcurrency::Object*>* _ptr_list_Of_Praise_Out_Subsets = { NULL };
 
 // constructor.
     OpenAvrilConcurrency::Output::Output()
@@ -30,13 +30,13 @@
 
 // public.
     // dynamic.
-    void OpenAvrilConcurrency::Output::initialise_Control()
+    void OpenAvrilConcurrency::Output::initialise_CLASS_Control()
     {
         stat_create_ptr_Output_Control();
     }
-    void OpenAvrilConcurrency::Output::initialise_list_Of_Praise_Out_Subsets(Framework_Server* obj)
+    void OpenAvrilConcurrency::Output::initialise_list_Of_Praise_Out_Subsets(Framework_Server* obj, uint8_t praiseID)
     {
-        set_Subset_With_OutputSubet(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_ptr_User_Output()->get_ptr_Praise0_Output());
+        set_Subset_With_OutputSubet(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Output()->get_ptr_Item_For_Subset_In_list_Of_Praise_Output_Subsets(praiseID));
     }
         // get.
     uint8_t OpenAvrilConcurrency::Output::get_out_praiseEventId()

@@ -18,9 +18,6 @@ namespace OpenAvrilConcurrency
         class Concurrent* get_CLASS_ptr_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID);
         class User_Algorithm* get_CLASS_ptr_User_Algorithmorithms();
         // set.
-    // static.
-        // get.
-        // set.
 
     private:
 // private.

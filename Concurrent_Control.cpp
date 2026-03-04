@@ -29,14 +29,17 @@
 			break;
 		}
 	}
-	// static.
-		// get.
-		// set.
 
 // private.
 	// dynamic.
 		// get.
 		// set.
 	// static.
-		// get.
-		// set.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
