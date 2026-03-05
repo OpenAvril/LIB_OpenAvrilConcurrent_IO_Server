@@ -88,12 +88,12 @@ namespace OpenAvrilConcurrency
         static class Output* stat_REG_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE(uint8_t side);
         static class Input* stat_REG_get_ptr_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot);
         static class Output* stat_REG_get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot);
-        static std::array<class OpenAvrilConcurrency::Input*, 3>* stat_REG_get_ptr_array_Of_buffer_Input_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
-        static std::array<class OpenAvrilConcurrency::Output*, 3>* stat_REG_get_ptr_array_Of_buffer_Output_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
-        static std::array<class OpenAvrilConcurrency::Input*, 2>* stat_REG_get_ptr_array_Of_doubleBuffer_Input();
-        static std::array<class OpenAvrilConcurrency::Output*, 2>* stat_REG_get_ptr_array_Of_doubleBuffer_Output();
-        static std::vector<class OpenAvrilConcurrency::Input*>* stat_REG_get_ptr_vector_Of_stack_Of_InputPraise();
-        static std::vector<class OpenAvrilConcurrency::Output*>* stat_REG_get_ptr_vector_Of_stack_Of_OutputPraise();
+        static std::array<class Input*, 3>* stat_REG_get_ptr_array_Of_buffer_Input_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
+        static std::array<class Output*, 3>* stat_REG_get_ptr_array_Of_buffer_Output_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
+        static std::array<class Input*, 2>* stat_REG_get_ptr_array_Of_doubleBuffer_Input();
+        static std::array<class Output*, 2>* stat_REG_get_ptr_array_Of_doubleBuffer_Output();
+        static std::vector<class Input*>* stat_REG_get_ptr_vector_Of_stack_Of_InputPraise();
+        static std::vector<class Output*>* stat_REG_get_ptr_vector_Of_stack_Of_OutputPraise();
             // set.
         static void stat_set_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t concurrentThreadID, class Input* newCLass);
         static void stat_set_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(uint8_t concurrentThreadID, class Output* newCLass);

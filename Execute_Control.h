@@ -18,9 +18,6 @@ namespace OpenAvrilConcurrency
         bool get_Item_On_list_Of_flag_ThreadInitialised(uint8_t threadID);
         // set.
         void set_ConditionCode_Of_Thread(uint8_t threadID);
-    // static.
-        // get.
-        // set.
 
     private:
 // private.
@@ -33,27 +30,17 @@ namespace OpenAvrilConcurrency
             // get.
             // set.
         // registers.
+        static bool* _ptr_flag_is_SystemInitialised;
+        static std::array<bool, 4>* _ptr_list_Of_flag_ThreadInitialised;//NUMBER OF THREADS
             // create.
-            // get.
-            // set.
-// private.
-    // dynamic.
-        // get.
-        // set.
-        
-    // static.
         void stat_create_flag_is_SystemInitialised(bool* newDEFAULT_Bool);
         void stat_create_list_Of_flag_ThreadInitialised(bool* newDEFAULT_Bool);
-        // get.
+            // get.
         bool stat_get_ptr_flag_is_SystemInitialised();
         static bool stat_get_Item_On_ptr_list_Of_flag_ThreadInitialised(uint8_t threadID);
         static std::array<bool, 4>* stat_get_ptr_list_Of_flag_ThreadInitialised();
-        // set.
+            // set.
         void stat_set_flag_is_SystemInitialised(bool* newFlag);
-        void set_Item_On_list_Of_flag_ThreadInitialised(uint8_t threadID, bool* newFlag);
-    // pointers.
-        // registers.
-        static bool* _ptr_flag_is_SystemInitialised;
-        static std::array<bool, 4>* _ptr_list_Of_flag_ThreadInitialised;//NUMBER OF THREADS
+        void stat_set_Item_On_list_Of_flag_ThreadInitialised(uint8_t threadID, bool* newFlag);
     };
 }

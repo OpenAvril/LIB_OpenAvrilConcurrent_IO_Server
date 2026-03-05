@@ -4,7 +4,7 @@
 	// classes.
 static class OpenAvrilConcurrency::Praise0_Algorithm* _stat_REG_ptr_Praise0_Algorithm = NULL;
 // registers.
-static std::list<class Object*>* _stat_REG_ptr_list_Of_ptr_PraiseAlgorithmSubsets = { NULL };
+static std::list<class OpenAvrilConcurrency::Object*>* _stat_REG_ptr_list_Of_ptr_PraiseAlgorithmSubsets = { NULL };
 
 // constructor.
 OpenAvrilConcurrency::User_Algorithm::User_Algorithm()
@@ -18,15 +18,17 @@ OpenAvrilConcurrency::User_Algorithm::User_Algorithm()
 OpenAvrilConcurrency::User_Algorithm::~User_Algorithm()
 {
 	delete _stat_REG_ptr_Praise0_Algorithm;
+	delete _stat_REG_ptr_list_Of_ptr_PraiseAlgorithmSubsets;
+}
+
+OpenAvrilConcurrency::Object* OpenAvrilConcurrency::User_Algorithm::get_REG_ptr_Item_On_List_Of_ptr_list_Of_ptr_PraiseAlgorithmSubsets(uint8_t praiseID)
+{
+	return stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseAlgorithmSubsets(praiseID);
 }
 
 // public.
 	// dynamic.
 		// get.
-class Object* OpenAvrilConcurrency::User_Algorithm::get_REG_ptr_Item_On_List_Of_stat_REG_ptr_list_Of_ptr_PraiseAlgorithmSubsets(uint8_t praiseID)
-{
-	return stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseAlgorithmSubsets(praiseID);
-}
 // set.
 
 // private.
@@ -55,13 +57,13 @@ void OpenAvrilConcurrency::User_Algorithm::stat_REG_create_ptr_list_Of_ptr_Prais
 	while (stat_REG_get_ptr_list_Of_ptr_PraiseAlgorithmSubsets() == NULL) {}
 }
 // get.
-Object* stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseAlgorithmSubsets(uint8_t praiseID)
+OpenAvrilConcurrency::Object* stat_REG_get_Item_On_list_Of_PraiseInSubsets(uint8_t praiseID)
 {
 	auto temp = stat_REG_get_ptr_list_Of_ptr_PraiseAlgorithmSubsets()->begin();
 	std::advance(temp, praiseID);
 	return *temp;
 }
-std::list<class Object*>* stat_REG_get_ptr_list_Of_ptr_PraiseAlgorithmSubsets()
+std::list<OpenAvrilConcurrency::Object*>* stat_REG_get_ptr_list_Of_ptr_PraiseAlgorithmSubsets()
 {
 	return _stat_REG_ptr_list_Of_ptr_PraiseAlgorithmSubsets;
 }

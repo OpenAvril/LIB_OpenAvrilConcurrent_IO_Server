@@ -15,7 +15,7 @@ namespace OpenAvrilConcurrency
 		// public.
 			// dynamic.
 				// get.
-		class Object* get_REG_ptr_Item_On_List_Of_stat_REG_ptr_list_Of_ptr_PraiseInputSubsets(uint8_t praiseID);
+		class Object* get_REG_ptr_Item_On_List_Of_ptr_list_Of_ptr_PraiseInputSubsets(uint8_t praiseID);
 		// set.
 
 	private:

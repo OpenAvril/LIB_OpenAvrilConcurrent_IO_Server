@@ -2,141 +2,138 @@
 
 // pointers.
     // calsses.
-    static OpenAvrilConcurrency::Input_Control* _ptr_Input_Control = NULL;
+    static OpenAvrilConcurrency::Input_Control* _CLASS_ptr_Input_Control = NULL;
     // registers.
-    static uint8_t* OpenAvrilConcurrency::Input::_ptr_in_praiseEventId = NULL;
-    static uint8_t* OpenAvrilConcurrency::Input::_ptr_in_playerId = NULL;
-    static std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Input::_ptr_list_Of_Praise_In_Subsets = { NULL };
+    static uint8_t* _REG_ptr_in_praiseEventId = NULL;
+    static uint8_t* _REG_ptr_in_playerId = NULL;
+    static std::list<class OpenAvrilConcurrency::Object*>* _REG_ptr_list_Of_ptr_PraiseInSubsets = { NULL };
 
 // constructor.
     OpenAvrilConcurrency::Input::Input()
     {
         uint8_t* newDEFAULT_uint8_t = new uint8_t(UINT8_MAX);
         while (newDEFAULT_uint8_t == NULL) {}
-        stat_create_ptr_in_playerId(newDEFAULT_uint8_t);
-        stat_create_ptr_in_praiseEventId(newDEFAULT_uint8_t);
+        stat_REG_create_ptr_in_playerId(newDEFAULT_uint8_t);
+        stat_REG_create_ptr_in_praiseEventId(newDEFAULT_uint8_t);
         delete newDEFAULT_uint8_t;
-        stat_create_ptr_list_Of_Praise_In_Subsets();
+        stat_REG_create_ptr_list_Of_Praise_In_Subsets();
     }
 
 // destructor.
     OpenAvrilConcurrency::Input::~Input()
     {
-        delete _ptr_Input_Control;
-        delete _ptr_list_Of_Praise_In_Subsets;
+        delete _CLASS_ptr_Input_Control;
+        delete _REG_ptr_list_Of_ptr_PraiseInSubsets;
     }
 
 // public.
     // dynamic.
     void OpenAvrilConcurrency::Input::initialise_CLASS_Control()
     {
-        stat_create_ptr_Input_Control();
+        stat_CLASS_create_ptr_Input_Control();
     }
-    void OpenAvrilConcurrency::Input::initialise_list_Of_Praise_In_Subsets(Framework_Server* obj)
+    void OpenAvrilConcurrency::Input::initialise_list_Of_PraiseInSubsets(OpenAvrilConcurrency::Framework_Server* obj)
     {
-        set_Subset_With_InputSubet(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Input()->get_ptr_Praise0_Input());
+        set_Subset_With_InputSubet(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Input()->get_REG_ptr_Item_On_List_Of_ptr_list_Of_ptr_PraiseInputSubsets(0));
     }
-    // get.
-    uint8_t OpenAvrilConcurrency::Input::get_in_praiseEventId()
+        // get.
+    OpenAvrilConcurrency::Input_Control* OpenAvrilConcurrency::Input::get_CLASS_ptr_Input_Control()
     {
-        return *stat_get_ptr_in_praiseEventId();
+        return stat_get_CLASS_ptr_Input_Control();
     }
-    uint8_t OpenAvrilConcurrency::Input::get_in_playerId()
+    uint8_t OpenAvrilConcurrency::Input::get_REG_in_praiseEventId()
     {
-        return *stat_get_ptr_in_playerId();
+        return *_REG_ptr_in_playerId;
     }
-    OpenAvrilConcurrency::Input_Control* OpenAvrilConcurrency::Input::get_ptr_Input_Control()
+    uint8_t OpenAvrilConcurrency::Input::get_REG_in_playerId()
     {
-        return stat_get_ptr_Input_Control();
+        return *_REG_ptr_in_praiseEventId;
     }
-    OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Input::get_ptr_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID)
+    OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Input::get_REG_ptr_Item_On_list_Of_PraiseInSubsets(uint8_t praiseID)
     {
-        return stat_get_Item_On_list_Of_Praise_In_Subsets(praiseID);
+        stat_get_REG_ptr_Item_On_list_Of_PraiseInSubsets(praiseID);
     }
         // set.
-    void OpenAvrilConcurrency::Input::set_Subset_With_InputSubet(Praise0_Input* praise0_Input)
+    void OpenAvrilConcurrency::Input::set_Subset_With_InputSubet(OpenAvrilConcurrency::Praise0_Input* praise0_Input)
     {
-        auto temp = _ptr_list_Of_Praise_In_Subsets->begin();
+        auto temp = _REG_ptr_list_Of_ptr_PraiseInSubsets->begin();
         std::advance(temp, 0);
         *temp = reinterpret_cast<class Object*>(praise0_Input);
     }
-    // static.
-        // get.
-        // set.
 
 // private.
     // dynamic.
         // get.
         // set.
     // static.
-    void OpenAvrilConcurrency::Input::stat_create_ptr_in_playerId(uint8_t* newDEFAULT_uint8_t)
+        // classes.
+            // create.
+    void OpenAvrilConcurrency::Input::stat_CLASS_create_ptr_Input_Control()
     {
-        uint8_t* _ptr_in_praiseEventId = new uint8_t(UINT8_MAX);
-        while (stat_get_ptr_in_playerId() == NULL) {}
-        *_ptr_in_praiseEventId = *newDEFAULT_uint8_t;
+        OpenAvrilConcurrency::Input_Control* _CLASS_ptr_Input_Control = new class OpenAvrilConcurrency::Input_Control();
+        while (stat_get_CLASS_ptr_Input_Control() == NULL) {}
     }
-    void OpenAvrilConcurrency::Input::stat_create_ptr_in_praiseEventId(uint8_t* newDEFAULT_uint8_t)
+            // get.
+    OpenAvrilConcurrency::Input_Control* OpenAvrilConcurrency::Input::stat_get_CLASS_ptr_Input_Control()
     {
-        uint8_t* _ptr_in_praiseEventId = new uint8_t(UINT8_MAX);
-        while (stat_get_ptr_in_praiseEventId() == NULL) {}
-        *_ptr_in_praiseEventId = *newDEFAULT_uint8_t;
+        return _CLASS_ptr_Input_Control;
     }
-    void OpenAvrilConcurrency::Input::stat_create_ptr_Input_Control()
+            // set.
+        // registers.
+            // create.
+    void OpenAvrilConcurrency::Input::stat_REG_create_ptr_in_playerId(uint8_t* newDEFAULT_uint8_t)
     {
-        stat_set_ptr_Input_Control(new class OpenAvrilConcurrency::Input_Control());
-        while (stat_get_ptr_Input_Control() == NULL) {}
+        uint8_t* _REG_ptr_in_playerId = new uint8_t(UINT8_MAX);
+        *_REG_ptr_in_playerId = 0;
     }
-    void OpenAvrilConcurrency::Input::stat_create_ptr_list_Of_Praise_In_Subsets()
+    void OpenAvrilConcurrency::Input::stat_REG_create_ptr_in_praiseEventId(uint8_t* newDEFAULT_uint8_t)
     {
-        std::list<class Object*>* _ptr_list_Of_Praise_In_Subsets = new std::list<class Object*>();
-        while (stat_get_ptr_Item_On_list_Of_Praise_In_Subsets() == NULL) { }
-        _ptr_list_Of_Praise_In_Subsets->resize(1);//NUMBER OF PRAISES.
+        uint8_t* _REG_ptr_in_praiseEventId = new uint8_t(UINT8_MAX);
+        *_REG_ptr_in_praiseEventId = 0;
     }
-    // get.
-    uint8_t* OpenAvrilConcurrency::Input::stat_get_ptr_in_playerId()
+    void OpenAvrilConcurrency::Input::stat_REG_create_ptr_list_Of_Praise_In_Subsets()
     {
-        return _ptr_in_playerId;
+        std::list<class Object*>* _REG_ptr_list_Of_ptr_PraiseInSubsets = new std::list<class Object*>();
+        while (stat_get_REG_ptr_list_Of_ptr_PraiseInSubsets() == NULL) {}
     }
-    uint8_t* OpenAvrilConcurrency::Input::stat_get_ptr_in_praiseEventId()
+            // get.
+    uint8_t OpenAvrilConcurrency::Input::stat_REG_get_ptr_in_playerId()
     {
-        return _ptr_in_praiseEventId;
+        return *_REG_ptr_in_playerId;
     }
-    OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Input::stat_get_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID)
+    uint8_t OpenAvrilConcurrency::Input::stat_REG_get_ptr_in_praiseEventId()
     {
-        auto temp = stat_get_ptr_Item_On_list_Of_Praise_In_Subsets()->begin();
+        return *_REG_ptr_in_praiseEventId;
+    }
+    OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Input::stat_REG_get_Item_On_list_Of_PraiseInSubsets(uint8_t praiseID)
+    {
+        auto temp = stat_REG_get_ptr_list_Of_ptr_PraiseInputSubsets()->begin();
         std::advance(temp, praiseID);
         return *temp;
     }
-    std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Input::stat_get_ptr_Item_On_list_Of_Praise_In_Subsets()
+
+    std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Input::stat_REG_get_ptr_list_Of_ptr_PraiseInputSubsets()
     {
-        return _ptr_list_Of_Praise_In_Subsets;
+        return _REG_ptr_list_Of_ptr_PraiseInSubsets;
     }
-    OpenAvrilConcurrency::Input_Control* OpenAvrilConcurrency::Input::stat_get_ptr_Input_Control()
+            // set.
+    void OpenAvrilConcurrency::Input::stat_REG_set_ptr_in_playerId(uint8_t* new_uint8_t)
     {
-        return _ptr_Input_Control;
+        *_REG_ptr_in_playerId = *new_uint8_t;
     }
-        // set.
-    void OpenAvrilConcurrency::Input::stat_set_ptr_in_playerId(uint8_t* new_uint8_t)
+    void OpenAvrilConcurrency::Input::stat_REG_set_ptr_in_praiseEventId(uint8_t* _ptr_in_praiseEventId)
     {
-        *_ptr_in_playerId = *new_uint8_t;
+        *_REG_ptr_in_praiseEventId = *_ptr_in_praiseEventId;
     }
-    void OpenAvrilConcurrency::Input::stat_set_ptr_in_praiseEventId(uint8_t* new_uint8_t)
+    void OpenAvrilConcurrency::Input::stat_REG_set_ptr_Input_Control(Input_Control* newClass)
     {
-        *_ptr_in_praiseEventId = *new_uint8_t;
+        *_CLASS_ptr_Input_Control = *newClass;
     }
-    void OpenAvrilConcurrency::Input::stat_set_ptr_Input_Control(Input_Control* newClass)
+    void OpenAvrilConcurrency::Input::stat_REG_set_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID, Object* newObject)
     {
-        *_ptr_Input_Control = *newClass;
-    }
-    void OpenAvrilConcurrency::Input::stat_set_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID, Object* newObject)
-    {
-        auto temp = stat_get_ptr_Item_On_list_Of_Praise_In_Subsets()->begin();
+        auto temp = stat_REG_get_ptr_list_Of_ptr_PraiseInputSubsets()->begin();
         std::advance(temp, praiseID);
         *temp = newObject;
     }
-
-
-
-
 
 

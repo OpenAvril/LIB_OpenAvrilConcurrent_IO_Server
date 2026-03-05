@@ -21,6 +21,8 @@ namespace OpenAvrilConcurrency
         class Object* get_REG_ptr_Item_On_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID);
         std::list<class Object*>* get_REG_Item_ptr_list_Of_ptr_Algorithms_Subset();
         // set.
+    // static.
+        static void thread_Concurrency(class Framework_Server* obj, uint8_t concurrent_threadID);
 
     private:
 // private.
@@ -28,7 +30,6 @@ namespace OpenAvrilConcurrency
         // get.
         // set.
     // static.
-        static void thread_Concurrency(class Framework_Server* obj, uint8_t concurrent_threadID);
         // classes.
             // create.
         static void stat_CLASS_create_ptr_Concurrent_Control();

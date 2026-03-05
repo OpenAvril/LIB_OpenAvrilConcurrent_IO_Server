@@ -54,7 +54,7 @@
             // create.
     void OpenAvrilConcurrency::Algorithms::stat_CLASS_create_ptr_User_Algorithmorithms()
     {
-        static class OpenAvrilConcurrency::User_Algorithm* _stat_CLASS_ptr_User_Algorithmorithms = new class OpenAvrilConcurrency::User_Alogorithm();
+        static class OpenAvrilConcurrency::User_Algorithm* _stat_CLASS_ptr_User_Algorithmorithms = new class OpenAvrilConcurrency::User_Algorithm();
         while (stat_CLASS_get_ptr_User_Algorithmorithms() == NULL) {}
     }
             // get.
@@ -70,7 +70,7 @@
         static std::list<class OpenAvrilConcurrency::Concurrent*>* _list_Of_ptr_Concurrent = new std::list<class OpenAvrilConcurrency::Concurrent*>();
         while (stat_REG_get_ptr_list_Of_ptr_Concurrent() == NULL) {}
         *_list_Of_ptr_Concurrent = { newDEFAULT_Concurrent , newDEFAULT_Concurrent, newDEFAULT_Concurrent };
-        for (uint8_t concurrentThreadID = 0; concurrentThreadID < sizeof(*stat_REG_get_ptr_Item_On_List_ptr_Concurrent()); concurrentThreadID++)
+        for (uint8_t concurrentThreadID = 0; concurrentThreadID < sizeof(*stat_REG_get_ptr_list_Of_ptr_Concurrent()); concurrentThreadID++)
         {
             while (stat_REG_get_ptr_Item_On_List_ptr_Concurrent(concurrentThreadID) == NULL) {}
         }
@@ -87,13 +87,9 @@
         return _stat_REG_ptr_list_Of_ptr_Concurrent;
     }
             // set.
-    OpenAvrilConcurrency::Concurrent* OpenAvrilConcurrency::Algorithms::stat_REG_get_ptr_Item_On_List_ptr_Concurrent(uint8_t concurrentThreadID)
+    void OpenAvrilConcurrency::Algorithms::stat_REG_set_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID, class OpenAvrilConcurrency::Concurrent* newClass)
     {
         auto temp = stat_REG_get_ptr_list_Of_ptr_Concurrent()->begin();
         std::advance(temp, concurrentThreadID);
-        return *temp;
-    }
-    std::list<OpenAvrilConcurrency::Concurrent*>* OpenAvrilConcurrency::Algorithms::stat_REG_get_ptr_list_Of_ptr_Concurrent()
-    {
-        return _stat_REG_ptr_list_Of_ptr_Concurrent;
+        *temp = newClass;
     }

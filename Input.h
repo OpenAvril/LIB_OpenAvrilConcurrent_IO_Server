@@ -14,12 +14,13 @@ namespace OpenAvrilConcurrency
 // public.
     // dynamic.
         void initialise_CLASS_Control();
-        void initialise_list_Of_Praise_In_Subsets(class Framework_Server* obj);
+        void initialise_list_Of_PraiseInSubsets(class Framework_Server* obj);
         // get.
-        uint8_t get_in_praiseEventId();
-        uint8_t get_in_playerId();
-        class Input_Control* get_ptr_Input_Control();
-        class Object* get_ptr_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID);
+        class Input_Control* get_CLASS_ptr_Input_Control();
+        uint8_t get_REG_in_praiseEventId();
+        uint8_t get_REG_in_playerId();
+        
+        class Object* get_REG_ptr_Item_On_list_Of_PraiseInSubsets(uint8_t praiseID);
         // set.
         void set_Subset_With_InputSubet(class Praise0_Input* praise0_Input);
     // static.
@@ -34,36 +35,29 @@ namespace OpenAvrilConcurrency
     // static.
         // classes.
             // create.
+        static void stat_CLASS_create_ptr_Input_Control();
             // get.
+        static Input_Control* stat_get_CLASS_ptr_Input_Control();
+        static uint8_t stat_REG_get_ptr_in_playerId();
+        static uint8_t stat_REG_get_ptr_in_praiseEventId();
             // set.
         // registers.
+        static uint8_t* _REG_ptr_in_praiseEventId;
+        static uint8_t* _REG_ptr_in_playerId;
+        static std::list<class Object*>* _REG_ptr_list_Of_ptr_PraiseInSubsets;
             // create.
+        static void stat_REG_create_ptr_in_playerId(uint8_t* newDEFAULT_uint8_t);
+        static void stat_REG_create_ptr_in_praiseEventId(uint8_t* newDEFAULT_uint8_t);
+        static void stat_REG_create_ptr_list_Of_Praise_In_Subsets();
             // get.
+        static uint8_t stat_REG_get_ptr_in_playerId();
+        static uint8_t stat_REG_get_ptr_in_praiseEventId();
+        static class Object* stat_REG_get_Item_On_list_Of_PraiseInSubsets(uint8_t praiseID);
+        static std::list<class Object*>* stat_REG_get_ptr_list_Of_ptr_PraiseInputSubsets();
             // set.
-// private.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        static void stat_create_ptr_in_playerId(uint8_t* newDEFAULT_uint8_t);
-        static void stat_create_ptr_in_praiseEventId(uint8_t* newDEFAULT_uint8_t);
-        static void stat_create_ptr_Input_Control();
-        static void stat_create_ptr_list_Of_Praise_In_Subsets();
-        // get.
-        static uint8_t* stat_get_ptr_in_playerId();
-        static uint8_t* stat_get_ptr_in_praiseEventId();
-        static class Object* stat_get_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID);
-        static std::list<OpenAvrilConcurrency::Object*>* stat_get_ptr_Item_On_list_Of_Praise_In_Subsets();
-        static Input_Control* stat_get_ptr_Input_Control();
-        // set.
-        static void stat_set_ptr_in_playerId(uint8_t* new_uint8_t);
-        static void stat_set_ptr_in_praiseEventId(uint8_t* new_uint8_t);
-        static void stat_set_ptr_Input_Control(class Input_Control* newClass);
-        static void stat_set_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID, class Object* newObject);
-    // pointers.
-        // registers.
-        static uint8_t* _ptr_in_praiseEventId;
-        static uint8_t* _ptr_in_playerId;
-        static std::list<class Object*>* _ptr_list_Of_Praise_In_Subsets;
+        static void stat_REG_set_ptr_in_playerId(uint8_t* new_uint8_t);
+        static void stat_REG_set_ptr_in_praiseEventId(uint8_t* new_uint8_t);
+        static void stat_REG_set_ptr_Input_Control(class Input_Control* newClass);
+        static void stat_REG_set_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID, class Object* newObject);
     };
 }

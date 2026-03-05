@@ -4,7 +4,7 @@
 	// classes.
 	static class OpenAvrilConcurrency::Praise0_Output* _stat_REG_ptr_Praise0_Output = NULL;
 	// registers.
-	static std::list<class Object*>* _stat_REG_ptr_list_Of_ptr_PraiseOutputSubsets = { NULL };
+	static std::list<class OpenAvrilConcurrency::Object*>* _stat_REG_ptr_list_Of_ptr_PraiseOutputSubsets = { NULL };
 
 // constructor.
 	OpenAvrilConcurrency::User_Output::User_Output()
@@ -23,7 +23,7 @@
 // public.
 	// dynamic.
 		// get.
-	class Object* OpenAvrilConcurrency::User_Output::get_REG_ptr_Item_On_List_Of_stat_REG_ptr_list_Of_ptr_PraiseOutputSubsets(uint8_t praiseID)
+	OpenAvrilConcurrency::Object* OpenAvrilConcurrency::User_Output::get_REG_ptr_Item_On_List_Of_stat_REG_ptr_list_Of_ptr_PraiseOutputSubsets(uint8_t praiseID)
 	{
 		return stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseOutputSubsets(praiseID);
 	}
@@ -49,19 +49,19 @@
 			// set.
 		// registers.
 			// create.
-	void OpenAvrilConcurrency::User_Output::stat_REG_create_ptr_list_Of_ptr_PraiseOutputSubsets(Object* newDEFAULT_Object)
+	void OpenAvrilConcurrency::User_Output::stat_REG_create_ptr_list_Of_ptr_PraiseOutputSubsets(OpenAvrilConcurrency::Object* newDEFAULT_Object)
 	{
 		OpenAvrilConcurrency::Praise0_Output* _stat_REG_ptr_Praise0_Output = new class OpenAvrilConcurrency::Praise0_Output();
 		while (stat_REG_get_ptr_list_Of_ptr_PraiseOutputSubsets() == NULL) {}
 	}
 			// get.
-	Object* stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseOutputSubsets(uint8_t praiseID)
+	OpenAvrilConcurrency::Object* stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseOutputSubsets(uint8_t praiseID)
 	{
 		auto temp = stat_REG_get_ptr_list_Of_ptr_PraiseOutputSubsets()->begin();
 		std::advance(temp, praiseID);
 		return *temp;
 	}
-	std::list<class Object*>* stat_REG_get_ptr_list_Of_ptr_PraiseOutputSubsets()
+	std::list<class OpenAvrilConcurrency::Object*>* stat_REG_get_ptr_list_Of_ptr_PraiseOutputSubsets()
 	{
 			return _stat_REG_ptr_list_Of_ptr_PraiseOutputSubsets;
 	}

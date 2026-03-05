@@ -25,18 +25,20 @@
 		switch (praiseEventId)
 		{
 		case 0:
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_array_Of_doubleBuffer_Output_WRITE()->set_Subset_With_OutputSubet(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Output()->get_ptr_Item_For_Subset_In_list_Of_Praise_Output_Subsets(praiseEventId));
+			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_array_Of_doubleBuffer_Output_WRITE(obj)->set_Subset_With_OutputSubet(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Output()->get_REG_ptr_Item_On_List_Of_stat_REG_ptr_list_Of_ptr_PraiseOutputSubsets(praiseEventId));
 			break;
 		}
 	}
-	// static.
-		// get.
-		// set.
-
 // private.
 	// dynamic.
 		// get.
 		// set.
 	// static.
-		// get.
-		// set.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
