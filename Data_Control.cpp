@@ -72,8 +72,8 @@
         class OpenAvrilConcurrency::Input* referenceForCore = data->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrentThreadID);
         class OpenAvrilConcurrency::Input* inputSlot = data->get_REG_ptr_Item_On_vector_Of_stack_Of_InputPraise(1);
         referenceForCore = inputSlot;
-        data->get_REG_ptr_vector_Of_stack_Of_InputPraise()->erase(data->get_REG_ptr_vector_Of_stack_Of_InputPraise()->begin() + 1);
-        if (sizeof(data->get_REG_ptr_vector_Of_stack_Of_InputPraise()) < 2)
+        data->stat_REG_get_ptr_vector_Of_stack_Of_InputPraise()->erase(data->stat_REG_get_ptr_vector_Of_stack_Of_InputPraise()->begin() + 1);
+        if (sizeof(*data->stat_REG_get_ptr_vector_Of_stack_Of_InputPraise()) < 2)
         {
             stat_REG_set_Item_flag_isLoaded_Stack_InputAction(new bool(false));
         }
@@ -87,8 +87,8 @@
         class OpenAvrilConcurrency::Output* distributeBuffer = data->get_REG_ptr_Item_array_Of_doubleBuffer_Output_WRITE(obj);
         class OpenAvrilConcurrency::Output* outputSlot = data->get_REG_ptr_Item_On_vector_Of_stack_Of_OutputPraise(1);
         distributeBuffer = outputSlot;
-        data->get_REG_ptr_vector_Of_stack_Of_OutputPraise()->erase(data->get_REG_ptr_vector_Of_stack_Of_OutputPraise()->begin() + 1);
-        if (sizeof(data->get_REG_ptr_vector_Of_stack_Of_OutputPraise()) < 2)
+        data->stat_REG_get_ptr_vector_Of_stack_Of_OutputPraise()->erase(data->stat_REG_get_ptr_vector_Of_stack_Of_OutputPraise()->begin() + 1);
+        if (sizeof(data->stat_REG_get_ptr_vector_Of_stack_Of_OutputPraise()) < 2)
         {
             stat_REG_set_Item_flag_isLoaded_Stack_OutputSend(new bool(false));
         }
@@ -100,7 +100,7 @@
     void OpenAvrilConcurrency::Data_Control::push_To_Stack_Of_Input(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Data* data)
     {
         class OpenAvrilConcurrency::Input* inputBuffer = data->get_REG_ptr_Item_array_Of_doubleBuffer_Input_READ(obj);
-        std::vector<class OpenAvrilConcurrency::Input*>* inputStackt = data->get_REG_ptr_vector_Of_stack_Of_InputPraise();
+        std::vector<class OpenAvrilConcurrency::Input*>* inputStackt = data->stat_REG_get_ptr_vector_Of_stack_Of_InputPraise();
         inputStackt->push_back(inputBuffer);
         if (sizeof(inputStackt) < 2)
         {
@@ -114,7 +114,7 @@
     void OpenAvrilConcurrency::Data_Control::push_To_Stack_Of_Output(OpenAvrilConcurrency::Data* data, uint8_t concurrentThreadID)
     {
         class OpenAvrilConcurrency::Output* referenceForCore = data->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrentThreadID);
-        std::vector<class OpenAvrilConcurrency::Output*>* outputStack = data->get_REG_ptr_vector_Of_stack_Of_OutputPraise();
+        std::vector<class OpenAvrilConcurrency::Output*>* outputStack = data->stat_REG_get_ptr_vector_Of_stack_Of_OutputPraise();
         outputStack->push_back(referenceForCore);
         if (sizeof(outputStack) < 2)
         {

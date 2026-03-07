@@ -23,7 +23,7 @@ OpenAvrilConcurrency::User_Algorithm::~User_Algorithm()
 
 OpenAvrilConcurrency::Object* OpenAvrilConcurrency::User_Algorithm::get_REG_ptr_Item_On_List_Of_ptr_list_Of_ptr_PraiseAlgorithmSubsets(uint8_t praiseID)
 {
-	return stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseAlgorithmSubsets(praiseID);
+	return stat_REG_get_ptr_Item_On_list_Of_ptr_PraiseAlgorithmSubsets(praiseID);
 }
 
 // public.
@@ -57,7 +57,7 @@ void OpenAvrilConcurrency::User_Algorithm::stat_REG_create_ptr_list_Of_ptr_Prais
 	while (stat_REG_get_ptr_list_Of_ptr_PraiseAlgorithmSubsets() == NULL) {}
 }
 // get.
-OpenAvrilConcurrency::Object* stat_REG_get_Item_On_list_Of_PraiseInSubsets(uint8_t praiseID)
+OpenAvrilConcurrency::Object* OpenAvrilConcurrency::User_Algorithm::stat_REG_get_ptr_Item_On_list_Of_ptr_PraiseAlgorithmSubsets(uint8_t praiseID)
 {
 	auto temp = stat_REG_get_ptr_list_Of_ptr_PraiseAlgorithmSubsets()->begin();
 	std::advance(temp, praiseID);

@@ -56,11 +56,11 @@
 	}
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::pop_From_Stack_Of_Output(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->pop_From_Stack_Of_Output(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data());
+		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->pop_From_Stack_Of_Output(obj, obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data());
 	}
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::push_To_Stack_Of_Input(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->push_To_Stack_Of_Input(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data());
+		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->push_To_Stack_Of_Input(obj, obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data());
 	}
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::select_set_Intput_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId)
 	{

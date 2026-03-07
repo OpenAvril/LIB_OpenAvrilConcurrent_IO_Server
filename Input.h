@@ -38,8 +38,6 @@ namespace OpenAvrilConcurrency
         static void stat_CLASS_create_ptr_Input_Control();
             // get.
         static Input_Control* stat_get_CLASS_ptr_Input_Control();
-        static uint8_t stat_REG_get_ptr_in_playerId();
-        static uint8_t stat_REG_get_ptr_in_praiseEventId();
             // set.
         // registers.
         static uint8_t* _REG_ptr_in_praiseEventId;
@@ -48,7 +46,7 @@ namespace OpenAvrilConcurrency
             // create.
         static void stat_REG_create_ptr_in_playerId(uint8_t* newDEFAULT_uint8_t);
         static void stat_REG_create_ptr_in_praiseEventId(uint8_t* newDEFAULT_uint8_t);
-        static void stat_REG_create_ptr_list_Of_Praise_In_Subsets();
+        static void stat_REG_create_ptr_list_Of_PraiseInSubsets();
             // get.
         static uint8_t stat_REG_get_ptr_in_playerId();
         static uint8_t stat_REG_get_ptr_in_praiseEventId();

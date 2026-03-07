@@ -36,7 +36,7 @@
     }
     void OpenAvrilConcurrency::Output::initialise_list_Of_PraiseOutSubsets(Framework_Server* obj, uint8_t praiseID)
     {
-        set_Subset_With_OutputSubet(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Output()->get_REG_ptr_Item_On_List_Of_stat_REG_ptr_list_Of_ptr_PraiseOutputSubsets(praiseID));
+        set_Subset_With_OutputSubet(reinterpret_cast<OpenAvrilConcurrency::Praise0_Output*>(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Output()->get_REG_ptr_Item_On_List_Of_stat_REG_ptr_list_Of_ptr_PraiseOutputSubsets(praiseID)));
     }
         // get.
     uint8_t OpenAvrilConcurrency::Output::get_out_praiseEventId()

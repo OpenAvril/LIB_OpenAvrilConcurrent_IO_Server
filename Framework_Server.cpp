@@ -48,17 +48,18 @@
 		OpenAvrilConcurrency::Input* newINITIALISED_Input = new class OpenAvrilConcurrency::Input();
 		while (newINITIALISED_Input == NULL) {}
 		newINITIALISED_Input->initialise_CLASS_Control();
+		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Input()->initialise_stat_REG_ptr_list_Of_ptr_PraiseInputSubsets();
 		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
 		{
 			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrentThreadID, newINITIALISED_Input);
 		}
 		for (uint8_t sideID = 0; sideID < uint8_t(2); sideID++)
 		{
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_array_Of_doubleBuffer_Input(sideID, newINITIALISED_Input);
+			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_array_Of_doubleBuffer_Input(obj, newINITIALISED_Input);
 		}
 		for (uint8_t slotID = 0; slotID < obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Praise_Events(); slotID++)
 		{
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_vector_Of_stack_Of_InputPraise(slotID, newINITIALISED_Input);
+			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_vector_Of_stack_Of_InputPraise(obj, newINITIALISED_Input);
 		}
 		delete newINITIALISED_Input;
 			// output.
@@ -71,11 +72,11 @@
 		}
 		for (uint8_t sideID = 0; sideID < uint8_t(2); sideID++)
 		{
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_array_Of_doubleBuffer_Output(sideID, newINITIALISED_Output);
+			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_array_Of_doubleBuffer_Output(obj, newINITIALISED_Output);
 		}
 		for (uint8_t slotID = 0; slotID < obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Praise_Events(); slotID++)
 		{
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_vector_Of_stack_Of_OutputPraise(slotID, newINITIALISED_Output);
+			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_vector_Of_stack_Of_OutputPraise(obj, newINITIALISED_Output);
 		}
 		delete newINITIALISED_Output;
 		

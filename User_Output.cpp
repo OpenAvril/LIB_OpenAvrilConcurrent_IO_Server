@@ -38,7 +38,7 @@
 			// create.
 	void OpenAvrilConcurrency::User_Output::stat_REG_create_ptr_Praise0_Output()
 	{
-		OpenAvrilConcurrency::Praise0_Output* _stat_REG_ptr_Praise0_Output = new class OpenAvrilConcurrency::Praise0_Output();
+		class OpenAvrilConcurrency::Praise0_Output* _stat_REG_ptr_Praise0_Output = new class OpenAvrilConcurrency::Praise0_Output();
 		while (stat_REG_get_ptr_Praise0_Output() == NULL) {}
 	}
 			// get.
@@ -51,15 +51,19 @@
 			// create.
 	void OpenAvrilConcurrency::User_Output::stat_REG_create_ptr_list_Of_ptr_PraiseOutputSubsets(OpenAvrilConcurrency::Object* newDEFAULT_Object)
 	{
-		OpenAvrilConcurrency::Praise0_Output* _stat_REG_ptr_Praise0_Output = new class OpenAvrilConcurrency::Praise0_Output();
+		class OpenAvrilConcurrency::Praise0_Output* _stat_REG_ptr_Praise0_Output = new class OpenAvrilConcurrency::Praise0_Output();
 		while (stat_REG_get_ptr_list_Of_ptr_PraiseOutputSubsets() == NULL) {}
 	}
 			// get.
-	OpenAvrilConcurrency::Object* stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseOutputSubsets(uint8_t praiseID)
+	class OpenAvrilConcurrency::Object* OpenAvrilConcurrency::User_Output::stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseOutputSubsets(uint8_t praiseID)
 	{
 		auto temp = stat_REG_get_ptr_list_Of_ptr_PraiseOutputSubsets()->begin();
 		std::advance(temp, praiseID);
 		return *temp;
+	}
+	std::list<class OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::User_Output::stat_REG_get_ptr_list_Of_ptr_PraiseOutputSubsets()
+	{
+		return stat_REG_get_ptr_list_Of_ptr_PraiseOutputSubsets();
 	}
 	std::list<class OpenAvrilConcurrency::Object*>* stat_REG_get_ptr_list_Of_ptr_PraiseOutputSubsets()
 	{

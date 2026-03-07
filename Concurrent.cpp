@@ -22,7 +22,7 @@
 
 // public.
     // dynamic.
-    void OpenAvrilConcurrency::Concurrent::do_Concurrent_Algorithm_For_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj, char playerId, uint8_t praiseEventId, Object* ptr_Algorithm_Subset, Object* ptr_Input_Subset, Object* ptr_Output_Subset)
+    void OpenAvrilConcurrency::Concurrent::do_Concurrent_Algorithm_For_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj, char playerId, uint8_t praiseEventId, class OpenAvrilConcurrency::Object* ptr_Algorithm_Subset, class OpenAvrilConcurrency::Object* ptr_Input_Subset, class OpenAvrilConcurrency::Object* ptr_Output_Subset)
     {
         OpenAvrilConcurrency::Praise0_Algorithm* ptr_Algorithm_Subset_Praise0 = NULL;
         OpenAvrilConcurrency::Praise0_Input* ptr_Input_Subset_Praise0 = NULL;
@@ -41,12 +41,11 @@
     {
         stat_CLASS_create_ptr_Concurrent_Control();
     }
-    void OpenAvrilConcurrency::Concurrent::initialise_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID, class Object* newINITIALISED_Object)
+    void OpenAvrilConcurrency::Concurrent::initialise_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID, class OpenAvrilConcurrency::Object* newINITIALISED_Object)
     {
         stat_REG_set_ptr_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(praiseID, newINITIALISED_Object);
     }
         // get.
-
     OpenAvrilConcurrency::Concurrent_Control* OpenAvrilConcurrency::Concurrent::get_CLASS_ptr_Concurrent_Control()
     {
         return stat_CLASS_get_ptr_Concurrent_Control();
@@ -143,8 +142,10 @@
             // create.
     void OpenAvrilConcurrency::Concurrent::stat_REG_create_ptr_list_Of_ptr_Algorithms_Subset()
     {
-        std::list<class Object*>* _stat_REG_ptr_list_Of_ptr_Algorithms_Subset = new std::list<class Object*>();
+        std::list<class OpenAvrilConcurrency::Object*>* _stat_REG_ptr_list_Of_ptr_Algorithms_Subset = new std::list<class OpenAvrilConcurrency::Object*>();
         while (stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset() == NULL) { }
+        stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->resize(1);
+
     }
             // get.
     OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Concurrent::stat_REG_get_ptr_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID)

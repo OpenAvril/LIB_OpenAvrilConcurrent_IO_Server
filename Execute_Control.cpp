@@ -46,7 +46,7 @@
 		// set.
 	void OpenAvrilConcurrency::Execute_Control::set_ConditionCode_Of_Thread(uint8_t threadID)
 	{
-		set_Item_On_list_Of_flag_ThreadInitialised(threadID, new bool(true));
+		stat_set_Item_On_list_Of_flag_ThreadInitialised(threadID, new bool(true));
 	}
 
 // private.

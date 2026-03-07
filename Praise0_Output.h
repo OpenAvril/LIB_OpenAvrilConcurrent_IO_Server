@@ -16,7 +16,7 @@ namespace OpenAvrilConcurrency
 		// get.
 		double get_REG_ptr_output_Value();
 		// set.
-		void set_REG_ptr_output_Value(double* newValue);
+		void set_REG_ptr_output_Value(double newValue);
 
 	private:
 // private.

@@ -24,9 +24,9 @@
 	{
 		return stat_get_REG_ptr_output_Value();
 	}
-	void OpenAvrilConcurrency::Praise0_Output::set_REG_ptr_output_Value(double* newValue)
+	void OpenAvrilConcurrency::Praise0_Output::set_REG_ptr_output_Value(double newValue)
 	{
-		stat_set_REG_ptr_output_Value(*newValue);
+		stat_set_REG_ptr_output_Value(newValue);
 	}
 		// set.
 	// static.
