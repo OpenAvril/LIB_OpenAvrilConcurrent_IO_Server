@@ -2,13 +2,13 @@
 
 // pointers.
     // classes.
-    static OpenAvrilConcurrency::Execute_Control* _stat_CLASS_ptr_Execute_Control = NULL;
+    class OpenAvrilConcurrency::Execute_Control* OpenAvrilConcurrency::Execute::_stat_CLASS_ptr_Execute_Control = NULL;
     // registers.
     std::list<std::thread*>* OpenAvrilConcurrency::Execute::_stat_REG_ptr_array_Of_ptr_list_Of_Threads = NULL;
     // programs.
-    static class OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* _stat_program_ConcurrentQue_Server = NULL;
-    static class OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* _stat_program_WriteEnable_ServerInputAction = NULL;
-    static class OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* _stat_program_WriteEnable_ServerOutputRecieve = NULL;
+    class OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* OpenAvrilConcurrency::Execute::_stat_program_ConcurrentQue_Server = NULL;
+    class OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* OpenAvrilConcurrency::Execute::_stat_program_WriteEnable_ServerInputAction = NULL;
+    class OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* OpenAvrilConcurrency::Execute::_stat_program_WriteEnable_ServerOutputRecieve = NULL;
 
 // constructor.
     OpenAvrilConcurrency::Execute::Execute()

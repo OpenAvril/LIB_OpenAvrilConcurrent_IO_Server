@@ -31,6 +31,7 @@ namespace OpenAvrilConcurrency
         // set.
     // static.
         // classes.
+        static class Concurrent_Control* _stat_CLASS_ptr_Concurrent_Control;
             // create.
         static void stat_CLASS_create_ptr_Concurrent_Control();
             // get.

@@ -2,7 +2,7 @@
 
 // pointers.
 	// classes.
-	static class OpenAvrilConcurrency::Server* _stat_CLASS_ptr_Server = NULL;
+	class OpenAvrilConcurrency::Server* OpenAvrilConcurrency::Framework_Server::_stat_CLASS_ptr_Server = NULL;
 	// registers.
 
 // constructor.

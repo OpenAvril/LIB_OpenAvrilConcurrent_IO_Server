@@ -2,10 +2,10 @@
 
 // pointers.
     // classes.
-    static class OpenAvrilConcurrency::Algorithms* _CLASS_ptr_Algorithms = NULL;
-    static class OpenAvrilConcurrency::Data* _CLASS_ptr_Data = NULL;
-    static class OpenAvrilConcurrency::Execute* _CLASS_ptr_Execute = NULL;
-    static class OpenAvrilConcurrency::Global* _CLASS_ptr_Global = NULL;
+    class OpenAvrilConcurrency::Algorithms* OpenAvrilConcurrency::Server::_stat_CLASS_ptr_Algorithms = NULL;
+    class OpenAvrilConcurrency::Data* OpenAvrilConcurrency::Server::_stat_CLASS_ptr_Data = NULL;
+    class OpenAvrilConcurrency::Execute* OpenAvrilConcurrency::Server::_stat_CLASS_ptr_Execute = NULL;
+    class OpenAvrilConcurrency::Global* OpenAvrilConcurrency::Server::_stat_CLASS_ptr_Global = NULL;
     // registers.
 
 // constructor.
@@ -33,10 +33,10 @@
 // destructor.
     OpenAvrilConcurrency::Server::~Server()
     {
-        delete _CLASS_ptr_Global;
-        delete _CLASS_ptr_Algorithms;
-        delete _CLASS_ptr_Data;
-        delete _CLASS_ptr_Execute;
+        delete _stat_CLASS_ptr_Global;
+        delete _stat_CLASS_ptr_Algorithms;
+        delete _stat_CLASS_ptr_Data;
+        delete _stat_CLASS_ptr_Execute;
     }
 
 // public.
@@ -90,19 +90,19 @@
             // get.
         OpenAvrilConcurrency::Algorithms* OpenAvrilConcurrency::Server::stat_CLASS_get_ptr_Algorithms()
         {
-            return _CLASS_ptr_Algorithms;
+            return _stat_CLASS_ptr_Algorithms;
         }
         OpenAvrilConcurrency::Data* OpenAvrilConcurrency::Server::stat_CLASS_get_ptr_Data()
         {
-            return _CLASS_ptr_Data;
+            return _stat_CLASS_ptr_Data;
         }
         OpenAvrilConcurrency::Execute* OpenAvrilConcurrency::Server::stat_CLASS_get_ptr_Execute()
         {
-            return _CLASS_ptr_Execute;
+            return _stat_CLASS_ptr_Execute;
         }
         OpenAvrilConcurrency::Global* OpenAvrilConcurrency::Server::stat_CLASS_get_ptr_Global()
         {
-            return _CLASS_ptr_Global;
+            return _stat_CLASS_ptr_Global;
         }
             // set.
         // registers.

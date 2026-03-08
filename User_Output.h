@@ -25,6 +25,7 @@ namespace OpenAvrilConcurrency
 		// set.
 	// static.
 		// classes.
+		static class Praise0_Output* _stat_CLASS_ptr_Praise0_Output;
 			// create.
 		static void stat_CLASS_create_ptr_Praise0_Output();
 			// get.
