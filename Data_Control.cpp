@@ -3,10 +3,10 @@
 // pointers.
     // classes.
     // registers.
-    static bool* _stat_REG_ptr_flag_isLoaded_Stack_InputAction = NULL;
-    static bool* _stat_REG_ptr_flag_isLoaded_Stack_OutputSend = NULL;
-    static bool* _stat_REG_ptr_side_To_Write_For_array_Of_doubleBuffer_Input = NULL;
-    static bool* _Stat_REG_ptr_side_To_Write_For_array_Of_doubleBuffer_Output = NULL;
+    bool* OpenAvrilConcurrency::Data_Control::_stat_REG_ptr_flag_isLoaded_Stack_InputAction = NULL;
+    bool* OpenAvrilConcurrency::Data_Control::_stat_REG_ptr_flag_isLoaded_Stack_OutputSend = NULL;
+    bool* OpenAvrilConcurrency::Data_Control::_stat_REG_ptr_side_To_Write_For_array_Of_doubleBuffer_Input = NULL;
+    bool* OpenAvrilConcurrency::Data_Control::_Stat_REG_ptr_side_To_Write_For_array_Of_doubleBuffer_Output = NULL;
         
 // constructor.
     OpenAvrilConcurrency::Data_Control::Data_Control()

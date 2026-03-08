@@ -23,7 +23,7 @@
 		static class OpenAvrilConcurrency::Framework_Server* _CLASS_ptr_Framework_Server = new class OpenAvrilConcurrency::Framework_Server();
 		while (stat_CLASS_get_ptr_Framework_Server() == NULL) {}
 		stat_CLASS_get_ptr_Framework_Server()->initialise_Program(stat_CLASS_get_ptr_Framework_Server());
-		return (void*)stat_CLASS_get_ptr_Framework_Server();;
+		return (void*)stat_CLASS_get_ptr_Framework_Server();
 	}
 	// dynamic.
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::initalise_Program(OpenAvrilConcurrency::Framework_Server* obj)

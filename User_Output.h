@@ -15,7 +15,7 @@ namespace OpenAvrilConcurrency
 // public.
 	// dynamic.
 		// get.
-		class Object* get_REG_ptr_Item_On_List_Of_stat_REG_ptr_list_Of_ptr_PraiseOutputSubsets(uint8_t praiseID);
+		class Object* get_CLASS_ptr_Item_ptr_PraiseOutputSubsets(uint8_t praiseID);
 		// set.
 
 	private:
@@ -26,18 +26,13 @@ namespace OpenAvrilConcurrency
 	// static.
 		// classes.
 			// create.
-		static void stat_REG_create_ptr_Praise0_Output();
+		static void stat_CLASS_create_ptr_Praise0_Output();
 			// get.
-		static class Praise0_Output* stat_REG_get_ptr_Praise0_Output();
+		static class Praise0_Output* stat_CLASS_get_ptr_Praise0_Output();
 			// set.
-		// registers.
-		static std::list<class Object*>* _stat_REG_ptr_list_Of_ptr_PraiseOutputSubsets;
+		// CLASSisters.
 			// create.
-		static void stat_REG_create_ptr_list_Of_ptr_PraiseOutputSubsets(class Object* newDEFAULT_Object);
 			// get.
-		static class Object* stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseOutputSubsets(uint8_t praiseID);
-		static std::list<class Object*>* stat_REG_get_ptr_list_Of_ptr_PraiseOutputSubsets();
 			// set.
-		static void stat_REG_set_ptr_Item_For_Subset_In_list_Of_PraiseOutputSubsets(uint8_t praiseID, class Object* newClass);
 	};
 }

@@ -4,7 +4,7 @@
     // classes.
     static class OpenAvrilConcurrency::Concurrent_Control* _stat_CLASS_ptr_Concurrent_Control = NULL;
     // registers.
-    static std::list<class OpenAvrilConcurrency::Object*>* _stat_REG_ptr_list_Of_ptr_Algorithms_Subset = NULL;
+    std::list<class OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Concurrent::_stat_REG_ptr_list_Of_ptr_Algorithms_Subset = NULL;
 
 // constructor.
     OpenAvrilConcurrency::Concurrent::Concurrent()
@@ -98,9 +98,9 @@
                         obj,
                         obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_playerId(),
                         obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId(),
-                        obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Algorithms()->get_CLASS_ptr_User_Algorithmorithms()->get_REG_ptr_Item_On_List_Of_ptr_list_Of_ptr_PraiseAlgorithmSubsets(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId()),
-                        obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_ptr_Item_On_list_Of_PraiseInSubsets(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId()),
-                        obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrent_threadID)->get_ptr_Item_On_list_Of_PraiseOutSubsets(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId())
+                        obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Algorithms()->get_CLASS_ptr_User_Algorithmorithms()->get_CLASS_ptr_Item_ptr_PraiseAlgorithmSubsets(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId()),
+                        obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_ptr_Item_PraiseInSubsets(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId()),
+                        obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrent_threadID)->get_ptr_PraiseOutSubsets()
                     );
                     OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::CLIDWriteEnableForThreadsAtSERVERINPUTACTION::write_Start(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_program_WriteEnable_ServerInputAction(), (uint8_t)(concurrent_threadID + (uint8_t)1));
                     obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->push_To_Stack_Of_Output(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data(), concurrent_threadID);

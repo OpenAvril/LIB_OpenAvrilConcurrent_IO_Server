@@ -48,7 +48,6 @@
 		OpenAvrilConcurrency::Input* newINITIALISED_Input = new class OpenAvrilConcurrency::Input();
 		while (newINITIALISED_Input == NULL) {}
 		newINITIALISED_Input->initialise_CLASS_Control();
-		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Input()->initialise_stat_REG_ptr_list_Of_ptr_PraiseInputSubsets();
 		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
 		{
 			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrentThreadID, newINITIALISED_Input);

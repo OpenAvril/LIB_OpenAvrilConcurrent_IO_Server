@@ -12,33 +12,27 @@ namespace OpenAvrilConcurrency
 		// destructor.
 		virtual ~User_Input();
 
-		// public.
-			// dynamic.
-		void initialise_stat_REG_ptr_list_Of_ptr_PraiseInputSubsets();
-				// get.
-		class Object* get_REG_ptr_Item_On_List_Of_ptr_list_Of_ptr_PraiseInputSubsets(uint8_t praiseID);
+// public.
+	// dynamic.
+		// get.
+		class Object* get_CLASS_ptr_Item_ptr_PraiseInputSubsets(uint8_t praiseID);
 		// set.
 
 	private:
-		// private.
-			// dynamic.
-				// get.
-				// set.
-			// static.
-				// classes.
-					// create.
-		static void stat_REG_create_ptr_Praise0_Input();
+// private.
+	// dynamic.
 		// get.
-		static class Praise0_Input* stat_REG_get_ptr_Praise0_Input();
 		// set.
-	// registers.
-		static std::list<class Object*>* _stat_REG_ptr_list_Of_ptr_PraiseInputSubsets;
-		// create.
-		static void stat_REG_create_ptr_list_Of_ptr_PraiseInputSubsets();
-		// get.
-		static class Object* stat_REG_get_ptr_Item_For_Subset_In_list_Of_PraiseInputSubsets(uint8_t praiseID);
-		static std::list<class Object*>* c();
-		// set.
-		static void stat_REG_set_ptr_Item_For_Subset_In_list_Of_PraiseInputSubsets(uint8_t praiseID, class Object* newClass);
-	};
+	// static.
+		// classes.
+			// create.
+		static void stat_CLASS_create_ptr_Praise0_Input();
+			// get.
+		static class Praise0_Input* stat_CLASS_get_ptr_Praise0_Input();
+			// set.
+		// CLASSisters.
+			// create.
+			// get.
+			// set.
+		};
 }

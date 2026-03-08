@@ -17,19 +17,19 @@ namespace OpenAvrilConcurrency
 // public.
 	// dynamic.
 		static void* generate_Program();
-		static void initalise_Program(class OpenAvrilConcurrency::Framework_Server* obj);
-		static void flip_Input_DoubleBuffer(class OpenAvrilConcurrency::Framework_Server* obj);
-		static bool get_flag_isStackLoaded_Server_InputAction(class OpenAvrilConcurrency::Framework_Server* obj);
-		static bool get_flag_isLoaded_Stack_OutputSend(class OpenAvrilConcurrency::Framework_Server* obj);
-		static bool get_flag_IsInitialised_OpenAvrilConcurrencyConcurrency(class OpenAvrilConcurrency::Framework_Server* obj);
-		static void* get_program_WriteEnableStack_ServerInputAction(class OpenAvrilConcurrency::Framework_Server* obj);
-		static void* get_program_WriteEnableStack_ServerOutputRecieve(class OpenAvrilConcurrency::Framework_Server* obj);
-		static void pop_From_Stack_Of_Output(class OpenAvrilConcurrency::Framework_Server* obj);
-		static void push_To_Stack_Of_Input(class OpenAvrilConcurrency::Framework_Server* obj);
-		static void select_set_Intput_Subset(class OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId);
+		static void initalise_Program(class Framework_Server* obj);
+		static void flip_Input_DoubleBuffer(class Framework_Server* obj);
+		static bool get_flag_isStackLoaded_Server_InputAction(class Framework_Server* obj);
+		static bool get_flag_isLoaded_Stack_OutputSend(class Framework_Server* obj);
+		static bool get_flag_IsInitialised_OpenAvrilConcurrencyConcurrency(class Framework_Server* obj);
+		static void* get_program_WriteEnableStack_ServerInputAction(class Framework_Server* obj);
+		static void* get_program_WriteEnableStack_ServerOutputRecieve(class Framework_Server* obj);
+		static void pop_From_Stack_Of_Output(class Framework_Server* obj);
+		static void push_To_Stack_Of_Input(class Framework_Server* obj);
+		static void select_set_Intput_Subset(class Framework_Server* obj, uint8_t praiseEventId);
 		// Praise Event Id
-		static uint8_t get_PraiseEventId(class OpenAvrilConcurrency::Framework_Server* obj);
-		static void set_PraiseEventId(class OpenAvrilConcurrency::Framework_Server* obj, uint8_t value);
+		static uint8_t get_PraiseEventId(class Framework_Server* obj);
+		static void set_PraiseEventId(class Framework_Server* obj, uint8_t value);
 	// TODO: add your methods here.
 		// Praise 0 Data
 
@@ -49,7 +49,7 @@ namespace OpenAvrilConcurrency
 		// classes.
 			// create.
 			// get.
-		static class OpenAvrilConcurrency::Framework_Server* stat_CLASS_get_ptr_Framework_Server();
+		static class Framework_Server* stat_CLASS_get_ptr_Framework_Server();
 			// set.
 		// registers.
 			// create.

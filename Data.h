@@ -68,12 +68,12 @@ namespace OpenAvrilConcurrency
         static class User_Output* stat_CLASS_get_ptr_User_Output();
             // set.
         // registers.
-        static std::array<class Input*, 3>* _REG_stat_ptr_array_Of_buffer_Input_ReferenceForThread;//NUMBER OF CONCURRENT THREADS.
-        static std::array<class Output*, 3>* _REG_stat_ptr_array_Of_buffer_Output_ReferenceForThread;//NUMBER OF CONCURRENT THREADS.
-        static std::array<class Input*, 2>* _REG_stat_ptr_array_Of_doubleBuffer_Input;
-        static std::array<class Output*, 2>* _REG_stat_ptr_array_Of_doubleBuffer_Output;
-        static std::vector<class Input*>* _REG_stat_ptr_vector_Of_stack_Of_InputPraise;
-        static std::vector<class Output*>* _REG_stat_ptr_vector_Of_stack_Of_OutputPraise;
+        static std::array<class Input*, 3>* _stat_REG_ptr_array_Of_buffer_Input_ReferenceForThread;//NUMBER OF CONCURRENT THREADS.
+        static std::array<class Output*, 3>* _stat_REG_ptr_array_Of_buffer_Output_ReferenceForThread;//NUMBER OF CONCURRENT THREADS.
+        static std::array<class Input*, 2>* _stat_REG_ptr_array_Of_doubleBuffer_Input;
+        static std::array<class Output*, 2>* _stat_REG_ptr_array_Of_doubleBuffer_Output;
+        static std::vector<class Input*>* _stat_REG_ptr_vector_Of_stack_Of_InputPraise;
+        static std::vector<class Output*>* _stat_REG_ptr_vector_Of_stack_Of_OutputPraise;
             // create.
         static void stat_REG_create_ptr_array_Of_buffer_Input_ReferenceForThread(class Input* newDEFAULT_Input);
         static void stat_REG_create_ptr_array_Of_buffer_Output_ReferenceForThread(class Output* newDEFAULT_Output);
