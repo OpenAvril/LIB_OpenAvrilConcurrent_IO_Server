@@ -43,6 +43,7 @@
 			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Algorithms()->initialise_CLASS_Item_On_list_Of_ptr_Concurrent(concurrentThreadID, newINITIALISED_Concurrent);
 		}
 		delete newINITIALISED_Concurrent;
+		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Algorithms()->initialise_REG_ptr_List_Of_PraiseAlgorithmSubset();
 		// data.
 			// input.
 		OpenAvrilConcurrency::Input* newINITIALISED_Input = new class OpenAvrilConcurrency::Input();

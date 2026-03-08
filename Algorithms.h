@@ -14,9 +14,10 @@ namespace OpenAvrilConcurrency
 // public.
     // dynamic.
         void initialise_CLASS_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID, class Concurrent* newINITIALISED_Concurrent);
+        void initialise_REG_ptr_List_Of_PraiseAlgorithmSubset();
         // get.
         class Concurrent* get_CLASS_ptr_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID);
-        class User_Algorithm* get_CLASS_ptr_User_Algorithmorithms();
+        class User_Algorithm* get_CLASS_ptr_User_Algorithms();
         // set.
 
     private:
@@ -30,16 +31,20 @@ namespace OpenAvrilConcurrency
             // create.
         static void stat_CLASS_create_ptr_User_Algorithmorithms();
             // get.
-        static class User_Algorithm* stat_CLASS_get_ptr_User_Algorithmorithms();
+        static class User_Algorithm* stat_CLASS_get_ptr_User_Algorithims();
             // set.
         // registers.
         static std::list<class Concurrent*>* _stat_REG_ptr_list_Of_ptr_Concurrent;
+        static std::list<class Object*>* _REG_ptr_List_Of_PraiseAlgorithmSubset;
             // create.
         static void stat_REG_create_ptr_list_Of_ptr_Concurrent(class Concurrent* newDEFAULT_Concurrent);
+        static void stat_REG_create_ptr_PraiseAlgorithimSubsets();
             // get.
         static class Concurrent* stat_REG_get_ptr_Item_On_List_ptr_Concurrent(uint8_t concurrentThreadID);
         static std::list<class Concurrent*>* stat_REG_get_ptr_list_Of_ptr_Concurrent();
+        static class std::list<class Object*>* stat_REG_get_ptr_Item_PraiseInSubsets();
             // set.
         static void stat_REG_set_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID, class Concurrent* newClass);
+        static void stat_REG_set_ptr_Item_PraiseInSubsets(uint8_t praiseID, class Object* obj);
     };
 }
