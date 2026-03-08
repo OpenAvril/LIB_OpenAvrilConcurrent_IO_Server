@@ -25,7 +25,6 @@ namespace OpenAvrilConcurrency
         // set.
     // static.
         // classes.
-        static class OpenAvrilConcurrency::Server* _stat_CLASS_ptr_Server;
             // create.
         static void stat_CLASS_create_ptr_Server();
             // get.

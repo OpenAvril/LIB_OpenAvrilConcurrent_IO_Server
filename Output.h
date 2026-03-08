@@ -33,7 +33,6 @@ namespace OpenAvrilConcurrency
         // set.
     // static.
         // classes.
-        static class Output_Control* _stat_CLASS_ptr_Output_Control;
             // create.
             // get.
             // set.

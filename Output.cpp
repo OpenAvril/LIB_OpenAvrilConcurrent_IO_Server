@@ -2,7 +2,7 @@
 
 // pointers.
     // calsses.
-    class OpenAvrilConcurrency::Output_Control* OpenAvrilConcurrency::Output::_stat_CLASS_ptr_Output_Control = NULL;
+    class OpenAvrilConcurrency::Output_Control* _stat_CLASS_ptr_Output_Control = NULL;
     // registers.
     uint8_t* OpenAvrilConcurrency::Output::_stat_REG_ptr_out_praiseEventId = NULL;
     uint8_t* OpenAvrilConcurrency::Output::_stat_REG_ptr_out_playerId = NULL;

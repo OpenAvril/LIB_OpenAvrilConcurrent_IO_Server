@@ -2,7 +2,7 @@
 
 // pointers.
 	// classes.
-class OpenAvrilConcurrency::Praise0_Algorithm* OpenAvrilConcurrency::User_Algorithm::_stat_CLASS_ptr_Praise0_Algorithm = NULL;
+class OpenAvrilConcurrency::Praise0_Algorithm* _stat_CLASS_ptr_Praise0_Algorithm = NULL;
 	// CLASSisters.
 
 // constructor.

@@ -59,7 +59,11 @@
     {
         stat_REG_set_Item_On_array_Of_ptr_list_Of_Threads(obj, threadId);
     }
-        // get.
+    OpenAvrilConcurrency::Execute_Control* OpenAvrilConcurrency::Execute::get_CLASS_ptr_Execute_Control()
+    {
+        return _stat_CLASS_ptr_Execute_Control;
+    }
+    // get.
     OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* OpenAvrilConcurrency::Execute::get_program_ConcurrentQue_Server()
     {
         return stat_get_program_ConcurrentQue_Server();

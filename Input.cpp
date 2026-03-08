@@ -2,7 +2,7 @@
 
 // pointers.
     // calsses.
-    class OpenAvrilConcurrency::Input_Control* OpenAvrilConcurrency::Input::_CLASS_ptr_Input_Control = NULL;
+    class OpenAvrilConcurrency::Input_Control* _CLASS_ptr_Input_Control = NULL;
     // registers.
     uint8_t* OpenAvrilConcurrency::Input::_REG_ptr_in_praiseEventId = NULL;
     uint8_t* OpenAvrilConcurrency::Input::_REG_ptr_in_playerId = NULL;

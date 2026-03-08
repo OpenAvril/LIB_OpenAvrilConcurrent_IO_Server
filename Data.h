@@ -58,9 +58,6 @@ namespace OpenAvrilConcurrency
         // set.
     // static.
         // classes.
-        static class Data_Control* _stat_CLASS_ptr_Data_Control;
-        static class User_Input* _stat_CLASS_ptr_User_Input;
-        static class User_Output* _stat_CLASS_ptr_User_Output;
             // create.
         static void stat_CLASS_create_ptr_Data_Control();
         static void stat_CLASS_create_ptr_User_Input();
