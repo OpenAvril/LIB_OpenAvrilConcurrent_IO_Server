@@ -22,7 +22,7 @@
 
 // public.
     // dynamic.
-    void OpenAvrilConcurrency::Concurrent::do_Concurrent_Algorithm_For_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj, char playerId, uint8_t praiseEventId, class OpenAvrilConcurrency::Object* ptr_Algorithm_Subset, class OpenAvrilConcurrency::Object* ptr_Input_Subset, class OpenAvrilConcurrency::Object* ptr_Output_Subset)
+    void OpenAvrilConcurrency::Concurrent::do_Concurrent_Algorithm_For_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj, char playerId, uint8_t praiseEventId, OpenAvrilConcurrency::Object* ptr_Algorithm_Subset, OpenAvrilConcurrency::Object* ptr_Input_Subset, OpenAvrilConcurrency::Object* ptr_Output_Subset)
     {
         OpenAvrilConcurrency::Praise0_Algorithm* ptr_Algorithm_Subset_Praise0 = NULL;
         OpenAvrilConcurrency::Praise0_Input* ptr_Input_Subset_Praise0 = NULL;
@@ -41,7 +41,7 @@
     {
         stat_CLASS_create_ptr_Concurrent_Control();
     }
-    void OpenAvrilConcurrency::Concurrent::initialise_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID, class OpenAvrilConcurrency::Object* newINITIALISED_Object)
+    void OpenAvrilConcurrency::Concurrent::initialise_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID, OpenAvrilConcurrency::Object* newINITIALISED_Object)
     {
         stat_REG_set_ptr_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(praiseID, newINITIALISED_Object);
     }
@@ -54,7 +54,7 @@
     {
         return stat_REG_get_ptr_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(praiseID);
     }
-    std::list<class OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Concurrent::get_REG_Item_ptr_list_Of_ptr_Algorithms_Subset()
+    std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Concurrent::get_REG_Item_ptr_list_Of_ptr_Algorithms_Subset()
     {
         return get_REG_Item_ptr_list_Of_ptr_Algorithms_Subset();
     }
@@ -129,7 +129,7 @@
             // create.
     void OpenAvrilConcurrency::Concurrent::stat_CLASS_create_ptr_Concurrent_Control()
     {
-        OpenAvrilConcurrency::Concurrent_Control* _stat_CLASS_ptr_Concurrent_Control = new class OpenAvrilConcurrency::Concurrent_Control();
+        class OpenAvrilConcurrency::Concurrent_Control* _stat_CLASS_ptr_Concurrent_Control = new class OpenAvrilConcurrency::Concurrent_Control();
         while (stat_CLASS_get_ptr_Concurrent_Control() == NULL) {}
     }
             // get.

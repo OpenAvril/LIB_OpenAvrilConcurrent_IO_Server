@@ -23,7 +23,19 @@
 		static class OpenAvrilConcurrency::Framework_Server* _CLASS_ptr_Framework_Server = new class OpenAvrilConcurrency::Framework_Server();
 		while (stat_CLASS_get_ptr_Framework_Server() == NULL) {}
 		stat_CLASS_get_ptr_Framework_Server()->initialise_Program(stat_CLASS_get_ptr_Framework_Server());
-		return (void*)stat_CLASS_get_ptr_Framework_Server();
+		std::cout << "        ,     \\      /      ,"<< std::endl;
+		std::cout << "       / \\    )\\ __ /(     / \\ "<< std::endl;
+		std::cout << "      /   \\   (_\\  /_)    /   \\ "<< std::endl;
+		std::cout << "____ / ____\\__ \\@  @/ ___/_____\\_____"<< std::endl;
+		std::cout << "|              |\\../|               |"<< std::endl;
+		std::cout << "|               \\VV/                |"<< std::endl;
+		std::cout << "|        MIT Concurrent Server       |"<< std::endl;
+		std::cout << "|___________________________________|"<< std::endl;
+		std::cout << "|    / \\ /        \\\\        \\ /\\    |"<< std::endl;
+		std::cout << "|  /    V          ))        V   \\  |"<< std::endl;
+		std::cout << "|/                //               \\| "<< std::endl;
+		std::cout << "`                 V                 '"<< std::endl;
+		return stat_CLASS_get_ptr_Framework_Server();
 	}
 	// dynamic.
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::initalise_Program(OpenAvrilConcurrency::Framework_Server* obj)
