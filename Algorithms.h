@@ -41,10 +41,12 @@ namespace OpenAvrilConcurrency
         static void stat_REG_create_ptr_List_Of_PraiseAlgorithmSubset();
             // get.
         static class Concurrent* stat_REG_get_ptr_Item_On_List_ptr_Concurrent(uint8_t concurrentThreadID);
+        static class Object* stat_REG_get_ptr_Item_On_List_ptr_PraiseAlgorithmSubset(uint8_t concurrentThreadID);
         static std::list<class Concurrent*>* stat_REG_get_ptr_list_Of_ptr_Concurrent();
         static std::list<class Object*>* stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset();
             // set.
         static void stat_REG_set_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID, class Concurrent* newClass);
-        static void stat_REG_set_ptr_Item_PraiseAlgorithmSubset(uint8_t praiseID, class Object* obj);
+        static void stat_REG_set_Item_On_list_Of_ptr_PraiseAlgorithmSubset(uint8_t praiseID, class Object* newClass);
+ 
     };
 }

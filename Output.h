@@ -17,10 +17,10 @@ namespace OpenAvrilConcurrency
         void initialise_list_Of_PraiseInSubsets(class Framework_Server* obj);
         // get.
         class Output_Control* get_CLASS_ptr_Output_Control();
-        uint8_t get_REG_in_praiseEventId();
-        uint8_t get_REG_in_playerId();
+        uint8_t get_REG_out_praiseEventId();
+        uint8_t get_REG_out_playerId();
 
-        class Object* get_REG_ptr_Item_PraiseInSubsets();
+        class Object* get_REG_ptr_Item_PraiseOutSubsets();
         // set.
         void set_Subset_With_Praise0_OutputSubet(class Object* praise0_Output);
         // static.
@@ -43,7 +43,7 @@ namespace OpenAvrilConcurrency
     // registers.
         static uint8_t* _REG_ptr_out_praiseEventId;
         static uint8_t* _REG_ptr_out_playerId;
-        static class Object* _REG_ptr_PraiseInSubset;
+        static std::list<class Object*>* _REG_ptr_PraiseOutSubset;
         // create.
         static void stat_REG_create_ptr_out_playerId(uint8_t* newDEFAULT_uint8_t);
         static void stat_REG_create_ptr_out_praiseEventId(uint8_t* newDEFAULT_uint8_t);
@@ -51,7 +51,8 @@ namespace OpenAvrilConcurrency
         // get.
         static uint8_t stat_REG_get_ptr_out_playerId();
         static uint8_t stat_REG_get_ptr_out_praiseEventId();
-        static class Object* stat_REG_get_ptr_Item_PraiseOutputSubsets();
+        static class Object* get_REG_ptr_Item_On_List_Of_PraiseOutSubsets(uint8_t praiseID);
+        static std::list<OpenAvrilConcurrency::Object*>* get_REG_ptr_List_Of_PraiseOutSubsets();
         // set.
         static void stat_REG_set_ptr_out_playerId(uint8_t* new_uint8_t);
         static void stat_REG_set_ptr_out_praiseEventId(uint8_t* new_uint8_t);

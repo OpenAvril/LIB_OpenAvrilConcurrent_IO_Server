@@ -95,6 +95,12 @@
         std::advance(temp, concurrentThreadID);
         return *temp;
     }
+    OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Algorithms::stat_REG_get_ptr_Item_On_List_ptr_PraiseAlgorithmSubset(uint8_t concurrentThreadID)
+    {
+        auto temp = stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset()->begin();
+        std::advance(temp, concurrentThreadID);
+        return *temp;
+    }
     std::list<OpenAvrilConcurrency::Concurrent*>* OpenAvrilConcurrency::Algorithms::stat_REG_get_ptr_list_Of_ptr_Concurrent()
     {
         return _stat_REG_ptr_list_Of_ptr_Concurrent;
@@ -104,23 +110,15 @@
         return _REG_ptr_List_Of_PraiseAlgorithmSubset;
     }
             // set.
-    void OpenAvrilConcurrency::Algorithms::stat_REG_set_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID, class OpenAvrilConcurrency::Concurrent* newClass)
+    void OpenAvrilConcurrency::Algorithms::stat_REG_set_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID, OpenAvrilConcurrency::Concurrent* objClass)
     {
         auto temp = stat_REG_get_ptr_list_Of_ptr_Concurrent()->begin();
         std::advance(temp, concurrentThreadID);
-        *temp = newClass;
+        *temp = objClass;
     }
-
-    void OpenAvrilConcurrency::Algorithms::stat_REG_set_ptr_Item_PraiseAlgorithmSubset(uint8_t praiseID, Object* objObject)
+    void OpenAvrilConcurrency::Algorithms::stat_REG_set_Item_On_list_Of_ptr_PraiseAlgorithmSubset(uint8_t praiseID, OpenAvrilConcurrency::Object* objObject)
     {
         auto temp = stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset()->begin();
-        std::advance(temp, praiseID);
-        *temp = objObject;
-    }
-
-    void OpenAvrilConcurrency::Input::stat_REG_set_ptr_Item_PraiseAlgorithmSubset(uint8_t praiseID, class Object* objObject)
-    {
-        auto temp = stat_get_REG_ptr_List_Of_PraiseAlgorithmSubset()->begin();
         std::advance(temp, praiseID);
         *temp = objObject;
     }
