@@ -27,7 +27,7 @@ class OpenAvrilConcurrency::Praise0_Algorithm* OpenAvrilConcurrency::User_Algori
 		switch (praiseID)
 		{
 		case 0:
-			return reinterpret_cast<class OpenAvrilConcurrency::Object*>(stat_CLASS_get_ptr_Praise0_Algorithm());
+			return reinterpret_cast<OpenAvrilConcurrency::Object*>(stat_CLASS_get_ptr_Praise0_Algorithm());
 			break;
 
 		case 1:

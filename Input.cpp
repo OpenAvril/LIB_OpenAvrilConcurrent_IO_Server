@@ -6,7 +6,7 @@
     // registers.
     uint8_t* OpenAvrilConcurrency::Input::_REG_ptr_in_praiseEventId = NULL;
     uint8_t* OpenAvrilConcurrency::Input::_REG_ptr_in_playerId = NULL;
-    class OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Input::_REG_ptr_PraiseInSubset = NULL;
+    OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Input::_REG_ptr_PraiseInSubset = NULL;
 
 // constructor.
     OpenAvrilConcurrency::Input::Input()
@@ -34,7 +34,7 @@
     }
     void OpenAvrilConcurrency::Input::initialise_list_Of_PraiseInSubsets(OpenAvrilConcurrency::Framework_Server* obj)
     {
-        set_Subset_With_InputSubet(reinterpret_cast<OpenAvrilConcurrency::Praise0_Input*>(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Input()->get_CLASS_ptr_Item_ptr_PraiseInputSubsets(0)));
+        stat_REG_set_ptr_Item_PraiseInSubsets(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Input()->get_CLASS_ptr_Item_ptr_PraiseInputSubsets(0));
     }
         // get.
     OpenAvrilConcurrency::Input_Control* OpenAvrilConcurrency::Input::get_CLASS_ptr_Input_Control()
@@ -49,10 +49,14 @@
     {
         return *_REG_ptr_in_praiseEventId;
     }
-        // set.
-    void OpenAvrilConcurrency::Input::set_Subset_With_InputSubet(OpenAvrilConcurrency::Praise0_Input* praise0_Input)
+    OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Input::get_REG_ptr_Item_PraiseInSubsets()
     {
-        _REG_ptr_PraiseInSubset = (OpenAvrilConcurrency::Object*)praise0_Input;
+        return _REG_ptr_PraiseInSubset;
+    }
+        // set.
+    void OpenAvrilConcurrency::Input::stat_REG_set_ptr_Item_PraiseInSubsets(OpenAvrilConcurrency::Praise0_Input* praise0_Input)
+    {
+        _REG_ptr_PraiseInSubset = (Object*)praise0_Input;
     }
 
 // private.
@@ -87,7 +91,7 @@
     }
     void OpenAvrilConcurrency::Input::stat_REG_create_ptr_PraiseInSubsets()
     {
-        std::list<class Object*>* _REG_ptr_PraiseInSubset = new std::list<class Object*>();
+        std::list<OpenAvrilConcurrency::Object*>* _REG_ptr_PraiseInSubset = new std::list<OpenAvrilConcurrency::Object*>();
         while (stat_REG_get_ptr_Item_PraiseInSubsets() == NULL) {}
     }
             // get.
@@ -99,10 +103,12 @@
     {
         return *_REG_ptr_in_praiseEventId;
     }
+
     OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Input::stat_REG_get_ptr_Item_PraiseInSubsets()
     {
         return _REG_ptr_PraiseInSubset;
     }
+
             // set.
     void OpenAvrilConcurrency::Input::stat_REG_set_ptr_in_playerId(uint8_t* new_uint8_t)
     {
@@ -112,12 +118,12 @@
     {
         *_REG_ptr_in_praiseEventId = *_ptr_in_praiseEventId;
     }
-    void OpenAvrilConcurrency::Input::stat_REG_set_ptr_Input_Control(Input_Control* newClass)
+    void OpenAvrilConcurrency::Input::stat_REG_set_ptr_Input_Control(OpenAvrilConcurrency::Input_Control* newClass)
     {
         *_CLASS_ptr_Input_Control = *newClass;
     }
 
-    void OpenAvrilConcurrency::Input::stat_REG_set_ptr_Item_PraiseInSubsets(Object* objectClass)
+    void OpenAvrilConcurrency::Input::stat_REG_set_ptr_Item_PraiseInSubsets(OpenAvrilConcurrency::Object* objectClass)
     {
         _REG_ptr_PraiseInSubset = objectClass;
     }

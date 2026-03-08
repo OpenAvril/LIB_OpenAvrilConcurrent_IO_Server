@@ -4,7 +4,7 @@
     // classes.
     class OpenAvrilConcurrency::User_Algorithm* OpenAvrilConcurrency::Algorithms::_stat_CLASS_ptr_User_Algorithmorithms = NULL;
     // registers.
-    std::list<class OpenAvrilConcurrency::Concurrent*>* OpenAvrilConcurrency::Algorithms::_stat_REG_ptr_list_Of_ptr_Concurrent = NULL;
+    std::list<OpenAvrilConcurrency::Concurrent*>* OpenAvrilConcurrency::Algorithms::_stat_REG_ptr_list_Of_ptr_Concurrent = NULL;
 
 // constructor.
     OpenAvrilConcurrency::Algorithms::Algorithms()

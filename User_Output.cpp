@@ -29,7 +29,7 @@
 		switch (praiseID)
 		{
 		case 0:
-			return reinterpret_cast<class OpenAvrilConcurrency::Object*>(stat_CLASS_get_ptr_Praise0_Output());
+			return reinterpret_cast<OpenAvrilConcurrency::Object*>(stat_CLASS_get_ptr_Praise0_Output());
 			break;
 
 		case 1:

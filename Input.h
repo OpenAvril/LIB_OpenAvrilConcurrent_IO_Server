@@ -22,7 +22,7 @@ namespace OpenAvrilConcurrency
         
         class Object* get_REG_ptr_Item_PraiseInSubsets();
         // set.
-        void set_Subset_With_InputSubet(class Praise0_Input* praise0_Input);
+        void stat_REG_set_ptr_Item_PraiseInSubsets(class Praise0_Input* praise0_Input);
     // static.
         // get.
         // set.

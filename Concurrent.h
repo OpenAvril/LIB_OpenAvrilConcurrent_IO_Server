@@ -39,6 +39,7 @@ namespace OpenAvrilConcurrency
             // set.
         // registers.
         static std::list<class Object*>* _stat_REG_ptr_list_Of_ptr_Algorithms_Subset;
+        static class Object* _REG_ptr_PraiseInSubset;
             // create.
         static void stat_REG_create_ptr_list_Of_ptr_Algorithms_Subset();
             // get.
