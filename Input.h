@@ -20,7 +20,7 @@ namespace OpenAvrilConcurrency
         uint8_t get_REG_in_praiseEventId();
         uint8_t get_REG_in_playerId();
         
-        class Object* get_REG_ptr_Item_PraiseInSubsets(uint8_t praiseID);
+        class Object* get_REG_ptr_Item_PraiseInSubsets();
         // set.
         void set_Subset_With_InputSubet(class Praise0_Input* praise0_Input);
     // static.
@@ -34,6 +34,7 @@ namespace OpenAvrilConcurrency
         // set.
     // static.
         // classes.
+        static class Input_Control* _CLASS_ptr_Input_Control;
             // create.
         static void stat_CLASS_create_ptr_Input_Control();
             // get.

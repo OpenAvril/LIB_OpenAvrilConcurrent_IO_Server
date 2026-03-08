@@ -56,6 +56,10 @@
         return stat_REG_get_ptr_PraiseOutSubsets();
     }
         // set.
+    void OpenAvrilConcurrency::Output::set_Subset_With_OutputSubet(Praise0_Output* praise0_Output)
+    {
+        _stat_REG_ptr_Praise_Out_Subsets = (class Object*)praise0_Output;
+    }
     // static.
         // get.
         // set.
