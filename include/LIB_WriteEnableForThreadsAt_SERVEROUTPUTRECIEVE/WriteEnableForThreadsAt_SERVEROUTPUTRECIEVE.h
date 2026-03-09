@@ -1,6 +1,6 @@
 #pragma once
 
-namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE
+namespace OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE
 {
     class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE
     {

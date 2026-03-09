@@ -4,20 +4,20 @@
 #define LIBWRITEENABLEFORTHREADSATSERVEROUTPUTRECIEVE_API __declspec(dllimport)
 #endif
 
-namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE
+namespace OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE
 {
-	class LIBWRITEENABLEFORTHREADSATSERVEROUTPUTRECIEVE_API CLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE
+	class LIBWRITEENABLEFORTHREADSATSERVEROUTPUTRECIEVE_API CLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE
 	{
 	public:
 		// constructor.
-		CLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE();
+		CLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE();
 
 		// destructor.
 
 		// public.
 			// dynamic.
 		//static void* generate_Program();//ToDO: uncomment for C#.
-		static OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* generate_Program();//ToDO: uncomment for C++.
+		static WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* generate_Program();//ToDO: uncomment for C++.
 		static void write_End(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t coreId);
 		static void write_Start(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t coreId);
 		// get.

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION
+namespace OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION
 {
     class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework
     {
@@ -34,7 +34,7 @@ namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION
         static void stat_set_ptr_WriteEnable(class WriteEnableForThreadsAt_SERVERINPUTACTION* writeEnable);
     // pointers.
         // classes.
-        static OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION* _ptr_WriteEnable;
+        static OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION* _ptr_WriteEnable;
         // registers.
     };
 }

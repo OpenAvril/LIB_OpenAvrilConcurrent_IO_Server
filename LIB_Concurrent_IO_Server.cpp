@@ -35,7 +35,8 @@
 		std::cout << "|  /    V          ))        V   \\  |"<< std::endl;
 		std::cout << "|/                //               \\| "<< std::endl;
 		std::cout << "`                 V                 '"<< std::endl;
-		return stat_CLASS_get_ptr_Framework_Server();
+		return (void*)stat_CLASS_get_ptr_Framework_Server();//ToDO: uncomment for C#.
+		//return stat_CLASS_get_ptr_Framework_Server();//ToDO: uncomment for C++.
 	}
 	// dynamic.
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::initalise_Program(OpenAvrilConcurrency::Framework_Server* obj)
