@@ -56,6 +56,6 @@ namespace OpenAvrilConcurrency
         static void stat_REG_set_ptr_out_playerId(uint8_t* new_uint8_t);
         static void stat_REG_set_ptr_out_praiseEventId(uint8_t* new_uint8_t);
         static void stat_REG_set_ptr_Output_Control(class Output_Control* newClass);
-        static void stat_REG_set_ptr_Item_PraiseOutputSubset(uint8_t praiseID, class Object* objObject);
+        static void stat_REG_set_Item_On_List_Of_PraiseOutputSubset(uint8_t praiseID, class Object* objObject);
     };
 }

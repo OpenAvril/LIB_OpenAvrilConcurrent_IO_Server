@@ -43,9 +43,9 @@ namespace OpenAvrilConcurrency
             // create.
         static void stat_REG_create_ptr_list_Of_ptr_Algorithms_Subset();
             // get.
-        static class Object* stat_REG_get_ptr_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID);
+        static class Object* stat_REG_get_ptr_Item_On_list_Of_ptr_Algorithms_Subset(uint8_t praiseID);
         static std::list<class Object*>* stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset();
             // set.
-        static void stat_REG_set_ptr_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID, class Object* newDEFAULT_Object);
+        static void stat_REG_set_ptr_Item_On_list_Of_ptr_Algorithms_Subset(uint8_t praiseID, class Object* newDEFAULT_Object);
     };
 }

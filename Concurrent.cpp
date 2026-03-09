@@ -43,7 +43,7 @@
     }
     void OpenAvrilConcurrency::Concurrent::initialise_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID, OpenAvrilConcurrency::Object* newINITIALISED_Object)
     {
-        stat_REG_set_ptr_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(praiseID, newINITIALISED_Object);
+        stat_REG_set_ptr_Item_On_list_Of_ptr_Algorithms_Subset(praiseID, newINITIALISED_Object);
     }
         // get.
     OpenAvrilConcurrency::Concurrent_Control* OpenAvrilConcurrency::Concurrent::get_CLASS_ptr_Concurrent_Control()
@@ -52,7 +52,7 @@
     }
     OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Concurrent::get_REG_ptr_Item_On_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID)
     {
-        return stat_REG_get_ptr_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(praiseID);
+        return stat_REG_get_ptr_Item_On_list_Of_ptr_Algorithms_Subset(praiseID);
     }
     std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Concurrent::get_REG_Item_ptr_list_Of_ptr_Algorithms_Subset()
     {
@@ -148,7 +148,7 @@
 
     }
             // get.
-    OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Concurrent::stat_REG_get_ptr_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID)
+    OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Concurrent::stat_REG_get_ptr_Item_On_list_Of_ptr_Algorithms_Subset(uint8_t praiseID)
     {
         auto temp = stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->begin();
         std::advance(temp, praiseID);
@@ -157,6 +157,12 @@
     std::list<class OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Concurrent::stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()
     {
         return _stat_REG_ptr_list_Of_ptr_Algorithms_Subset;
+    }
+    void OpenAvrilConcurrency::Concurrent::stat_REG_set_ptr_Item_On_list_Of_ptr_Algorithms_Subset(uint8_t praiseID, Object* newDEFAULT_Object)
+    {
+        auto temp = stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->begin();
+        std::advance(temp, praiseID);
+        *temp = newDEFAULT_Object;
     }
             // set.
 
