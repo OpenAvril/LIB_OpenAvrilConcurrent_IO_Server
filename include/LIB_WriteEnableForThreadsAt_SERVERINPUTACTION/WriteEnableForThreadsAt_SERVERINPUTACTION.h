@@ -13,11 +13,11 @@ namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION
 
 // public.
     // dynamic.
-        void initialise_CLASS_Control(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj);
+        void initialise_Control(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj);
         void write_End(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, uint8_t coreId);
         void write_Start(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, uint8_t coreId);
         // get.
-        class WriteEnableForThreadsAt_SERVERINPUTACTION_Global* get_ptr_CLASS_Global();
+        class WriteEnableForThreadsAt_SERVERINPUTACTION_Global* get_ptr_Global();
         class WriteEnableForThreadsAt_SERVERINPUTACTION_Control* get_ptr_WriteEnable_Control();
         // set.
     // static.
@@ -30,17 +30,17 @@ namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION
         // get.
         // set.
     // static.
-        static void stat_CLASS_create_ptr_Global();
+        static void stat_create_ptr_Global();
         static void stat_create_ptr_WriteEnable_Control();
         // get.
-        static class WriteEnableForThreadsAt_SERVERINPUTACTION_Global* stat_CLASS_get_ptr_Global();
+        static class WriteEnableForThreadsAt_SERVERINPUTACTION_Global* stat_get_ptr_Global();
         static class WriteEnableForThreadsAt_SERVERINPUTACTION_Control* stat_get_ptr_WriteEnable_Control();
         // set.
-        static void stat_set_CLASS_ptr_Global(class WriteEnableForThreadsAt_SERVERINPUTACTION_Global* global);
+        static void stat_set_ptr_Global(class WriteEnableForThreadsAt_SERVERINPUTACTION_Global* global);
         static void stat_set_ptr_WriteEnable_Control(class WriteEnableForThreadsAt_SERVERINPUTACTION_Control* writeEnableControl);
     // pointers.
         // classes.
-        static class WriteEnableForThreadsAt_SERVERINPUTACTION_Global* _CLASS_ptr_Global;
+        static class WriteEnableForThreadsAt_SERVERINPUTACTION_Global* _ptr_Global;
         static class WriteEnableForThreadsAt_SERVERINPUTACTION_Control* _ptr_WriteEnable_Control;
         // registers.
     };
