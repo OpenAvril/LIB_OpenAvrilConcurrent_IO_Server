@@ -16,6 +16,7 @@
         while (newDEFAULT_Concurrent == NULL) {}
         stat_REG_create_ptr_list_Of_ptr_Concurrent(newDEFAULT_Concurrent);
         delete newDEFAULT_Concurrent;
+        stat_REG_create_ptr_List_Of_PraiseAlgorithmSubset();
         std::cout << "exiting constructor of OpenAvrilConcurrency::Algorithms::Algorithms()" << std::endl;
     }
 
@@ -24,6 +25,7 @@
     {
         delete _stat_CLASS_ptr_User_Algorithmorithms;
         delete _stat_REG_ptr_list_Of_ptr_Concurrent;
+        delete _REG_ptr_List_Of_PraiseAlgorithmSubset;
     }
 
 // public.

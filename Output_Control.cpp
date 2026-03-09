@@ -25,7 +25,7 @@
 		switch (praiseEventId)
 		{
 		case 0:
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_array_Of_doubleBuffer_Output_WRITE(obj)->set_Subset_With_Praise0_OutputSubet(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Output()->get_CLASS_ptr_Item_ptr_PraiseOutputSubsets(praiseEventId));
+			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_array_Of_doubleBuffer_Output_WRITE(obj)->set_REG_ptr_Item_PraiseOutputSubset(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_array_Of_doubleBuffer_Output_WRITE(obj)->get_REG_out_praiseEventId(), obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_array_Of_doubleBuffer_Output_WRITE(obj)->get_REG_ptr_Item_On_List_Of_PraiseOutputSubset(praiseEventId));
 			break;
 		}
 	}

@@ -80,7 +80,7 @@
 	}
 	uint8_t OpenAvrilConcurrency::CLIBConcurrentServerIO::get_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		return obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_array_Of_doubleBuffer_Output_WRITE(obj)->get_REG_in_praiseEventId();
+		return obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_array_Of_doubleBuffer_Output_WRITE(obj)->get_REG_out_praiseEventId();
 	}
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::set_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj, uint8_t value)
 	{
