@@ -51,18 +51,14 @@
     {
         return *_REG_ptr_in_praiseEventId;
     }
-    OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Input::stat_get_REG_ptr_Item_On_List_Of_PraiseInputSubset(uint8_t praiseID)
+    OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Input::get_REG_ptr_Item_On_List_Of_PraiseInputSubset(uint8_t praiseID)
     {
-        auto temp = stat_get_REG_ptr_List_Of_PraiseInputSubset()->begin();
-        std::advance(temp, praiseID);
-        return *temp;
+        return stat_get_REG_ptr_Item_On_List_Of_PraiseInputSubset(praiseID);
     }
-        // set.
-    void OpenAvrilConcurrency::Input::stat_REG_set_ptr_Item_PraiseInputSubset(uint8_t praiseID, OpenAvrilConcurrency::Object* objObject)
+    // set.
+    void OpenAvrilConcurrency::Input::set_REG_ptr_Item_PraiseInputSubset(uint8_t praiseID, OpenAvrilConcurrency::Object* objObject)
     {
-        auto temp = stat_get_REG_ptr_List_Of_PraiseInputSubset()->begin();
-        std::advance(temp, praiseID);
-        *temp = (Object*)objObject;
+        stat_REG_set_ptr_Item_PraiseInputSubset(praiseID, objObject);
     }
 
 // private.
