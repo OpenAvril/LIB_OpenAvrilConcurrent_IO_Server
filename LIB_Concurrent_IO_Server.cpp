@@ -20,6 +20,7 @@
 // public.
 	void* OpenAvrilConcurrency::CLIBConcurrentServerIO::generate_Program()
 	{
+		std::cout << "entered generate_Program()." << std::endl;
 		static class OpenAvrilConcurrency::Framework_Server* _CLASS_ptr_Framework_Server = new class OpenAvrilConcurrency::Framework_Server();
 		while (stat_CLASS_get_ptr_Framework_Server() == NULL) {}
 		stat_CLASS_get_ptr_Framework_Server()->initialise_Program(stat_CLASS_get_ptr_Framework_Server());

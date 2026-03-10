@@ -17,7 +17,7 @@ namespace OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE
 		// public.
 			// dynamic.
 		//static void* generate_Program();//ToDO: uncomment for C#.
-		static WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* generate_Program();//ToDO: uncomment for C++.
+		static OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* generate_Program();//ToDO: uncomment for C++.
 		static void write_End(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t coreId);
 		static void write_Start(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t coreId);
 		// get.
