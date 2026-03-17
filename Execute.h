@@ -19,9 +19,9 @@ namespace OpenAvrilConcurrency
         void initialise_ptr_array_Of_ptr_list_Of_Threads(class Framework_Server* obj, uint8_t threadId);
         // get.
         class Execute_Control* get_CLASS_ptr_Execute_Control();
-        class OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* get_program_ConcurrentQue_Server();
-        class OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* get_program_WriteEnable_ServerInputAction();
-        class OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* get_program_WriteEnable_ServerOutputRecieve();
+        void* get_program_ConcurrentQue_Server();
+        void* get_program_WriteEnable_ServerInputAction();
+        void* get_program_WriteEnable_ServerOutputRecieve();
         // set.
     // static.
         // get.
@@ -54,13 +54,13 @@ namespace OpenAvrilConcurrency
             // set.
         static void stat_REG_set_Item_On_array_Of_ptr_list_Of_Threads(OpenAvrilConcurrency::Framework_Server* obj, uint8_t threadID);
         // programs.
-        static OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* _stat_program_ConcurrentQue_Server;
-        static OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* _stat_program_WriteEnable_ServerInputAction;
-        static OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* _stat_program_WriteEnable_ServerOutputRecieve;
+        static void* _stat_program_ConcurrentQue_Server;
+        static void* _stat_program_WriteEnable_ServerInputAction;
+        static void* _stat_program_WriteEnable_ServerOutputRecieve;
             // get.
-        static OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* stat_get_program_ConcurrentQue_Server();
-        static OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* stat_get_program_WriteEnable_ServerInputAction();
-        static OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* stat_get_program_WriteEnable_ServerOutputRecieve();
+        static void* stat_get_program_ConcurrentQue_Server();
+        static void* stat_get_program_WriteEnable_ServerInputAction();
+        static void* stat_get_program_WriteEnable_ServerOutputRecieve();
             // seet.
     };
 }

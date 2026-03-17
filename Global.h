@@ -13,13 +13,26 @@ namespace OpenAvrilConcurrency
 
 // public.
     // dynamic.
+        //create.
         void initialise_REG_Item_number_Of_Implemented_Cores(uint8_t* newINITIALISED_Value);
         void initialise_REG_Item_number_Of_Praise_Events(uint8_t* newINITIALISED_Value);
         // get.
         uint8_t get_REG_Item_number_Of_Implemented_Cores();
         uint8_t get_REG_Item_number_Of_Praise_Events();
         // set.
+    // static.
+        static uint8_t stat_CONVERT_ByteArray_to_uint8_t(unsigned char* bytes);
+        static double stat_CONVERT_ByteArray_to_Double(unsigned char* bytes);
+        static float stat_CONVERT_ByteArray_to_Float(unsigned char* bytes);
+        static unsigned char* stat_CONVERT_Double_to_ByteArray(double double_Value);
+        static unsigned char* stat_CONVERT_Float_to_ByteArray(float float_Value);
+        static unsigned char* stat_CONVERT_uint8_t_to_ByteArray(uint8_t uint8_t_Value);
 
+        static class Framework_Server* stat_CONVERT_ObjPtr_to_Class(void* obj);
+        // create.
+        // get.
+        // set.
+        
     private:
 // private.
     // dynamic.

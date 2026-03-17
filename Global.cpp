@@ -56,8 +56,47 @@
     {
         return stat_REG_get_Item_number_Of_Praise_Events();
     }
-        // set.
-
+    uint8_t OpenAvrilConcurrency::Global::stat_CONVERT_ByteArray_to_uint8_t(unsigned char* bytes)
+    {
+        uint8_t cpp_uint8_t_value;
+        std::memcpy(&cpp_uint8_t_value, bytes, sizeof(cpp_uint8_t_value));
+        return cpp_uint8_t_value;
+    }
+    // set.
+    double OpenAvrilConcurrency::Global::stat_CONVERT_ByteArray_to_Double(unsigned char* java_bytes)
+    {
+        double cpp_double_value;
+        std::memcpy(&cpp_double_value, java_bytes, sizeof(cpp_double_value));
+        return cpp_double_value;
+    }
+    float OpenAvrilConcurrency::Global::stat_CONVERT_ByteArray_to_Float(unsigned char* java_bytes)
+    {
+        float cpp_float_value;
+        std::memcpy(&cpp_float_value, java_bytes, sizeof(cpp_float_value));
+        return cpp_float_value;
+    }
+    unsigned char* OpenAvrilConcurrency::Global::stat_CONVERT_Double_to_ByteArray(double doubleValue)
+    {
+        unsigned char* bytes_array;
+        std::memcpy(&bytes_array, &doubleValue, sizeof(doubleValue));
+        return bytes_array;
+    }
+    unsigned char* OpenAvrilConcurrency::Global::stat_CONVERT_Float_to_ByteArray(float floatValue)
+    {
+        unsigned char* bytes_array;
+        std::memcpy(&bytes_array, &floatValue, sizeof(floatValue));
+        return bytes_array;
+    }
+    unsigned char* OpenAvrilConcurrency::Global::stat_CONVERT_uint8_t_to_ByteArray(uint8_t uint8_t_Value)
+    {
+        unsigned char* bytes_array;
+        std::memcpy(&bytes_array, &uint8_t_Value, sizeof(uint8_t_Value));
+        return bytes_array;
+    }
+    OpenAvrilConcurrency::Framework_Server* OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(void* obj)
+    {
+        return reinterpret_cast<OpenAvrilConcurrency::Framework_Server*>(obj);
+    }
 // private.
     // dynamic.
         // get.
