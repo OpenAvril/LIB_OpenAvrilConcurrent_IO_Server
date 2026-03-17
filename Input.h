@@ -66,8 +66,8 @@ namespace OpenAvrilConcurrency
         uint8_t get_REG_in_playerId();
         class Object* get_REG_ptr_Item_On_List_Of_PraiseInputSubset(uint8_t praiseID);
         // set.
-        static void dyn_REG_set_ptr_in_playerId(uint8_t* uint8_t_Value);
-        static void dyn_REG_set_ptr_in_praiseEventId(uint8_t* uint8_t_Value);
+        static void dyn_REG_set_ptr_in_playerId(uint8_t uint8_t_Value);
+        static void dyn_REG_set_ptr_in_praiseEventId(uint8_t uint8_t_Value);
         void set_REG_ptr_Item_PraiseInputSubset(uint8_t praiseID, OpenAvrilConcurrency::Object* objObject);
     // static.
         // get.

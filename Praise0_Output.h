@@ -51,7 +51,7 @@ namespace OpenAvrilConcurrency
 // public.
 	// dynamic.
 		// get.
-		double get_REG_ptr_output_Value();
+		double dyn_REG_get_ptr_output_Value();
 		// set.
 		void set_REG_ptr_output_Value(double newValue);
 
@@ -76,7 +76,7 @@ namespace OpenAvrilConcurrency
 	// static
 		static void stat_create_REG_ptr_output_Value();
 		// get.
-		static double stat_get_REG_ptr_output_Value();
+		static double stat_dyn_REG_get_ptr_output_Value();
 		// set.
 		static void stat_set_REG_ptr_output_Value(double newValue);
 	// pointers.

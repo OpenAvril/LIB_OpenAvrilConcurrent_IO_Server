@@ -3,8 +3,8 @@
 // pointers.
 	// classes.
 	// registers.
-	double* OpenAvrilConcurrency::Praise0_Input::_stat_REG_ptr_input_Value_A = NULL;
-	double* OpenAvrilConcurrency::Praise0_Input::_stat_REG_ptr_input_Value_B = NULL;
+	float* OpenAvrilConcurrency::Praise0_Input::_stat_REG_ptr_input_Value_A = NULL;
+	float* OpenAvrilConcurrency::Praise0_Input::_stat_REG_ptr_input_Value_B = NULL;
 
 // public.
 	// constructor.
@@ -43,11 +43,11 @@
 // constructor.
 	OpenAvrilConcurrency::Praise0_Input::Praise0_Input()
 	{
-		double* newDEFAULT_Double = new double(DBL_MAX);
-		while(newDEFAULT_Double == NULL) { }
-		stat_REG_create_ptr_input_Value_A(newDEFAULT_Double);
-		stat_REG_create_ptr_input_Value_B(newDEFAULT_Double);
-		delete newDEFAULT_Double;
+		float* newDEFAULT_Float = new float(DBL_MAX);
+		while(newDEFAULT_Float == NULL) { }
+		stat_REG_create_ptr_input_Value_A(newDEFAULT_Float);
+		stat_REG_create_ptr_input_Value_B(newDEFAULT_Float);
+		delete newDEFAULT_Float;
 	}
 
 // destructor.
@@ -60,22 +60,22 @@
 // public.
 	// dynamic.
 		// get.
-	double OpenAvrilConcurrency::Praise0_Input::get_Item_input_Value_A()
+	float OpenAvrilConcurrency::Praise0_Input::get_Item_input_Value_A()
 	{
 		return stat_REG_get_Item_input_Value_A();
 	}
-	double OpenAvrilConcurrency::Praise0_Input::get_Item_input_Value_B()
+	float OpenAvrilConcurrency::Praise0_Input::get_Item_input_Value_B()
 	{
 		return stat_REG_get_Item_input_Value_B();
 	}
 		// set.
-	void OpenAvrilConcurrency::Praise0_Input::set_Item_input_Value_A(double newValue)
+	void OpenAvrilConcurrency::Praise0_Input::dyn_REG_set_Item_input_Value_A(float newValue)
 	{
-		stat_REG_set_Item_input_Value_A(newValue);
+		stat_REG_dyn_REG_set_Item_input_Value_A(newValue);
 	}
-	void OpenAvrilConcurrency::Praise0_Input::set_Item_input_Value_B(double newValue)
+	void OpenAvrilConcurrency::Praise0_Input::dyn_REG_set_Item_input_Value_B(float newValue)
 	{
-		stat_REG_set_Item_input_Value_B(newValue);
+		stat_REG_dyn_REG_set_Item_input_Value_B(newValue);
 	}
 
 // private.
@@ -83,33 +83,33 @@
 		// get.
 		// set.
 	// static.
-	void OpenAvrilConcurrency::Praise0_Input::stat_REG_create_ptr_input_Value_A(double* newDEFAULT_Double)
+	void OpenAvrilConcurrency::Praise0_Input::stat_REG_create_ptr_input_Value_A(float* newDEFAULT_Float)
 	{
-		double* _stat_REG_ptr_input_Value_A = new double(NULL);
+		float* _stat_REG_ptr_input_Value_A = new float(NULL);
 		while (stat_REG_get_Item_input_Value_A() == NULL) {}
-		stat_REG_set_Item_input_Value_A(*newDEFAULT_Double);
+		stat_REG_dyn_REG_set_Item_input_Value_A(*newDEFAULT_Float);
 	}
-	void OpenAvrilConcurrency::Praise0_Input::stat_REG_create_ptr_input_Value_B(double* newDEFAULT_Double)
+	void OpenAvrilConcurrency::Praise0_Input::stat_REG_create_ptr_input_Value_B(float* newDEFAULT_Float)
 	{
-		double* _stat_REG_ptr_input_Value_B = new double(NULL);
+		float* _stat_REG_ptr_input_Value_B = new float(NULL);
 		while (stat_REG_get_Item_input_Value_B() == NULL) {}
-		stat_REG_set_Item_input_Value_B(*newDEFAULT_Double);
+		stat_REG_dyn_REG_set_Item_input_Value_B(*newDEFAULT_Float);
 	}
 		// get.
-	double OpenAvrilConcurrency::Praise0_Input::stat_REG_get_Item_input_Value_A()
+	float OpenAvrilConcurrency::Praise0_Input::stat_REG_get_Item_input_Value_A()
 	{
 		return *_stat_REG_ptr_input_Value_A;
 	}
-	double OpenAvrilConcurrency::Praise0_Input::stat_REG_get_Item_input_Value_B()
+	float OpenAvrilConcurrency::Praise0_Input::stat_REG_get_Item_input_Value_B()
 	{
 		return *_stat_REG_ptr_input_Value_B;
 	}
 		// set.
-	void OpenAvrilConcurrency::Praise0_Input::stat_REG_set_Item_input_Value_A(double newValue)
+	void OpenAvrilConcurrency::Praise0_Input::stat_REG_dyn_REG_set_Item_input_Value_A(float newValue)
 	{
 		*_stat_REG_ptr_input_Value_A = newValue;
 	}
-	void OpenAvrilConcurrency::Praise0_Input::stat_REG_set_Item_input_Value_B(double newValue)
+	void OpenAvrilConcurrency::Praise0_Input::stat_REG_dyn_REG_set_Item_input_Value_B(float newValue)
 	{
 		*_stat_REG_ptr_input_Value_B = newValue;
 	}

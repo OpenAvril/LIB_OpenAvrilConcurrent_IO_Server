@@ -48,11 +48,11 @@ namespace OpenAvrilConcurrency
 // public.
 	// dynamic.
 		// get.
-		double get_Item_input_Value_A();
-		double get_Item_input_Value_B();
+		float get_Item_input_Value_A();
+		float get_Item_input_Value_B();
 		// set.
-		void set_Item_input_Value_A(double newValue);
-		void set_Item_input_Value_B(double newValue);
+		void dyn_REG_set_Item_input_Value_A(float newValue);
+		void dyn_REG_set_Item_input_Value_B(float newValue);
 
 	private:
 // private.
@@ -65,17 +65,17 @@ namespace OpenAvrilConcurrency
 			// get.
 			// set.
 		// registers.
-		static double* _stat_REG_ptr_input_Value_A;
-		static double* _stat_REG_ptr_input_Value_B;
+		static float* _stat_REG_ptr_input_Value_A;
+		static float* _stat_REG_ptr_input_Value_B;
 
 			// create.
-		static void stat_REG_create_ptr_input_Value_A(double* newDEFAULT_Double);
-		static void stat_REG_create_ptr_input_Value_B(double* newDEFAULT_Double);
+		static void stat_REG_create_ptr_input_Value_A(float* newDEFAULT_Float);
+		static void stat_REG_create_ptr_input_Value_B(float* newDEFAULT_Float);
 			// get.
-		static double stat_REG_get_Item_input_Value_A();
-		static double stat_REG_get_Item_input_Value_B();
+		static float stat_REG_get_Item_input_Value_A();
+		static float stat_REG_get_Item_input_Value_B();
 			// set.
-		static void stat_REG_set_Item_input_Value_A(double newValue);
-		static void stat_REG_set_Item_input_Value_B(double newValue);
+		static void stat_REG_dyn_REG_set_Item_input_Value_A(float newValue);
+		static void stat_REG_dyn_REG_set_Item_input_Value_B(float newValue);
 	};
 }

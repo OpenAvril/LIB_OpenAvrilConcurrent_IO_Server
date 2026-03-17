@@ -95,13 +95,13 @@
         return stat_get_REG_ptr_Item_On_List_Of_PraiseInputSubset(praiseID);
     }
     // set.
-    void OpenAvrilConcurrency::Input::dyn_REG_set_ptr_in_playerId(uint8_t* uint8_t_Value)
+    void OpenAvrilConcurrency::Input::dyn_REG_set_ptr_in_playerId(uint8_t uint8_t_Value)
     {
-        stat_REG_set_ptr_in_playerId(*uint8_t_Value);
+        stat_REG_set_ptr_in_playerId(uint8_t_Value);
     }
-    void OpenAvrilConcurrency::Input::dyn_REG_set_ptr_in_praiseEventId(uint8_t* uint8_t_Value)
+    void OpenAvrilConcurrency::Input::dyn_REG_set_ptr_in_praiseEventId(uint8_t uint8_t_Value)
     {
-        stat_REG_set_ptr_in_praiseEventId(*uint8_t_Value);
+        stat_REG_set_ptr_in_praiseEventId(uint8_t_Value);
     }
     void OpenAvrilConcurrency::Input::set_REG_ptr_Item_PraiseInputSubset(uint8_t praiseID, OpenAvrilConcurrency::Object* objObject)
     {

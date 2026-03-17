@@ -54,9 +54,9 @@
 // public.
 	// dynamic.
 		// get.
-	double OpenAvrilConcurrency::Praise0_Output::get_REG_ptr_output_Value()
+	double OpenAvrilConcurrency::Praise0_Output::dyn_REG_get_ptr_output_Value()
 	{
-		return stat_get_REG_ptr_output_Value();
+		return stat_dyn_REG_get_ptr_output_Value();
 	}
 	void OpenAvrilConcurrency::Praise0_Output::set_REG_ptr_output_Value(double newValue)
 	{
@@ -78,7 +78,7 @@
 		stat_set_REG_ptr_output_Value(0.0);
 	}
 		// get.
-	double OpenAvrilConcurrency::Praise0_Output::stat_get_REG_ptr_output_Value()
+	double OpenAvrilConcurrency::Praise0_Output::stat_dyn_REG_get_ptr_output_Value()
 	{
 		return *_REG_ptr_output_Value;
 	}
