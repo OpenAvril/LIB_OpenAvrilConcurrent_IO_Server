@@ -6,8 +6,17 @@
 
 // public.
 	// constructor.
+	OpenAvrilConcurrency::Concurrent_Control::Concurrent_Control()
+	{
+		std::cout << "entered CONSTRUCTOR Concurrent()" << std::endl;
+		std::cout << "exiting CONSTRUCTOR Concurrent()" << std::endl;
+	}
 
 	// destructor.
+	OpenAvrilConcurrency::Concurrent_Control::~Concurrent_Control()
+	{
+
+	}
 
 	// dynamic.
 		// create.
@@ -39,16 +48,10 @@
 			// set.
 
 // constructor.
-	OpenAvrilConcurrency::Concurrent_Control::Concurrent_Control()
-	{
 
-	}
 
 // destructor.
-	OpenAvrilConcurrency::Concurrent_Control::~Concurrent_Control()
-	{
 
-	}
 
 // public.
 	// dynamic.
@@ -59,7 +62,7 @@
 		switch (praiseEventId)
 		{
 		case 0:
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Algorithms()->get_CLASS_ptr_Item_On_list_Of_ptr_Concurrent(concurrent_threadID)->get_CLASS_ptr_Concurrent_Control()->selectset_Algorithm_Subset(obj, praiseEventId, concurrent_threadID);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->get_CLASS_ptr_Item_On_list_Of_ptr_Concurrent(concurrent_threadID)->get_CLASS_ptr_Concurrent_Control()->selectset_Algorithm_Subset(obj, praiseEventId, concurrent_threadID);
 			break;
 		}
 	}

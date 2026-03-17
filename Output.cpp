@@ -71,7 +71,7 @@ void OpenAvrilConcurrency::Output::initialise_CLASS_Control()
 }
 void OpenAvrilConcurrency::Output::initialise_list_Of_PraiseOutSubsets(OpenAvrilConcurrency::Framework_Server* obj)
 {
-    stat_REG_set_Item_On_List_Of_PraiseOutputSubset(0, obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Output()->get_CLASS_ptr_Item_ptr_PraiseOutputSubsets(0));
+    stat_REG_set_Item_On_List_Of_PraiseOutputSubset(0, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->get_CLASS_ptr_User_Output()->get_CLASS_ptr_Item_ptr_PraiseOutputSubsets(0));
 }
 // get.
 OpenAvrilConcurrency::Output_Control* OpenAvrilConcurrency::Output::get_CLASS_ptr_Output_Control()

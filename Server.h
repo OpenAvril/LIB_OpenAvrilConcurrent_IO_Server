@@ -7,59 +7,34 @@ namespace OpenAvrilConcurrency
     public:
 // public.
     // constructor.
-
-    // destructor.
-
-    // dynamic.
-        // create.
-        // get.
-        // set.
-    // static.
-        // create.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
-        // classes.
-            // create.
-            // get.
-            // set.
-        // registers.
-            // create.
-            // get.
-            // set.
-    // static.
-        // classes.
-            // create.
-            // get.
-            // set.
-        // registers.
-            // create.
-            // get.
-            // set.
-
-
-// constructor.
         Server();
 
-// destructor.
+    // destructor.
         virtual ~Server();
 
-// public.
     // dynamic.
+        // create.
         // get.
-        class Algorithms* get_CLASS_ptr_Algorithms();
-        class Data* get_CLASS_ptr_Data();
-        class Execute* get_CLASS_ptr_Execute();
-        class Global* get_ptr_CLASS_Global();
+        class Algorithms* dyn_CLASS_get_ptr_Algorithms();
+        class Data* dyn_CLASS_get_ptr_Data();
+        class Execute* dyn_CLASS_get_ptr_Execute();
+        class Global* dyn_CLASS_get_ptr_Global();
         // set.
-
+    // static.
+        // create.
+        // get.
+        // set.
     private:
 // private.
     // dynamic.
-        // get.
-        // set.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
     // static.
         // classes.
         static class Algorithms* _stat_CLASS_ptr_Algorithms;

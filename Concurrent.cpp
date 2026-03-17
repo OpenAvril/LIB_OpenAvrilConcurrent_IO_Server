@@ -8,8 +8,19 @@
 
 // public.
     // constructor.
+    OpenAvrilConcurrency::Concurrent::Concurrent()
+    {
+        std::cout << "entered CONSTRUCTOR Concurrent()" << std::endl;
+        stat_REG_create_ptr_list_Of_ptr_Algorithms_Subset();
+        std::cout << "exiting CONSTRUCTOR Concurrent()" << std::endl;
+    }
 
     // destructor.
+    OpenAvrilConcurrency::Concurrent::~Concurrent()
+    {
+        delete _stat_CLASS_ptr_Concurrent_Control;
+        delete _stat_REG_ptr_list_Of_ptr_Algorithms_Subset;
+    }
 
     // dynamic.
         // create.
@@ -41,18 +52,10 @@
             // set.
 
 // constructor.
-    OpenAvrilConcurrency::Concurrent::Concurrent()
-    {
-        std::cout << "entered => OpenAvrilConcurrency::Concurrent::Concurrent()" << std::endl;
-        stat_REG_create_ptr_list_Of_ptr_Algorithms_Subset();
-    }
+
 
 // destructor.
-    OpenAvrilConcurrency::Concurrent::~Concurrent()
-    {
-        delete _stat_CLASS_ptr_Concurrent_Control;
-        delete _stat_REG_ptr_list_Of_ptr_Algorithms_Subset;
-    }
+
 
 // public.
     // dynamic.
@@ -97,56 +100,56 @@
     void OpenAvrilConcurrency::Concurrent::thread_Concurrency(OpenAvrilConcurrency::Framework_Server* obj, uint8_t concurrent_threadID)
     {
         bool doneOnce = true;
-        while (obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_CLASS_ptr_Execute_Control()->get_Item_On_list_Of_flag_ThreadInitialised(concurrent_threadID) == true)
+        while (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_CLASS_get_ptr_Execute_Control()->get_Item_On_list_Of_flag_ThreadInitialised(concurrent_threadID) == true)
         {
             if (doneOnce == true)
             {
-                obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_CLASS_ptr_Execute_Control()->set_ConditionCode_Of_Thread(concurrent_threadID);
+                obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_CLASS_get_ptr_Execute_Control()->set_ConditionCode_Of_Thread(concurrent_threadID);
                 doneOnce = false;
             }
 
         }
         std::cout << "Thread Initialised: ID=" << (concurrent_threadID) << " => Thread_Concurrency()" << std::endl;//TestBench
-        while (obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_CLASS_ptr_Execute_Control()->get_Item_On_list_Of_flag_ThreadInitialised(concurrent_threadID) == true)
+        while (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_CLASS_get_ptr_Execute_Control()->get_Item_On_list_Of_flag_ThreadInitialised(concurrent_threadID) == true)
         {
 
         }
         std::cout << "Thread Starting " << (concurrent_threadID) << " => Thread_Concurrency()" << std::endl;//TestBench
-        while (obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_CLASS_ptr_Execute_Control()->get_Item_On_list_Of_flag_ThreadInitialised(concurrent_threadID) == false)
+        while (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_CLASS_get_ptr_Execute_Control()->get_Item_On_list_Of_flag_ThreadInitialised(concurrent_threadID) == false)
         {
-            switch (OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::get_Flag_ConcurrentCoreState(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_program_ConcurrentQue_Server(), concurrent_threadID))
+            switch (OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::get_Flag_ConcurrentCoreState(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->get_program_ConcurrentQue_Server(), concurrent_threadID))
             {
             case false:
 
                 break;
 
             case true:
-                if (obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->get_REG_Item_flag_isLoaded_Stack_InputAction() == true)
+                if (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->get_REG_Item_flag_isLoaded_Stack_InputAction() == true)
                 {
-                    OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION::CLIDWriteEnableForThreadsAtSERVERINPUTACTION::write_Start(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_program_WriteEnable_ServerInputAction(), (uint8_t)(concurrent_threadID + (uint8_t)1));
-                    obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrent_threadID)->get_CLASS_ptr_Output_Control()->selectset_Output_Subset(obj, obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrent_threadID)->get_REG_out_praiseEventId(), concurrent_threadID);
-                    obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Algorithms()->get_CLASS_ptr_Item_On_list_Of_ptr_Concurrent(concurrent_threadID)->get_CLASS_ptr_Concurrent_Control()->selectset_Algorithm_Subset(obj, obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId(), concurrent_threadID);
-                    obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->pop_From_Stack_Of_Input(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data(), concurrent_threadID);
-                    OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION::CLIDWriteEnableForThreadsAtSERVERINPUTACTION::write_End(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_program_WriteEnable_ServerInputAction(), (uint8_t)(concurrent_threadID + (uint8_t)1));
-                    obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Algorithms()->get_CLASS_ptr_Item_On_list_Of_ptr_Concurrent(concurrent_threadID)->do_Concurrent_Algorithm_For_PraiseEventId(
+                    OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION::CLIDWriteEnableForThreadsAtSERVERINPUTACTION::write_Start(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->get_program_WriteEnable_ServerInputAction(), (uint8_t)(concurrent_threadID + (uint8_t)1));
+                    obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrent_threadID)->get_CLASS_ptr_Output_Control()->selectset_Output_Subset(obj, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrent_threadID)->get_REG_out_praiseEventId(), concurrent_threadID);
+                    obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->get_CLASS_ptr_Item_On_list_Of_ptr_Concurrent(concurrent_threadID)->get_CLASS_ptr_Concurrent_Control()->selectset_Algorithm_Subset(obj, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId(), concurrent_threadID);
+                    obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->pop_From_Stack_Of_Input(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data(), concurrent_threadID);
+                    OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION::CLIDWriteEnableForThreadsAtSERVERINPUTACTION::write_End(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->get_program_WriteEnable_ServerInputAction(), (uint8_t)(concurrent_threadID + (uint8_t)1));
+                    obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->get_CLASS_ptr_Item_On_list_Of_ptr_Concurrent(concurrent_threadID)->do_Concurrent_Algorithm_For_PraiseEventId(
                         obj,
-                        obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_playerId(),
-                        obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId(),
-                        obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Algorithms()->get_CLASS_ptr_User_Algorithms()->get_CLASS_ptr_Item_ptr_PraiseAlgorithmSubsets(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId()),
-                        obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->stat_get_REG_ptr_Item_On_List_Of_PraiseInputSubset(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId()),
-                        obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrent_threadID)->get_REG_ptr_Item_On_List_Of_PraiseOutputSubset(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId())
+                        obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_playerId(),
+                        obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId(),
+                        obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->get_CLASS_ptr_User_Algorithms()->get_CLASS_ptr_Item_ptr_PraiseAlgorithmSubsets(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId()),
+                        obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->stat_get_REG_ptr_Item_On_List_Of_PraiseInputSubset(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId()),
+                        obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrent_threadID)->get_REG_ptr_Item_On_List_Of_PraiseOutputSubset(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->get_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->get_REG_in_praiseEventId())
                     );
-                    OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION::CLIBWriteEnableForThreadsAtSERVERINPUTACTION::write_Start(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_program_WriteEnable_ServerInputAction(), (uint8_t)(concurrent_threadID + (uint8_t)1));
-                    obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->push_To_Stack_Of_Output(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data(), concurrent_threadID);
-                    OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::thread_End(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_program_ConcurrentQue_Server(), concurrent_threadID);
-                    if (obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_Data_Control()->get_REG_Item_flag_isLoaded_Stack_OutputSend() == true)
+                    OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION::CLIBWriteEnableForThreadsAtSERVERINPUTACTION::write_Start(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->get_program_WriteEnable_ServerInputAction(), (uint8_t)(concurrent_threadID + (uint8_t)1));
+                    obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->push_To_Stack_Of_Output(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data(), concurrent_threadID);
+                    OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::thread_End(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->get_program_ConcurrentQue_Server(), concurrent_threadID);
+                    if (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->get_REG_Item_flag_isLoaded_Stack_OutputSend() == true)
                     {
-                        if (OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::get_Flag_ConcurrentCoreState(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_program_ConcurrentQue_Server(), OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::get_coreId_To_launch(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_program_ConcurrentQue_Server())) == OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::get_Flag_Idle(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_program_ConcurrentQue_Server()))
+                        if (OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::get_Flag_ConcurrentCoreState(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->get_program_ConcurrentQue_Server(), OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::get_coreId_To_launch(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->get_program_ConcurrentQue_Server())) == OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::get_Flag_Idle(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->get_program_ConcurrentQue_Server()))
                         {
-                            OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::request_Wait_launch(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_program_ConcurrentQue_Server(), OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::get_coreId_To_launch(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_program_ConcurrentQue_Server()));
+                            OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::request_Wait_launch(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->get_program_ConcurrentQue_Server(), OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::get_coreId_To_launch(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->get_program_ConcurrentQue_Server()));
                         }
                     }
-                    OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::CLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::write_End(obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->get_program_WriteEnable_ServerOutputRecieve(), (uint8_t)(concurrent_threadID + (uint8_t)1));
+                    OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::CLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::write_End(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->get_program_WriteEnable_ServerOutputRecieve(), (uint8_t)(concurrent_threadID + (uint8_t)1));
                     //}
                 }
                 break;

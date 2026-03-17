@@ -54,7 +54,7 @@ namespace OpenAvrilConcurrency
         void initialise_Threads(class Framework_Server* obj);
         void initialise_ptr_array_Of_ptr_list_Of_Threads(class Framework_Server* obj, uint8_t threadId);
         // get.
-        class Execute_Control* get_CLASS_ptr_Execute_Control();
+        class Execute_Control* dyn_CLASS_get_ptr_Execute_Control();
         void* get_program_ConcurrentQue_Server();
         void* get_program_WriteEnable_ServerInputAction();
         void* get_program_WriteEnable_ServerOutputRecieve();

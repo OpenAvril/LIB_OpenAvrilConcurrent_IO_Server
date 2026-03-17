@@ -7,135 +7,101 @@
 
 // public.
 	// constructor.
-
-	// destructor.
-
-	// dynamic.
-		// create.
-		// get.
-		// set.
-	// static.
-		// create.
-		// get.
-		// set.
-
-// private.
-	// dynamic.
-		// classes.
-			// create.
-			// get.
-			// set.
-		// registers.
-			// create.
-			// get.
-			// set.
-	// static.
-		// classes.
-			// create.
-			// get.
-			// set.
-		// registers.
-			// create.
-			// get.
-			// set.
-
-// constructor.
 	OpenAvrilConcurrency::Framework_Server::Framework_Server()
 	{
-		std::cout << "entered constructor of OpenAvrilConcurrency::Framework_Server::Framework_Server()" << std::endl;
+		std::cout << "entered CONSTRUCTOR of Framework_Server()" << std::endl;
 		stat_CLASS_create_ptr_Server();
-		std::cout << "exiting constructor of OpenAvrilConcurrency::Framework_Server::Framework_Server()Created => Created Server Assembly()" << std::endl;
+		std::cout << "exiting CONSTRUCTOR of Framework_Server()" << std::endl;
 	}
 
-// destructor.
+	// destructor.
 	OpenAvrilConcurrency::Framework_Server::~Framework_Server()
 	{
 		delete _stat_CLASS_ptr_Server;
 	}
 
-// public.
 	// dynamic.
-	void OpenAvrilConcurrency::Framework_Server::initialise_Program(OpenAvrilConcurrency::Framework_Server* obj)
+		// create.
+	void OpenAvrilConcurrency::Framework_Server::app_initialise_Program(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		std::cout << "entered => OpenAvrilConcurrency::Framework_Server::initialise_Program()" << std::endl;
-	// server.
-		// global.
+		std::cout << "entered => OpenAvrilConcurrency::Framework_Server::app_initialise_Program()" << std::endl;
 		uint8_t* newINITIALISED_Value = new uint8_t(UINT8_MAX);
 		while (newINITIALISED_Value) {}
 		*newINITIALISED_Value = uint8_t(4);
-		obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Global()->initialise_REG_Item_number_Of_Implemented_Cores(newINITIALISED_Value);
+		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->initialise_REG_Item_number_Of_Implemented_Cores(newINITIALISED_Value);
 		*newINITIALISED_Value = uint8_t(1);
-		obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Global()->initialise_REG_Item_number_Of_Praise_Events(newINITIALISED_Value);
+		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->initialise_REG_Item_number_Of_Praise_Events(newINITIALISED_Value);
 		delete newINITIALISED_Value;
-		// algorithms.
-			// concurrent.
 		OpenAvrilConcurrency::Concurrent* newINITIALISED_Concurrent = new class OpenAvrilConcurrency::Concurrent();
 		while (newINITIALISED_Concurrent == NULL) {}
 		newINITIALISED_Concurrent->initialise_CLASS_Control();
-		for (uint8_t concurrentThreadID = 0; concurrentThreadID < sizeof((obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Implemented_Cores() - 1)); concurrentThreadID++)
+		for (uint8_t concurrentThreadID = 0; concurrentThreadID < sizeof((obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->get_REG_Item_number_Of_Implemented_Cores() - 1)); concurrentThreadID++)
 		{
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Algorithms()->initialise_CLASS_Item_On_list_Of_ptr_Concurrent(concurrentThreadID, newINITIALISED_Concurrent);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->initialise_CLASS_Item_On_list_Of_ptr_Concurrent(concurrentThreadID, newINITIALISED_Concurrent);
 		}
 		delete newINITIALISED_Concurrent;
-				
-		// data.
-			// input.
 		OpenAvrilConcurrency::Input* newINITIALISED_Input = new class OpenAvrilConcurrency::Input();
 		while (newINITIALISED_Input == NULL) {}
 		newINITIALISED_Input->initialise_CLASS_Control();
-		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
+		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->get_REG_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
 		{
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrentThreadID, newINITIALISED_Input);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrentThreadID, newINITIALISED_Input);
 		}
 		for (uint8_t sideID = 0; sideID < uint8_t(2); sideID++)
 		{
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_array_Of_doubleBuffer_Input(obj, newINITIALISED_Input);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_array_Of_doubleBuffer_Input(obj, newINITIALISED_Input);
 		}
-		for (uint8_t slotID = 0; slotID < obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Praise_Events(); slotID++)
+		for (uint8_t slotID = 0; slotID < obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->get_REG_Item_number_Of_Praise_Events(); slotID++)
 		{
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_vector_Of_stack_Of_InputPraise(obj, newINITIALISED_Input);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_vector_Of_stack_Of_InputPraise(obj, newINITIALISED_Input);
 		}
 		delete newINITIALISED_Input;
-			// output.
 		OpenAvrilConcurrency::Output* newINITIALISED_Output = new class OpenAvrilConcurrency::Output();
 		while (newINITIALISED_Output == NULL) {}
 		newINITIALISED_Output->initialise_CLASS_Control();
-		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
+		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->get_REG_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
 		{
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrentThreadID, newINITIALISED_Output);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrentThreadID, newINITIALISED_Output);
 		}
 		for (uint8_t sideID = 0; sideID < uint8_t(2); sideID++)
 		{
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_array_Of_doubleBuffer_Output(obj, newINITIALISED_Output);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_array_Of_doubleBuffer_Output(obj, newINITIALISED_Output);
 		}
-		for (uint8_t slotID = 0; slotID < obj->get_CLASS_ptr_Server()->get_ptr_CLASS_Global()->get_REG_Item_number_Of_Praise_Events(); slotID++)
+		for (uint8_t slotID = 0; slotID < obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->get_REG_Item_number_Of_Praise_Events(); slotID++)
 		{
-			obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->initialise_REG_Item_On_vector_Of_stack_Of_OutputPraise(obj, newINITIALISED_Output);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_vector_Of_stack_Of_OutputPraise(obj, newINITIALISED_Output);
 		}
 		delete newINITIALISED_Output;
-		
-		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->initialise_Libraries();
+
+		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->initialise_Libraries();
 		std::cout << "INIT Libraries" << std::endl;
-		
-		obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Execute()->initialise_Threads(obj);
+
+		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->initialise_Threads(obj);
 		std::cout << "INIT Thread(s)" << std::endl;
 
-		std::cout << "exiting => OpenAvrilConcurrency::Framework_Server::initialise_Program()" << std::endl;
+		std::cout << "exiting => OpenAvrilConcurrency::Framework_Server::app_initialise_Program()" << std::endl;
 	}
 		// get.
-	OpenAvrilConcurrency::Server* OpenAvrilConcurrency::Framework_Server::get_CLASS_ptr_Server()
+	OpenAvrilConcurrency::Server* OpenAvrilConcurrency::Framework_Server::dyn_CLASS_get_ptr_Server()
 	{
 		return stat_CLASS_get_ptr_Server();
 	}
 		// set.
 	// static.
+		// create.
 		// get.
 		// set.
-		 
+
 // private.
 	// dynamic.
-		// get.
-		// set.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
 	// static.
 		// classes.
 			// create.

@@ -14,8 +14,24 @@
   
 // public.
     // constructor.
+    OpenAvrilConcurrency::Global::Global()
+    {
+        std::cout << "entered CONSTRUCTOR of Global()." << std::endl;
+        uint8_t* newDEFAULT_Value = new uint8_t(NULL);
+        while (newDEFAULT_Value == NULL) {}
+        *newDEFAULT_Value = uint8_t(UINT8_MAX);
+        stat_REG_create_number_Of_Implemented_Cores(newDEFAULT_Value);
+        stat_REG_create_number_Of_Praise_Events(newDEFAULT_Value);
+        delete newDEFAULT_Value;
+        std::cout << "exiting CONSTRUCTOR of Global()." << std::endl;
+    }
 
     // destructor.
+    OpenAvrilConcurrency::Global::~Global()
+    {
+        delete _stat_REG_ptr_number_Of_Implemented_Cores;
+        delete _stat_REG__ptr_number_Of_Praise_Events;
+    }
 
     // dynamic.
         // create.
@@ -47,29 +63,10 @@
             // set.
 
 // constructor.
-    OpenAvrilConcurrency::Global::Global()
-    {
-        std::cout << "entered constructor of OpenAvrilConcurrency::Global::Global()." << std::endl;
-        uint8_t* newDEFAULT_Value = new uint8_t(NULL);
-        std::cout << "alpha." << std::endl;
-        while (newDEFAULT_Value == NULL) { }
-        std::cout << "bravo." << std::endl;
-        *newDEFAULT_Value = uint8_t(UINT8_MAX);
-        std::cout << "charlie." << std::endl;
-        stat_REG_create_number_Of_Implemented_Cores(newDEFAULT_Value);
-        std::cout << "delta." << std::endl;
-        stat_REG_create_number_Of_Praise_Events(newDEFAULT_Value);
-        std::cout << "echo." << std::endl;
-        delete newDEFAULT_Value;
-        std::cout << "exiting constructor of OpenAvrilConcurrency::Global::Global()." << std::endl;
-    }
+
 
 // destructor.
-    OpenAvrilConcurrency::Global::~Global()
-    {
-        delete _stat_REG_ptr_number_Of_Implemented_Cores;
-        delete _stat_REG__ptr_number_Of_Praise_Events;
-    }
+
 
 // public.
     // dynamic.

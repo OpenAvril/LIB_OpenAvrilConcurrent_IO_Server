@@ -75,7 +75,7 @@
     }
     void OpenAvrilConcurrency::Input::initialise_list_Of_PraiseInSubsets(OpenAvrilConcurrency::Framework_Server* obj)
     {
-        stat_REG_set_ptr_Item_PraiseInputSubset(0, obj->get_CLASS_ptr_Server()->get_CLASS_ptr_Data()->get_CLASS_ptr_User_Input()->get_CLASS_ptr_Item_ptr_PraiseInputSubsets(0));
+        stat_REG_set_ptr_Item_PraiseInputSubset(0, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->get_CLASS_ptr_User_Input()->get_CLASS_ptr_Item_ptr_PraiseInputSubsets(0));
     }
         // get.
     OpenAvrilConcurrency::Input_Control* OpenAvrilConcurrency::Input::get_CLASS_ptr_Input_Control()

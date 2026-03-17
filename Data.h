@@ -63,7 +63,7 @@ namespace OpenAvrilConcurrency
         void initialise_REG_Item_On_vector_Of_stack_Of_InputPraise(class Framework_Server* obj, class Input* newINITIALISED_Input);
         void initialise_REG_Item_On_vector_Of_stack_Of_OutputPraise(class Framework_Server* obj, class Output* newINITIALISED_Output);
         // get.
-        class Data_Control* get_CLASS_ptr_Data_Control();
+        class Data_Control* dyn_CLASS_get_ptr_Data_Control();
         class User_Input* get_CLASS_ptr_User_Input();
         class User_Output* get_CLASS_ptr_User_Output();
         class Input* get_REG_ptr_Item_array_Of_doubleBuffer_Input_READ(class Framework_Server* obj);

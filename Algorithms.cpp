@@ -9,8 +9,25 @@
 
 // public.
     // constructor.
+    OpenAvrilConcurrency::Algorithms::Algorithms()
+    {
+        std::cout << "entered CONSTRUCTOR of Algorithms()" << std::endl;
+        stat_CLASS_create_ptr_User_Algorithmorithms();
+        class OpenAvrilConcurrency::Concurrent* newDEFAULT_Concurrent = new class OpenAvrilConcurrency::Concurrent();
+        while (newDEFAULT_Concurrent == NULL) {}
+        stat_REG_create_ptr_list_Of_ptr_Concurrent(newDEFAULT_Concurrent);
+        delete newDEFAULT_Concurrent;
+        stat_REG_create_ptr_List_Of_PraiseAlgorithmSubset();
+        std::cout << "exiting CONSTRUCTOR of Algorithms()" << std::endl;
+    }
 
     // destructor.
+    OpenAvrilConcurrency::Algorithms::~Algorithms()
+    {
+        delete _stat_CLASS_ptr_User_Algorithmorithms;
+        delete _stat_REG_ptr_list_Of_ptr_Concurrent;
+        delete _REG_ptr_List_Of_PraiseAlgorithmSubset;
+    }
 
     // dynamic.
         // create.
@@ -43,25 +60,10 @@
 
 
 // constructor.
-    OpenAvrilConcurrency::Algorithms::Algorithms()
-    {
-        std::cout << "entered constructor of OpenAvrilConcurrency::Algorithms::Algorithms()" << std::endl;
-        stat_CLASS_create_ptr_User_Algorithmorithms();
-        class OpenAvrilConcurrency::Concurrent* newDEFAULT_Concurrent = new class OpenAvrilConcurrency::Concurrent();
-        while (newDEFAULT_Concurrent == NULL) {}
-        stat_REG_create_ptr_list_Of_ptr_Concurrent(newDEFAULT_Concurrent);
-        delete newDEFAULT_Concurrent;
-        stat_REG_create_ptr_List_Of_PraiseAlgorithmSubset();
-        std::cout << "exiting constructor of OpenAvrilConcurrency::Algorithms::Algorithms()" << std::endl;
-    }
+
 
 // destructor.
-    OpenAvrilConcurrency::Algorithms::~Algorithms()
-    {
-        delete _stat_CLASS_ptr_User_Algorithmorithms;
-        delete _stat_REG_ptr_list_Of_ptr_Concurrent;
-        delete _REG_ptr_List_Of_PraiseAlgorithmSubset;
-    }
+
 
 // public.
     // dynamic.

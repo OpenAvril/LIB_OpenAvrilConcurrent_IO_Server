@@ -7,8 +7,10 @@ namespace OpenAvrilConcurrency
     public:
 // public.
     // constructor.
+        Global();
 
     // destructor.
+        virtual ~Global();
 
     // dynamic.
         // create.
@@ -41,10 +43,10 @@ namespace OpenAvrilConcurrency
 
 
 // constructor.
-        Global();
+
 
 // destructor.
-        virtual ~Global();
+
 
 // public.
     // dynamic.

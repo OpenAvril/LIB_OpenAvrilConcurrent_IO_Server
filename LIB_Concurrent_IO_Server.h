@@ -20,6 +20,7 @@ namespace OpenAvrilConcurrency
 		static void app_pop_From_Stack_Of_Output(void* obj);
 		static void app_push_To_Stack_Of_Input(void* obj);
 		static void app_select_set_Intput_Subset(void* obj, unsigned char* bytes);
+		static void app_terminate_Program(void* obj);
 		// create.
 		// get.
 		static bool dyn_REG_get_flag_isStackLoaded_Server_InputAction(void* obj);
@@ -37,7 +38,7 @@ namespace OpenAvrilConcurrency
 		// create.
 		// get.
 		// set.
-
+	private:
 // private.
 	// dynamic.
 		// classes.
