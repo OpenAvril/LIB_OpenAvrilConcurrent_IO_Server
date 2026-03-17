@@ -27,7 +27,7 @@
         stat_CLASS_create_ptr_Execute();
         while (stat_CLASS_get_ptr_Execute() == NULL) {}
         std::cout << "echo." << std::endl;
-        stat_CLASS_get_ptr_Execute()->initialise_CLASS_Control(stat_CLASS_get_ptr_Global()->get_REG_Item_number_Of_Implemented_Cores());
+        stat_CLASS_get_ptr_Execute()->initialise_CLASS_Control(stat_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Implemented_Cores());
         std::cout << "exiting CONSTRUCTOR of Server()" << std::endl;
     }
 
