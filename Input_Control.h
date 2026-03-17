@@ -5,6 +5,44 @@ namespace OpenAvrilConcurrency
     class Input_Control
     {
 	public:
+// public.
+	// constructor.
+
+	// destructor.
+
+	// dynamic.
+		// create.
+		// get.
+		// set.
+	// static.
+		// create.
+		// get.
+		// set.
+
+// private.
+	// dynamic.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+	// static.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+
+
+
+
+
 // constructor.
 		Input_Control();
 

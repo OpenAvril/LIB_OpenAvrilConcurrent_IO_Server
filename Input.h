@@ -5,6 +5,51 @@ namespace OpenAvrilConcurrency
     class Input
     {
     public:
+// public.
+    // constructor.
+
+    // destructor.
+
+    // dynamic.
+        // create.
+        // get.
+        // set.
+    // static.
+        // create.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+
+
+
+
+
+
+
+
+
+
+
+
 // constructor.
         Input();
 
@@ -21,6 +66,8 @@ namespace OpenAvrilConcurrency
         uint8_t get_REG_in_playerId();
         class Object* get_REG_ptr_Item_On_List_Of_PraiseInputSubset(uint8_t praiseID);
         // set.
+        static void dyn_REG_set_ptr_in_playerId(uint8_t* uint8_t_Value);
+        static void dyn_REG_set_ptr_in_praiseEventId(uint8_t* uint8_t_Value);
         void set_REG_ptr_Item_PraiseInputSubset(uint8_t praiseID, OpenAvrilConcurrency::Object* objObject);
     // static.
         // get.
@@ -53,9 +100,8 @@ namespace OpenAvrilConcurrency
         static uint8_t stat_REG_get_ptr_in_praiseEventId();
         static std::list<class Object*>* stat_get_REG_ptr_List_Of_PraiseInputSubset();
             // set.
-        static void stat_REG_set_ptr_in_playerId(uint8_t* new_uint8_t);
-        static void stat_REG_set_ptr_in_praiseEventId(uint8_t* new_uint8_t);
-        static void stat_REG_set_ptr_Input_Control(class Input_Control* newClass);
+        static void stat_REG_set_ptr_in_playerId(uint8_t new_uint8_t);
+        static void stat_REG_set_ptr_in_praiseEventId(uint8_t new_uint8_t);
         static void stat_REG_set_ptr_Item_PraiseInputSubset(uint8_t praiseID, class Object* objObject);
     };
 }

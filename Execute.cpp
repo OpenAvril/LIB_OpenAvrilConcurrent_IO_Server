@@ -10,6 +10,40 @@
     void* OpenAvrilConcurrency::Execute::_stat_program_WriteEnable_ServerInputAction = NULL;
     void* OpenAvrilConcurrency::Execute::_stat_program_WriteEnable_ServerOutputRecieve = NULL;
 
+// public.
+    // constructor.
+
+    // destructor.
+
+    // dynamic.
+        // create.
+        // get.
+        // set.
+    // static.
+        // create.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+
 // constructor.
     OpenAvrilConcurrency::Execute::Execute()
     {
@@ -37,13 +71,13 @@
     }
     void OpenAvrilConcurrency::Execute::initialise_Libraries()
     {
-        _stat_program_ConcurrentQue_Server = OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::generate_Program();
+        _stat_program_ConcurrentQue_Server = OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_generate_Program();
         while (get_program_ConcurrentQue_Server() == NULL) {}
 
-        _stat_program_WriteEnable_ServerInputAction = OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::CLIDWriteEnableForThreadsAtSERVERINPUTACTION::generate_Program();
+        _stat_program_WriteEnable_ServerInputAction = OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::CLIDWriteEnableForThreadsAtSERVERINPUTACTION::app_generate_Program();
         while (get_program_WriteEnable_ServerInputAction() == NULL) {}
 
-       _stat_program_WriteEnable_ServerOutputRecieve = OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::CLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::generate_Program();
+       _stat_program_WriteEnable_ServerOutputRecieve = OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::CLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::app_generate_Program();
         while (get_program_WriteEnable_ServerOutputRecieve() == NULL) {}
     }
     void OpenAvrilConcurrency::Execute::initialise_Threads(OpenAvrilConcurrency::Framework_Server* obj)

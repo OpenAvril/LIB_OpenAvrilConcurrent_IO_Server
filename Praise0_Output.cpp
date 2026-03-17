@@ -5,6 +5,40 @@
 	// registers.
 	double* OpenAvrilConcurrency::Praise0_Output::_REG_ptr_output_Value = NULL;
 
+// public.
+	// constructor.
+
+	// destructor.
+
+	// dynamic.
+		// create.
+		// get.
+		// set.
+	// static.
+		// create.
+		// get.
+		// set.
+
+// private.
+	// dynamic.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+	// static.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+
 // constructor.
 	OpenAvrilConcurrency::Praise0_Output::Praise0_Output()
 	{

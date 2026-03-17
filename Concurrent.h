@@ -5,6 +5,46 @@ namespace OpenAvrilConcurrency
     class Concurrent
     {
     public:
+// public.
+    // constructor.
+
+    // destructor.
+
+    // dynamic.
+        // create.
+        // get.
+        // set.
+    // static.
+        // create.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+
+
+
+
+
+
+
 // constructor.
         Concurrent();
 

@@ -7,7 +7,42 @@
     bool* OpenAvrilConcurrency::Data_Control::_stat_REG_ptr_flag_isLoaded_Stack_OutputSend = NULL;
     bool* OpenAvrilConcurrency::Data_Control::_stat_REG_ptr_side_To_Write_For_array_Of_doubleBuffer_Input = NULL;
     bool* OpenAvrilConcurrency::Data_Control::_Stat_REG_ptr_side_To_Write_For_array_Of_doubleBuffer_Output = NULL;
-        
+
+// public.
+    // constructor.
+
+    // destructor.
+
+    // dynamic.
+        // create.
+        // get.
+        // set.
+    // static.
+        // create.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+
+
 // constructor.
     OpenAvrilConcurrency::Data_Control::Data_Control()
     {
@@ -43,7 +78,7 @@
         }
         return *temp;
     }
-    void OpenAvrilConcurrency::Data_Control::flip_Input_DoubleBuffer(OpenAvrilConcurrency::Data* data)
+    void OpenAvrilConcurrency::Data_Control::app_flip_Input_DoubleBuffer(OpenAvrilConcurrency::Data* data)
     {
         set_REG_ptr_flag_isLoaded_Stack_InputAction(!get_REG_Item_flag_isLoaded_Stack_InputAction());
     }
@@ -82,7 +117,7 @@
             stat_REG_set_Item_flag_isLoaded_Stack_InputAction(new bool(true));
         }
     }
-    void OpenAvrilConcurrency::Data_Control::pop_From_Stack_Of_Output(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Data* data)
+    void OpenAvrilConcurrency::Data_Control::app_pop_From_Stack_Of_Output(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Data* data)
     {
         class OpenAvrilConcurrency::Output* distributeBuffer = data->get_REG_ptr_Item_array_Of_doubleBuffer_Output_WRITE(obj);
         class OpenAvrilConcurrency::Output* outputSlot = data->get_REG_ptr_Item_On_vector_Of_stack_Of_OutputPraise(1);
@@ -97,7 +132,7 @@
             stat_REG_set_Item_flag_isLoaded_Stack_OutputSend(new bool(true));
         }
     }
-    void OpenAvrilConcurrency::Data_Control::push_To_Stack_Of_Input(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Data* data)
+    void OpenAvrilConcurrency::Data_Control::app_push_To_Stack_Of_Input(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Data* data)
     {
         class OpenAvrilConcurrency::Input* inputBuffer = data->get_REG_ptr_Item_array_Of_doubleBuffer_Input_READ(obj);
         std::vector<class OpenAvrilConcurrency::Input*>* inputStackt = data->stat_REG_get_ptr_vector_Of_stack_Of_InputPraise();

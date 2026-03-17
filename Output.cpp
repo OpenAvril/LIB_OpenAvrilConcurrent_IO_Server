@@ -8,6 +8,41 @@ uint8_t* OpenAvrilConcurrency::Output::_REG_ptr_out_praiseEventId = NULL;
 uint8_t* OpenAvrilConcurrency::Output::_REG_ptr_out_playerId = NULL;
 std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Output::_REG_ptr_Lits_Of_PraiseOutSubset = NULL;
 
+// public.
+    // constructor.
+
+    // destructor.
+
+    // dynamic.
+        // create.
+        // get.
+        // set.
+    // static.
+        // create.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+
+
 // constructor.
 OpenAvrilConcurrency::Output::Output()
 {

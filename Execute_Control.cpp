@@ -6,6 +6,41 @@
 	bool* OpenAvrilConcurrency::Execute_Control::_REG_ptr_flag_is_SystemInitialised = NULL;
 	std::array<bool, 4>* OpenAvrilConcurrency::Execute_Control::_REG_ptr_flag_array_ThreadInitialised = { NULL };//NUMBER OF THREADS
 
+// public.
+	// constructor.
+
+	// destructor.
+
+	// dynamic.
+		// create.
+		// get.
+		// set.
+	// static.
+		// create.
+		// get.
+		// set.
+
+// private.
+	// dynamic.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+	// static.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+
+
 // constructor.
 	OpenAvrilConcurrency::Execute_Control::Execute_Control(uint8_t number_Implemented_Cores)
 	{

@@ -5,6 +5,41 @@
 	class OpenAvrilConcurrency::Praise0_Output* OpenAvrilConcurrency::User_Output::_stat_CLASS_ptr_Praise0_Output = NULL;
 	// registers.
 
+// public.
+	// constructor.
+
+	// destructor.
+
+	// dynamic.
+		// create.
+		// get.
+		// set.
+	// static.
+		// create.
+		// get.
+		// set.
+
+// private.
+	// dynamic.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+	// static.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+
+
 // constructor.
 	OpenAvrilConcurrency::User_Output::User_Output()
 	{

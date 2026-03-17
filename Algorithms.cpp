@@ -7,6 +7,41 @@
     std::list<OpenAvrilConcurrency::Concurrent*>* OpenAvrilConcurrency::Algorithms::_stat_REG_ptr_list_Of_ptr_Concurrent = NULL;
     std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Algorithms::_REG_ptr_List_Of_PraiseAlgorithmSubset = NULL;
 
+// public.
+    // constructor.
+
+    // destructor.
+
+    // dynamic.
+        // create.
+        // get.
+        // set.
+    // static.
+        // create.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+
+
 // constructor.
     OpenAvrilConcurrency::Algorithms::Algorithms()
     {

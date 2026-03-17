@@ -11,7 +11,41 @@
     // registers.
     uint8_t* OpenAvrilConcurrency::Global::_stat_REG_ptr_number_Of_Implemented_Cores = NULL;
     uint8_t* OpenAvrilConcurrency::Global::_stat_REG__ptr_number_Of_Praise_Events = NULL;
-    
+  
+// public.
+    // constructor.
+
+    // destructor.
+
+    // dynamic.
+        // create.
+        // get.
+        // set.
+    // static.
+        // create.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+
 // constructor.
     OpenAvrilConcurrency::Global::Global()
     {

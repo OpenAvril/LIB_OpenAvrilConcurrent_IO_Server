@@ -5,6 +5,41 @@
 class OpenAvrilConcurrency::Praise0_Input* OpenAvrilConcurrency::User_Input::_stat_CLASS_ptr_Praise0_Input = NULL;
 	// registers.
 
+// public.
+	// constructor.
+
+	// destructor.
+
+	// dynamic.
+		// create.
+		// get.
+		// set.
+	// static.
+		// create.
+		// get.
+		// set.
+
+// private.
+	// dynamic.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+	// static.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+
+
 // constructor.
 	OpenAvrilConcurrency::User_Input::User_Input()
 	{

@@ -5,6 +5,47 @@ namespace OpenAvrilConcurrency
     class Data_Control
     {
     public:
+// public.
+    // constructor.
+
+    // destructor.
+
+    // dynamic.
+        // create.
+        // get.
+        // set.
+    // static.
+        // create.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+
+
+
+
+
+
+
+
 // constructor.
         Data_Control();
 
@@ -14,15 +55,15 @@ namespace OpenAvrilConcurrency
 // public.
     // dynamic.
         uint8_t boolToInt(bool bufferSide);
-        void flip_Input_DoubleBuffer(class Data* obj);
+        void app_flip_Input_DoubleBuffer(class Data* obj);
         void flip_Output_DoubleBuffer(class Data* obj);
         void initialise_REG_ptr_flag_isLoaded_Stack_InputAction(bool* newINITIALISED_Bool);
         void initialise_REG_ptr_flag_isLoaded_Stack_OutputSend(bool* newINITIALISED_Bool);
         void initialise_REG_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(uint8_t side, bool* newINITIALISED_Bool);
         void initialise_REG_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(uint8_t side, bool* newINITIALISED_Bool);
         void pop_From_Stack_Of_Input(class Data* data, uint8_t concurrentThreadID);
-        void pop_From_Stack_Of_Output(class Framework_Server* obj, Data* data);
-        void push_To_Stack_Of_Input(class Framework_Server* obj, class Data* data);
+        void app_pop_From_Stack_Of_Output(class Framework_Server* obj, Data* data);
+        void app_push_To_Stack_Of_Input(class Framework_Server* obj, class Data* data);
         void push_To_Stack_Of_Output(class Data* data, uint8_t concurrentThreadID);
         // get.
         bool get_REG_Item_flag_isLoaded_Stack_InputAction();

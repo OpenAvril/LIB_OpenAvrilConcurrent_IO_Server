@@ -6,6 +6,40 @@
 	double* OpenAvrilConcurrency::Praise0_Input::_stat_REG_ptr_input_Value_A = NULL;
 	double* OpenAvrilConcurrency::Praise0_Input::_stat_REG_ptr_input_Value_B = NULL;
 
+// public.
+	// constructor.
+
+	// destructor.
+
+	// dynamic.
+		// create.
+		// get.
+		// set.
+	// static.
+		// create.
+		// get.
+		// set.
+
+// private.
+	// dynamic.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+	// static.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
+
 // constructor.
 	OpenAvrilConcurrency::Praise0_Input::Praise0_Input()
 	{
