@@ -1,58 +1,38 @@
 #pragma once
-
-namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION
+namespace OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION
 {
     class WriteEnableForThreadsAt_SERVERINPUTACTION_Global
     {
     public:
-// constructor.
         WriteEnableForThreadsAt_SERVERINPUTACTION_Global();
-
-// destructor.
         ~WriteEnableForThreadsAt_SERVERINPUTACTION_Global();
-
-// public.
-    // dynamic.
-        void initialise_Item_Of_2bit_flag_write_IDLE(std::array<bool, 2>* newINITIALISED_FlagBit);
-        void initialise_Item_Of_2bit_flag_write_WAIT(std::array<bool, 2>* newINITIALISED_FlagBit);
-        void initialise_Item_Of_2bit_flag_write_WRITE(std::array<bool, 2>* newINITIALISED_FlagBit);
-        void initialise_number_Of_Implemented_Threads(uint8_t* newValue);
-        // get.
-        std::array<bool, 2> get_2bit_flag_write_IDLE();
-        std::array<bool, 2> get_2bit_flag_write_WAIT();
-        std::array<bool, 2> get_2bit_flag_write_WRITE();
-        uint8_t get_number_Of_Implemented_Threads();
-        // set.
-    // static.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        static void stat_create_2bit_flag_write_IDLE(std::array<bool, 2>* newDEAFULT_FlagSet);
-        static void stat_create_2bit_flag_write_WAIT(std::array<bool, 2>* newDEAFULT_FlagSet);
-        static void stat_create_2bit_flag_write_WRITE(std::array<bool, 2>* newDEAFULT_FlagSet);
-        static void stat_create_number_Of_Implemented_Threads(uint8_t* newDEFAULT_Value);
-        // get.
-        static std::array<bool, 2>* stat_get_ptr_2bit_flag_write_IDLE();
-        static std::array<bool, 2>* stat_get_ptr_2bit_flag_write_WAIT();
-        static std::array<bool, 2>* stat_get_ptr_2bit_flag_write_WRITE();
-        static uint8_t* stat_get_ptr_number_Of_Implemented_Threads();
-        // set.
-        static void stat_set_2bit_flag_write_IDLE(std::array<bool, 2> new_FlagBitSet);
-        static void stat_set_2bit_flag_write_WAIT(std::array<bool, 2> new_FlagBitSet);
-        static void stat_set_2bit_flag_write_WRITE(std::array<bool, 2> new_FlagBitSet);
-        static void stat_set_number_Of_Implemented_Threads(uint8_t newValue);
-    // pointers.
-        // classes.
-        // registers.
-        static std::array<bool, 2>* _ptr_2bit_flag_write_IDLE;
-        static std::array<bool, 2>* _ptr_2bit_flag_write_WAIT;
-        static std::array<bool, 2>* _ptr_2bit_flag_write_WRITE;
-        static uint8_t* _ptr_number_Of_Implemented_Threads;
+        void app_REG_initialise_Item_Of_ptr_3STATE_flag_IDLE(std::array<bool, 2>*newINITIALISED_FlagBits);
+        void app_REG_initialise_Item_Of_ptr_3STATE_flag_WAIT(std::array<bool, 2>* newINITIALISED_FlagBits);
+        void app_REG_initialise_Item_Of_ptr_3STATE_flag_WRITE(std::array<bool, 2>* newINITIALISED_FlagBits);
+        void app_REG_initialise_Ptr_number_Of_Implemented_Threads(uint8_t* newValue);
+        std::array<bool, 2> dyn_REG_get_3STATE_flag_IDLE();
+        std::array<bool, 2> dyn_REG_get_3STATE_flag_WAIT();
+        std::array<bool, 2> dyn_REG_get_3STATE_flag_WRITE();
+        uint8_t dyn_REG_get_number_Of_Implemented_Threads();
+        static uint8_t stat_CONVERT_ByteArray_to_uint8_t(unsigned char* bytes);
+        static class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* stat_CONVERT_ObjPtr_to_Class(void* obj);
+        static unsigned char* stat_CONVERT_uint8_t_to_ByteArray(uint8_t uint8_t_Value);
+    private:
+        static std::array<bool, 2>* _REG_ptr_3STATE_flag_IDLE;
+        static std::array<bool, 2>* _REG_ptr_3STATE_flag_WAIT;
+        static std::array<bool, 2>* _REG_ptr_3STATE_flag_WRITE;
+        static uint8_t* _REG_ptr_number_Of_Implemented_Threads;
+        static void stat_REG_create_3STATE_flag_IDLE(std::array<bool, 2>* newDEAFULT_FlagSet);
+        static void stat_REG_create_3STATE_flag_WAIT(std::array<bool, 2>* newDEAFULT_FlagSet);
+        static void stat_REG_create_3STATE_flag_WRITE(std::array<bool, 2>* newDEAFULT_FlagSet);
+        static void stat_REG_create_number_Of_Implemented_Threads(uint8_t* newDEFAULT_Value);
+        static std::array<bool, 2>* stat_REG_get_ptr_3STATE_flag_IDLE();
+        static std::array<bool, 2>* stat_REG_get_ptr_3STATE_flag_WAIT();
+        static std::array<bool, 2>* stat_REG_get_ptr_3STATE_flag_WRITE();
+        static uint8_t* stat_REG_get_ptr_number_Of_Implemented_Threads();
+        static void stat_REG_set_3STATE_flag_IDLE(std::array<bool, 2> new_FlagBitSet);
+        static void stat_REG_set_3STATE_flag_WAIT(std::array<bool, 2> new_FlagBitSet);
+        static void stat_REG_set_3STATE_flag_WRITE(std::array<bool, 2> new_FlagBitSet);
+        static void stat_REG_set_number_Of_Implemented_Threads(uint8_t newValue);
     };
 }
-

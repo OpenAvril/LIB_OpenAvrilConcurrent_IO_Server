@@ -5,41 +5,50 @@ namespace OpenAvrilConcurrency
     class Algorithms
     {
     public:
-// constructor.
+// public.
+    // constructor.
         Algorithms();
 
-// destructor.
+    // destructor.
         virtual ~Algorithms();
 
-// public.
     // dynamic.
-        void initialise_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID, class Concurrent* newINITIALISED_Concurrent);
+        // create.
+        void app_CLASS_initialise_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID, class Concurrent* newINITIALISED_Concurrent);
         // get.
-        class Concurrent* get_ptr_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID);
-        class User_Alg* get_ptr_User_Algorithms();
+        class Concurrent* dyn_CLASS_get_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID);
+        class User_Algorithm* dyn_CLASS_get_ptr_User_Algorithims();
         // set.
     // static.
+        // create.
         // get.
         // set.
-
     private:
 // private.
     // dynamic.
-        // get.
-        // set.
-    // static.
-        static  void stat_create_ptr_list_Of_ptr_Concurrent(class Concurrent* newDEFAULT_Concurrent);
-        static void stat_create_ptr_User_Algorithms();
-        // get.
-        static class Concurrent* stat_get_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID);
-        static std::list<class Concurrent*>* stat_get_ptr_list_Of_ptr_Concurrent();
-        static class User_Alg* stat_get_ptr_User_Algorithms();
-        // set.
-        static void stat_set_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID, class Concurrent* newClass);
-        static  void stat_set_ptr_User_Algorithms(class User_Alg* newClass);
-    // pointers.
         // classes.
+            // create.
+            // get.
+            // set.
         // registers.
-        static std::list<class Concurrent*>* _ptr_list_Of_ptr_Concurrent;
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+        static class User_Algorithm* _stat_CLASS_ptr_User_Algorithmorithms;
+            // create.
+        static void stat_CLASS_create_ptr_User_Algorithmorithms();
+            // get.
+        static class User_Algorithm* stat_CLASS_get_ptr_User_Algorithims();
+            // set.
+        // registers.
+        static std::list<class Concurrent*>* _stat_REG_ptr_list_Of_ptr_Concurrent;
+            // create.
+        static void stat_REG_create_ptr_list_Of_ptr_Concurrent(class Concurrent* newDEFAULT_Concurrent);
+            // get.
+        static std::list<class Concurrent*>* stat_REG_get_ptr_list_Of_ptr_Concurrent();
+            // set.
+        static void stat_REG_set_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID, class Concurrent* newClass);
     };
 }

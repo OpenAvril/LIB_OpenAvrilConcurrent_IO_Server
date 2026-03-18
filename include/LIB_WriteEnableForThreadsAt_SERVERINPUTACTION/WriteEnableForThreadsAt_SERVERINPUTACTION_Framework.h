@@ -1,40 +1,16 @@
 #pragma once
-
-namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION
+namespace OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION
 {
     class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework
     {
     public:
-// constructor.
         WriteEnableForThreadsAt_SERVERINPUTACTION_Framework();
-
-// destructor.
         virtual ~WriteEnableForThreadsAt_SERVERINPUTACTION_Framework();
-
-// public.
-    // dynamic.
-        void initialise(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj);
-        // get.
-        class WriteEnableForThreadsAt_SERVERINPUTACTION* get_ptr_WriteEnable();
-        // set.
-    // static.
-        // get.
-        // set.
-
+        void app_initialise(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj);
+        class WriteEnableForThreadsAt_SERVERINPUTACTION* dyn_CLASS_get_ptr_WriteEnable();
     private:
-// private.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        static void stat_create_WriteEnable();
-        // get.
-        static class WriteEnableForThreadsAt_SERVERINPUTACTION* stat_get_ptr_WriteEnable();
-        // set.
-        static void stat_set_ptr_WriteEnable(class WriteEnableForThreadsAt_SERVERINPUTACTION* writeEnable);
-    // pointers.
-        // classes.
-        static OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION* _ptr_WriteEnable;
-        // registers.
+        static class WriteEnableForThreadsAt_SERVERINPUTACTION* _CLASS_get_ptr_WriteEnable;
+        static void stat_CLASS_create_WriteEnable();
+        static class WriteEnableForThreadsAt_SERVERINPUTACTION* stat_CLASS_get_ptr_WriteEnable();
     };
 }

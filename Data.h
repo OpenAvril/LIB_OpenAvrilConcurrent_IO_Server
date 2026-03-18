@@ -1,91 +1,104 @@
 #pragma once
-
 namespace OpenAvrilConcurrency
 {
     class Data
     {
     public:
-// constructor.
+        // public.
+            // constructor.
         Data();
 
-// destructor.
+        // destructor.
         virtual ~Data();
 
-// public.
-    // dynamic.
-        void initialise_Control();
-        void initialise_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t concurrentThreadID, class Input* newINITIALISED_Input);
-        void initialise_Item_On_array_Of_ptr_array_Of_buffer_Output_ReferenceForThread(uint8_t concurrentThreadID, class Output* newINITIALISED_Output);
-        void initialise_Item_On_array_Of_doubleBuffer_Input(uint8_t sideRW, class OpenAvrilConcurrency::Input* newINITIALISED_Input);
-        void initialise_Item_On_array_Of_doubleBuffer_Output(uint8_t sideRW, class OpenAvrilConcurrency::Output* newINITIALISED_Output);
-        void initialise_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot, class OpenAvrilConcurrency::Input* newINITIALISED_Input);
-        void initialise_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot, class OpenAvrilConcurrency::Output* newINITIALISED_Output);
+        // dynamic.
+            // create.
+        void app_FUNCT_initialise_ptr_Input_Control();
+        void app_initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t concurrentThreadID, class Input* newINITIALISED_Input);
+        void app_initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Output_ReferenceForThread(uint8_t concurrentThreadID, class Output* newINITIALISED_Output);
+        void app_initialise_REG_Item_On_array_Of_doubleBuffer_Input(class Framework_Server* obj, class Input* newINITIALISED_Input);
+        void app_initialise_REG_Item_On_array_Of_doubleBuffer_Output(class Framework_Server* obj, class Output* newINITIALISED_Output);
+        void app_initialise_REG_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slotID, class Input* newINITIALISED_Input);
+        void app_initialise_REG_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slotID, class Output* newINITIALISED_Output);
         // get.
-        class Input* get_ptr_array_Of_doubleBuffer_Input_READ();
-        class Input* get_ptr_array_Of_doubleBuffer_Input_WRITE();
-        class Output* get_ptr_array_Of_doubleBuffer_Output_READ();
-        class Output* get_ptr_array_Of_doubleBuffer_Output_WRITE();
-        class Data_Control* get_ptr_Data_Control();
-        class Input* get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t threadID);
-        class Output* get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(uint8_t threadID);
-        class Input* get_ptr_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot);
-        class Output* get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot);
-        class std::array<class OpenAvrilConcurrency::Input*, 3>* get_ptr_array_Of_buffer_Input_ReferenceForThread();
-        class std::array<class OpenAvrilConcurrency::Output*, 3>* get_ptr_array_Of_buffer_Output_ReferenceForThread();
-        class std::vector<class OpenAvrilConcurrency::Input*>* get_ptr_vector_Of_stack_Of_InputPraise();
-        class std::vector<class OpenAvrilConcurrency::Output*>* get_ptr_vector_Of_stack_Of_OutputPraise();
-        class User_I* get_ptr_User_I();
-        class User_O* get_ptr_User_O();
+        class Data_Control* dyn_CLASS_get_ptr_Data_Control();
+        class User_Input* dyn_CLASS_get_ptr_User_Input();
+        class User_Output* dyn_CLASS_get_ptr_User_Output();
+        class Input* dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_READ(class Framework_Server* obj);
+        class Input* dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(class Framework_Server* obj);
+        class Output* dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Output_READ(class Framework_Server* obj);
+        class Output* dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE(class Framework_Server* obj);
+        class Input* dyn_REG_get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t concurrentThreadID);
+        class Output* dyn_REG_get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(uint8_t concurrentThreadID);
+        class Input* dyn_REG_get_ptr_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot);
+        class Output* dyn_REG_get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot);
         // set.
-    // static.
-        // get.
-        // set.
+        void set_REG_ptr_Item_array_Of_doubleBuffer_Input_READ(class Framework_Server* obj, class Input* newClass);
+        void set_REG_ptr_Item_array_Of_doubleBuffer_Input_WRITE(class Framework_Server* obj, class Input* newClass);
+        void set_REG_ptr_Item_array_Of_doubleBuffer_Output_READ(class Framework_Server* obj, class Output* newClass);
+        void set_REG_ptr_Item_array_Of_doubleBuffer_Output_WRITE(class Framework_Server* obj, class Output* newClass);
+        void set_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t concurrentThreadID, class Input* newClass);
+        void set_REG_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(uint8_t concurrentThreadID, class Output* newClass);
+        void set_REG_ptr_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot, class Input* newClass);
+        void set_REG_ptr_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot, class Output* newClass);
+        // static.
+            // create.
+            // get.
+            // set.
 
-    private:
-// private.
-    // dynamic.
+    // private.
+        // dynamic.
+            // classes.
+                // create.
+                // get.
+                // set.
+            // registers.
+                // create.
+                // get.
+                // set.
+        // static.
+            // classes.
+        static class Data_Control* _stat_CLASS_ptr_Data_Control;
+        static class User_Input* _stat_CLASS_ptr_User_Input;
+        static class User_Output* _stat_CLASS_ptr_User_Output;
+        // create.
+        static void stat_CLASS_create_ptr_Data_Control();
+        static void stat_CLASS_create_ptr_User_Input();
+        static  void stat_CLASS_create_ptr_User_Output();
         // get.
+        static class Data_Control* stat_CLASS_get_ptr_Data_Control();
+        static class User_Input* stat_CLASS_get_ptr_User_Input();
+        static class User_Output* stat_CLASS_get_ptr_User_Output();
         // set.
-    // static.
-        static void stat_create_ptr_array_Of_doubleBuffer_Input(Input* newDEFAULT_Input);
-        static void stat_create_ptr_array_Of_doubleBuffer_Output(Output* newDEFAULT_Input);
-        static void stat_create_ptr_Data_Control();
-        static void stat_create_ptr_array_Of_buffer_Input_ReferenceForThread(Input* newDEFAULT_Input);
-        static void stat_create_ptr_array_Of_buffer_Output_ReferenceForThread(Output* newDEFAULT_Output);
-        static void stat_create_ptr_vector_Of_stack_Of_InputPraise(Input* newDEFAULT_Input);
-        static void stat_create_ptr_vector_Of_stack_Of_OutputPraise(Output* newDEFAULT_Output);
-        static void stat_create_ptr_User_I();
-        static  void stat_create_ptr_User_O();
+    // registers.
+        static std::array<class Input*, 3>* _stat_REG_ptr_array_Of_buffer_Input_ReferenceForThread;//NUMBER OF CONCURRENT THREADS.
+        static std::array<class Output*, 3>* _stat_REG_ptr_array_Of_buffer_Output_ReferenceForThread;//NUMBER OF CONCURRENT THREADS.
+        static std::array<class Input*, 2>* _stat_REG_ptr_array_Of_doubleBuffer_Input;
+        static std::array<class Output*, 2>* _stat_REG_ptr_array_Of_doubleBuffer_Output;
+        static std::vector<class Input*>* _stat_REG_ptr_vector_Of_stack_Of_InputPraise;
+        static std::vector<class Output*>* _stat_REG_ptr_vector_Of_stack_Of_OutputPraise;
+        // create.
+        static void stat_REG_create_ptr_array_Of_buffer_Input_ReferenceForThread(class Input* newDEFAULT_Input);
+        static void stat_REG_create_ptr_array_Of_buffer_Output_ReferenceForThread(class Output* newDEFAULT_Output);
+        static void stat_REG_create_ptr_array_Of_doubleBuffer_Input(class Framework_Server* obj, class Input* newDEFAULT_Input);
+        static void stat_REG_create_ptr_array_Of_doubleBuffer_Output(class Framework_Server* obj, class Output* newDEFAULT_Input);
+        static void stat_REG_create_ptr_vector_Of_stack_Of_InputPraise(class Input* newDEFAULT_Input);
+        static void stat_REG_create_ptr_vector_Of_stack_Of_OutputPraise(class Output* newDEFAULT_Output);
         // get.
-        static class Input* stat_get_ptr_array_Of_doubleBuffer_Input_READ();
-        static class Input* stat_get_ptr_array_Of_doubleBuffer_Input_WRITE();
-        static class Output* stat_ptr_array_Of_doubleBuffer_Output_READ();
-        static class Output* stat_ptr_array_Of_doubleBuffer_Output_WRITE();
-        static class Data_Control* stat_get_ptr_Data_Control();
-        static std::array<class OpenAvrilConcurrency::Input*, 3>* stat_get_ptr_array_Of_buffer_Input_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
-        static std::array<class OpenAvrilConcurrency::Output*, 3>* stat_get_ptr_array_Of_buffer_Output_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
-        static std::array<class OpenAvrilConcurrency::Input*, 2>* stat_get_ptr_array_Of_doubleBuffer_Input();
-        static std::array<class OpenAvrilConcurrency::Output*, 2>* stat_get_ptr_array_Of_doubleBuffer_Output();
-        static class Input* stat_get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t threadID);
-        static  class Output* stat_get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(uint8_t threadID);
-        static class Input* stat_get_ptr_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot);
-        static class Output* stat_get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot);
-        static std::vector<class OpenAvrilConcurrency::Input*>* stat_get_ptr_vector_Of_stack_Of_InputPraise();
-        static std::vector<class OpenAvrilConcurrency::Output*>* stat_get_ptr_vector_Of_stack_Of_OutputPraise();
-        static class User_I* stat_get_ptr_User_I();
-        static class User_O* stat_get_ptr_User_O();
+        static std::array<class Input*, 3>* stat_REG_get_ptr_Array_Of_buffer_Input_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
+        static std::array<class Output*, 3>* stat_REG_get_ptr_array_Of_buffer_Output_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
+        static std::array<class Input*, 2>* stat_get_REG_ptr_array_Of_doubleBuffer_Input();
+        static std::array<class Output*, 2>* stat_get_REG_ptr_array_Of_doubleBuffer_Output();
+        static std::vector<class Input*>* stat_REG_get_ptr_vector_Of_stack_Of_InputPraise();
+        static std::vector<class Output*>* stat_REG_get_ptr_vector_Of_stack_Of_OutputPraise();
         // set.
-        static void stat_set_ptr_Data_Control(class Data_Control* newClass);
-        static void stat_set_ptr_User_I(class User_I* newClass);
-        static void stat_set_ptr_User_O(class User_O* newClass); 
-    // pointers.
-        // classes.
-        // registers.
-        static std::array<class Input*, 3>* _ptr_array_Of_buffer_Input_ReferenceForThread;//NUMBER OF CONCURRENT THREADS.
-        static std::array<class Output*, 3>* _ptr_array_Of_buffer_Output_ReferenceForThread;//NUMBER OF CONCURRENT THREADS.
-        static std::array<class Input*, 2>* _ptr_array_Of_doubleBuffer_Input;
-        static std::array<class Output*, 2>* _ptr_array_Of_doubleBuffer_Output;
-        static std::vector<class Input*>* _ptr_vector_Of_stack_Of_InputPraise;
-        static std::vector<class Output*>* _ptr_vector_Of_stack_Of_OutputPraise;
+        static void stat_REG_set_Item_On_Array_Of_buffer_Input_ReferenceForThread(uint8_t concurrentThreadID, class Input* newClass);
+        static void stat_REG_set_Item_On_Array_Of_buffer_Output_ReferenceForThread(uint8_t concurrentThreadID, class Output* newClass);
+        static void stat_REG_set_Item_On_Array_Of_doubleBuffer_Input_READ(class Framework_Server* obj, class Input* newClass);
+        static void stat_REG_set_Item_On_Array_Of_doubleBuffer_Input_WRITE(class Framework_Server* obj, class Input* newClass);
+        static void stat_REG_set_Item_On_Array_Of_doubleBuffer_Output_READ(class Framework_Server* obj, class Output* newClass);
+        static void stat_REG_set_Item_On_Array_Of_doubleBuffer_Output_WRITE(class Framework_Server* obj, class Output* newClass);
+        static void stat_REG_set_Item_On_Vector_Of_stack_Of_InputPraise(uint8_t slot, class Input* newClass);
+        static void stat_REG_set_Item_On_Vector_Of_stack_Of_OutputPraise(uint8_t slot, class Output* newClass);
     };
 }

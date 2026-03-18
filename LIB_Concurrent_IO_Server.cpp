@@ -7,91 +7,124 @@
 // pointers.
 	// programs.
 	// classes.
-	class OpenAvrilConcurrency::Framework_Server* _ptr_Framework_Server = NULL;
-
-// constructor.
-	OpenAvrilConcurrency::CLIBConcurrentServerIO::CLIBConcurrentServerIO()
-	{
-		return;
-	}
-
-// destructor.
+	static void* _CLASS_ptr_Framework_Server = NULL;
 
 // public.
-	void* OpenAvrilConcurrency::CLIBConcurrentServerIO::generate_Program()
-	{
-		stat_set_ptr_Framework_Server(new class OpenAvrilConcurrency::Framework_Server());
-		while (stat_get_ptr_Framework_Server() == NULL) {}
-		stat_get_ptr_Framework_Server()->initialise_Program(stat_get_ptr_Framework_Server());
-		return (void*)stat_get_ptr_Framework_Server();;
-	}
+	// constructor.
+
+	// destructor.
+
 	// dynamic.
-	void OpenAvrilConcurrency::CLIBConcurrentServerIO::initalise_Program(OpenAvrilConcurrency::Framework_Server* obj)
+	void OpenAvrilConcurrency::CLIBConcurrentServerIO::app_FUNCT_Flip_Input_DoubleBuffer(void* obj)
 	{
-		obj->initialise_Program(obj);
+		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_Flip_Input_DoubleBuffer();
 	}
-	void OpenAvrilConcurrency::CLIBConcurrentServerIO::flip_Input_DoubleBuffer(OpenAvrilConcurrency::Framework_Server* obj)
+	void* OpenAvrilConcurrency::CLIBConcurrentServerIO::app_generate_Program()
 	{
-		obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->flip_Input_DoubleBuffer();
+		std::cout << "entered app_generate_Program()." << std::endl;
+		_CLASS_ptr_Framework_Server = new class OpenAvrilConcurrency::Framework_Server();
+		while (stat_CLASS_get_ptr_Framework_Server() == NULL) {}
+		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server())->app_initialise_Program(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server()));
+		std::cout << "        ,     \\      /      ," << std::endl;
+		std::cout << "       / \\    )\\ __ /(     / \\ " << std::endl;
+		std::cout << "      /   \\   (_\\  /_)    /   \\ " << std::endl;
+		std::cout << "____ / ____\\__ \\@  @/ ___/_____\\_____" << std::endl;
+		std::cout << "|              |\\../|               |" << std::endl;
+		std::cout << "|               \\VV/                |" << std::endl;
+		std::cout << "|      MIT OpenAvrilConcurrency     |" << std::endl;
+		std::cout << "|___________________________________|" << std::endl;
+		std::cout << "|    / \\ /        \\\\        \\ /\\    |" << std::endl;
+		std::cout << "|  /    V          ))        V   \\  |" << std::endl;
+		std::cout << "|/                //               \\| " << std::endl;
+		std::cout << "`                 V                 '" << std::endl;
+		return (void*)stat_CLASS_get_ptr_Framework_Server();
 	}
-	bool OpenAvrilConcurrency::CLIBConcurrentServerIO::get_flag_isStackLoaded_Server_InputAction(OpenAvrilConcurrency::Framework_Server* obj)
+	void OpenAvrilConcurrency::CLIBConcurrentServerIO::app_FUNCT_pop_From_Stack_Of_Output(void* obj)
 	{
-		return obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->get_ptr_flag_isLoaded_Stack_InputAction();
+		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_pop_From_Stack_Of_Output(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj));
 	}
-	bool OpenAvrilConcurrency::CLIBConcurrentServerIO::get_flag_isLoaded_Stack_OutputSend(OpenAvrilConcurrency::Framework_Server* obj)
+	void OpenAvrilConcurrency::CLIBConcurrentServerIO::app_FUNCT_push_To_STACK_Of_Input(void* obj)
 	{
-		return obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->get_ptr_flag_isLoaded_Stack_OutputSend();
+		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_push_To_STACK_Of_Input(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj));
 	}
-	bool OpenAvrilConcurrency::CLIBConcurrentServerIO::get_flag_IsInitialised_OpenAvrilConcurrencyConcurrency(OpenAvrilConcurrency::Framework_Server* obj)
+	void OpenAvrilConcurrency::CLIBConcurrentServerIO::app_select_set_Intput_Subset(void* obj, unsigned char* bytes)
 	{
-		return obj->get_ptr_Server()->get_ptr_Execute()->get_ptr_Execute_Control()->get_flag_is_SystemInitialised();
+		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj))->dyn_CLASS_get_ptr_Input_Control()->select_And_Set_Input_Subset(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj), OpenAvrilConcurrency::Global::stat_CONVERT_ByteArray_to_uint8_t(bytes));
 	}
-	void* OpenAvrilConcurrency::CLIBConcurrentServerIO::get_program_WriteEnableStack_ServerInputAction(OpenAvrilConcurrency::Framework_Server* obj)
+	void OpenAvrilConcurrency::CLIBConcurrentServerIO::app_terminate_Program(void* obj)
 	{
-		return obj->get_ptr_Server()->get_ptr_Execute()->get_program_WriteEnable_ServerInputAction();
+		delete _CLASS_ptr_Framework_Server;
 	}
-	void* OpenAvrilConcurrency::CLIBConcurrentServerIO::get_program_WriteEnableStack_ServerOutputRecieve(OpenAvrilConcurrency::Framework_Server* obj)	
-	{
-		return obj->get_ptr_Server()->get_ptr_Execute()->get_program_WriteEnable_ServerOutputRecieve();
-	}
-	void OpenAvrilConcurrency::CLIBConcurrentServerIO::pop_From_Stack_Of_Output(OpenAvrilConcurrency::Framework_Server* obj)
-	{
-		obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->pop_From_Stack_Of_Output(obj->get_ptr_Server()->get_ptr_Data());
-	}
-	void OpenAvrilConcurrency::CLIBConcurrentServerIO::push_To_Stack_Of_Input(OpenAvrilConcurrency::Framework_Server* obj)
-	{
-		obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->push_To_Stack_Of_Input(obj->get_ptr_Server()->get_ptr_Data());
-	}
-	void OpenAvrilConcurrency::CLIBConcurrentServerIO::select_set_Intput_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId)
-	{
-		obj->get_ptr_Server()->get_ptr_Data()->get_ptr_array_Of_doubleBuffer_Input_WRITE()->get_ptr_Input_Control()->select_And_Set_Input_Subset(obj, praiseEventId);
-	}
-	uint8_t OpenAvrilConcurrency::CLIBConcurrentServerIO::get_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj)
-	{
-		return obj->get_ptr_Server()->get_ptr_Data()->get_ptr_array_Of_doubleBuffer_Output_WRITE()->get_out_praiseEventId();
-	}
-	void OpenAvrilConcurrency::CLIBConcurrentServerIO::set_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj, uint8_t value)
-	{
-		obj->get_ptr_Server()->get_ptr_Data()->get_ptr_array_Of_doubleBuffer_Input_WRITE()->get_ptr_Item_On_list_Of_Praise_In_Subsets(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_array_Of_doubleBuffer_Input_WRITE()->get_in_praiseEventId());
-	}
+		// create.
 		// get.
+	bool OpenAvrilConcurrency::CLIBConcurrentServerIO::dyn_REG_get_flag_isStackLoaded_Server_InputAction(void* obj)
+	{
+		return OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_get_Item_flag_isLoaded_Stack_InputAction();
+	}
+	bool OpenAvrilConcurrency::CLIBConcurrentServerIO::dyn_REG_get_flag_isLoaded_Stack_OutputSend(void* obj)
+	{
+		return OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_get_Item_flag_isLoaded_Stack_OutputSend();
+	}
+	bool OpenAvrilConcurrency::CLIBConcurrentServerIO::dyn_REG_get_flag_IsInitialised_OpenAvrilConcurrency(void* obj)
+	{
+		return OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_CLASS_get_ptr_Execute_Control()->app_REG_get_Flag_is_SystemInitialised();
+	}
+	unsigned char* OpenAvrilConcurrency::CLIBConcurrentServerIO::dyn_REG_get_PraiseEventId(void* obj)
+	{
+		return OpenAvrilConcurrency::Global::stat_CONVERT_uint8_t_to_ByteArray(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj))->dyn_REG_get_ptr_in_praiseEventId());
+	}
+	unsigned char* OpenAvrilConcurrency::CLIBConcurrentServerIO::dyn_REG_get_ptr_output_Value(void* obj)
+	{
+		return nullptr;
+	}
+	void* OpenAvrilConcurrency::CLIBConcurrentServerIO::dyn_PGM_get_program_WriteEnableStack_ServerInputAction(void* obj)
+	{
+		return OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_PGM_get_WriteEnable_ServerInputAction();
+	}
+	void* OpenAvrilConcurrency::CLIBConcurrentServerIO::dyn_PGM_get_program_WriteEnableStack_ServerOutputRecieve(void* obj)
+	{
+		return OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_PGM_get_WriteEnable_ServerOutputRecieve();
+	}
 		// set.
+	void OpenAvrilConcurrency::CLIBConcurrentServerIO::dyn_REG_set_Item_input_Value_A(void* obj, unsigned char* bytes)
+	{
+		OpenAvrilConcurrency::Praise0_Input* objPraise0_input = (OpenAvrilConcurrency::Praise0_Input*)OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj));
+		objPraise0_input->dyn_REG_set_Item_input_Value_A(OpenAvrilConcurrency::Global::stat_CONVERT_ByteArray_to_Float(bytes));
+	}
+	void OpenAvrilConcurrency::CLIBConcurrentServerIO::dyn_REG_set_Item_input_Value_B(void* obj, unsigned char* bytes)
+	{
+		OpenAvrilConcurrency::Praise0_Input* objPraise0_input = (OpenAvrilConcurrency::Praise0_Input*)OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj))->dyn_REG_get_ptr_in_praiseEventId();
+		objPraise0_input->dyn_REG_set_Item_input_Value_B(OpenAvrilConcurrency::Global::stat_CONVERT_ByteArray_to_Float(bytes));
+	}
+	void OpenAvrilConcurrency::CLIBConcurrentServerIO::dyn_REG_set_PraiseEventId(void* obj, unsigned char* bytes)
+	{
+		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)))->dyn_REG_Set_in_praiseEventId(OpenAvrilConcurrency::Global::stat_CONVERT_ByteArray_to_uint8_t(bytes));
+	}
 	// static.
+		// create.
 		// get.
 		// set.
 
 // private.
 	// dynamic.
-		// get.
-		// set.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
 	// static.
-		// get.
-	OpenAvrilConcurrency::Framework_Server* OpenAvrilConcurrency::CLIBConcurrentServerIO::stat_get_ptr_Framework_Server()
+		// classes.
+			// create.
+			// get.
+	void* OpenAvrilConcurrency::CLIBConcurrentServerIO::stat_CLASS_get_ptr_Framework_Server()
 	{
-		return _ptr_Framework_Server;
+		return _CLASS_ptr_Framework_Server;
 	}
-		// set.
-	void OpenAvrilConcurrency::CLIBConcurrentServerIO::stat_set_ptr_Framework_Server(OpenAvrilConcurrency::Framework_Server* newClass)
-	{
-		*_ptr_Framework_Server = *newClass;
-	}
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.

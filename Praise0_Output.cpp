@@ -1,46 +1,31 @@
 #include "pch.h"
-
-// pointers.
-	// classes.
-	// registers.
-	double* OpenAvrilConcurrency::Praise0_Output::_ptr_output_Value = NULL;
-
-// constructor.
+	double* OpenAvrilConcurrency::Praise0_Output::_REG_ptr_output_Value = NULL;
 	OpenAvrilConcurrency::Praise0_Output::Praise0_Output()
 	{
-		stat_create_ptr_output_Value();
+		stat_create_REG_ptr_output_Value();
 	}
-
-// destructor.
 	OpenAvrilConcurrency::Praise0_Output::~Praise0_Output()
 	{
 
 	}
-
-// public.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-
-// private.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-	void OpenAvrilConcurrency::Praise0_Output::stat_create_ptr_output_Value()
+	double OpenAvrilConcurrency::Praise0_Output::dyn_REG_get_ptr_output_Value()
 	{
-
+		return stat_dyn_REG_get_ptr_output_Value();
 	}
-		// get.
-	double* OpenAvrilConcurrency::Praise0_Output::stat_get_ptr_output_Value()
+	void OpenAvrilConcurrency::Praise0_Output::set_REG_ptr_output_Value(double newValue)
 	{
-		return _ptr_output_Value;
+		stat_set_REG_ptr_output_Value(newValue);
 	}
-		// set.
-	void OpenAvrilConcurrency::Praise0_Output::stat_set_output_Value(double newValue)
+	void OpenAvrilConcurrency::Praise0_Output::stat_create_REG_ptr_output_Value()
 	{
-		*_ptr_output_Value = newValue;
+		double* _REG_ptr_output_Value = new double(NULL);
+		stat_set_REG_ptr_output_Value(0.0);
+	}
+	double OpenAvrilConcurrency::Praise0_Output::stat_dyn_REG_get_ptr_output_Value()
+	{
+		return *_REG_ptr_output_Value;
+	}
+	void OpenAvrilConcurrency::Praise0_Output::stat_set_REG_ptr_output_Value(double newValue)
+	{
+		*_REG_ptr_output_Value = newValue;
 	}

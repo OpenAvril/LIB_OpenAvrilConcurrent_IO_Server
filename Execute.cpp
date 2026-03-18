@@ -1,137 +1,143 @@
 #include "pch.h"
 
 // pointers.
-    // pointers.
-    OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* _program_ConcurrentQue_Server = NULL;
-    OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* _program_WriteEnable_ServerInputAction = NULL;
-    OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* _program_WriteEnable_ServerOutputRecieve = NULL;
     // classes.
-    OpenAvrilConcurrency::Execute_Control* _ptr_Execute_Control = NULL;
+    class OpenAvrilConcurrency::Execute_Control* OpenAvrilConcurrency::Execute::_stat_CLASS_ptr_Execute_Control = NULL;
     // registers.
-    std::list<std::thread*>* OpenAvrilConcurrency::Execute::_ptr_array_Of_ptr_list_Of_Threads = NULL;
-
-// constructor.
-    OpenAvrilConcurrency::Execute::Execute()
-    {
-        std::cout << "entered constructor of OpenAvrilConcurrency::Execute::Execute()" << std::endl;
-        stat_create_ptr_array_Of_ptr_list_Of_Threads();
-        std::cout << "entered constructor of OpenAvrilConcurrency::Execute::Execute()" << std::endl;
-    }
-
-// destructor.
-    OpenAvrilConcurrency::Execute::~Execute()
-    {
-        delete _ptr_Execute_Control;
-        delete _ptr_array_Of_ptr_list_Of_Threads;
-    }
+    std::list<std::thread*>* OpenAvrilConcurrency::Execute::_stat_REG_ptr_array_Of_ptr_list_Of_Threads = NULL;
+    // programs.
+    void* OpenAvrilConcurrency::Execute::_stat_PGM_ConcurrentQue_Server = NULL;
+    void* OpenAvrilConcurrency::Execute::_stat_PGM_WriteEnable_ServerInputAction = NULL;
+    void* OpenAvrilConcurrency::Execute::_stat_PGM_WriteEnable_ServerOutputRecieve = NULL;
 
 // public.
+    // constructor.
+    OpenAvrilConcurrency::Execute::Execute()
+    {
+        std::cout << "entered CONSTRUCTOR of Execute()." << std::endl;
+        
+        std::cout << "exiting CONSTRUCTOR of Execute()." << std::endl;
+    }
+
+    // destructor.
+    OpenAvrilConcurrency::Execute::~Execute()
+    {
+        delete _stat_CLASS_ptr_Execute_Control;
+        delete _stat_REG_ptr_array_Of_ptr_list_Of_Threads;
+        delete _stat_PGM_ConcurrentQue_Server;
+        delete _stat_PGM_WriteEnable_ServerInputAction;
+        delete _stat_PGM_WriteEnable_ServerOutputRecieve;
+    }
+
     // dynamic.
-    void OpenAvrilConcurrency::Execute::initialise_Control(uint8_t number_Implemented_Cores)
+        // create.
+    void OpenAvrilConcurrency::Execute::app_FUNCT_initialise_ptr_Input_Control(uint8_t number_Implemented_Cores)
     {
-        stat_create_ptr_Execute_Control(number_Implemented_Cores);
+        stat_CLASS_create_ptr_Execute_Control();
     }
-    void OpenAvrilConcurrency::Execute::initialise_Libraries()
+    void OpenAvrilConcurrency::Execute::app_FUNCT_initialise_Libraries()
     {
-        OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* _program_ConcurrentQue_Server = OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::generate_Program();
-        while (get_program_ConcurrentQue_Server() == NULL) {}
+        _stat_PGM_ConcurrentQue_Server = OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::generate_Program();
+        while (dyn_PGM_get_ConcurrentQue_Server() == NULL) {}
 
-        OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* _program_WriteEnable_ServerInputAction = OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::CLIDWriteEnableForThreadsAtSERVERINPUTACTION::generate_Program();
-        while (get_program_WriteEnable_ServerInputAction() == NULL) {}
+        _stat_PGM_WriteEnable_ServerInputAction = OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION::CLIBWriteEnableForThreadsAtSERVERINPUTACTION::generate_Program();
+        while (dyn_PGM_get_WriteEnable_ServerInputAction() == NULL) {}
 
-        OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* _program_WriteEnable_ServerOutputRecieve = OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::CLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::generate_Program();
-        while (get_program_WriteEnable_ServerOutputRecieve() == NULL) {}
+        _stat_PGM_WriteEnable_ServerOutputRecieve = OpenAvrilCLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::CLIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::generate_Program();
+        while (dyn_PGM_get_WriteEnable_ServerOutputRecieve() == NULL) {}
     }
-    void OpenAvrilConcurrency::Execute::initialise_Threads(OpenAvrilConcurrency::Framework_Server* obj)
+    void OpenAvrilConcurrency::Execute::app_FUNCT_initialise_Threads(OpenAvrilConcurrency::Framework_Server* obj)
     {
-        std::list<std::thread*>* _ptr_array_Of_ptr_list_Of_Threads = new std::list<std::thread*>(NULL);
-        while (stat_get_ptr_array_Of_ptr_list_Of_Threads() == NULL) { }
-        for (uint8_t threadID = 0; threadID < sizeof(stat_get_ptr_array_Of_ptr_list_Of_Threads()); threadID++)
-        {
-            stat_set_Item_On_array_Of_ptr_list_Of_Threads(obj, threadID);
-        }
+        stat_REG_create_ptr_Array_Of_ptr_list_Of_Threads(obj);
     }
-    void OpenAvrilConcurrency::Execute::initialise_ptr_array_Of_ptr_list_Of_Threads(OpenAvrilConcurrency::Framework_Server* obj, uint8_t threadId)
+    void OpenAvrilConcurrency::Execute::app_FUNCT_Initialise_ptr_array_Of_ptr_list_Of_Threads(OpenAvrilConcurrency::Framework_Server* obj, uint8_t threadId)
     {
-        stat_set_Item_On_array_Of_ptr_list_Of_Threads(obj, threadId);
+        stat_REG_create_ptr_Array_Of_ptr_list_Of_Threads(obj);
     }
         // get.
-    OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* OpenAvrilConcurrency::Execute::get_program_ConcurrentQue_Server()
+    OpenAvrilConcurrency::Execute_Control* OpenAvrilConcurrency::Execute::dyn_CLASS_get_ptr_Execute_Control()
     {
-        return stat_get_program_ConcurrentQue_Server();
+        return _stat_CLASS_ptr_Execute_Control;
     }
-    OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* OpenAvrilConcurrency::Execute::get_program_WriteEnable_ServerInputAction()
+    void* OpenAvrilConcurrency::Execute::dyn_PGM_get_ConcurrentQue_Server()
     {
-        return stat_get_program_WriteEnable_ServerInputAction();
+        return stat_PGM_get_ConcurrentQue_Server();
     }
-    OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* OpenAvrilConcurrency::Execute::get_program_WriteEnable_ServerOutputRecieve()
+    void* OpenAvrilConcurrency::Execute::dyn_PGM_get_WriteEnable_ServerInputAction()
     {
-        return stat_get_program_WriteEnable_ServerOutputRecieve();
+        return stat_PGM_get_WriteEnable_ServerInputAction();
+    }
+    void* OpenAvrilConcurrency::Execute::dyn_PGM_get_WriteEnable_ServerOutputRecieve()
+    {
+        return stat_PGM_WriteEnable_ServerOutputRecieve();
     }
         // set.
     // static.
+        // create.
         // get.
         // set.
 
 // private.
     // dynamic.
-        // get.
-        // set.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
     // static.
-    void OpenAvrilConcurrency::Execute::stat_create_ptr_Execute_Control(uint8_t number_Implemented_Cores)
+        // classes.
+            // create.
+    void OpenAvrilConcurrency::Execute::stat_CLASS_create_ptr_Execute_Control()
     {
-        class OpenAvrilConcurrency::Execute_Control* _ptr_Execute_Control = new class OpenAvrilConcurrency::Execute_Control(number_Implemented_Cores);
-        while (stat_get_ptr_Execute_Control() == NULL) { }
+        _stat_CLASS_ptr_Execute_Control = new class OpenAvrilConcurrency::Execute_Control();
+        while (stat_CLASS_get_ptr_Execute_Control() == NULL) {}
     }
-    void OpenAvrilConcurrency::Execute::stat_create_ptr_array_Of_ptr_list_Of_Threads()
+            // get.
+    OpenAvrilConcurrency::Execute_Control* OpenAvrilConcurrency::Execute::stat_CLASS_get_ptr_Execute_Control()
     {
-        std::list<std::thread*>* _ptr_array_Of_ptr_list_Of_Threads = new std::list<std::thread*>;
-        while (stat_get_ptr_array_Of_ptr_list_Of_Threads() == NULL) {}
-        for (uint8_t threadID = 0; threadID < sizeof(stat_get_ptr_array_Of_ptr_list_Of_Threads()); threadID++)
+        return _stat_CLASS_ptr_Execute_Control;
+    }
+            // set.
+        // registers.
+            // create.
+    void OpenAvrilConcurrency::Execute::stat_REG_create_ptr_Array_Of_ptr_list_Of_Threads(OpenAvrilConcurrency::Framework_Server* obj)
+    {
+        _stat_REG_ptr_array_Of_ptr_list_Of_Threads = new std::list<std::thread*>;
+        while (stat_REG_get_ptr_Array_Of_Threads() == NULL) {}
+        stat_REG_get_ptr_Array_Of_Threads()->resize(4);//NUMBER OF THEREADS.
+        for (uint8_t threadID = 1; threadID < sizeof(*stat_REG_get_ptr_Array_Of_Threads()); threadID++)
         {
-            stat_get_Item_On_array_Of_ptr_list_Of_Threads(threadID);
+            stat_REG_set_Item_On_array_Of_Threads(obj, threadID);
         }
     }
-        // get.
-    OpenAvrilConcurrency::Execute_Control* OpenAvrilConcurrency::Execute::stat_get_ptr_Execute_Control()
+            // get.
+    std::list<std::thread*>* OpenAvrilConcurrency::Execute::stat_REG_get_ptr_Array_Of_Threads()
     {
-        return _ptr_Execute_Control;
+        return _stat_REG_ptr_array_Of_ptr_list_Of_Threads;
     }
-    std::thread* OpenAvrilConcurrency::Execute::stat_get_Item_On_array_Of_ptr_list_Of_Threads(uint8_t threadID)
+            // set.
+    void OpenAvrilConcurrency::Execute::stat_REG_set_Item_On_array_Of_Threads(OpenAvrilConcurrency::Framework_Server* obj, uint8_t threadID)
     {
-        auto temp = stat_get_ptr_array_Of_ptr_list_Of_Threads()->begin();
+        auto temp = stat_REG_get_ptr_Array_Of_Threads()->begin();
         std::advance(temp, threadID);
-        return *temp;
+        *temp = new std::thread(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_Item_On_list_Of_ptr_Concurrent(threadID)->thread_Concurrency, obj, threadID);
     }
-    std::list<std::thread*>* OpenAvrilConcurrency::Execute::stat_get_ptr_array_Of_ptr_list_Of_Threads()
+        // programs.
+            // create.
+            // get.
+    void* OpenAvrilConcurrency::Execute::stat_PGM_get_ConcurrentQue_Server()
     {
-        return _ptr_array_Of_ptr_list_Of_Threads;
+        return _stat_PGM_ConcurrentQue_Server;
     }
-    OpenAvrilConcurrency::Execute_Control* OpenAvrilConcurrency::Execute::get_ptr_Execute_Control()
+    void* OpenAvrilConcurrency::Execute::stat_PGM_get_WriteEnable_ServerInputAction()
     {
-        return _ptr_Execute_Control;
+        return _stat_PGM_WriteEnable_ServerInputAction;
     }
-    OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* OpenAvrilConcurrency::Execute::stat_get_program_ConcurrentQue_Server()
+    void* OpenAvrilConcurrency::Execute::stat_PGM_WriteEnable_ServerOutputRecieve()
     {
-        return _program_ConcurrentQue_Server;
+        return _stat_PGM_WriteEnable_ServerOutputRecieve;
     }
-    OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* OpenAvrilConcurrency::Execute::stat_get_program_WriteEnable_ServerInputAction()
-    {
-        return _program_WriteEnable_ServerInputAction;
-    }
-    OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* OpenAvrilConcurrency::Execute::stat_get_program_WriteEnable_ServerOutputRecieve()
-    {
-        return _program_WriteEnable_ServerOutputRecieve;
-    }
-        // set.
-    void OpenAvrilConcurrency::Execute::stat_set_ptr_Execute_Control(OpenAvrilConcurrency::Execute_Control* newClass)
-    {
-        *_ptr_Execute_Control = *newClass;
-    }
-    void OpenAvrilConcurrency::Execute::stat_set_Item_On_array_Of_ptr_list_Of_Threads(OpenAvrilConcurrency::Framework_Server* obj, uint8_t threadID)
-    {
-        auto temp = stat_get_ptr_array_Of_ptr_list_Of_Threads()->begin();
-        std::advance(temp, threadID);
-        *temp = new std::thread(obj->get_ptr_Server()->get_ptr_Algorithms()->get_ptr_Item_On_list_Of_ptr_Concurrent(threadID)->thread_Concurrency, obj, threadID);
-    }
- 
+            // set.

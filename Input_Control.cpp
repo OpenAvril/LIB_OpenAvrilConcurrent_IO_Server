@@ -1,43 +1,57 @@
 #include "pch.h"
-// classes.
-
-// registers.
 
 // pointers.
+    // classes. 
+    // registers.
 
-// constructor.
+// public.
+    // constructor.
     OpenAvrilConcurrency::Input_Control::Input_Control()
     {
-
+        std::cout << "entered CONSTRUCTOR of Input_Control()." << std::endl;
+        std::cout << "exiting CONSTRUCTOR of Input_Control()." << std::endl;
     }
 
-// destructor.
+    // destructor.
     OpenAvrilConcurrency::Input_Control::~Input_Control()
     {
 
     }
 
-// public.
     // dynamic.
+        // create.
         // get.
         // set.
-    // static.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
     void OpenAvrilConcurrency::Input_Control::select_And_Set_Input_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId)
     {
         switch (praiseEventId)
         {
         case 0:
-            obj->get_ptr_Server()->get_ptr_Data()->get_ptr_array_Of_doubleBuffer_Input_WRITE()->set_Subset_With_InputSubet(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_I()->get_ptr_Praise0_Input());
+            obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(obj);
             break;
         }
     }
-        // get.
-        // set.
     // static.
+        // create.
         // get.
         // set.
+
+// private.
+    // dynamic.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
