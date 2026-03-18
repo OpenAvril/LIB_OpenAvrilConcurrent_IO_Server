@@ -67,7 +67,7 @@
         switch (praiseEventId)
         {
         case 0:
-            obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->get_REG_ptr_Item_array_Of_doubleBuffer_Input_WRITE(obj);
+            obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(obj);
             break;
         }
     }

@@ -38,15 +38,15 @@
         // get.
     OpenAvrilConcurrency::Concurrent* OpenAvrilConcurrency::Algorithms::dyn_CLASS_get_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID)
     {
-        return stat_REG_get_Item_On_List_ptr_Concurrent(concurrentThreadID);
+        auto temp = stat_REG_get_ptr_list_Of_ptr_Concurrent()->begin();
+        std::advance(temp, concurrentThreadID);
+        return *temp;
     }
-OpenAvrilConcurrency::User_Algorithm* OpenAvrilConcurrency::Algorithms::dyn_CLASS_get_ptr_User_Algorithims()
+    OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Algorithms::dyn_CLASS_get_Item_On_list_Of_ptr_PraiseAlgorithmSubset(uint8_t concurrentThreadID)
     {
-        return _stat_CLASS_ptr_User_Algorithmorithms;
-    }
-    OpenAvrilConcurrency::User_Algorithm* OpenAvrilConcurrency::Algorithms::get_CLASS_ptr_User_Algorithms()
-    {
-        return stat_CLASS_get_ptr_User_Algorithims();
+    auto temp = stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset()->begin();
+    std::advance(temp, concurrentThreadID);
+    return *temp;
     }
         // set.
     // static.
@@ -89,23 +89,6 @@ OpenAvrilConcurrency::User_Algorithm* OpenAvrilConcurrency::Algorithms::dyn_CLAS
         stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset()->resize(1);
     }
             // get.
-    OpenAvrilConcurrency::User_Algorithm* OpenAvrilConcurrency::Algorithms::stat_CLASS_get_ptr_User_Algorithims()
-    {
-        return stat_CLASS_get_ptr_User_Algorithims();
-    }
-    OpenAvrilConcurrency::Concurrent* OpenAvrilConcurrency::Algorithms::stat_REG_get_Item_On_List_ptr_Concurrent(uint8_t concurrentThreadID)
-    {
-        auto temp = stat_REG_get_ptr_list_Of_ptr_Concurrent()->begin();
-        std::advance(temp, concurrentThreadID);
-        return *temp;
-    }
-    OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Algorithms::stat_REG_get_Item_On_List_ptr_PraiseAlgorithmSubset(uint8_t concurrentThreadID)
-    {
-        auto temp = stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset()->begin();
-        std::advance(temp, concurrentThreadID);
-        return *temp;
-    }
-
     std::list<OpenAvrilConcurrency::Concurrent*>* OpenAvrilConcurrency::Algorithms::stat_REG_get_ptr_list_Of_ptr_Concurrent()
     {
         return _stat_REG_ptr_list_Of_ptr_Concurrent;

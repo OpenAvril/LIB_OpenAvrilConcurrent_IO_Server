@@ -45,15 +45,15 @@
 		newINITIALISED_Input->app_initialise_CLASS_Control();
 		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
 		{
-			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrentThreadID, newINITIALISED_Input);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->app_initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrentThreadID, newINITIALISED_Input);
 		}
 		for (uint8_t sideID = 0; sideID < uint8_t(2); sideID++)
 		{
-			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_array_Of_doubleBuffer_Input(obj, newINITIALISED_Input);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->app_initialise_REG_Item_On_array_Of_doubleBuffer_Input(obj, newINITIALISED_Input);
 		}
 		for (uint8_t slotID = 0; slotID < obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Praise_Events(); slotID++)
 		{
-			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_vector_Of_stack_Of_InputPraise(obj, newINITIALISED_Input);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->app_initialise_REG_Item_On_vector_Of_stack_Of_InputPraise(obj, newINITIALISED_Input);
 		}
 		delete newINITIALISED_Input;
 		OpenAvrilConcurrency::Output* newINITIALISED_Output = new class OpenAvrilConcurrency::Output();
@@ -61,15 +61,15 @@
 		newINITIALISED_Output->app_initialise_CLASS_Control();
 		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
 		{
-			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrentThreadID, newINITIALISED_Output);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->app_initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrentThreadID, newINITIALISED_Output);
 		}
 		for (uint8_t sideID = 0; sideID < uint8_t(2); sideID++)
 		{
-			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_array_Of_doubleBuffer_Output(obj, newINITIALISED_Output);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->app_initialise_REG_Item_On_array_Of_doubleBuffer_Output(obj, newINITIALISED_Output);
 		}
 		for (uint8_t slotID = 0; slotID < obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Praise_Events(); slotID++)
 		{
-			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_vector_Of_stack_Of_OutputPraise(obj, newINITIALISED_Output);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->app_initialise_REG_Item_On_vector_Of_stack_Of_OutputPraise(obj, newINITIALISED_Output);
 		}
 		delete newINITIALISED_Output;
 
