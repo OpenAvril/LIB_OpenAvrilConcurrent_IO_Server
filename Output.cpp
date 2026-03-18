@@ -39,9 +39,15 @@ void OpenAvrilConcurrency::Output::app_FUNCT_create_ptr_Output_Control()
 }
 void OpenAvrilConcurrency::Output::app_FUNCT_initialise_Item_PraiseInSubset(OpenAvrilConcurrency::Framework_Server* obj)
 {
-    stat_REG_set_ptr_Item_PraiseOutputSubset(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Output()->get_CLASS_ptr_Item_ptr_PraiseOutputSubsets(0));
+    stat_REG_set_ptr_Item_PraiseOutputSubset(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Output()->dyn_CLASS_getr_Item_On_List_Of_ptr_PraiseOutputSubsets(0));
 }
 // get.
+
+OpenAvrilConcurrency::Output_Control* OpenAvrilConcurrency::Output::dyn_CLASS_get_ptr_Output_Control()
+{
+    return _CLASS_ptr_Output_Control;
+}
+
 uint8_t OpenAvrilConcurrency::Output::dyn_REG_get_ptr_in_playerId()
 {
     return *stat_REG_get_ptr_in_praiseEventId();
@@ -50,7 +56,7 @@ uint8_t OpenAvrilConcurrency::Output::dyn_REG_get_ptr_in_praiseEventId()
 {
     return *stat_REG_get_ptr_in_playerId();
 }
-OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Output::dyn_REG_get_ptr_Item_On_List_Of_PraiseOutputSubset()
+OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Output::dyn_REG_get_ptr_Item_On_List_Of_PraiseOutputSubset(uint8_t praiseId)
 {
     return stat_REG_get_ptr_List_Of_PraiseOutputSubset();
 }

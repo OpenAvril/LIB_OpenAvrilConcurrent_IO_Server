@@ -42,7 +42,7 @@
 		delete newINITIALISED_Concurrent;
 		OpenAvrilConcurrency::Input* newINITIALISED_Input = new class OpenAvrilConcurrency::Input();
 		while (newINITIALISED_Input == NULL) {}
-		newINITIALISED_Input->app_FUNCT_initialise_ptr_Input_Control();
+		newINITIALISED_Input->app_FUNCT_create_ptr_Input_Control();
 		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
 		{
 			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->app_initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrentThreadID, newINITIALISED_Input);
@@ -53,12 +53,12 @@
 		}
 		for (uint8_t slotID = 0; slotID < obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Praise_Events(); slotID++)
 		{
-			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->app_initialise_REG_Item_On_vector_Of_stack_Of_InputPraise(obj, newINITIALISED_Input);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->app_initialise_REG_Item_On_vector_Of_stack_Of_InputPraise(slotID, newINITIALISED_Input);
 		}
 		delete newINITIALISED_Input;
 		OpenAvrilConcurrency::Output* newINITIALISED_Output = new class OpenAvrilConcurrency::Output();
 		while (newINITIALISED_Output == NULL) {}
-		newINITIALISED_Output->app_FUNCT_initialise_ptr_Input_Control();
+		newINITIALISED_Output->app_FUNCT_create_ptr_Output_Control();
 		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
 		{
 			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->app_initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrentThreadID, newINITIALISED_Output);
@@ -69,14 +69,14 @@
 		}
 		for (uint8_t slotID = 0; slotID < obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Praise_Events(); slotID++)
 		{
-			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->app_initialise_REG_Item_On_vector_Of_stack_Of_OutputPraise(obj, newINITIALISED_Output);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->app_initialise_REG_Item_On_vector_Of_stack_Of_OutputPraise(slotID, newINITIALISED_Output);
 		}
 		delete newINITIALISED_Output;
 
-		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->initialise_Libraries();
+		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->app_FUNCT_initialise_Libraries();
 		std::cout << "INIT Libraries" << std::endl;
 
-		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->initialise_Threads(obj);
+		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->app_FUNCT_initialise_Threads(obj);
 		std::cout << "INIT Thread(s)" << std::endl;
 
 		std::cout << "exiting => OpenAvrilConcurrency::Framework_Server::app_initialise_Program()" << std::endl;

@@ -17,9 +17,10 @@ namespace OpenAvrilConcurrency
         void app_FUNCT_create_ptr_Output_Control();
         void app_FUNCT_initialise_Item_PraiseInSubset(class Framework_Server* obj);
         // get.
-        static uint8_t dyn_REG_get_ptr_in_playerId();
-        static uint8_t dyn_REG_get_ptr_in_praiseEventId();
-        class Object* dyn_REG_get_ptr_Item_On_List_Of_PraiseOutputSubset();
+        class Output_Control* dyn_CLASS_get_ptr_Output_Control();
+        uint8_t dyn_REG_get_ptr_in_playerId();
+        uint8_t dyn_REG_get_ptr_in_praiseEventId();
+        class Object* dyn_REG_get_ptr_Item_On_List_Of_PraiseOutputSubset(uint8_t praiseId);
         // set.
     // static.
         // create.

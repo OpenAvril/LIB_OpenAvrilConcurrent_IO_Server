@@ -7,17 +7,19 @@ namespace OpenAvrilConcurrency
     public:
 // public.
     // constructor.
+        Data_Control();
 
     // destructor.
+        virtual ~Data_Control();
 
     // dynamic.
         uint8_t app_FUNCT_Bool_To_Int(bool bufferSide);
-        void app_FUNCT_Flip_Input_DoubleBuffer(class Data* data);
-        void app_FUNCT_Flip_Output_DoubleBuffer(class Data* data);
-        void dyn_FUNCT_pop_From_Stack_Of_Input(class Data* data, uint8_t concurrentThreadID);
-        void app_FUNCT_pop_From_Stack_Of_Output(class Data* data);
-        void app_FUNCT_push_To_STACK_Of_Input(class Data* data);
-        void app_FUNCT_push_To_STACK_Of_Output(class Data* data, uint8_t concurrentThreadID);
+        void app_FUNCT_Flip_Input_DoubleBuffer();
+        void app_FUNCT_Flip_Output_DoubleBuffer();
+        void app_FUNCT_pop_From_Stack_Of_Input(class Framework_Server* obj, uint8_t concurrentThreadID);
+        void app_FUNCT_pop_From_Stack_Of_Output(class Framework_Server* obj);
+        void app_FUNCT_push_To_STACK_Of_Input(class Framework_Server* obj);
+        void app_FUNCT_push_To_STACK_Of_Output(class Framework_Server* obj, uint8_t concurrentThreadID);
         void app_REG_initialise_ptr_flag_isLoaded_Stack_InputAction(bool newINITIALISED_Bool);
         void app_REG_initialise_ptr_flag_isLoaded_Stack_OutputSend(bool newINITIALISED_Bool);
         void app_REG_initialise_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(bool newINITIALISED_Bool);

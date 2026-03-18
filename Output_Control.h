@@ -2,21 +2,21 @@
 
 namespace OpenAvrilConcurrency
 {
-	class Input_Control
+	class Output_Control
 	{
 	public:
 		// public.
 			// constructor.
-		Input_Control();
+		Output_Control();
 
 		// destructor.
-		virtual ~Input_Control();
+		virtual ~Output_Control();
 
 		// dynamic.
 			// create.
 			// get.
 			// set.
-		void select_And_Set_Input_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId);
+		void select_And_Set_Output_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId);
 		// static.
 			// create.
 			// get.

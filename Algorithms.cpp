@@ -40,6 +40,10 @@
         std::advance(temp, concurrentThreadID);
         return *temp;
     }
+    OpenAvrilConcurrency::User_Algorithm* OpenAvrilConcurrency::Algorithms::dyn_CLASS_get_ptr_User_Algorithims()
+    {
+        return stat_CLASS_get_ptr_User_Algorithims();
+    }
         // set.
     // static.
         // create.
@@ -63,6 +67,10 @@
     {
         _stat_CLASS_ptr_User_Algorithmorithms = new class OpenAvrilConcurrency::User_Algorithm();
         while (stat_CLASS_get_ptr_User_Algorithims() == NULL) {}
+    }
+    OpenAvrilConcurrency::User_Algorithm* OpenAvrilConcurrency::Algorithms::stat_CLASS_get_ptr_User_Algorithims()
+    {
+        return _stat_CLASS_ptr_User_Algorithmorithms;
     }
             // get.
             // set.
