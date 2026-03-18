@@ -1,73 +1,12 @@
 #pragma once
-
 namespace OpenAvrilConcurrency
 {
     class Praise0_Algorithm
     {
 	public:
-// public.
-	// constructor.
-
-	// destructor.
-
-	// dynamic.
-		// create.
-		// get.
-		// set.
-	// static.
-		// create.
-		// get.
-		// set.
-
-// private.
-	// dynamic.
-		// classes.
-			// create.
-			// get.
-			// set.
-		// registers.
-			// create.
-			// get.
-			// set.
-	// static.
-		// classes.
-			// create.
-			// get.
-			// set.
-		// registers.
-			// create.
-			// get.
-			// set.
-
-
-// constructor.
 		Praise0_Algorithm();
-
-// destructor.
 		virtual ~Praise0_Algorithm();
-
-// public.
-	// dynamic.
 		void Do_Praise(class OpenAvrilConcurrency::Praise0_Input* ptr_In_SubSet, class OpenAvrilConcurrency::Praise0_Output* ptr_Out_SubSet);
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-
 	private:
-// private.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// classes.
-			// create.
-			// get.
-			// set.
-		// registers.
-			// create.
-			// get.
-			// set.
     };
 }
