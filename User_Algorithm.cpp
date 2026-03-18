@@ -2,62 +2,28 @@
 
 // pointers.
 	// classes.
-class OpenAvrilConcurrency::Praise0_Algorithm* OpenAvrilConcurrency::User_Algorithm::_stat_CLASS_ptr_Praise0_Algorithm = NULL;
+	OpenAvrilConcurrency::Praise0_Algorithm* OpenAvrilConcurrency::User_Algorithm::_stat_CLASS_ptr_Praise0_Algorithm = NULL;
 	// registers.
 
 // public.
 	// constructor.
-
-	// destructor.
-
-	// dynamic.
-		// create.
-		// get.
-		// set.
-	// static.
-		// create.
-		// get.
-		// set.
-
-// private.
-	// dynamic.
-		// classes.
-			// create.
-			// get.
-			// set.
-		// registers.
-			// create.
-			// get.
-			// set.
-	// static.
-		// classes.
-			// create.
-			// get.
-			// set.
-		// registers.
-			// create.
-			// get.
-			// set.
-			
-
-// constructor.
 	OpenAvrilConcurrency::User_Algorithm::User_Algorithm()
 	{
-		std::cout << "entered => User_Algorithm()" << std::endl;
+		std::cout << "entered CONSTRUCTOR of User_Algorithm()." << std::endl;
 		stat_CLASS_create_ptr_Praise0_Algorithm();
-		std::cout << "exiting => User_Algorithm()" << std::endl;
+		std::cout << "exiting CONSTRUCTOR of User_Algorithm()." << std::endl;
 	}
 
-// destructor.
+	// destructor.
 	OpenAvrilConcurrency::User_Algorithm::~User_Algorithm()
 	{
 		delete _stat_CLASS_ptr_Praise0_Algorithm;
 	}
 
-// public.
 	// dynamic.
+		// create.
 		// get.
-	OpenAvrilConcurrency::Object* OpenAvrilConcurrency::User_Algorithm::get_CLASS_ptr_Item_ptr_PraiseAlgorithmSubsets(uint8_t praiseID)
+	OpenAvrilConcurrency::Object* OpenAvrilConcurrency::User_Algorithm::dyn_CLASS_getr_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(uint8_t praiseID)
 	{
 		switch (praiseID)
 		{
@@ -70,18 +36,27 @@ class OpenAvrilConcurrency::Praise0_Algorithm* OpenAvrilConcurrency::User_Algori
 		}
 	}
 		// set.
+	// static.
+		// create.
+		// get.
+		// set.
 
 // private.
 	// dynamic.
-		// get.
-
-		// set.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
 	// static.
 		// classes.
 			// create.
 	void OpenAvrilConcurrency::User_Algorithm::stat_CLASS_create_ptr_Praise0_Algorithm()
 	{
-		OpenAvrilConcurrency::Praise0_Algorithm* _stat_CLASS_ptr_Praise0_Algorithm = new class OpenAvrilConcurrency::Praise0_Algorithm();
+		_stat_CLASS_ptr_Praise0_Algorithm = new class OpenAvrilConcurrency::Praise0_Algorithm();
 		while (stat_CLASS_get_ptr_Praise0_Algorithm() == NULL) {}
 	}
 			// get.

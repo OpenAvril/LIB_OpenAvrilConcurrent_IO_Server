@@ -2,16 +2,16 @@
 
 // pointers.
     // classes.
-    class OpenAvrilConcurrency::Data_Control* OpenAvrilConcurrency::Data::_stat_CLASS_ptr_Data_Control = NULL;
-    class OpenAvrilConcurrency::User_Input* OpenAvrilConcurrency::Data::_stat_CLASS_ptr_User_Input = NULL;
-    class OpenAvrilConcurrency::User_Output* OpenAvrilConcurrency::Data::_stat_CLASS_ptr_User_Output = NULL;
+    OpenAvrilConcurrency::Data_Control* OpenAvrilConcurrency::Data::_stat_CLASS_ptr_Data_Control = NULL;
+    OpenAvrilConcurrency::User_Input* OpenAvrilConcurrency::Data::_stat_CLASS_ptr_User_Input = NULL;
+    OpenAvrilConcurrency::User_Output* OpenAvrilConcurrency::Data::_stat_CLASS_ptr_User_Output = NULL;
     // registers.
-    std::array<class OpenAvrilConcurrency::Input*, 3>* OpenAvrilConcurrency::Data::_stat_REG_ptr_array_Of_buffer_Input_ReferenceForThread = NULL;//NUMBER OF CONCURRENT THREADS.
-    std::array<class OpenAvrilConcurrency::Output*, 3>* OpenAvrilConcurrency::Data::_stat_REG_ptr_array_Of_buffer_Output_ReferenceForThread = NULL;//NUMBER OF CONCURRENT THREADS.
-    std::array<class OpenAvrilConcurrency::Input*, 2>* OpenAvrilConcurrency::Data::_stat_REG_ptr_array_Of_doubleBuffer_Input = NULL;
-    std::array<class OpenAvrilConcurrency::Output*, 2>* OpenAvrilConcurrency::Data::_stat_REG_ptr_array_Of_doubleBuffer_Output = NULL;
-    std::vector<class OpenAvrilConcurrency::Input*>* OpenAvrilConcurrency::Data::_stat_REG_ptr_vector_Of_stack_Of_InputPraise = NULL;
-    std::vector<class OpenAvrilConcurrency::Output*>* OpenAvrilConcurrency::Data::_stat_REG_ptr_vector_Of_stack_Of_OutputPraise = NULL;
+    std::array<OpenAvrilConcurrency::Input*, 3>* OpenAvrilConcurrency::Data::_stat_REG_ptr_array_Of_buffer_Input_ReferenceForThread = NULL;//NUMBER OF CONCURRENT THREADS.
+    std::array<OpenAvrilConcurrency::Output*, 3>* OpenAvrilConcurrency::Data::_stat_REG_ptr_array_Of_buffer_Output_ReferenceForThread = NULL;//NUMBER OF CONCURRENT THREADS.
+    std::array<OpenAvrilConcurrency::Input*, 2>* OpenAvrilConcurrency::Data::_stat_REG_ptr_array_Of_doubleBuffer_Input = NULL;
+    std::array<OpenAvrilConcurrency::Output*, 2>* OpenAvrilConcurrency::Data::_stat_REG_ptr_array_Of_doubleBuffer_Output = NULL;
+    std::vector<OpenAvrilConcurrency::Input*>* OpenAvrilConcurrency::Data::_stat_REG_ptr_vector_Of_stack_Of_InputPraise = NULL;
+    std::vector<OpenAvrilConcurrency::Output*>* OpenAvrilConcurrency::Data::_stat_REG_ptr_vector_Of_stack_Of_OutputPraise = NULL;
 
 // public.
     // constructor.
@@ -94,25 +94,25 @@
     OpenAvrilConcurrency::Input* OpenAvrilConcurrency::Data::dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_READ(OpenAvrilConcurrency::Framework_Server* obj)
     {
         auto temp = stat_get_REG_ptr_array_Of_doubleBuffer_Input()->begin();
-        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->boolToInt(!obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->get_REG_Item_side_To_Write_For_array_Of_doubleBuffer_Input()));
+        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_Bool_To_Int(!obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_get_Item_side_To_Write_For_array_Of_doubleBuffer_Input()));
         return *temp;
     }
     OpenAvrilConcurrency::Input* OpenAvrilConcurrency::Data::dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(OpenAvrilConcurrency::Framework_Server* obj)
     {
         auto temp = stat_get_REG_ptr_array_Of_doubleBuffer_Input()->begin();
-        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->boolToInt(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->get_REG_Item_side_To_Write_For_array_Of_doubleBuffer_Input()));
+        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_Bool_To_Int(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_get_Item_side_To_Write_For_array_Of_doubleBuffer_Input()));
         return *temp;
     }
     OpenAvrilConcurrency::Output* OpenAvrilConcurrency::Data::dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Output_READ(OpenAvrilConcurrency::Framework_Server* obj)
     {
         auto temp = stat_get_REG_ptr_array_Of_doubleBuffer_Output()->begin();
-        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->boolToInt(!obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->get_REG_Item_side_To_Write_For_array_Of_doubleBuffer_Output()));
+        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_Bool_To_Int(!obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_get_Item_side_To_Write_For_array_Of_doubleBuffer_Output()));
         return *temp;
     }
     OpenAvrilConcurrency::Output* OpenAvrilConcurrency::Data::dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE(OpenAvrilConcurrency::Framework_Server* obj)
     {
         auto temp = stat_get_REG_ptr_array_Of_doubleBuffer_Output()->begin();
-        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->boolToInt(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->get_REG_Item_side_To_Write_For_array_Of_doubleBuffer_Output()));
+        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_Bool_To_Int(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_get_Item_side_To_Write_For_array_Of_doubleBuffer_Output()));
         return *temp;
     }
     OpenAvrilConcurrency::Input* OpenAvrilConcurrency::Data::dyn_REG_get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t threadID)
@@ -308,25 +308,25 @@
     void OpenAvrilConcurrency::Data::stat_REG_set_Item_On_Array_Of_doubleBuffer_Input_READ(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Input* newClass)
     {
         auto temp = stat_get_REG_ptr_array_Of_doubleBuffer_Input()->begin();
-        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->boolToInt(!obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->get_REG_Item_side_To_Write_For_array_Of_doubleBuffer_Output()));
+        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_Bool_To_Int(!obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_get_Item_side_To_Write_For_array_Of_doubleBuffer_Output()));
         *temp = newClass;
     }
     void OpenAvrilConcurrency::Data::stat_REG_set_Item_On_Array_Of_doubleBuffer_Input_WRITE(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Input* newClass)
     {
         auto temp = stat_get_REG_ptr_array_Of_doubleBuffer_Input()->begin();
-        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->boolToInt(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->get_REG_Item_side_To_Write_For_array_Of_doubleBuffer_Input()));
+        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_Bool_To_Int(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_get_Item_side_To_Write_For_array_Of_doubleBuffer_Input()));
         *temp = newClass;
     }
     void OpenAvrilConcurrency::Data::stat_REG_set_Item_On_Array_Of_doubleBuffer_Output_READ(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Output* newClass)
     {
         auto temp = stat_REG_get_ptr_vector_Of_stack_Of_OutputPraise()->begin();
-        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->boolToInt(!obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->get_REG_Item_side_To_Write_For_array_Of_doubleBuffer_Output()));
+        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_Bool_To_Int(!obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_get_Item_side_To_Write_For_array_Of_doubleBuffer_Output()));
         *temp = newClass;
     }
     void OpenAvrilConcurrency::Data::stat_REG_set_Item_On_Array_Of_doubleBuffer_Output_WRITE(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Output* newClass)
     {
         auto temp = stat_REG_get_ptr_vector_Of_stack_Of_OutputPraise()->begin();
-        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->boolToInt(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->get_REG_Item_side_To_Write_For_array_Of_doubleBuffer_Output()));
+        std::advance(temp, obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_Bool_To_Int(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_get_Item_side_To_Write_For_array_Of_doubleBuffer_Output()));
         *temp = newClass;
     }
     void OpenAvrilConcurrency::Data::stat_REG_set_Item_On_Vector_Of_stack_Of_InputPraise(uint8_t slot, OpenAvrilConcurrency::Input* newClass)

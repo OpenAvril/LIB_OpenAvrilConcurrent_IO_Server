@@ -8,68 +8,42 @@ namespace OpenAvrilConcurrency
 	public:
 // public.
 	// constructor.
-
-	// destructor.
-
-	// dynamic.
-		// create.
-		// get.
-		// set.
-	// static.
-		// create.
-		// get.
-		// set.
-
-// private.
-	// dynamic.
-		// classes.
-			// create.
-			// get.
-			// set.
-		// registers.
-			// create.
-			// get.
-			// set.
-	// static.
-		// classes.
-			// create.
-			// get.
-			// set.
-		// registers.
-			// create.
-			// get.
-			// set.
-
-
-// constructor.
 		User_Algorithm();
 
-// destructor.
+	// destructor.
 		virtual ~User_Algorithm();
 
-// public.
 	// dynamic.
+		// create.
 		// get.
-		class Object* get_CLASS_ptr_Item_ptr_PraiseAlgorithmSubsets(uint8_t praiseID);
+		class Object* dyn_CLASS_getr_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(uint8_t praiseID);
 		// set.
-
+	// static.
+		// create.
+		// get.
+		// set.
 	private:
 // private.
 	// dynamic.
-		// get.
-		// set.
+		// classes.
+			// create.
+			// get.
+			// set.
+		// registers.
+			// create.
+			// get.
+			// set.
 	// static.
 		// classes.
 		static class Praise0_Algorithm* _stat_CLASS_ptr_Praise0_Algorithm;
 			// create.
 		static void stat_CLASS_create_ptr_Praise0_Algorithm();
 			// get.
-		class Praise0_Algorithm* get_CLASS_ptr_Praise0_Algorithm();
 		static class Praise0_Algorithm* stat_CLASS_get_ptr_Praise0_Algorithm();
 			// set.
-	// CLASSisters.
-		// create.
-		// get.
-		// set.
+		// registers.
+			// create.
+			// get.
+			// set.
 	};
 }
