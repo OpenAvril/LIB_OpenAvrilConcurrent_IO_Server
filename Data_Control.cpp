@@ -12,12 +12,14 @@
     // constructor.
     OpenAvrilConcurrency::Data_Control::Data_Control()
     {
+        std::cout << "entered CONSTRUCTOR of Data_Control()." << std::endl;
         bool* newDEFAULT_Bool = new bool(true);
         stat_REG_create_ptr_flag_isLoaded_Stack_InputAction(newDEFAULT_Bool);
         stat_REG_create_ptr_flag_isLoaded_Stack_OutputSend(newDEFAULT_Bool);
         stat_REG_create_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(newDEFAULT_Bool);
         stat_REG_create_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(newDEFAULT_Bool);
         delete newDEFAULT_Bool;
+        std::cout << "exiting CONSTRUCTOR of Data_Control()" << std::endl;
     }
 
     // destructor.

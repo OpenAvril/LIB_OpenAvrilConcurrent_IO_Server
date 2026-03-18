@@ -6,62 +6,22 @@
 
 // public.
     // constructor.
-
-    // destructor.
-
-    // dynamic.
-        // create.
-        // get.
-        // set.
-    // static.
-        // create.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
-        // classes.
-            // create.
-            // get.
-            // set.
-        // registers.
-            // create.
-            // get.
-            // set.
-    // static.
-        // classes.
-            // create.
-            // get.
-            // set.
-        // registers.
-            // create.
-            // get.
-            // set.
-
-
-
-// constructor.
     OpenAvrilConcurrency::Input_Control::Input_Control()
     {
-
+        std::cout << "entered CONSTRUCTOR of Input_Control()." << std::endl;
+        std::cout << "exiting CONSTRUCTOR of Input_Control()" << std::endl;
     }
 
-// destructor.
+    // destructor.
     OpenAvrilConcurrency::Input_Control::~Input_Control()
     {
 
     }
 
-// public.
     // dynamic.
+        // create.
         // get.
         // set.
-    // static.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
     void OpenAvrilConcurrency::Input_Control::select_And_Set_Input_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId)
     {
         switch (praiseEventId)
@@ -71,8 +31,27 @@
             break;
         }
     }
-        // get.
-        // set.
     // static.
+        // create.
         // get.
         // set.
+
+// private.
+    // dynamic.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.
+    // static.
+        // classes.
+            // create.
+            // get.
+            // set.
+        // registers.
+            // create.
+            // get.
+            // set.

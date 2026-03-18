@@ -14,7 +14,7 @@ namespace OpenAvrilConcurrency
 
     // dynamic.
         void app_do_Concurrent_Algorithm_For_PraiseEventId(class Framework_Server* obj, char playerId, uint8_t ptr_praiseEventId, class Object* ptr_Algorithm_Subset, class Object* ptr_Input_Subset, class Object* ptr_Output_Subset);
-        void app_initialise_CLASS_Control();
+        void app_FUNCT_initialise_ptr_Input_Control();
         void app_initialise_Item_On_REG_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID, class Object* newINITIALISED_Object);
         // create.
         // get.

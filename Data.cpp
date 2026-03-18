@@ -47,7 +47,7 @@
 
     // dynamic.
         // create.
-    void OpenAvrilConcurrency::Data::app_initialise_CLASS_Control()
+    void OpenAvrilConcurrency::Data::app_FUNCT_initialise_ptr_Input_Control()
     {
         _stat_CLASS_ptr_Data_Control = new OpenAvrilConcurrency::Data_Control();
         while (stat_CLASS_get_ptr_Data_Control() == NULL) {}
