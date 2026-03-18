@@ -9,7 +9,7 @@
     OpenAvrilConcurrency::Input_Control::Input_Control()
     {
         std::cout << "entered CONSTRUCTOR of Input_Control()." << std::endl;
-        std::cout << "exiting CONSTRUCTOR of Input_Control()" << std::endl;
+        std::cout << "exiting CONSTRUCTOR of Input_Control()." << std::endl;
     }
 
     // destructor.

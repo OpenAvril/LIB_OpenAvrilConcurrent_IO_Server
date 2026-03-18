@@ -4,99 +4,61 @@ namespace OpenAvrilConcurrency
 {
     class Output
     {
-// public.
-    // constructor.
-
-    // destructor.
-
-    // dynamic.
-        // create.
-        // get.
-        // set.
-    // static.
-        // create.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
-        // classes.
-            // create.
-            // get.
-            // set.
-        // registers.
-            // create.
-            // get.
-            // set.
-    // static.
-        // classes.
-            // create.
-            // get.
-            // set.
-        // registers.
-            // create.
-            // get.
-            // set.
-
-
-
-
-
-
-
-
     public:
-        // constructor.
+        // public.
+            // constructor.
         Output();
 
         // destructor.
         virtual ~Output();
 
-        // public.
-            // dynamic.
-        void app_FUNCT_initialise_ptr_Input_Control();
-        void initialise_list_Of_PraiseOutSubsets(class Framework_Server* obj);
+        // dynamic.
+            // create.
+        void app_FUNCT_create_ptr_Output_Control();
+        void app_FUNCT_initialise_Item_PraiseInSubset(class Framework_Server* obj);
         // get.
-        class Output_Control* get_CLASS_ptr_Output_Control();
-        uint8_t get_REG_out_praiseEventId();
-        uint8_t get_REG_out_playerId();
-        class Object* get_REG_ptr_Item_On_List_Of_PraiseOutputSubset(uint8_t praiseID);
+        static uint8_t dyn_REG_get_ptr_in_playerId();
+        static uint8_t dyn_REG_get_ptr_in_praiseEventId();
+        class Object* dyn_REG_get_ptr_Item_On_List_Of_PraiseOutputSubset();
         // set.
-        void set_REG_ptr_Item_PraiseOutputSubset(uint8_t praiseID, class Object* objObject);
-        // static.
-            // get.
-            // set.
-
+    // static.
+        // create.
+        // get.
+        // set.
     private:
         // private.
             // dynamic.
-                // get.
-                // set.
+                // classes.
+                    // create.
+                    // get.
+                    // set.
+                // registers.
+                    // create.
+                    // get.
+                    // set.
             // static.
                 // classes.
         static class Output_Control* _CLASS_ptr_Output_Control;
         // create.
         static void stat_CLASS_create_ptr_Output_Control();
         // get.
-        static Output_Control* stat_get_CLASS_ptr_Output_Control();
+        static Output_Control* stat_CLASS_get_ptr_Output_Control();
         // set.
     // registers.
-        static uint8_t* _REG_ptr_out_praiseEventId;
-        static uint8_t* _REG_ptr_out_playerId;
-        static std::list<class Object*>* _REG_ptr_Lits_Of_PraiseOutSubset;
+        static uint8_t* _REG_ptr_in_praiseEventId;
+        static uint8_t* _REG_ptr_in_playerId;
+        static class Object* _REG_ptr_PraiseInSubset;
         // create.
-        static void stat_REG_create_ptr_out_playerId(uint8_t* newDEFAULT_uint8_t);
-        static void stat_REG_create_ptr_out_praiseEventId(uint8_t* newDEFAULT_uint8_t);
-        static void stat_REG_create_ptr_PraiseOutSubsets();
+        static void stat_REG_create_ptr_in_playerId(uint8_t* newDEFAULT_uint8_t);
+        static void stat_REG_create_ptr_in_praiseEventId(uint8_t* newDEFAULT_uint8_t);
+        static void stat_REG_create_ptr_PraiseInSubsets();
         // get.
-        static uint8_t stat_REG_get_ptr_out_playerId();
-        static uint8_t stat_REG_get_ptr_out_praiseEventId();
-        static class Object* stat_get_REG_ptr_Item_On_List_Of_PraiseOutputSubset(uint8_t praiseID);
-        static std::list<class Object*>* stat_get_REG_ptr_List_Of_PraiseOutputSubset();
+        static uint8_t* stat_REG_get_ptr_in_praiseEventId();
+        static uint8_t* stat_REG_get_ptr_in_playerId();
+        static class Object* stat_REG_get_ptr_List_Of_PraiseOutputSubset();
         // set.
-        static void stat_REG_set_ptr_out_playerId(uint8_t* new_uint8_t);
-        static void stat_REG_set_ptr_out_praiseEventId(uint8_t* new_uint8_t);
-        static void stat_REG_set_ptr_Output_Control(class Output_Control* newClass);
-        static void stat_REG_set_Item_On_List_Of_PraiseOutputSubset(uint8_t praiseID, class Object* objObject);
+        static void stat_REG_set_ptr_in_playerId(uint8_t new_uint8_t);
+        static void stat_REG_set_ptr_in_praiseEventId(uint8_t new_uint8_t);
+        static void stat_REG_set_ptr_Item_PraiseOutputSubset(class Object* objObject);
     };
 }
