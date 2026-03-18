@@ -17,6 +17,7 @@ namespace OpenAvrilConcurrency
         void app_CLASS_initialise_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID, class Concurrent* newINITIALISED_Concurrent);
         // get.
         class Concurrent* dyn_CLASS_get_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID);
+        class User_Algorithm* dyn_CLASS_get_ptr_User_Algorithims();
         // set.
     // static.
         // create.

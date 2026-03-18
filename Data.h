@@ -55,7 +55,7 @@ namespace OpenAvrilConcurrency
 
 // public.
     // dynamic.
-        void initialise_CLASS_Control();
+        void app_initialise_CLASS_Control();
         void initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t concurrentThreadID, class Input* newINITIALISED_Input);
         void initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Output_ReferenceForThread(uint8_t concurrentThreadID, class Output* newINITIALISED_Output);
         void initialise_REG_Item_On_array_Of_doubleBuffer_Input(class Framework_Server* obj, class Input* newINITIALISED_Input);

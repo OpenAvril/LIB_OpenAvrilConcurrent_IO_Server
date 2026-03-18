@@ -34,7 +34,7 @@
 		delete newINITIALISED_Value;
 		OpenAvrilConcurrency::Concurrent* newINITIALISED_Concurrent = new class OpenAvrilConcurrency::Concurrent();
 		while (newINITIALISED_Concurrent == NULL) {}
-		newINITIALISED_Concurrent->initialise_CLASS_Control();
+		newINITIALISED_Concurrent->app_initialise_CLASS_Control();
 		for (uint8_t concurrentThreadID = 0; concurrentThreadID < sizeof((obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Implemented_Cores() - 1)); concurrentThreadID++)
 		{
 			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->app_CLASS_initialise_Item_On_list_Of_ptr_Concurrent(concurrentThreadID, newINITIALISED_Concurrent);
@@ -42,7 +42,7 @@
 		delete newINITIALISED_Concurrent;
 		OpenAvrilConcurrency::Input* newINITIALISED_Input = new class OpenAvrilConcurrency::Input();
 		while (newINITIALISED_Input == NULL) {}
-		newINITIALISED_Input->initialise_CLASS_Control();
+		newINITIALISED_Input->app_initialise_CLASS_Control();
 		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
 		{
 			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrentThreadID, newINITIALISED_Input);
@@ -58,7 +58,7 @@
 		delete newINITIALISED_Input;
 		OpenAvrilConcurrency::Output* newINITIALISED_Output = new class OpenAvrilConcurrency::Output();
 		while (newINITIALISED_Output == NULL) {}
-		newINITIALISED_Output->initialise_CLASS_Control();
+		newINITIALISED_Output->app_initialise_CLASS_Control();
 		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
 		{
 			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrentThreadID, newINITIALISED_Output);

@@ -40,6 +40,10 @@
     {
         return stat_REG_get_Item_On_List_ptr_Concurrent(concurrentThreadID);
     }
+OpenAvrilConcurrency::User_Algorithm* OpenAvrilConcurrency::Algorithms::dyn_CLASS_get_ptr_User_Algorithims()
+    {
+        return _stat_CLASS_ptr_User_Algorithmorithms;
+    }
     OpenAvrilConcurrency::User_Algorithm* OpenAvrilConcurrency::Algorithms::get_CLASS_ptr_User_Algorithms()
     {
         return stat_CLASS_get_ptr_User_Algorithims();

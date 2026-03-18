@@ -25,7 +25,7 @@ namespace OpenAvrilConcurrency
 		// get.
 		static bool dyn_REG_get_flag_isStackLoaded_Server_InputAction(void* obj);
 		static bool dyn_REG_get_flag_isLoaded_Stack_OutputSend(void* obj);
-		static bool dyn_REG_get_flag_IsInitialised_OpenAvrilConcurrencyConcurrency(void* obj);
+		static bool dyn_REG_get_flag_IsInitialised_OpenAvrilConcurrency(void* obj);
 		static unsigned char* dyn_REG_get_PraiseEventId(void* obj);
 		static unsigned char* dyn_REG_get_ptr_output_Value(void* obj);
 		static void* dyn_PGM_get_program_WriteEnableStack_ServerInputAction(void* obj);

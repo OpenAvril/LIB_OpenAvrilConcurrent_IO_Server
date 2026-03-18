@@ -65,7 +65,7 @@ OpenAvrilConcurrency::Output::~Output()
 
 // public.
     // dynamic.
-void OpenAvrilConcurrency::Output::initialise_CLASS_Control()
+void OpenAvrilConcurrency::Output::app_initialise_CLASS_Control()
 {
     stat_CLASS_create_ptr_Output_Control();
 }

@@ -49,7 +49,7 @@ namespace OpenAvrilConcurrency
 
 // public.
     // dynamic.
-        void initialise_CLASS_Control(uint8_t number_Implemented_Cores);
+        void app_initialise_CLASS_Control(uint8_t number_Implemented_Cores);
         void initialise_Libraries();
         void initialise_Threads(class Framework_Server* obj);
         void initialise_ptr_array_Of_ptr_list_Of_Threads(class Framework_Server* obj, uint8_t threadId);

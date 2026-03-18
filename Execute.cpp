@@ -64,7 +64,7 @@
 
 // public.
     // dynamic.
-    void OpenAvrilConcurrency::Execute::initialise_CLASS_Control(uint8_t number_Implemented_Cores)
+    void OpenAvrilConcurrency::Execute::app_initialise_CLASS_Control(uint8_t number_Implemented_Cores)
     {
         OpenAvrilConcurrency::Execute_Control* _stat_CLASS_ptr_Execute_Control = new OpenAvrilConcurrency::Execute_Control(number_Implemented_Cores);
         while (stat_REG_get_ptr_array_Of_ptr_list_Of_Threads() == NULL) {}

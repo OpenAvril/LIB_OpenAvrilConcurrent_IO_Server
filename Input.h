@@ -58,7 +58,7 @@ namespace OpenAvrilConcurrency
 
 // public.
     // dynamic.
-        void initialise_CLASS_Control();
+        void app_initialise_CLASS_Control();
         void initialise_list_Of_PraiseInSubsets(class Framework_Server* obj);
         // get.
         class Input_Control* get_CLASS_ptr_Input_Control();

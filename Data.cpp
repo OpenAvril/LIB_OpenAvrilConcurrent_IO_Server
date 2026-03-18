@@ -82,7 +82,7 @@
 
 // public.
     // dynamic.
-    void OpenAvrilConcurrency::Data::initialise_CLASS_Control()
+    void OpenAvrilConcurrency::Data::app_initialise_CLASS_Control()
     {
         class OpenAvrilConcurrency::Data_Control* _CLASS_ptr_Data_Control = new OpenAvrilConcurrency::Data_Control();
         while (stat_CLASS_get_ptr_Data_Control() == NULL) {}

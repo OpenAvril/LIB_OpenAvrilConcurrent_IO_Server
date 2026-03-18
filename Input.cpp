@@ -69,7 +69,7 @@
 
 // public.
     // dynamic.
-    void OpenAvrilConcurrency::Input::initialise_CLASS_Control()
+    void OpenAvrilConcurrency::Input::app_initialise_CLASS_Control()
     {
         stat_CLASS_create_ptr_Input_Control();
     }

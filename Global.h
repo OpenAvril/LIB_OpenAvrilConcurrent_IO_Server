@@ -21,9 +21,10 @@ namespace OpenAvrilConcurrency
         uint8_t dyn_REG_get_Item_number_Of_Praise_Events();
         // set.
     // static.
-        static uint8_t stat_CONVERT_ByteArray_to_uint8_t(unsigned char* bytes);
         static double stat_CONVERT_ByteArray_to_Double(unsigned char* bytes);
         static float stat_CONVERT_ByteArray_to_Float(unsigned char* bytes);
+        static uint8_t stat_CONVERT_ByteArray_to_uint8_t(unsigned char* bytes);
+
         static unsigned char* stat_CONVERT_Double_to_ByteArray(double double_Value);
         static unsigned char* stat_CONVERT_Float_to_ByteArray(float float_Value);
         static unsigned char* stat_CONVERT_uint8_t_to_ByteArray(uint8_t uint8_t_Value);
