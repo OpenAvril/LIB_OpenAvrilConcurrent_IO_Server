@@ -4,7 +4,6 @@ namespace OpenAvrilConcurrency
 	class Praise0_Input
 	{
 	public:
-
 		Praise0_Input();
 		virtual ~Praise0_Input();
 		float get_Item_input_Value_A();
