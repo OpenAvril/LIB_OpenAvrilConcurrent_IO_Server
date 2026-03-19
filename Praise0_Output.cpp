@@ -2,6 +2,9 @@
 	double* OpenAvrilConcurrency::Praise0_Output::_REG_ptr_output_Value = NULL;
 	OpenAvrilConcurrency::Praise0_Output::Praise0_Output()
 	{
+		std::cout << "entered CONSTRUCTOR of Praise0_Algorithm()." << std::endl;
+
+		std::cout << "exiting CONSTRUCTOR of Praise0_Algorithm()." << std::endl;
 		stat_create_REG_ptr_output_Value();
 	}
 	OpenAvrilConcurrency::Praise0_Output::~Praise0_Output()

@@ -19,9 +19,9 @@
 	{
 		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_Flip_Input_DoubleBuffer();
 	}
-	void* OpenAvrilConcurrency::CLIBConcurrentServerIO::app_generate_Program()
+	void* OpenAvrilConcurrency::CLIBConcurrentServerIO::app_FUNCT_generate_Program()
 	{
-		std::cout << "entered app_generate_Program()." << std::endl;
+		std::cout << "entered app_FUNCT_generate_Program()." << std::endl;
 		_CLASS_ptr_Framework_Server = new class OpenAvrilConcurrency::Framework_Server();
 		while (stat_CLASS_get_ptr_Framework_Server() == NULL) {}
 		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server())->app_initialise_Program(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server()));
@@ -47,11 +47,11 @@
 	{
 		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_push_To_STACK_Of_Input(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj));
 	}
-	void OpenAvrilConcurrency::CLIBConcurrentServerIO::app_select_set_Intput_Subset(void* obj, unsigned char* bytes)
+	void OpenAvrilConcurrency::CLIBConcurrentServerIO::app_FUNCT_select_set_Intput_Subset(void* obj, unsigned char* bytes)
 	{
 		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj))->dyn_CLASS_get_ptr_Input_Control()->select_And_Set_Input_Subset(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj), OpenAvrilConcurrency::Global::stat_CONVERT_ByteArray_to_uint8_t(bytes));
 	}
-	void OpenAvrilConcurrency::CLIBConcurrentServerIO::app_terminate_Program(void* obj)
+	void OpenAvrilConcurrency::CLIBConcurrentServerIO::app_FUNCT_terminate_Program(void* obj)
 	{
 		delete _CLASS_ptr_Framework_Server;
 	}
