@@ -16,8 +16,8 @@ namespace OpenAvrilConcurrency
 		static float* _stat_REG_ptr_input_Value_B;
 		static void stat_REG_create_ptr_input_Value_A(float* newDEFAULT_Float);
 		static void stat_REG_create_ptr_input_Value_B(float* newDEFAULT_Float);
-		static float stat_REG_get_Item_input_Value_A();
-		static float stat_REG_get_Item_input_Value_B();
+		static float* stat_REG_get_Item_input_Value_A();
+		static float* stat_REG_get_Item_input_Value_B();
 		static void stat_REG_dyn_REG_set_Item_input_Value_A(float newValue);
 		static void stat_REG_dyn_REG_set_Item_input_Value_B(float newValue);
 	};

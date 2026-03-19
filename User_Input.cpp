@@ -66,7 +66,7 @@ OpenAvrilConcurrency::Praise0_Input* OpenAvrilConcurrency::User_Input::stat_CLAS
 	// create.
 void OpenAvrilConcurrency::User_Input::stat_REG_create_ptr_List_Of_PraiseInputSubset()
 {
-	_REG_ptr_List_Of_PraiseInputSubset = new std::list<OpenAvrilConcurrency::Object*>();
+	_REG_ptr_List_Of_PraiseInputSubset = new std::list<class OpenAvrilConcurrency::Object*>();
 	while (stat_REG_get_ptr_List_Of_PraiseInputSubset() == NULL) {}
 	stat_REG_get_ptr_List_Of_PraiseInputSubset()->resize(1);
 	stat_REG_set_Item_On_list_Of_ptr_PraiseInputSubset(0, reinterpret_cast<class OpenAvrilConcurrency::Object*>(stat_CLASS_get_ptr_Praise0_Input()));

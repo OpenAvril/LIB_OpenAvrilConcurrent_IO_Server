@@ -66,7 +66,7 @@
 			// create.
 	void OpenAvrilConcurrency::User_Algorithm::stat_REG_create_ptr_List_Of_PraiseAlgorithmSubset()
 	{
-		_REG_ptr_List_Of_PraiseAlgorithmSubset = new std::list<OpenAvrilConcurrency::Object*>();
+		_REG_ptr_List_Of_PraiseAlgorithmSubset = new std::list<class OpenAvrilConcurrency::Object*>();
 		while (stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset() == NULL) {}
 		stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset()->resize(1);
 		stat_REG_set_Item_On_list_Of_ptr_PraiseAlgorithmSubset(0, reinterpret_cast<class OpenAvrilConcurrency::Object*>(stat_CLASS_get_ptr_Praise0_Algorithm()));
