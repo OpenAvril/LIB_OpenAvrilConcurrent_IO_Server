@@ -81,7 +81,7 @@ OpenAvrilConcurrency::Framework_Server* OpenAvrilConcurrency::Global::stat_CONVE
 void OpenAvrilConcurrency::Global::stat_REG_create_number_Of_Implemented_Cores(uint8_t* newDEFAULT_Value)
 {
     std::cout << "entered member function OpenAvrilConcurrency::Global::stat_REG_create_number_Of_Implemented_Cores()." << std::endl;
-    static uint8_t* _stat_REG_ptr_number_Of_Implemented_Cores = new uint8_t(NULL);
+    _stat_REG_ptr_number_Of_Implemented_Cores = new uint8_t(NULL);
     while (stat_REG_get_Ptr_number_Of_Implemented_Cores() == NULL) {}
     stat_REG_set_Item_number_Of_Implemented_Cores(*newDEFAULT_Value);
     std::cout << "exiting member function OpenAvrilConcurrency::Global::stat_REG_create_number_Of_Implemented_Cores()." << std::endl;
@@ -89,7 +89,7 @@ void OpenAvrilConcurrency::Global::stat_REG_create_number_Of_Implemented_Cores(u
 void OpenAvrilConcurrency::Global::stat_REG_create_number_Of_Praise_Events(uint8_t* newDEFAULT_Value)
 {
     std::cout << "entered OpenAvrilConcurrency::Global::stat_REG_create_number_Of_Praise_Events()." << std::endl;
-    static uint8_t* _stat_REG__ptr_number_Of_Praise_Events = new uint8_t(NULL);
+    _stat_REG__ptr_number_Of_Praise_Events = new uint8_t(NULL);
     while (stat_REG_get_Ptr_number_Of_Praise_Events() == NULL) {}
     stat_REG_set_Item_number_Of_Praise_Events(*newDEFAULT_Value);
     std::cout << "exiting OpenAvrilConcurrency::Global::stat_REG_create_number_Of_Praise_Events()." << std::endl;

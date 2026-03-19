@@ -14,10 +14,15 @@ OpenAvrilConcurrency::Input::Input()
 {
     std::cout << "entered CONSTRUCTOR of Input()." << std::endl;
     uint8_t* newDEFAULT_uint8_t = new uint8_t(UINT8_MAX);
+    std::cout << "alpha." << std::endl;
     while (newDEFAULT_uint8_t == NULL) {}
+    std::cout << "bravo." << std::endl;
     stat_REG_create_ptr_in_playerId(newDEFAULT_uint8_t);
+    std::cout << "charlie." << std::endl;
     stat_REG_create_ptr_in_praiseEventId(newDEFAULT_uint8_t);
+    std::cout << "delta." << std::endl;
     delete newDEFAULT_uint8_t;
+    std::cout << "foxtrot." << std::endl;
     stat_REG_create_ptr_PraiseInSubsets();
     std::cout << "exiting CONSTRUCTOR of Input()" << std::endl;
 }
@@ -98,15 +103,11 @@ OpenAvrilConcurrency::Input_Control* OpenAvrilConcurrency::Input::stat_CLASS_get
     // create.
 void OpenAvrilConcurrency::Input::stat_REG_create_ptr_in_playerId(uint8_t* newDEFAULT_uint8_t)
 {
-    _REG_ptr_in_praiseEventId = new uint8_t(UINT8_MAX);
-    while (stat_REG_get_ptr_in_playerId() == NULL) {}
-    stat_REG_set_ptr_in_playerId(*newDEFAULT_uint8_t);
+    _REG_ptr_in_praiseEventId = new uint8_t(*newDEFAULT_uint8_t);
 }
 void OpenAvrilConcurrency::Input::stat_REG_create_ptr_in_praiseEventId(uint8_t* newDEFAULT_uint8_t)
 {
-    _REG_ptr_in_playerId = new uint8_t(UINT8_MAX);
-    while (stat_REG_get_ptr_in_praiseEventId() == NULL) {}
-    stat_REG_set_ptr_in_playerId(*newDEFAULT_uint8_t);
+    _REG_ptr_in_playerId = new uint8_t(*newDEFAULT_uint8_t);
 }
 void OpenAvrilConcurrency::Input::stat_REG_create_ptr_PraiseInSubsets()
 {

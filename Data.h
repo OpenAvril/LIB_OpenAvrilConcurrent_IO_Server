@@ -6,7 +6,7 @@ namespace OpenAvrilConcurrency
     public:
         Data();
         virtual ~Data();
-        void app_FUNCT_initialise_ptr_Input_Control();
+        void app_FUNCT_initialise_ptr_Data_Control();
         void app_initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t concurrentThreadID, class Input* newINITIALISED_Input);
         void app_initialise_REG_Item_On_array_Of_ptr_array_Of_buffer_Output_ReferenceForThread(uint8_t concurrentThreadID, class Output* newINITIALISED_Output);
         void app_initialise_REG_Item_On_array_Of_doubleBuffer_Input(class Framework_Server* obj, class Input* newINITIALISED_Input);

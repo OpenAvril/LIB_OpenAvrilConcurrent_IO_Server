@@ -6,7 +6,7 @@ namespace OpenAvrilConcurrency
     public:
         Execute();
         virtual ~Execute();
-        void app_FUNCT_initialise_ptr_Input_Control(uint8_t number_Implemented_Cores);
+        void app_FUNCT_initialise_ptr_Execute_Control();
         void app_FUNCT_initialise_Libraries();
         void app_FUNCT_initialise_Threads(class Framework_Server* obj);
         void app_FUNCT_Initialise_ptr_array_Of_ptr_list_Of_Threads(class Framework_Server* obj, uint8_t threadId);

@@ -94,15 +94,11 @@ OpenAvrilConcurrency::Output_Control* OpenAvrilConcurrency::Output::stat_CLASS_g
     // create.
 void OpenAvrilConcurrency::Output::stat_REG_create_ptr_in_playerId(uint8_t* newDEFAULT_uint8_t)
 {
-    _REG_ptr_in_praiseEventId = new uint8_t(UINT8_MAX);
-    while (stat_REG_get_ptr_in_playerId() == NULL) {}
-    stat_REG_set_ptr_in_playerId(*newDEFAULT_uint8_t);
+    _REG_ptr_in_praiseEventId = new uint8_t(*newDEFAULT_uint8_t);
 }
 void OpenAvrilConcurrency::Output::stat_REG_create_ptr_in_praiseEventId(uint8_t* newDEFAULT_uint8_t)
 {
-    _REG_ptr_in_playerId = new uint8_t(UINT8_MAX);
-    while (stat_REG_get_ptr_in_praiseEventId() == NULL) {}
-    stat_REG_set_ptr_in_playerId(*newDEFAULT_uint8_t);
+    _REG_ptr_in_playerId = new uint8_t(*newDEFAULT_uint8_t);
 }
 void OpenAvrilConcurrency::Output::stat_REG_create_ptr_PraiseInSubsets()
 {

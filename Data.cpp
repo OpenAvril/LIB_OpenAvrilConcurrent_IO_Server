@@ -19,15 +19,28 @@
     {
         std::cout << "entered CONSTRUCTOR of Data()" << std::endl;
         stat_CLASS_create_ptr_User_Input();
+        std::cout << "alpha." << std::endl;
         stat_CLASS_create_ptr_User_Output();
-        OpenAvrilConcurrency::Input* newDEFAULT_Input = new class OpenAvrilConcurrency::Input();
+        std::cout << "bravo." << std::endl;
+        class OpenAvrilConcurrency::Input* newDEFAULT_Input = new class OpenAvrilConcurrency::Input();
+        std::cout << "charlie." << std::endl;
         while (newDEFAULT_Input == NULL) {}
+        std::cout << "delta." << std::endl;
+        newDEFAULT_Input->app_FUNCT_create_ptr_Input_Control();
+        std::cout << "echo." << std::endl;
         stat_REG_create_ptr_array_Of_buffer_Input_ReferenceForThread(newDEFAULT_Input);
-        delete newDEFAULT_Input;
-        OpenAvrilConcurrency::Output* newDEFAULT_output = new class OpenAvrilConcurrency::Output();
+        std::cout << "foxtrot." << std::endl;
+        //delete newDEFAULT_Input;
+        std::cout << "giga." << std::endl;
+        class OpenAvrilConcurrency::Output* newDEFAULT_output = new class OpenAvrilConcurrency::Output();
+        std::cout << "helio." << std::endl;
         while (newDEFAULT_output == NULL) {}
+        std::cout << "indigo." << std::endl;
+        newDEFAULT_output->app_FUNCT_create_ptr_Output_Control();
+        std::cout << "java." << std::endl;
         stat_REG_create_ptr_array_Of_buffer_Output_ReferenceForThread(newDEFAULT_output);
-        delete newDEFAULT_output;
+        std::cout << "kilo." << std::endl;
+        //delete newDEFAULT_output;
         std::cout << "exiting CONSTRUCTOR of Data()" << std::endl;
     }
 
@@ -47,7 +60,7 @@
 
     // dynamic.
         // create.
-    void OpenAvrilConcurrency::Data::app_FUNCT_initialise_ptr_Input_Control()
+    void OpenAvrilConcurrency::Data::app_FUNCT_initialise_ptr_Data_Control()
     {
         _stat_CLASS_ptr_Data_Control = new OpenAvrilConcurrency::Data_Control();
         while (stat_CLASS_get_ptr_Data_Control() == NULL) {}
@@ -224,7 +237,6 @@
     void OpenAvrilConcurrency::Data::stat_REG_create_ptr_array_Of_buffer_Input_ReferenceForThread(OpenAvrilConcurrency::Input* newDEFAULT_Input)
     {
         _stat_REG_ptr_array_Of_buffer_Input_ReferenceForThread = new std::array<class OpenAvrilConcurrency::Input*, 3>();
-        while (stat_REG_get_ptr_Array_Of_buffer_Input_ReferenceForThread() == NULL) {}
         for (uint8_t concurrentThreadID = 0; concurrentThreadID < sizeof(*stat_REG_get_ptr_Array_Of_buffer_Input_ReferenceForThread()); concurrentThreadID++)
         {
             stat_REG_set_Item_On_Array_Of_buffer_Input_ReferenceForThread(concurrentThreadID, newDEFAULT_Input);
@@ -233,7 +245,6 @@
     void OpenAvrilConcurrency::Data::stat_REG_create_ptr_array_Of_buffer_Output_ReferenceForThread(OpenAvrilConcurrency::Output* newDEFAULT_Output)
     {
         _stat_REG_ptr_array_Of_buffer_Output_ReferenceForThread = new std::array<class OpenAvrilConcurrency::Output*, 3>();
-        while (stat_REG_get_ptr_array_Of_buffer_Output_ReferenceForThread() == NULL) {}
         for (uint8_t concurrentThreadID = 0; concurrentThreadID < sizeof(*stat_REG_get_ptr_array_Of_buffer_Output_ReferenceForThread()); concurrentThreadID++)
         {
             stat_REG_set_Item_On_Array_Of_buffer_Output_ReferenceForThread(concurrentThreadID, newDEFAULT_Output);

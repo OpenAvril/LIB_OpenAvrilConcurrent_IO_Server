@@ -15,12 +15,12 @@ OpenAvrilConcurrency::Server::Server()
     stat_CLASS_create_ptr_Data();
     while (stat_CLASS_get_ptr_Data() == NULL) {}
     std::cout << "charlie." << std::endl;
-    stat_CLASS_get_ptr_Data()->app_FUNCT_initialise_ptr_Input_Control();
+    stat_CLASS_get_ptr_Data()->app_FUNCT_initialise_ptr_Data_Control();
     std::cout << "delta." << std::endl;
     stat_CLASS_create_ptr_Execute();
     while (stat_CLASS_get_ptr_Execute() == NULL) {}
     std::cout << "echo." << std::endl;
-    stat_CLASS_get_ptr_Execute()->app_FUNCT_initialise_ptr_Input_Control(stat_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Implemented_Cores());
+    stat_CLASS_get_ptr_Execute()->app_FUNCT_initialise_ptr_Execute_Control();
     std::cout << "exiting CONSTRUCTOR of Server()" << std::endl;
 }
 OpenAvrilConcurrency::Server::~Server()

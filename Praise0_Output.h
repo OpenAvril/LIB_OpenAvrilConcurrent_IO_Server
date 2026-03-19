@@ -6,12 +6,12 @@ namespace OpenAvrilConcurrency
 	public:
 		Praise0_Output();
 		virtual ~Praise0_Output();
-		double dyn_REG_get_ptr_output_Value();
-		void set_REG_ptr_output_Value(double newValue);
+		double dyn_REG_get_output_Value();
+		void dyn_REG_set_output_Value(double newValue);
 	private:
 		static double* _REG_ptr_output_Value;
-		static void stat_create_REG_ptr_output_Value();
-		static double stat_dyn_REG_get_ptr_output_Value();
-		static void stat_set_REG_ptr_output_Value(double newValue);
+		static void stat_REG_create_ptr_output_Value();
+		static double* stat_REG_get_ptr_output_Value();
+		static void stat_REG_set_Item_output_Value(double newValue);
 	};
 }

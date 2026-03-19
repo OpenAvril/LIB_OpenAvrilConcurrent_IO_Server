@@ -31,7 +31,7 @@
 
     // dynamic.
         // create.
-    void OpenAvrilConcurrency::Execute::app_FUNCT_initialise_ptr_Input_Control(uint8_t number_Implemented_Cores)
+    void OpenAvrilConcurrency::Execute::app_FUNCT_initialise_ptr_Execute_Control()
     {
         stat_CLASS_create_ptr_Execute_Control();
     }
