@@ -37,7 +37,7 @@ namespace OpenAvrilConcurrency
         static class User_Output* _stat_CLASS_ptr_User_Output;
         static void stat_CLASS_create_ptr_Data_Control();
         static void stat_CLASS_create_ptr_User_Input();
-        static  void stat_CLASS_create_ptr_User_Output();
+        static void stat_CLASS_create_ptr_User_Output();
         static class Data_Control* stat_CLASS_get_ptr_Data_Control();
         static class User_Input* stat_CLASS_get_ptr_User_Input();
         static class User_Output* stat_CLASS_get_ptr_User_Output();
