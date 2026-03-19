@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "framework.h"
 #include "LIB_Concurrent_IO_Server.h"
-static void* _CLASS_ptr_Framework_Server = NULL;
+void* _CLASS_ptr_Framework_Server = NULL;
 void OpenAvrilConcurrency::CLIBConcurrentServerIO::app_FUNCT_Flip_Input_DoubleBuffer(void* obj)
 {
 	OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_Flip_Input_DoubleBuffer();
