@@ -105,8 +105,7 @@
             // create.
     void OpenAvrilConcurrency::Execute::stat_REG_create_ptr_Array_Of_ptr_list_Of_Threads(OpenAvrilConcurrency::Framework_Server* obj)
     {
-        _stat_REG_ptr_array_Of_ptr_list_Of_Threads = new std::list<std::thread*>;
-        while (stat_REG_get_ptr_Array_Of_Threads() == NULL) {}
+        _stat_REG_ptr_array_Of_ptr_list_Of_Threads = new std::list<std::thread*>();
         stat_REG_get_ptr_Array_Of_Threads()->resize(4);//NUMBER OF THEREADS.
         for (uint8_t threadID = 1; threadID < sizeof(*stat_REG_get_ptr_Array_Of_Threads()); threadID++)
         {

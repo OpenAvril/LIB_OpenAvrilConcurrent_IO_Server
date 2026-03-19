@@ -19,27 +19,27 @@
     {
         std::cout << "entered CONSTRUCTOR of Data()" << std::endl;
         stat_CLASS_create_ptr_User_Input();
-        std::cout << "alpha." << std::endl;
+        std::cout << "alpha Data()." << std::endl;
         stat_CLASS_create_ptr_User_Output();
-        std::cout << "bravo." << std::endl;
+        std::cout << "bravo Data()." << std::endl;
         class OpenAvrilConcurrency::Input* newDEFAULT_Input = new class OpenAvrilConcurrency::Input();
-        std::cout << "charlie." << std::endl;
+        std::cout << "charlie Data()." << std::endl;
         while (newDEFAULT_Input == NULL) {}
-        std::cout << "delta." << std::endl;
+        std::cout << "delta Data()." << std::endl;
         newDEFAULT_Input->app_FUNCT_create_ptr_Input_Control();
-        std::cout << "echo." << std::endl;
+        std::cout << "echo Data()." << std::endl;
         stat_REG_create_ptr_array_Of_buffer_Input_ReferenceForThread(newDEFAULT_Input);
-        std::cout << "foxtrot." << std::endl;
+        std::cout << "foxtrotData()." << std::endl;
         //delete newDEFAULT_Input;
-        std::cout << "giga." << std::endl;
+        std::cout << "giga Data()." << std::endl;
         class OpenAvrilConcurrency::Output* newDEFAULT_output = new class OpenAvrilConcurrency::Output();
-        std::cout << "helio." << std::endl;
+        std::cout << "helio Data()." << std::endl;
         while (newDEFAULT_output == NULL) {}
-        std::cout << "indigo." << std::endl;
+        std::cout << "indigo Data()." << std::endl;
         newDEFAULT_output->app_FUNCT_create_ptr_Output_Control();
-        std::cout << "java." << std::endl;
+        std::cout << "java Data()." << std::endl;
         stat_REG_create_ptr_array_Of_buffer_Output_ReferenceForThread(newDEFAULT_output);
-        std::cout << "kilo." << std::endl;
+        std::cout << "kilo Data()." << std::endl;
         //delete newDEFAULT_output;
         std::cout << "exiting CONSTRUCTOR of Data()" << std::endl;
     }

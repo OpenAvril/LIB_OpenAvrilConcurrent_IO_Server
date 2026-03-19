@@ -8,18 +8,18 @@ OpenAvrilConcurrency::Server::Server()
     std::cout << "entered CONSTRUCTOR of Server()" << std::endl;
     stat_CLASS_create_ptr_Global();
     while (stat_CLASS_get_ptr_Global() == NULL) {}
-    std::cout << "alpha." << std::endl;
+    std::cout << "alpha Server()." << std::endl;
     stat_CLASS_create_ptr_Algorithms();
     while (stat_CLASS_get_ptr_Algorithms() == NULL) {}
-    std::cout << "bravo." << std::endl;
+    std::cout << "bravo Server()." << std::endl;
     stat_CLASS_create_ptr_Data();
     while (stat_CLASS_get_ptr_Data() == NULL) {}
-    std::cout << "charlie." << std::endl;
+    std::cout << "charlie Server()." << std::endl;
     stat_CLASS_get_ptr_Data()->app_FUNCT_initialise_ptr_Data_Control();
-    std::cout << "delta." << std::endl;
+    std::cout << "delta Server()." << std::endl;
     stat_CLASS_create_ptr_Execute();
     while (stat_CLASS_get_ptr_Execute() == NULL) {}
-    std::cout << "echo." << std::endl;
+    std::cout << "echo Server()." << std::endl;
     stat_CLASS_get_ptr_Execute()->app_FUNCT_initialise_ptr_Execute_Control();
     std::cout << "exiting CONSTRUCTOR of Server()" << std::endl;
 }

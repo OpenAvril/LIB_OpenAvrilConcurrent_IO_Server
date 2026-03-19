@@ -60,7 +60,10 @@ void OpenAvrilConcurrency::Framework_Server::app_initialise_Program(OpenAvrilCon
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->app_initialise_REG_Item_On_vector_Of_stack_Of_OutputPraise(slotID, newINITIALISED_Output);
 	}
 	delete newINITIALISED_Output;
-
+	for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
+	{
+		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->app_FUNCT_Initialise_ptr_array_Of_ptr_list_Of_Threads(obj, concurrentThreadID);
+	}
 	obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->app_FUNCT_initialise_Libraries();
 	std::cout << "INIT Libraries" << std::endl;
 
