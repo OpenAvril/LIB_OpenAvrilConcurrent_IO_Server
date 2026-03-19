@@ -3,6 +3,9 @@ float* OpenAvrilConcurrency::Praise0_Input::_stat_REG_ptr_input_Value_A = NULL;
 float* OpenAvrilConcurrency::Praise0_Input::_stat_REG_ptr_input_Value_B = NULL;
 OpenAvrilConcurrency::Praise0_Input::Praise0_Input()
 {
+	std::cout << "entered CONSTRUCTOR of Praise0_Algorithm()." << std::endl;
+
+	std::cout << "exiting CONSTRUCTOR of Praise0_Algorithm()." << std::endl;
 	float* newDEFAULT_Float = new float(DBL_MAX);
 	while(newDEFAULT_Float == NULL) { }
 	stat_REG_create_ptr_input_Value_A(newDEFAULT_Float);

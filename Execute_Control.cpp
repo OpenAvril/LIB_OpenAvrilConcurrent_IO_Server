@@ -10,11 +10,13 @@
 	// constructor.
 	OpenAvrilConcurrency::Execute_Control::Execute_Control()
 	{
+		std::cout << "entered CONSTRUCTOR of Praise0_Algorithm()." << std::endl;
 		bool* newDEFAULT_Bool = new bool(true);
 		while (newDEFAULT_Bool == NULL) {}
 		stat_REG_create_Flag_is_SystemInitialised(newDEFAULT_Bool);
 		stat_REG_create_Array_Of_Flag_ThreadInitialised(newDEFAULT_Bool);
 		delete newDEFAULT_Bool;
+		std::cout << "exiting CONSTRUCTOR of Praise0_Algorithm()." << std::endl;
 	}
 
 	// destructor.
