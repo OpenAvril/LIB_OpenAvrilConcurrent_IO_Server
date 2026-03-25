@@ -69,9 +69,6 @@
     <ClInclude Include="Output_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Praise0_Algorithm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Praise0_Input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -135,6 +132,9 @@
     <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Praise0_Algorithim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LIB_Concurrent_IO_Server.cpp">
@@ -185,9 +185,6 @@
     <ClCompile Include="Output_Control.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Praise0_Algorithm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Praise0_Input.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -204,6 +201,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="User_Output.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Praise0_Algorithim.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -32,7 +32,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-    <CLRSupport>false</CLRSupport>
+    <CLRSupport>true</CLRSupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -95,12 +95,13 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <CompileAsManaged>false</CompileAsManaged>
+      <CompileAsManaged>true</CompileAsManaged>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -197,7 +198,7 @@
     <ClInclude Include="Output.h" />
     <ClInclude Include="Output_Control.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Praise0_Algorithm.h" />
+    <ClInclude Include="Praise0_Algorithim.h" />
     <ClInclude Include="Praise0_Input.h" />
     <ClInclude Include="Praise0_Output.h" />
     <ClInclude Include="Server.h" />
@@ -227,7 +228,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Praise0_Algorithm.cpp" />
+    <ClCompile Include="Praise0_Algorithim.cpp" />
     <ClCompile Include="Praise0_Input.cpp" />
     <ClCompile Include="Praise0_Output.cpp" />
     <ClCompile Include="Server.cpp" />

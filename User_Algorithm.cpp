@@ -1,86 +1,119 @@
 #include "pch.h"
-
-// pointers.
-	// classes.
-	OpenAvrilConcurrency::Praise0_Algorithm* OpenAvrilConcurrency::User_Algorithm::_stat_CLASS_ptr_Praise0_Algorithm = NULL;
-	std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::User_Algorithm::_REG_ptr_List_Of_PraiseAlgorithmSubset = NULL;
-	// registers.
-
+	OpenAvrilConcurrency::Praise0_Algorithim* OpenAvrilConcurrency::User_Algorithim::_stat_CLASS_ptr_Praise0_Algorithim;
+	std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::User_Algorithim::_REG_ptr_List_Of_List_Of_PraiseAlogrithmSubset;
 // public.
-	// constructor.
-	OpenAvrilConcurrency::User_Algorithm::User_Algorithm()
+	OpenAvrilConcurrency::User_Algorithim::User_Algorithim()
 	{
-		std::cout << "entered CONSTRUCTOR of User_Algorithm()." << std::endl;
-		stat_CLASS_create_ptr_Praise0_Algorithm();
-		stat_REG_create_ptr_List_Of_PraiseAlgorithmSubset();
-		std::cout << "exiting CONSTRUCTOR of User_Algorithm()." << std::endl;
+		std::cout << "entered CONSTRUCTOR of User_Algorithim()." << std::endl;
+		stat_CLASS_boot0_DECLAIRE_User_Algorithim();
+		stat_CLASS_boot1_DEFINE_User_Algorithim();
+		stat_CLASS_boot3_INITIALISE_User_Algorithim();
+		stat_REG_boot0_DECLAIRE_User_Algorithim();
+		std::cout << "exiting CONSTRUCTOR of User_Algorithim()." << std::endl;
 	}
-
-	// destructor.
-	OpenAvrilConcurrency::User_Algorithm::~User_Algorithm()
+	OpenAvrilConcurrency::User_Algorithim::~User_Algorithim()
 	{
-		delete _stat_CLASS_ptr_Praise0_Algorithm;
-		delete _REG_ptr_List_Of_PraiseAlgorithmSubset;
+		delete _stat_CLASS_ptr_Praise0_Algorithim;
+		delete _REG_ptr_List_Of_List_Of_PraiseAlogrithmSubset;
 	}
-
-	// dynamic.
-		// create.
-		// get.
-	OpenAvrilConcurrency::Object* OpenAvrilConcurrency::User_Algorithm::dyn_CLASS_getr_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(uint8_t praiseID)
+	OpenAvrilConcurrency::Object* OpenAvrilConcurrency::User_Algorithim::dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(uint8_t praiseID)
 	{
-		auto temp = stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset()->begin();
+		auto temp = stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()->begin();
 		std:advance(temp, praiseID);
 		return *temp;
 	}
-		// set.
-	// static.
-		// create.
-		// get.
-		// set.
+	void OpenAvrilConcurrency::User_Algorithim::dyn_REG_boot1_DEFINE_User_Algorithim(OpenAvrilConcurrency::Framework_Server* obj)
+	{
+		std::cout << "entered dyn_REG_boot1_DEFINE_User_Algorithim()" << std::endl;
+		stat_REG_boot1_DEFINE_List_Of_PraiseAlogrithmSubset();
+		std::cout << "exiting dyn_REG_boot1_DEFINE_User_Algorithim()" << std::endl;
+	}
+	void OpenAvrilConcurrency::User_Algorithim::dyn_REG_boot2_SUBSTANTIATE_User_Algorithim(OpenAvrilConcurrency::Framework_Server* obj)
+	{
+		std::cout << "entered dyn_REG_boot2_SUBSTANTIATE_User_Algorithim()" << std::endl;
+		stat_REG_boot2_SUBSTANTIATE_List_Of_PraiseAlogrithmSubset();
+		std::cout << "exiting dyn_REG_boot2_SUBSTANTIATE_User_Algorithim()" << std::endl;
+	}
+	void OpenAvrilConcurrency::User_Algorithim::dyn_REG_boot3_INITIALISE_User_Algorithim(OpenAvrilConcurrency::Framework_Server* obj)
+	{
+		std::cout << "entered dyn_REG_boot3_INITIALISE_User_Algorithim()" << std::endl;
+		stat_REG_boot3_INITIALISE_List_Of_PraiseAlogrithmSubset(obj);
+		std::cout << "exiting dyn_REG_boot3_INITIALISE_User_Algorithim()" << std::endl;
+	}
+	void OpenAvrilConcurrency::User_Algorithim::dyn_REG_boot4_INSTANTIATE_User_Algorithim(OpenAvrilConcurrency::Framework_Server* obj)
+	{
+		std::cout << "entered dyn_REG_boot4_INSTANTIATE_User_Algorithim()" << std::endl;
 
+		std::cout << "exiting dyn_REG_boot4_INSTANTIATE_User_Algorithim()" << std::endl;
+	}
+	void OpenAvrilConcurrency::User_Algorithim::stat_CLASS_boot0_DECLAIRE_User_Algorithim()
+	{
+		std::cout << "entered stat_CLASS_boot0_DECLAIRE_User_Algorithim()" << std::endl;
+
+		std::cout << "exiting stat_CLASS_boot0_DECLAIRE_User_Algorithim()" << std::endl;
+	}
+	void OpenAvrilConcurrency::User_Algorithim::stat_CLASS_boot1_DEFINE_User_Algorithim()
+	{
+		std::cout << "entered stat_CLASS_boot1_DEFINE_User_Algorithim()" << std::endl;
+		stat_CLASS_boot1_DEFINE_Praise0_Algorithim();
+		std::cout << "exiting stat_CLASS_boot1_DEFINE_User_Algorithim()" << std::endl;
+	}
+	void OpenAvrilConcurrency::User_Algorithim::stat_CLASS_boot3_INITIALISE_User_Algorithim()
+	{
+		std::cout << "entered stat_CLASS_boot3_INITIALISE_User_Algorithim()" << std::endl;
+		stat_CLASS_boot3_INITIALISE_Praise0_Algorithim();
+		std::cout << "exiting stat_CLASS_boot3_INITIALISE_User_Algorithim()" << std::endl;
+	}
+	void OpenAvrilConcurrency::User_Algorithim::stat_CLASS_boot4_INSTANTIATE_User_Algorithim()
+	{
+		std::cout << "entered stat_CLASS_boot4_INSTANTIATE_User_Algorithim()" << std::endl;
+
+		std::cout << "exiting stat_CLASS_boot4_INSTANTIATE_User_Algorithim()" << std::endl;
+	}
+	void OpenAvrilConcurrency::User_Algorithim::stat_REG_boot0_DECLAIRE_User_Algorithim()
+	{
+		std::cout << "entered stat_REG_boot0_DECLAIRE_User_Algorithim()" << std::endl;
+
+		std::cout << "exiting stat_REG_boot0_DECLAIRE_User_Algorithim()" << std::endl;
+	}
 // private.
-	// dynamic.
-		// classes.
-			// create.
-			// get.
-			// set.
-		// registers.
-			// create.
-			// get.
-			// set.
-	// static.
-		// classes.
-			// create.
-	void OpenAvrilConcurrency::User_Algorithm::stat_CLASS_create_ptr_Praise0_Algorithm()
+	void OpenAvrilConcurrency::User_Algorithim::stat_CLASS_boot1_DEFINE_Praise0_Algorithim()
 	{
-		_stat_CLASS_ptr_Praise0_Algorithm = new class OpenAvrilConcurrency::Praise0_Algorithm();
-		while (stat_CLASS_get_ptr_Praise0_Algorithm() == NULL) {}
+		_stat_CLASS_ptr_Praise0_Algorithim = NULL;
 	}
-			// get.
-	OpenAvrilConcurrency::Praise0_Algorithm* OpenAvrilConcurrency::User_Algorithm::stat_CLASS_get_ptr_Praise0_Algorithm()
+	void OpenAvrilConcurrency::User_Algorithim::stat_CLASS_boot3_INITIALISE_Praise0_Algorithim()
 	{
-		return _stat_CLASS_ptr_Praise0_Algorithm;
+		_stat_CLASS_ptr_Praise0_Algorithim = new class OpenAvrilConcurrency::Praise0_Algorithim();
+		while (stat_CLASS_get_ptr_Praise0_Algorithim() == NULL) {}
 	}
-			// set.
-		// registers.
-			// create.
-	void OpenAvrilConcurrency::User_Algorithm::stat_REG_create_ptr_List_Of_PraiseAlgorithmSubset()
+	OpenAvrilConcurrency::Praise0_Algorithim* OpenAvrilConcurrency::User_Algorithim::stat_CLASS_get_ptr_Praise0_Algorithim()
 	{
-		_REG_ptr_List_Of_PraiseAlgorithmSubset = new std::list<class OpenAvrilConcurrency::Object*>();
-		while (stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset() == NULL) {}
-		stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset()->resize(1);
-		stat_REG_set_Item_On_list_Of_ptr_PraiseAlgorithmSubset(0, reinterpret_cast<class OpenAvrilConcurrency::Object*>(stat_CLASS_get_ptr_Praise0_Algorithm()));
-		//todo: user praise.
+		return _stat_CLASS_ptr_Praise0_Algorithim;
 	}
-			// get.
-	std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::User_Algorithm::stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset()
+	void OpenAvrilConcurrency::User_Algorithim::stat_REG_boot1_DEFINE_List_Of_PraiseAlogrithmSubset()
 	{
-		return _REG_ptr_List_Of_PraiseAlgorithmSubset;
+		_REG_ptr_List_Of_List_Of_PraiseAlogrithmSubset = NULL;
 	}
-			// set.
-	void OpenAvrilConcurrency::User_Algorithm::stat_REG_set_Item_On_list_Of_ptr_PraiseAlgorithmSubset(uint8_t praiseID, OpenAvrilConcurrency::Object* objObject)
+	void OpenAvrilConcurrency::User_Algorithim::stat_REG_boot2_SUBSTANTIATE_List_Of_PraiseAlogrithmSubset()
 	{
-		auto temp = stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset()->begin();
-		std::advance(temp, praiseID);
-		*temp = objObject;
+		_REG_ptr_List_Of_List_Of_PraiseAlogrithmSubset = new std::list<OpenAvrilConcurrency::Object*>();
+		while (stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset() == NULL) {}
+		stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()->resize(1);
+		auto temp = stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()->begin();
+		std::advance(temp, 0);
+		*temp = NULL;
+	}
+	void OpenAvrilConcurrency::User_Algorithim::stat_REG_boot3_INITIALISE_List_Of_PraiseAlogrithmSubset(OpenAvrilConcurrency::Framework_Server* obj)
+	{
+		stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()->resize(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Praise_Events());
+		for (uint8_t praiseId = 0; praiseId < obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Praise_Events(); praiseId++)
+		{
+			auto temp = stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()->begin();
+			std::advance(temp, praiseId);
+			*temp = obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_ptr_User_Algorithms()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(praiseId);
+		}
+	}
+	std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::User_Algorithim::stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()
+	{
+		return _REG_ptr_List_Of_List_Of_PraiseAlogrithmSubset;
 	}

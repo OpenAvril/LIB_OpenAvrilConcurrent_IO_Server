@@ -1,53 +1,30 @@
 #pragma once
-
-
 namespace OpenAvrilConcurrency
 {
-	class User_Algorithm
+	class User_Algorithim
 	{
 	public:
-// public.
-	// constructor.
-		User_Algorithm();
-
-	// destructor.
-		virtual ~User_Algorithm();
-
-	// dynamic.
-		// create.
-		// get.
-		class Object* dyn_CLASS_getr_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(uint8_t praiseID);
-		// set.
-	// static.
-		// create.
-		// get.
-		// set.
+		User_Algorithim();
+		virtual ~User_Algorithim();
+		class Object* dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(uint8_t praiseID);
+		void dyn_REG_boot1_DEFINE_User_Algorithim(class Framework_Server* obj);
+		void dyn_REG_boot2_SUBSTANTIATE_User_Algorithim(class Framework_Server* obj);
+		void dyn_REG_boot3_INITIALISE_User_Algorithim(class Framework_Server* obj);
+		void dyn_REG_boot4_INSTANTIATE_User_Algorithim(class Framework_Server* obj);
+		static void stat_CLASS_boot0_DECLAIRE_User_Algorithim();
+		static void stat_CLASS_boot1_DEFINE_User_Algorithim();
+		static void stat_CLASS_boot3_INITIALISE_User_Algorithim();
+		static void stat_CLASS_boot4_INSTANTIATE_User_Algorithim();
+		static void stat_REG_boot0_DECLAIRE_User_Algorithim();
 	private:
-// private.
-	// dynamic.
-		// classes.
-			// create.
-			// get.
-			// set.
-		// registers.
-			// create.
-			// get.
-			// set.
-	// static.
-		// classes.
-		static class Praise0_Algorithm* _stat_CLASS_ptr_Praise0_Algorithm;
-			// create.
-		static void stat_CLASS_create_ptr_Praise0_Algorithm();
-			// get.
-		static class Praise0_Algorithm* stat_CLASS_get_ptr_Praise0_Algorithm();
-			// set.
-		// registers.
-		static std::list<class Object*>* _REG_ptr_List_Of_PraiseAlgorithmSubset;
-			// create.
-		static void stat_REG_create_ptr_List_Of_PraiseAlgorithmSubset();
-			// get.
-		static std::list<class Object*>* stat_REG_get_ptr_List_Of_PraiseAlgorithmSubset();
-			// set.
-		static void stat_REG_set_Item_On_list_Of_ptr_PraiseAlgorithmSubset(uint8_t praiseID, class Object* newClass);
+		static class Praise0_Algorithim* _stat_CLASS_ptr_Praise0_Algorithim;
+		static std::list<class Object*>* _REG_ptr_List_Of_List_Of_PraiseAlogrithmSubset;
+		static void stat_CLASS_boot1_DEFINE_Praise0_Algorithim();
+		static void stat_CLASS_boot3_INITIALISE_Praise0_Algorithim();
+		static class Praise0_Algorithim* stat_CLASS_get_ptr_Praise0_Algorithim();
+		static void stat_REG_boot1_DEFINE_List_Of_PraiseAlogrithmSubset();
+		static void stat_REG_boot2_SUBSTANTIATE_List_Of_PraiseAlogrithmSubset();
+		static void stat_REG_boot3_INITIALISE_List_Of_PraiseAlogrithmSubset(class Framework_Server* obj);
+		static std::list<class Object*>* stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset();
 	};
 }
