@@ -29,7 +29,7 @@
     void OpenAvrilConcurrency::Algorithms::dyn_REG_boot1_DEFINE_Algorithim(Framework_Server* obj)
     {
         std::cout << "entered dyn_REG_boot1_DEFINE_Algorithms()" << std::endl;
-        stat_REG_boot1_DEFINE_buffer_list_Of_ptr_Concurrent();
+        stat_REG_boot1_DEFINE_List_Of_ptr_Concurrent();
         std::cout << "exiting dyn_REG_boot1_DEFINE_Algorithms()" << std::endl;
     }
     void OpenAvrilConcurrency::Algorithms::dyn_REG_boot2_SUBSTANTIATE_Algorithim(Framework_Server* obj)
@@ -94,7 +94,7 @@
     {
         return _stat_CLASS_ptr_User_Algorithim;
     }
-    void OpenAvrilConcurrency::Algorithms::stat_REG_boot1_DEFINE_buffer_list_Of_ptr_Concurrent()
+    void OpenAvrilConcurrency::Algorithms::stat_REG_boot1_DEFINE_List_Of_ptr_Concurrent()
     {
         _stat_REG_ptr_list_Of_ptr_Concurrent = NULL;
     }

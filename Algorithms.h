@@ -23,7 +23,7 @@ namespace OpenAvrilConcurrency
         static void stat_CLASS_boot1_DEFINE_User_Algorithms();
         static void stat_CLASS_boot3_INITIALISE_User_Algorithms();
         static class User_Algorithim* stat_CLASS_get_ptr_User_Algorithms();
-        static void stat_REG_boot1_DEFINE_buffer_list_Of_ptr_Concurrent();
+        static void stat_REG_boot1_DEFINE_List_Of_ptr_Concurrent();
         static void stat_REG_boot2_SUBSTANTIATE_list_Of_ptr_Concurrent(class Framework_Server* obj);
         static void stat_REG_boot3_INITIALISE_list_Of_ptr_Concurrent(class Framework_Server* obj);
         static std::list<class Concurrent*>* stat_REG_get_ptr_list_Of_ptr_Concurrent();
