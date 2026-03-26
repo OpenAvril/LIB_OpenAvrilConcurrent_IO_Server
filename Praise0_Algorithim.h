@@ -17,5 +17,6 @@ namespace OpenAvrilConcurrency
 		static void stat_CLASS_boot4_INSTANTIATE_Praise0_Algorithim();
 		static void stat_REG_boot0_DECLAIRE_Praise0_Algorithim();
 	private:
+
 	};
 }

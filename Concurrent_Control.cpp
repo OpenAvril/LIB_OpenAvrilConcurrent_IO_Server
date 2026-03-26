@@ -14,14 +14,15 @@
 
 }
     void OpenAvrilConcurrency::Concurrent_Control::app_selectset_Algorithm_Scubset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId, uint8_t concurrent_threadID)
-{
-    switch (praiseEventId)
     {
-    case 0:
-        obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_Item_On_list_Of_ptr_Concurrent(concurrent_threadID)->dyn_CLASS_get_ptr_Concurrent_Control()->app_selectset_Algorithm_Scubset(obj, praiseEventId, concurrent_threadID);
-        break;
+        OpenAvrilConcurrency::Concurrent* objConcurrnet = obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_Item_On_list_Of_ptr_Concurrent(concurrent_threadID);
+        switch (praiseEventId)
+        {
+        case 0:
+            objConcurrnet->dyn_REG_get_ptr_Item_On_ptr_list_Of_ptr_Algorithms_Subset(praiseEventId);
+            break;
+        }
     }
-}
     void OpenAvrilConcurrency::Concurrent_Control::dyn_REG_boot1_DEFINE_Concurrent_Control(Framework_Server* obj)
     {
         std::cout << "entered STRUCT dyn_REG_boot1_DEFINE_Concurrent_Control()" << std::endl;

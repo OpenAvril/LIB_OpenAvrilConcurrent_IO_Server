@@ -16,16 +16,14 @@ OpenAvrilConcurrency::Output_Control::~Output_Control()
 // private.
 void OpenAvrilConcurrency::Output_Control::app_select_And_Set_Output_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId)
 {
-    class OpenAvrilConcurrency::User_Output* user_Output = obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Output();
-    class Object* objObject = NULL;
+    class OpenAvrilConcurrency::Output* bufferOutputWRITE = obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE(obj);
     switch (praiseEventId)
     {
     case 0:
-        obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Output_WRITE(obj)->dyn_REG_set_PraiseOutputSubset_As_Praise0_Output(reinterpret_cast<OpenAvrilConcurrency::Praise0_Output*>(user_Output->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseOutputSubsets(praiseEventId)));
+        OpenAvrilConcurrency::Praise0_Output * objPraise0_Output = reinterpret_cast<class OpenAvrilConcurrency::Praise0_Output*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Output()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseOutputSubsets(praiseEventId));
+        bufferOutputWRITE->dyn_REG_set_Item0_PraiseOutputSubset(objPraise0_Output);
         break;
     }
-    delete user_Output;
-    delete objObject;
 }
 void OpenAvrilConcurrency::Output_Control::dyn_REG_boot1_DEFINE_Output_Control(Framework_Server* obj)
 {

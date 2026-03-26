@@ -105,7 +105,7 @@
                         obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->dyn_REG_get_ptr_Input_praiseEventId(),
                         obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_ptr_User_Algorithms()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->dyn_REG_get_ptr_Input_praiseEventId()),
                         obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrent_threadID)->dyn_REG_get_Item_On_List_Of_PraiseInputSubset(),
-                        obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrent_threadID)->dyn_REG_get_Item_On_List_Of_PraiseOutputSubset()
+                        obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(concurrent_threadID)->dyn_REG_get_Item0_PraiseOutputSubset()
                     );
                     OpenAvrilCLIBWriteEnableForThreadsAtSERVERINPUTACTION::CLIBWriteEnableForThreadsAtSERVERINPUTACTION::app_FUNCT_write_Start(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_PGM_get_WriteEnable_ServerInputAction(), OpenAvrilConcurrency::Global::stat_CONVERT_uint8_t_to_ByteArray((uint8_t)(concurrent_threadID + (uint8_t)1)));
                     obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->app_FUNCT_push_To_STACK_Of_Output(obj, concurrent_threadID);
@@ -171,18 +171,24 @@
     {
         _stat_REG_ptr_list_Of_ptr_Algorithms_Subset = NULL;
     }
-    void OpenAvrilConcurrency::Concurrent::stat_REG_boot2_SUBSTANTIATE_list_Of_Algorithms_Subset(Framework_Server* obj)
+    void OpenAvrilConcurrency::Concurrent::stat_REG_boot2_SUBSTANTIATE_list_Of_Algorithms_Subset(OpenAvrilConcurrency::Framework_Server* obj)
     {
         _stat_REG_ptr_list_Of_ptr_Algorithms_Subset = new std::list<OpenAvrilConcurrency::Object*>();
         while (stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset() == NULL) {}
-        stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->resize(1);
+        stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->resize(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Praise_Events());
     }
-    void OpenAvrilConcurrency::Concurrent::stat_REG_boot3_INITIALISE_list_Of_Algorithms_Subset(Framework_Server* obj)
+    void OpenAvrilConcurrency::Concurrent::stat_REG_boot3_INITIALISE_list_Of_Algorithms_Subset(OpenAvrilConcurrency::Framework_Server* obj)
     {
-        stat_REG_set_PraiseOutputSubset_As_Praise0_Output(reinterpret_cast<OpenAvrilConcurrency::Praise0_Output*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_ptr_User_Algorithms()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(0)));
+       
         //todo.        
-        for (uint8_t praiseId = 0; praiseId < uint8_t(1); praiseId++)//NUMBER OF PRAISES.
+        for (uint8_t praiseId = 0; praiseId < sizeof(*stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()); praiseId++)//NUMBER OF PRAISES.
         {
+            switch (praiseId)
+            {
+                case 0:
+                    stat_REG_set_PraiseOutputSubset_As_Praise0_Output(reinterpret_cast<OpenAvrilConcurrency::Praise0_Output*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_ptr_User_Algorithms()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(praiseId)));
+                    break;
+            }
             auto temp = stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->begin();
             std::advance(temp, praiseId);
             *temp = reinterpret_cast<OpenAvrilConcurrency::Object*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_ptr_User_Algorithms()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(praiseId));
@@ -195,6 +201,6 @@
     void OpenAvrilConcurrency::Concurrent::stat_REG_set_PraiseOutputSubset_As_Praise0_Output(OpenAvrilConcurrency::Praise0_Output* objPraise_Output)
     {
         auto temp = stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->begin();
-        std::advance(temp, 0);
+        std::advance(temp, uint8_t(0));
         *temp = reinterpret_cast<OpenAvrilConcurrency::Object*>(objPraise_Output);
     }

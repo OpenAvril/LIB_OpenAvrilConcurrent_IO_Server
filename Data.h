@@ -11,7 +11,7 @@ namespace OpenAvrilConcurrency
         class User_Output* dyn_CLASS_get_ptr_User_Output();
         void dyn_REG_boot1_DEFINE_Data(class Framework_Server* obj);
         void dyn_REG_boot2_SUBSTANTIATE_Data(class Framework_Server* obj);
-        void dyn_REG_boot3_INITIALISE_Data(class Framework_Server* obj);
+        void dyn_REG_boot3_INITIALISE_Data(class Framework_Server* obj, class Input* objInput, class Output* objOutput);
         void dyn_REG_boot4_INSTANTIATE_Data(class Framework_Server* obj);
         class Input* dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_READ(class Framework_Server* obj);
         class Input* dyn_REG_get_ptr_Item_array_Of_doubleBuffer_Input_WRITE(class Framework_Server* obj);
@@ -67,12 +67,12 @@ namespace OpenAvrilConcurrency
         static void stat_REG_boot2_SUBSTANTIATE_buffer_doubleBuffer_Output();
         static void stat_REG_boot2_SUBSTANTIATE_buffer_stack_Of_InputPraise();
         static void stat_REG_boot2_SUBSTANTIATE_buffer_stack_Of_OutputPraise();
-        static void stat_REG_boot3_INITIALISE_buffer_Input_ReferenceForThread(class Framework_Server* obj);
-        static void stat_REG_boot3_INITIALISE_buffer_Output_ReferenceForThread(class Framework_Server* obj);
-        static void stat_REG_boot3_INITIALISE_doubleBuffer_Input();
-        static void stat_REG_boot3_INITIALISE_doubleBuffer_Output();
-        static void stat_REG_boot3_INITIALISE_stack_Of_InputPraise();
-        static void stat_REG_boot3_INITIALISE_stack_Of_OutputPraise();
+        static void stat_REG_boot3_INITIALISE_buffer_Input_ReferenceForThread(class Input* objInput);
+        static void stat_REG_boot3_INITIALISE_buffer_Output_ReferenceForThread(class Output* objOutput);
+        static void stat_REG_boot3_INITIALISE_doubleBuffer_Input(class Input* objInput);
+        static void stat_REG_boot3_INITIALISE_doubleBuffer_Output(class Output* objOutput);
+        static void stat_REG_boot3_INITIALISE_stack_Of_InputPraise(class Input* objInput);
+        static void stat_REG_boot3_INITIALISE_stack_Of_OutputPraise(class Output* objOutput);
         static std::array<class Input*, 3>* stat_REG_get_ptr_Array_Of_buffer_Input_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
         static std::array<class Output*, 3>* stat_REG_get_ptr_array_Of_buffer_Output_ReferenceForThread();//NUMBER OF CONCURRENT THREADS.
         static std::array<class Input*, 2>* stat_get_REG_ptr_array_Of_doubleBuffer_Input();

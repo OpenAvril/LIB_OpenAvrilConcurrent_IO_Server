@@ -17,25 +17,25 @@
     {
         ptr_Out_SubSet->dyn_REG_set_output_Value(ptr_In_SubSet->dyn_REG_get_Item_input_Value_A() + ptr_In_SubSet->dyn_REG_get_Item_input_Value_B());
     }
-    void OpenAvrilConcurrency::Praise0_Algorithim::dyn_REG_boot1_DEFINE_Praise0_Algorithim(Framework_Server* obj)
+    void OpenAvrilConcurrency::Praise0_Algorithim::dyn_REG_boot1_DEFINE_Praise0_Algorithim(OpenAvrilConcurrency::Framework_Server* obj)
     {
         std::cout << "entered dyn_REG_boot1_DEFINE_Praise0_Algorithim()" << std::endl;
 
         std::cout << "exiting dyn_REG_boot1_DEFINE_Praise0_Algorithim()" << std::endl;
     }
-    void OpenAvrilConcurrency::Praise0_Algorithim::dyn_REG_boot2_SUBSTANTIATE_Praise0_Algorithim(Framework_Server* obj)
+    void OpenAvrilConcurrency::Praise0_Algorithim::dyn_REG_boot2_SUBSTANTIATE_Praise0_Algorithim(OpenAvrilConcurrency::Framework_Server* obj)
     {
         std::cout << "entered dyn_REG_boot2_SUBSTANTIATE_Praise0_Algorithim()" << std::endl;
 
         std::cout << "exiting dyn_REG_boot2_SUBSTANTIATE_Praise0_Algorithim()" << std::endl;
     }
-    void OpenAvrilConcurrency::Praise0_Algorithim::dyn_REG_boot3_INITIALISE_Praise0_Algorithim(Framework_Server* obj)
+    void OpenAvrilConcurrency::Praise0_Algorithim::dyn_REG_boot3_INITIALISE_Praise0_Algorithim(OpenAvrilConcurrency::Framework_Server* obj)
     {
         std::cout << "entered dyn_REG_boot3_INITIALISE_Praise0_Algorithim()" << std::endl;
 
         std::cout << "exiting dyn_REG_boot3_INITIALISE_Praise0_Algorithim()" << std::endl;
     }
-    void OpenAvrilConcurrency::Praise0_Algorithim::dyn_REG_boot4_INSTANTIATE_Praise0_Algorithim(Framework_Server* obj)
+    void OpenAvrilConcurrency::Praise0_Algorithim::dyn_REG_boot4_INSTANTIATE_Praise0_Algorithim(OpenAvrilConcurrency::Framework_Server* obj)
     {
         std::cout << "entered dyn_REG_boot4_INSTANTIATE_Praise0_Algorithim()" << std::endl;
 

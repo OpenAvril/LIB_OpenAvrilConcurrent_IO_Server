@@ -18,10 +18,12 @@ namespace OpenAvrilConcurrency
 		static void stat_REG_boot0_DECLAIRE_User_Algorithim();
 	private:
 		static class Praise0_Algorithim* _stat_CLASS_ptr_Praise0_Algorithim;
+		//todo.
 		static std::list<class Object*>* _REG_ptr_List_Of_List_Of_PraiseAlogrithmSubset;
 		static void stat_CLASS_boot1_DEFINE_Praise0_Algorithim();
 		static void stat_CLASS_boot3_INITIALISE_Praise0_Algorithim();
 		static class Praise0_Algorithim* stat_CLASS_get_ptr_Praise0_Algorithim();
+		//todo.
 		static void stat_REG_boot1_DEFINE_List_Of_PraiseAlogrithmSubset();
 		static void stat_REG_boot2_SUBSTANTIATE_List_Of_PraiseAlogrithmSubset(class Framework_Server* obj);
 		static void stat_REG_boot3_INITIALISE_List_Of_PraiseAlogrithmSubset(class Framework_Server* obj);
