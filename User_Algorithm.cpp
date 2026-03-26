@@ -31,7 +31,7 @@
 	void OpenAvrilConcurrency::User_Algorithim::dyn_REG_boot2_SUBSTANTIATE_User_Algorithim(OpenAvrilConcurrency::Framework_Server* obj)
 	{
 		std::cout << "entered dyn_REG_boot2_SUBSTANTIATE_User_Algorithim()" << std::endl;
-		stat_REG_boot2_SUBSTANTIATE_List_Of_PraiseAlogrithmSubset();
+		stat_REG_boot2_SUBSTANTIATE_List_Of_PraiseAlogrithmSubset(obj);
 		std::cout << "exiting dyn_REG_boot2_SUBSTANTIATE_User_Algorithim()" << std::endl;
 	}
 	void OpenAvrilConcurrency::User_Algorithim::dyn_REG_boot3_INITIALISE_User_Algorithim(OpenAvrilConcurrency::Framework_Server* obj)
@@ -94,19 +94,21 @@
 	{
 		_REG_ptr_List_Of_List_Of_PraiseAlogrithmSubset = NULL;
 	}
-	void OpenAvrilConcurrency::User_Algorithim::stat_REG_boot2_SUBSTANTIATE_List_Of_PraiseAlogrithmSubset()
+	void OpenAvrilConcurrency::User_Algorithim::stat_REG_boot2_SUBSTANTIATE_List_Of_PraiseAlogrithmSubset(OpenAvrilConcurrency::Framework_Server* obj)
 	{
 		_REG_ptr_List_Of_List_Of_PraiseAlogrithmSubset = new std::list<OpenAvrilConcurrency::Object*>();
 		while (stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset() == NULL) {}
-		stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()->resize(1);
-		auto temp = stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()->begin();
-		std::advance(temp, 0);
-		*temp = NULL;
+		stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()->resize(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Praise_Events());
+		for (uint8_t praiseId = 0; praiseId < sizeof(*stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()); praiseId++)
+		{
+			auto temp = stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()->begin();
+			std::advance(temp, praiseId);
+			*temp = NULL;
+		}
 	}
 	void OpenAvrilConcurrency::User_Algorithim::stat_REG_boot3_INITIALISE_List_Of_PraiseAlogrithmSubset(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()->resize(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Praise_Events());
-		for (uint8_t praiseId = 0; praiseId < obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Praise_Events(); praiseId++)
+		for (uint8_t praiseId = 0; praiseId < sizeof(*stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()); praiseId++)
 		{
 			auto temp = stat_REG_get_ptr_List_Of_PraiseAlogrithmSubset()->begin();
 			std::advance(temp, praiseId);

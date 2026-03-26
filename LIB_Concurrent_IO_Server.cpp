@@ -11,10 +11,14 @@
 	{
 		std::cout << "entered app_FUNCT_generate_Program()." << std::endl;
 
-		std::cout << "started Classes - DECLAIRE, DEFINE INITIALISE, Registers - DECLAIRE." << std::endl;
-		stat_stat_CLASS_boot1_DEFINE_Framework();
-		stat_boot3_CLASS_INITIALISE_Framework();
-		std::cout << "done Classes - DECLAIRE, DEFINE INITIALISE, Registers - DECLAIRE." << std::endl;
+		std::cout << "started Classe(s) - DECLAIRE, DEFINE INITIALISE, Registers - DECLAIRE." << std::endl;
+		stat_CLASS_boot1_DEFINE_Framework();
+		stat_CLASS_boot3_INITIALISE_Framework();
+		std::cout << "done Classe(s) - DECLAIRE, DEFINE INITIALISE, Registers - DECLAIRE." << std::endl;
+
+		std::cout << "started Structure(s) - DECLAIRE, DEFINE INITIALISE, Registers - DECLAIRE." << std::endl;
+		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server())->stat_STRUCT_create_All();
+		std::cout << "done Structure(s) - DECLAIRE, DEFINE INITIALISE, Registers - DECLAIRE." << std::endl;
 
 		std::cout << "started Registers - DEFINE" << std::endl;
 		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server())->dyn_REG_boot1_DEFINE_Framework_Server(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server()));
@@ -109,11 +113,11 @@
 		return OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(obj)->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_PGM_get_WriteEnable_ServerOutputRecieve();
 	}
 // private.
-	void OpenAvrilConcurrency::CLIBConcurrentServerIO::stat_stat_CLASS_boot1_DEFINE_Framework()
+	void OpenAvrilConcurrency::CLIBConcurrentServerIO::stat_CLASS_boot1_DEFINE_Framework()
 	{
 		_CLASS_ptr_Framework_Server = NULL;
 	}
-	void OpenAvrilConcurrency::CLIBConcurrentServerIO::stat_boot3_CLASS_INITIALISE_Framework()
+	void OpenAvrilConcurrency::CLIBConcurrentServerIO::stat_CLASS_boot3_INITIALISE_Framework()
 	{
 		_CLASS_ptr_Framework_Server = new class OpenAvrilConcurrency::Framework_Server();
 		while (stat_CLASS_get_ptr_Framework_Server() == NULL) {}

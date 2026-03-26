@@ -34,10 +34,10 @@
 		stat_REG_boot2_SUBSTANTIATE_List_Of_PraiseInputSubset();
 		std::cout << "exiting dyn_REG_boot2_SUBSTANTIATE_User_Input()" << std::endl;
 	}
-	void OpenAvrilConcurrency::User_Input::dyn_REG_boot3_INITIALISE_User_Input(OpenAvrilConcurrency::Framework_Server* obj)
+	void OpenAvrilConcurrency::User_Input::dyn_REG_boot3_INITIALISE_User_Input(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseId)
 	{
 		std::cout << "entered dyn_REG_boot3_INITIALISE_User_Input()" << std::endl;
-		stat_REG_boot3_INITIALISE_List_Of_PraiseInputSubset(obj);
+		stat_REG_boot3_INITIALISE_List_Of_PraiseInputSubset(obj, praiseId);
 		std::cout << "exiting dyn_REG_boot3_INITIALISE_User_Input()" << std::endl;
 	}
 	void OpenAvrilConcurrency::User_Input::dyn_REG_boot4_INSTANTIATE_User_Input(OpenAvrilConcurrency::Framework_Server* obj)
@@ -100,18 +100,14 @@
 		while (stat_REG_get_ptr_List_Of_PraiseInputSubset() == NULL) {}
 		stat_REG_get_ptr_List_Of_PraiseInputSubset()->resize(1);
 		auto temp = stat_REG_get_ptr_List_Of_PraiseInputSubset()->begin();
-		std::advance(temp, 0);
+		std::advance(temp, uint8_t(0));
 		*temp = NULL;
 	}
-	void OpenAvrilConcurrency::User_Input::stat_REG_boot3_INITIALISE_List_Of_PraiseInputSubset(OpenAvrilConcurrency::Framework_Server* obj)
+	void OpenAvrilConcurrency::User_Input::stat_REG_boot3_INITIALISE_List_Of_PraiseInputSubset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseId)
 	{
-		stat_REG_get_ptr_List_Of_PraiseInputSubset()->resize(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Praise_Events());
-		for (uint8_t praiseId = 0; praiseId < obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Praise_Events(); praiseId++)
-		{
-			auto temp = stat_REG_get_ptr_List_Of_PraiseInputSubset()->begin();
-			std::advance(temp, praiseId);
-			*temp = obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Input()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseInputSubsets(praiseId);
-		}
+		auto temp = stat_REG_get_ptr_List_Of_PraiseInputSubset()->begin();
+		std::advance(temp, uint8_t(0));
+		*temp = obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Input()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseInputSubsets(praiseId);
 	}
 	std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::User_Input::stat_REG_get_ptr_List_Of_PraiseInputSubset()
 	{

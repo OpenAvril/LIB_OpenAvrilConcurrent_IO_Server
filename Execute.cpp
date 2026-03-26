@@ -82,8 +82,11 @@
         std::cout << "entered stat_CLASS_boot3_INITIALISE_Execute()" << std::endl;
         stat_CLASS_boot3_INITIALISE_Execute_Control();
         stat_PGM_boot3_INITIALISE_ConcurrentQue_Server();
+        std::cout << "* booted. ConcurrentQue_Server()" << std::endl;
         stat_PGM_boot3_INITIALISE_ServerInputAction();
+        std::cout << "* booted. ServerInputAction()" << std::endl;
         stat_PGM_boot3_INITIALISE_ServerOutputRecieve();
+        std::cout << "* booted. ServerOutputRecieve()" << std::endl;
         std::cout << "exiting stat_CLASS_boot3_INITIALISE_Execute()" << std::endl;
     }
     void OpenAvrilConcurrency::Execute::stat_CLASS_boot4_INSTANTIATE_Execute()

@@ -26,25 +26,25 @@
         std::advance(temp, concurrentThreadId);
         return *temp;
     }
-    void OpenAvrilConcurrency::Algorithms::dyn_REG_boot1_DEFINE_Algorithim(Framework_Server* obj)
+    void OpenAvrilConcurrency::Algorithms::dyn_REG_boot1_DEFINE_Algorithim(OpenAvrilConcurrency::Framework_Server* obj)
     {
         std::cout << "entered dyn_REG_boot1_DEFINE_Algorithms()" << std::endl;
         stat_REG_boot1_DEFINE_List_Of_ptr_Concurrent();
         std::cout << "exiting dyn_REG_boot1_DEFINE_Algorithms()" << std::endl;
     }
-    void OpenAvrilConcurrency::Algorithms::dyn_REG_boot2_SUBSTANTIATE_Algorithim(Framework_Server* obj)
+    void OpenAvrilConcurrency::Algorithms::dyn_REG_boot2_SUBSTANTIATE_Algorithim(OpenAvrilConcurrency::Framework_Server* obj)
     {
         std::cout << "entered dyn_REG_boot2_SUBSTANTIATE_Algorithms()" << std::endl;
         stat_REG_boot2_SUBSTANTIATE_list_Of_ptr_Concurrent(obj);
         std::cout << "exiting dyn_REG_boot2_SUBSTANTIATE_Algorithms()" << std::endl;
     }
-    void OpenAvrilConcurrency::Algorithms::dyn_REG_boot3_INITIALISE_Algorithim(Framework_Server* obj)
+    void OpenAvrilConcurrency::Algorithms::dyn_REG_boot3_INITIALISE_Algorithim(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Concurrent* objConcurrent)
     {
         std::cout << "entered dyn_REG_boot3_INITIALISE_Algorithim()" << std::endl;
-        stat_REG_boot3_INITIALISE_list_Of_ptr_Concurrent(obj);
+        stat_REG_boot3_INITIALISE_list_Of_ptr_Concurrent(obj, objConcurrent);
         std::cout << "exiting dyn_REG_boot3_INITIALISE_Algorithms()" << std::endl;
     }
-    void OpenAvrilConcurrency::Algorithms::dyn_REG_boot4_INSTANTIATE_Algorithim(Framework_Server* obj)
+    void OpenAvrilConcurrency::Algorithms::dyn_REG_boot4_INSTANTIATE_Algorithim(OpenAvrilConcurrency::Framework_Server* obj)
     {
         std::cout << "entered dyn_REG_boot4_INSTANTIATE_Algorithms()" << std::endl;
 
@@ -102,26 +102,22 @@
     {
         _stat_REG_ptr_list_Of_ptr_Concurrent = new std::list<class Concurrent*>();
         while (stat_REG_get_ptr_list_Of_ptr_Concurrent() == NULL) {}
-        stat_REG_get_ptr_list_Of_ptr_Concurrent()->resize(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Implemented_Cores());
-        for (uint8_t threadId = 0; threadId < obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Implemented_Cores(); threadId++)
+        stat_REG_get_ptr_list_Of_ptr_Concurrent()->resize(uint8_t(3));//NUMBER OF CONCURRENT THREADS.
+        for (uint8_t threadId = 0; threadId < sizeof(*stat_REG_get_ptr_list_Of_ptr_Concurrent()); threadId++)
         {
             auto temp = stat_REG_get_ptr_list_Of_ptr_Concurrent()->begin();
             std::advance(temp, threadId);
             *temp = NULL;
         }
     }
-    void OpenAvrilConcurrency::Algorithms::stat_REG_boot3_INITIALISE_list_Of_ptr_Concurrent(OpenAvrilConcurrency::Framework_Server* obj)
+    void OpenAvrilConcurrency::Algorithms::stat_REG_boot3_INITIALISE_list_Of_ptr_Concurrent(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Concurrent* objConcurrent)
     {
-        class OpenAvrilConcurrency::Concurrent* objConcurrent = new class OpenAvrilConcurrency::Concurrent();
-        while (objConcurrent == NULL) {}
-        for (uint8_t concurrentThreadId = 0; concurrentThreadId < obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Global()->dyn_REG_get_Item_number_Of_Implemented_Cores(); concurrentThreadId++)
+        for (uint8_t concurrentThreadId = 0; concurrentThreadId < sizeof(*stat_REG_get_ptr_list_Of_ptr_Concurrent()); concurrentThreadId++)
         {
             auto temp = stat_REG_get_ptr_list_Of_ptr_Concurrent()->begin();
             std::advance(temp, concurrentThreadId);
             *temp = objConcurrent;
-            while (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_ptr_User_Algorithms()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(concurrentThreadId) == NULL) { }
         }
-        delete objConcurrent;
     }
     std::list<OpenAvrilConcurrency::Concurrent*>* OpenAvrilConcurrency::Algorithms::stat_REG_get_ptr_list_Of_ptr_Concurrent()
         {

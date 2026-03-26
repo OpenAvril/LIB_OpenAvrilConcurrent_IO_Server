@@ -27,8 +27,8 @@ extern "C"
 			static void* dyn_PGM_get_program_WriteEnableStack_ServerInputAction(void* obj);
 			static void* dyn_PGM_get_program_WriteEnableStack_ServerOutputRecieve(void* obj);
 		private:
-			static void stat_stat_CLASS_boot1_DEFINE_Framework();
-			static void stat_boot3_CLASS_INITIALISE_Framework();
+			static void stat_CLASS_boot1_DEFINE_Framework();
+			static void stat_CLASS_boot3_INITIALISE_Framework();
 			static void* stat_CLASS_get_ptr_Framework_Server();
 		};
 	}

@@ -4,12 +4,12 @@
 // public.
     OpenAvrilConcurrency::Concurrent::Concurrent()
     {
-        std::cout << "entered CONSTRUCTOR Concurrent()" << std::endl;
+        std::cout << "entered STRUCT CONSTRUCTOR Concurrent()" << std::endl;
         stat_CLASS_boot0_DECLAIRE_Concurrent();
         stat_CLASS_boot1_DEFINE_Concurrent();
         stat_CLASS_boot3_INITIALISE_Concurrent();
         stat_REG_boot0_DECLAIRE_Concurrent();
-        std::cout << "exiting CONSTRUCTOR Concurrent()" << std::endl;
+        std::cout << "exiting STRUCT CONSTRUCTOR Concurrent()" << std::endl;
     }
     OpenAvrilConcurrency::Concurrent::~Concurrent()
 {
@@ -37,27 +37,27 @@
     }
     void OpenAvrilConcurrency::Concurrent::dyn_REG_boot1_DEFINE_Concurrent(OpenAvrilConcurrency::Framework_Server* obj)
     {
-        std::cout << "entered dyn_REG_boot1_DEFINE_Concurrent()" << std::endl;
+        std::cout << "entered STRUCT dyn_REG_boot1_DEFINE_Concurrent()" << std::endl;
         stat_REG_boot1_DEFINE_list_Of_Algorithms_Subset();
-        std::cout << "exiting dyn_REG_boot1_DEFINE_Concurrent()" << std::endl;
+        std::cout << "exiting STRUCT dyn_REG_boot1_DEFINE_Concurrent()" << std::endl;
     }
     void OpenAvrilConcurrency::Concurrent::dyn_REG_boot2_SUBSTANTIATE_Concurrent(OpenAvrilConcurrency::Framework_Server* obj)
     {
-        std::cout << "entered dyn_REG_boot2_SUBSTANTIATE_Concurrent()" << std::endl;
+        std::cout << "entered STRUCT dyn_REG_boot2_SUBSTANTIATE_Concurrent()" << std::endl;
         stat_REG_boot2_SUBSTANTIATE_list_Of_Algorithms_Subset(obj);
-        std::cout << "exiting dyn_REG_boot2_SUBSTANTIATE_Concurrent()" << std::endl;
+        std::cout << "exiting STRUCT dyn_REG_boot2_SUBSTANTIATE_Concurrent()" << std::endl;
     }
     void OpenAvrilConcurrency::Concurrent::dyn_REG_boot3_INITIALISE_Concurrent(OpenAvrilConcurrency::Framework_Server* obj)
     {
-        std::cout << "entered dyn_REG_boot3_INITIALISE_dyn_REG_boot3_INITIALISE_ConcurrentConcurrent()" << std::endl;
+        std::cout << "entered STRUCT dyn_REG_boot3_INITIALISE_dyn_REG_boot3_INITIALISE_ConcurrentConcurrent()" << std::endl;
         stat_REG_boot3_INITIALISE_list_Of_Algorithms_Subset(obj);
-        std::cout << "exiting dyn_REG_boot3_INITIALISE_Concurrent()" << std::endl;
+        std::cout << "exiting STRUCT dyn_REG_boot3_INITIALISE_Concurrent()" << std::endl;
     }
     void OpenAvrilConcurrency::Concurrent::dyn_REG_boot4_INSTANTIATE_Concurrent(OpenAvrilConcurrency::Framework_Server* obj)
     {
-        std::cout << "entered dyn_REG_boot4_INSTANTIATE_Concurrent()" << std::endl;
+        std::cout << "entered STRUCT dyn_REG_boot4_INSTANTIATE_Concurrent()" << std::endl;
 
-        std::cout << "exiting dyn_REG_boot4_INSTANTIATE_Concurrent()" << std::endl;
+        std::cout << "exiting STRUCT dyn_REG_boot4_INSTANTIATE_Concurrent()" << std::endl;
     }
     OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Concurrent::dyn_REG_get_ptr_Item_On_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID)
     {
@@ -76,12 +76,12 @@
                 *doneOnce = false;
             }
         }
-        std::cout << "Thread Initialised: ID=" << (concurrent_threadID) << " => Thread_Concurrency()" << std::endl;//TestBench
+        //std::cout << "Thread Initialised: ID=" << (concurrent_threadID) << " => Thread_Concurrency()" << std::endl;//TestBench
         while (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_CLASS_get_ptr_Execute_Control()->dyn_REG_get_Flag_is_SystemInitialised() == true)
         {
 
         }
-        std::cout << "Thread Starting " << (concurrent_threadID) << " => Thread_Concurrency()" << std::endl;//TestBench
+        //std::cout << "Thread Starting " << (concurrent_threadID) << " => Thread_Concurrency()" << std::endl;//TestBench
         while (obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_CLASS_get_ptr_Execute_Control()->dyn_REG_get_Item_On_List_Of_Flag_ThreadInitialised(concurrent_threadID) == false)
         {
             switch (OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::CLIBLaunchEnableForConcurrentThreadsAtSERVER::app_FUNCT_get_Flag_ConcurrentCoreState(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_PGM_get_ConcurrentQue_Server(), &concurrent_threadID))
@@ -125,33 +125,33 @@
     }
     void OpenAvrilConcurrency::Concurrent::stat_CLASS_boot0_DECLAIRE_Concurrent()
     {
-        std::cout << "entered stat_CLASS_boot0_DECLAIRE_Concurrent()" << std::endl;
+        std::cout << "entered STRUCT stat_CLASS_boot0_DECLAIRE_Concurrent()" << std::endl;
 
-        std::cout << "exiting stat_CLASS_boot0_DECLAIRE_Concurrent()" << std::endl;
+        std::cout << "exiting STRUCT stat_CLASS_boot0_DECLAIRE_Concurrent()" << std::endl;
     }
     void OpenAvrilConcurrency::Concurrent::stat_CLASS_boot1_DEFINE_Concurrent()
     {
-        std::cout << "entered stat_CLASS_boot1_DEFINE_Concurrent()" << std::endl;
+        std::cout << "entered STRUCT stat_CLASS_boot1_DEFINE_Concurrent()" << std::endl;
         stat_CLASS_boot1_DEFINE_Concurrent_Control();
-        std::cout << "exiting stat_CLASS_boot1_DEFINE_Concurrent()" << std::endl;
+        std::cout << "exiting STRUCT stat_CLASS_boot1_DEFINE_Concurrent()" << std::endl;
     }
     void OpenAvrilConcurrency::Concurrent::stat_CLASS_boot3_INITIALISE_Concurrent()
     {
-        std::cout << "entered stat_CLASS_boot3_INITIALISE_Concurrent()" << std::endl;
+        std::cout << "entered STRUCT stat_CLASS_boot3_INITIALISE_Concurrent()" << std::endl;
         stat_CLASS_boot3_INITIALISE_Concurrent_Control();
-        std::cout << "exiting stat_CLASS_boot3_INITIALISE_Concurrent()" << std::endl;
+        std::cout << "exiting STRUCT stat_CLASS_boot3_INITIALISE_Concurrent()" << std::endl;
     }
     void OpenAvrilConcurrency::Concurrent::stat_CLASS_boot4_INSTANTIATE_Concurrent()
     {
-        std::cout << "entered stat_CLASS_boot4_INSTANTIATE_Concurrent()" << std::endl;
+        std::cout << "entered STRUCT stat_CLASS_boot4_INSTANTIATE_Concurrent()" << std::endl;
 
-        std::cout << "exiting stat_CLASS_boot4_INSTANTIATE_Concurrent()" << std::endl;
+        std::cout << "exiting STRUCT stat_CLASS_boot4_INSTANTIATE_Concurrent()" << std::endl;
     }
     void OpenAvrilConcurrency::Concurrent::stat_REG_boot0_DECLAIRE_Concurrent()
     {
-        std::cout << "entered stat_REG_boot0_DECLAIRE_Concurrent()" << std::endl;
+        std::cout << "entered STRUCT stat_REG_boot0_DECLAIRE_Concurrent()" << std::endl;
 
-        std::cout << "exiting stat_REG_boot0_DECLAIRE_Concurrent()" << std::endl;
+        std::cout << "exiting STRUCT stat_REG_boot0_DECLAIRE_Concurrent()" << std::endl;
     }
 // private.
     void OpenAvrilConcurrency::Concurrent::stat_CLASS_boot1_DEFINE_Concurrent_Control()
@@ -175,12 +175,18 @@
     {
         _stat_REG_ptr_list_Of_ptr_Algorithms_Subset = new std::list<OpenAvrilConcurrency::Object*>();
         while (stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset() == NULL) {}
-        stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->resize(4);
+        stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->resize(1);
     }
     void OpenAvrilConcurrency::Concurrent::stat_REG_boot3_INITIALISE_list_Of_Algorithms_Subset(Framework_Server* obj)
     {
         stat_REG_set_PraiseOutputSubset_As_Praise0_Output(reinterpret_cast<OpenAvrilConcurrency::Praise0_Output*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_ptr_User_Algorithms()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(0)));
         //todo.        
+        for (uint8_t praiseId = 0; praiseId < uint8_t(1); praiseId++)//NUMBER OF PRAISES.
+        {
+            auto temp = stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->begin();
+            std::advance(temp, praiseId);
+            *temp = reinterpret_cast<OpenAvrilConcurrency::Object*>(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_ptr_User_Algorithms()->dyn_CLASS_get_Item_On_List_Of_ptr_PraiseAlgorithmSubsets(praiseId));
+        }
     }
     std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Concurrent::stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()
     {
@@ -190,5 +196,5 @@
     {
         auto temp = stat_REG_get_ptr_list_Of_ptr_Algorithms_Subset()->begin();
         std::advance(temp, 0);
-        *temp = reinterpret_cast<class Object*>(objPraise_Output);
+        *temp = reinterpret_cast<OpenAvrilConcurrency::Object*>(objPraise_Output);
     }

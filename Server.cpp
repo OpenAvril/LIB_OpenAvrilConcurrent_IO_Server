@@ -69,19 +69,19 @@
     void OpenAvrilConcurrency::Server::stat_CLASS_boot1_DEFINE_Server()
     {
         std::cout << "entered stat_CLASS_boot1_DEFINE_Server()" << std::endl;
+        stat_CLASS_boot1_DEFINE_Global();
         stat_CLASS_boot1_DEFINE_Algorithms();
         stat_CLASS_boot1_DEFINE_Data();
         stat_CLASS_boot1_DEFINE_Execute();
-        stat_CLASS_boot1_DEFINE_Global();
         std::cout << "exiting stat_CLASS_boot1_DEFINE_Server()" << std::endl;
     }
     void OpenAvrilConcurrency::Server::stat_CLASS_boot3_INITIALISE_Server()
     {
         std::cout << "entered stat_CLASS_boot3_INITIALISE_Server()" << std::endl;
+        stat_CLASSS_boot3_INITIALISE_Global();
         stat_CLASS_boot3_INITIALISE_Algorithms();
         stat_CLASS_boot3_INITIALISE_Data();
         stat_CLASS_boot3_INITIALISE_Execute();
-        stat_CLASSS_boot3_INITIALISE_Global();
         std::cout << "exiting stat_CLASS_boot3_INITIALISE_Server()" << std::endl;
     }
     void OpenAvrilConcurrency::Server::stat_CLASS_boot4_INSTANTIATE_Server()
