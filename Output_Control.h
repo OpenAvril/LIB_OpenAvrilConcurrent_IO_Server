@@ -1,7 +1,7 @@
 #pragma once
 namespace OpenAvrilConcurrency
 {
-    class Output_Control
+    struct Output_Control
     {
     public:
         Output_Control();

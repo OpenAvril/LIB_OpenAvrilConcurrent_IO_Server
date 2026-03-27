@@ -1,25 +1,27 @@
 #include "pch.h"
-OpenAvrilConcurrency::Output_Control* OpenAvrilConcurrency::Output::stat_CLASS_ptr_Output_Control;
-uint8_t* OpenAvrilConcurrency::Output::_REG_ptr_Output_praiseEventId;
-uint8_t* OpenAvrilConcurrency::Output::_REG_ptr_Output_playerId;
-std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Output::_REG_ptr_List_Of_PraiseOutputSubset;
+    OpenAvrilConcurrency::Output_Control* OpenAvrilConcurrency::Output::stat_CLASS_ptr_Output_Control;
+    uint8_t* OpenAvrilConcurrency::Output::_REG_ptr_Output_praiseEventId;
+    uint8_t* OpenAvrilConcurrency::Output::_REG_ptr_Output_playerId;
+    std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Output::_REG_ptr_List_Of_PraiseOutputSubset;
 // public.
-OpenAvrilConcurrency::Output::Output()
-{
-    std::cout << "entered CONSTRUCTOR of Output()." << std::endl;
-    stat_CLASS_boot0_DECLAIRE_Output();
-    stat_CLASS_boot1_DEFINE_Output();
-    stat_CLASS_boot3_INITIALISE_Output();
-    stat_REG_boot0_DECLAIRE_Output();
-    std::cout << "exiting CONSTRUCTOR of Output()" << std::endl;
-}
-OpenAvrilConcurrency::Output::~Output()
-{
-    delete stat_CLASS_ptr_Output_Control;
-    delete _REG_ptr_Output_praiseEventId;
-    delete _REG_ptr_Output_playerId;
-    delete _REG_ptr_List_Of_PraiseOutputSubset;
-}
+/*
+    OpenAvrilConcurrency::Output::Output()
+    {
+        std::cout << "entered CONSTRUCTOR of Output()." << std::endl;
+        stat_CLASS_boot0_DECLAIRE_Output();
+        stat_CLASS_boot1_DEFINE_Output();
+        stat_CLASS_boot3_INITIALISE_Output();
+        stat_REG_boot0_DECLAIRE_Output();
+        std::cout << "exiting CONSTRUCTOR of Output()" << std::endl;
+    }
+    OpenAvrilConcurrency::Output::~Output()
+    {
+        delete stat_CLASS_ptr_Output_Control;
+        delete _REG_ptr_Output_praiseEventId;
+        delete _REG_ptr_Output_playerId;
+        delete _REG_ptr_List_Of_PraiseOutputSubset;
+    }
+*/
 OpenAvrilConcurrency::Output_Control* OpenAvrilConcurrency::Output::dyn_CLASS_get_ptr_Output_Control()
 {
     return stat_CLASS_get_ptr_Output_Control();

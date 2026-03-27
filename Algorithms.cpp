@@ -20,7 +20,7 @@
     {
         return stat_CLASS_get_ptr_User_Algorithms();
     }
-    OpenAvrilConcurrency::Concurrent* OpenAvrilConcurrency::Algorithms::dyn_CLASS_get_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadId)
+    OpenAvrilConcurrency::Concurrent* OpenAvrilConcurrency::Algorithms::dyn_STRUCT_get_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadId)
     {
         auto temp = stat_REG_get_ptr_list_Of_ptr_Concurrent()->begin();
         std::advance(temp, concurrentThreadId);
@@ -100,13 +100,13 @@
     }
     void OpenAvrilConcurrency::Algorithms::stat_REG_boot2_SUBSTANTIATE_list_Of_ptr_Concurrent(OpenAvrilConcurrency::Framework_Server* obj)
     {
-        _stat_REG_ptr_list_Of_ptr_Concurrent = new std::list<class Concurrent*>();
+        _stat_REG_ptr_list_Of_ptr_Concurrent = new std::list<struct Concurrent*>();
         while (stat_REG_get_ptr_list_Of_ptr_Concurrent() == NULL) {}
         stat_REG_get_ptr_list_Of_ptr_Concurrent()->resize(uint8_t(3));//NUMBER OF CONCURRENT THREADS.
-        for (uint8_t threadId = 0; threadId < sizeof(*stat_REG_get_ptr_list_Of_ptr_Concurrent()); threadId++)
+        for (uint8_t concurrentThreadId = 0; concurrentThreadId < sizeof(*stat_REG_get_ptr_list_Of_ptr_Concurrent()); concurrentThreadId++)
         {
             auto temp = stat_REG_get_ptr_list_Of_ptr_Concurrent()->begin();
-            std::advance(temp, threadId);
+            std::advance(temp, concurrentThreadId);
             *temp = NULL;
         }
     }

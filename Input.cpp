@@ -4,6 +4,7 @@
     uint8_t* OpenAvrilConcurrency::Input::_REG_ptr_Input_playerId;
     std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Input::_REG_ptr_List_Of_PraiseInputSubset;
 // public.
+/*
     OpenAvrilConcurrency::Input::Input()
     {
         std::cout << "entered CONSTRUCTOR of Input()." << std::endl;
@@ -20,6 +21,7 @@
         delete _REG_ptr_Input_playerId;
         delete _REG_ptr_List_Of_PraiseInputSubset;
     }
+*/
     OpenAvrilConcurrency::Input_Control* OpenAvrilConcurrency::Input::dyn_CLASS_get_ptr_Input_Control()
     {
         return stat_CLASS_get_ptr_Input_Control();

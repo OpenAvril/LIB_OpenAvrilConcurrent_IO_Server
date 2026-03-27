@@ -44,13 +44,13 @@
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_ptr_User_Algorithms()->dyn_REG_boot2_SUBSTANTIATE_User_Algorithim(obj);
 		for (uint8_t concurrentThreadId = 0; concurrentThreadId < uint8_t(3); concurrentThreadId++)//NUMBER OF CONCURRENT THREADS.
 		{
-			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_Item_On_list_Of_ptr_Concurrent(concurrentThreadId)->dyn_REG_boot2_SUBSTANTIATE_Concurrent(obj);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_STRUCT_get_Item_On_list_Of_ptr_Concurrent(concurrentThreadId)->dyn_REG_boot2_SUBSTANTIATE_Concurrent(obj);
 		}
-		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_boot2_SUBSTANTIATE_Data(obj);
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_boot2_SUBSTANTIATE_Data_Control(obj);
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Input()->dyn_REG_boot2_SUBSTANTIATE_User_Input(obj);
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_User_Output()->dyn_REG_boot2_SUBSTANTIATE_User_Output(obj);
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_REG_boot2_SUBSTANTIATE_Execute(obj);
+
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Execute()->dyn_CLASS_get_ptr_Execute_Control()->dyn_REG_boot2_SUBSTANTIATE_Execute_Control(obj);
 		std::cout << "exiting dyn_REG_boot2_SUBSTANTIATE_Framework_Server()" << std::endl;
 	}
@@ -63,7 +63,7 @@
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_ptr_User_Algorithms()->dyn_REG_boot3_INITIALISE_User_Algorithim(obj);
 		for (uint8_t concurrentThreadId = 0; concurrentThreadId < uint8_t(3); concurrentThreadId++)//NUMBER OF CONCURRENT THREADS.
 		{
-			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_Item_On_list_Of_ptr_Concurrent(concurrentThreadId)->dyn_REG_boot3_INITIALISE_Concurrent(obj);
+			obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_STRUCT_get_Item_On_list_Of_ptr_Concurrent(concurrentThreadId)->dyn_REG_boot3_INITIALISE_Concurrent(obj);
 		}
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_REG_boot3_INITIALISE_Data(obj, stat_STRUCT_get_Input(), stat_STRUCT_get_Output());
 		obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Data()->dyn_CLASS_get_ptr_Data_Control()->dyn_REG_boot3_INITIALISE_Data_Control(obj);
@@ -78,6 +78,18 @@
 		std::cout << "entered dyn_PGM_boot4_INSTANTIATE_Framework_Server()" << std::endl;
 		std::cout << "# app booted." << std::endl;
 		std::cout << "exiting dyn_PGM_boot4_INSTANTIATE_Framework_Server()" << std::endl;
+	}
+	OpenAvrilConcurrency::Concurrent* OpenAvrilConcurrency::Framework_Server::dyn_STRUCT_get_Concurrent()
+	{
+		return stat_STRUCT_get_Concurrent();
+	}
+	OpenAvrilConcurrency::Input* OpenAvrilConcurrency::Framework_Server::dyn_STRUCT_get_Input()
+	{
+		return stat_STRUCT_get_Input();
+	}
+	OpenAvrilConcurrency::Output* OpenAvrilConcurrency::Framework_Server::dyn_STRUCT_get_Output()
+	{
+		return stat_STRUCT_get_Output();
 	}
 	OpenAvrilConcurrency::Server* OpenAvrilConcurrency::Framework_Server::dyn_CLASS_get_ptr_Server()
 	{
@@ -113,13 +125,29 @@
 
 		std::cout << "exiting stat_REG_boot0_DECLAIRE_Framework_Server()" << std::endl;
 	}
-	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_create_All()
+	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_boot0_DECLAIRE()
 	{
-		std::cout << "entered stat_STRUCT_create_All()." << std::endl;
-		stat_STRUCT_get_Concurrent();
-		stat_STRUCT_get_Input();
-		stat_STRUCT_get_Output();
-		std::cout << "exiting stat_STRUCT_create_All()." << std::endl;
+		std::cout << "entered stat_STRUCT_boot0_DECLAIRE()." << std::endl;
+		stat_STRUCT_boot0_DECLAIRE_Concurrent();
+		stat_STRUCT_boot0_DECLAIRE_Input();
+		stat_STRUCT_boot0_DECLAIRE_Output();
+		std::cout << "exiting stat_STRUCT_boot0_DECLAIRE()." << std::endl;
+	}
+	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_boot1_DEFINE()
+	{
+		std::cout << "entered stat_STRUCT_boot1_DEFINE()." << std::endl;
+		stat_STRUCT_boot1_DEFINE_Concurrent();
+		stat_STRUCT_boot1_DEFINE_Input();
+		stat_STRUCT_boot1_DEFINE_Output();
+		std::cout << "exiting stat_STRUCT_boot1_DEFINE()." << std::endl;
+	}
+	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_boot3_INITIALISE(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Concurrent* objConcurrent, OpenAvrilConcurrency::Input* objInput, OpenAvrilConcurrency::Output* objOutput)
+	{
+		std::cout << "entered stat_STRUCT_boot3_INITIALISE()." << std::endl;
+		stat_STRUCT_boot3_INITIALISE_Concurrent(obj, objConcurrent);
+		stat_STRUCT_boot3_INITIALISE_Input(obj, objInput);
+		stat_STRUCT_boot3_INITIALISE_Output(obj,  objOutput);
+		std::cout << "exiting stat_STRUCT_boot3_INITIALISE()." << std::endl;
 	}
 // private.
 	void OpenAvrilConcurrency::Framework_Server::stat_CLASS_boot1_DEFINE_Server()
@@ -135,38 +163,65 @@
 	{
 		return _stat_CLASS_ptr_Server;
 	}
-	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_Create_Concurrent(OpenAvrilConcurrency::Framework_Server* obj)
+	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_boot0_DECLAIRE_Concurrent()
 	{
-		std::cout << "entered stat_STRUCT_Create_Concurrent()" << std::endl;
+		std::cout << "entered stat_STRUCT_boot0_DECLAIRE_Concurrent()." << std::endl;
+
+		std::cout << "exiting stat_STRUCT_boot0_DECLAIRE_Concurrent()." << std::endl;
+	}
+	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_boot0_DECLAIRE_Input()
+	{
+		std::cout << "entered stat_STRUCT_boot0_DECLAIRE_Input()." << std::endl;
+
+		std::cout << "exiting stat_STRUCT_boot0_DECLAIRE_Input()." << std::endl;
+	}
+	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_boot0_DECLAIRE_Output()
+	{
+		std::cout << "entered stat_STRUCT_boot0_DECLAIRE_Output()." << std::endl;
+
+		std::cout << "exiting stat_STRUCT_boot0_DECLAIRE_Output()." << std::endl;
+	}
+	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_boot1_DEFINE_Concurrent()
+	{
+		std::cout << "entered stat_STRUCT_boot1_DEFINE_Concurrent()" << std::endl;
 		_stat_STRUCT_Concurrent = NULL;
-		_stat_STRUCT_Concurrent = new class OpenAvrilConcurrency::Concurrent();
-		while (stat_STRUCT_get_Concurrent() == NULL) {}
-		stat_STRUCT_get_Concurrent()->dyn_REG_boot1_DEFINE_Concurrent(obj);
-		stat_STRUCT_get_Concurrent()->dyn_REG_boot2_SUBSTANTIATE_Concurrent(obj);
-		stat_STRUCT_get_Concurrent()->dyn_REG_boot3_INITIALISE_Concurrent(obj);
-		std::cout << "exiting stat_STRUCT_Create_Concurrent()" << std::endl;
+		std::cout << "exiting stat_STRUCT_boot1_DEFINE_Concurrent()" << std::endl;
 	}
-	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_Create_Input(OpenAvrilConcurrency::Framework_Server* obj)
+	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_boot1_DEFINE_Input()
 	{
-		std::cout << "entered stat_STRUCT_Create_Input()" << std::endl;
+		std::cout << "entered stat_STRUCT_boot1_DEFINE_Input()" << std::endl;
 		_stat_STRUCT_Input = NULL;
-		_stat_STRUCT_Input = new class OpenAvrilConcurrency::Input();
-		while (stat_STRUCT_get_Input() == NULL) {}
-		stat_STRUCT_get_Input()->dyn_REG_boot1_DEFINE_Input(obj);
-		stat_STRUCT_get_Input()->dyn_REG_boot2_SUBSTANTIATE_Input(obj);
-		stat_STRUCT_get_Input()->dyn_REG_boot3_INITIALISE_Input(obj);
-		std::cout << "exiting stat_STRUCT_Create_Input()" << std::endl;
+		std::cout << "exiting stat_STRUCT_boot1_DEFINE_Input()" << std::endl;
 	}
-	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_Create_Output(OpenAvrilConcurrency::Framework_Server* obj)
+	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_boot1_DEFINE_Output()
 	{
-		std::cout << "entered stat_STRUCT_Create_Output()" << std::endl;
+		std::cout << "entered stat_STRUCT_boot1_DEFINE_Output()" << std::endl;
 		_stat_STRUCT_Output = NULL;
-		_stat_STRUCT_Output = new class OpenAvrilConcurrency::Output();
+		std::cout << "exiting stat_STRUCT_boot1_DEFINE_Output()" << std::endl;
+	}
+	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_boot3_INITIALISE_Concurrent(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Concurrent* objConcurrent)
+	{
+		std::cout << "entered stat_STRUCT_boot3_INITIALISE_Concurrent()" << std::endl;
+		_stat_STRUCT_Concurrent = new struct OpenAvrilConcurrency::Concurrent();
+		while (stat_STRUCT_get_Concurrent() == NULL) {}
+		*_stat_STRUCT_Concurrent = *objConcurrent;
+		std::cout << "exiting stat_STRUCT_boot3_INITIALISE_Concurrent()" << std::endl;
+	}
+	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_boot3_INITIALISE_Input(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Input* objInput)
+	{
+		std::cout << "entered stat_STRUCT_boot3_INITIALISE_Input()" << std::endl;
+		_stat_STRUCT_Input = new struct OpenAvrilConcurrency::Input();
+		while (stat_STRUCT_get_Input() == NULL) {}
+		*_stat_STRUCT_Input = *objInput;
+		std::cout << "exiting stat_STRUCT_boot3_INITIALISE_Input()" << std::endl;
+	}
+	void OpenAvrilConcurrency::Framework_Server::stat_STRUCT_boot3_INITIALISE_Output(OpenAvrilConcurrency::Framework_Server* obj, OpenAvrilConcurrency::Output* objOutput)
+	{
+		std::cout << "entered stat_STRUCT_boot3_INITIALISE_Output()" << std::endl;
+		_stat_STRUCT_Output = new struct OpenAvrilConcurrency::Output();
 		while (stat_STRUCT_get_Output() == NULL) {}
-		stat_STRUCT_get_Output()->dyn_REG_boot1_DEFINE_Output(obj);
-		stat_STRUCT_get_Output()->dyn_REG_boot2_SUBSTANTIATE_Output(obj);
-		stat_STRUCT_get_Output()->dyn_REG_boot3_INITIALISE_Output(obj);
-		std::cout << "exiting stat_STRUCT_Create_Output()" << std::endl;
+		*_stat_STRUCT_Output = *objOutput;
+		std::cout << "exiting stat_STRUCT_boot3_INITIALISE_Output()" << std::endl;
 	}
 	OpenAvrilConcurrency::Concurrent* OpenAvrilConcurrency::Framework_Server::stat_STRUCT_get_Concurrent()
 	{

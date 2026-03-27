@@ -1,11 +1,11 @@
 #pragma once
 namespace OpenAvrilConcurrency
 {
-    class Concurrent
+    struct Concurrent
     {
     public:
-        Concurrent();
-        virtual ~Concurrent();
+        //Concurrent();
+        //virtual ~Concurrent();
         void app_do_Concurrent_Algorithm_For_PraiseEventId(class Framework_Server* obj, char playerId, uint8_t ptr_praiseEventId, class Object* ptr_Algorithm_Subset, class Object* ptr_Input_Subset, class Object* ptr_Output_Subset);
         class Concurrent_Control* dyn_CLASS_get_ptr_Concurrent_Control();
         void dyn_REG_boot1_DEFINE_Concurrent(class Framework_Server* obj);

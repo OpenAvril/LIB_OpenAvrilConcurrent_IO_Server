@@ -1,12 +1,12 @@
 #pragma once
 namespace OpenAvrilConcurrency
 {
-    class Input
+    struct Input
     {
     public:
-        Input();
-        virtual ~Input();
-        class Input_Control* dyn_CLASS_get_ptr_Input_Control();
+        //Input();
+        //virtual ~Input();
+        struct Input_Control* dyn_CLASS_get_ptr_Input_Control();
         void dyn_REG_boot1_DEFINE_Input(class Framework_Server* obj);
         void dyn_REG_boot2_SUBSTANTIATE_Input(class Framework_Server* obj);
         void dyn_REG_boot3_INITIALISE_Input(class Framework_Server* obj);
@@ -23,13 +23,13 @@ namespace OpenAvrilConcurrency
         static void stat_CLASS_boot4_INSTANTIATE_Input();
         static void stat_REG_boot0_DECLAIRE_Input();
     private:
-        static class Input_Control* stat_CLASS_ptr_Input_Control;
+        static struct Input_Control* stat_CLASS_ptr_Input_Control;
         static uint8_t* _REG_ptr_Input_praiseEventId;
         static uint8_t* _REG_ptr_Input_playerId;
         static std::list<class Object*>* _REG_ptr_List_Of_PraiseInputSubset;
         static void stat_CLASS_boot1_DEFINE_Input_Control();
         static void stat_CLASS_boot3_INITIALISE_Input_Control();
-        static class Input_Control* stat_CLASS_get_ptr_Input_Control();
+        static struct Input_Control* stat_CLASS_get_ptr_Input_Control();
         static void stat_REG_boot1_DEFINE_Input_praiseEventId();
         static void stat_REG_boot1_DEFINE_Input_playerId();
         static void stat_REG_boot1_DEFINE_Input_List_Of_PraiseInputSubset();

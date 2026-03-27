@@ -137,7 +137,7 @@
         {
             auto temp = stat_PGM_get_ptr_List_Of_Threads()->begin();
             std::advance(temp, threadId);
-            *temp = new std::thread(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_CLASS_get_Item_On_list_Of_ptr_Concurrent(threadId)->stat_app_thread_Concurrency, obj, threadId);
+            *temp = new std::thread(obj->dyn_CLASS_get_ptr_Server()->dyn_CLASS_get_ptr_Algorithms()->dyn_STRUCT_get_Item_On_list_Of_ptr_Concurrent(threadId)->stat_app_thread_Concurrency, obj, threadId);
         }
     }
     std::list<std::thread*>* OpenAvrilConcurrency::Execute::stat_PGM_get_ptr_List_Of_Threads()

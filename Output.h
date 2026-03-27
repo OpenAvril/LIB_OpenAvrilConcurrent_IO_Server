@@ -1,12 +1,12 @@
 #pragma once
 namespace OpenAvrilConcurrency
 {
-    class Output
+    struct Output
     {
     public:
-        Output();
-        virtual ~Output();
-        class Output_Control* dyn_CLASS_get_ptr_Output_Control();
+        //Output();
+        //virtual ~Output();
+        struct Output_Control* dyn_CLASS_get_ptr_Output_Control();
         void dyn_REG_boot1_DEFINE_Output(class Framework_Server* obj);
         void dyn_REG_boot2_SUBSTANTIATE_Output(class Framework_Server* obj);
         void dyn_REG_boot3_INITIALISE_Output(class Framework_Server* obj);
@@ -24,13 +24,13 @@ namespace OpenAvrilConcurrency
         static void stat_CLASS_boot4_INSTANTIATE_Output();
         static void stat_REG_boot0_DECLAIRE_Output();
     private:
-        static class Output_Control* stat_CLASS_ptr_Output_Control;
+        static struct Output_Control* stat_CLASS_ptr_Output_Control;
         static uint8_t* _REG_ptr_Output_praiseEventId;
         static uint8_t* _REG_ptr_Output_playerId;
         static std::list<class Object*>* _REG_ptr_List_Of_PraiseOutputSubset;
         static void stat_CLASS_boot1_DEFINE_Output_Control();
         static void stat_CLASS_boot3_INITIALISE_Output_Control();
-        static class Output_Control* stat_CLASS_get_ptr_Output_Control();
+        static struct Output_Control* stat_CLASS_get_ptr_Output_Control();
         static void stat_REG_boot1_DEFINE_Output_praiseEventId();
         static void stat_REG_boot1_DEFINE_Output_playerId();
         static void stat_REG_boot1_DEFINE_Output_List_Of_PraiseOutputSubset();

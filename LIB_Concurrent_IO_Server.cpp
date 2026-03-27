@@ -17,14 +17,18 @@
 		std::cout << "done Classe(s) - DECLAIRE, DEFINE INITIALISE, Registers - DECLAIRE." << std::endl;
 
 		std::cout << "started Structure(s) - DECLAIRE, DEFINE INITIALISE, Registers - DECLAIRE." << std::endl;
-		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server())->stat_STRUCT_create_All();
+		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server())->stat_STRUCT_boot0_DECLAIRE();
+		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server())->stat_STRUCT_boot1_DEFINE();
+		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server())->stat_STRUCT_boot3_INITIALISE(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server()), OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server())->dyn_STRUCT_get_Concurrent(), OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server())->dyn_STRUCT_get_Input(), OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server())->dyn_STRUCT_get_Output());
 		std::cout << "done Structure(s) - DECLAIRE, DEFINE INITIALISE, Registers - DECLAIRE." << std::endl;
 
 		std::cout << "started Registers - DEFINE" << std::endl;
+		
 		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server())->dyn_REG_boot1_DEFINE_Framework_Server(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server()));
 		std::cout << "done Registers - DEFINE." << std::endl;
 
 		std::cout << "started Registers - SUBSTANTIATE." << std::endl;
+		
 		OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server())->dyn_REG_boot2_SUBSTANTIATE_Framework_Server(OpenAvrilConcurrency::Global::stat_CONVERT_ObjPtr_to_Class(stat_CLASS_get_ptr_Framework_Server()));
 		std::cout << "done Registers - SUBSTANTIATE." << std::endl;
 
