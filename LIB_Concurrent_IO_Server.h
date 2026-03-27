@@ -17,7 +17,7 @@ extern "C"
 			static void app_FUNCT_pop_From_Stack_Of_Output(void* obj);
 			static void app_FUNCT_push_To_STACK_Of_Input(void* obj);
 			static bool dyn_REG_get_flag_isStackLoaded_Server_InputAction(void* obj);
-			static bool dyn_REG_get_flag_isLoaded_Stack_OutputSend(void* obj);
+			static bool dyn_REG_get_flag_isStackLoaded_Server_OutputSend(void* obj);
 			static bool dyn_REG_get_flag_IsInitialised_OpenAvrilConcurrency(void* obj);
 			static unsigned char* dyn_REG_get_ptr_PraiseEventId(void* obj);
 			static unsigned char* dyn_REG_get_ptr_output_Value(void* obj);
