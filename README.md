@@ -11,7 +11,15 @@ Version: 24H2
 ### Using Microsoft Visual Studio Professional 2022.
 
 Version 17.13.4.
- 
+
+## How To Implement.
+
+### How To Guide - Stack Flow From Client Input Scanner To Server And Back To Client.
+ - [GitHub ReadMe - How To Guide.](https://github.com/OpenAvril/OpenAvrilCFSD-TEMPLATE-for-Concurrenct-Full-Stack-Development/blob/master/blob/How%20To%20Guide%20-%20Stack%20Flow%20From%20Client%20Input%20Scanner%20To%20Server%20And%20Back%20To%20Client.md)
+
+### Wrapper Imports and Native IO.
+ - [Wrapper Imports and Native IO](https://github.com/OpenAvril/OpenAvrilCFSD_APP_Templates/edit/master/blob/Wrapper_Imports.md)
+
 ## Dependencies.
 ### WriteEnableForThreadsAtStacks.
  - https://github.com/OpenAvril/LIB_WriteEnableForThreadsAt_STACK
@@ -20,110 +28,9 @@ Version 17.13.4.
  - https://github.com/OpenAvril/LIB_LaunchEnableForConcurrentThreadsAt_END
 #### Similar Rewritten Repositiry.
  - https://github.com/cameron314/concurrentqueue
-   
-## Using
 
-### C#
-
-#### IMPORT_LIB_Server_IO_Concurrnecy.cs
-````
-﻿using System;
-using System.Runtime.InteropServices;
-using System.Security;
-
-namespace Avril_FSD
-{
-    [SuppressUnmanagedCodeSecurity]
-    public static class Library_For_Server_Concurrency
-    {
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Initialise_Server_Concurrency@CLIBServerIOConcurrnecy@Avril_FSD@@SAPAXXZ")]
-        public static extern IntPtr Initialise_Server_Concurrency();
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Initalise_Programs@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@@Z")]
-        public static extern void Initialise_Programs(IntPtr obj);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Flip_InBufferToWrite@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@@Z")]
-        public static extern void Flip_InBufferToWrite(IntPtr obj);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Flip_OutBufferToWrite@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@@Z")]
-        public static extern void Flip_OutBufferToWrite(IntPtr obj);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_flag_IsStackLoaded_Server_InputAction@CLIBServerIOConcurrnecy@Avril_FSD@@SA_NPAVFramework_Server@2@@Z")]
-        public static extern bool Get_flag_IsStackLoaded_Server_InputAction(IntPtr obj);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_flag_IsStackLoaded_Server_OutputRecieve@CLIBServerIOConcurrnecy@Avril_FSD@@SA_NPAVFramework_Server@2@@Z")]
-        public static extern bool Get_flag_IsStackLoaded_Server_OutputRecieve(IntPtr obj);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_flag_IsInitialised_Avril_FSD_ServerConcurrency@CLIBServerIOConcurrnecy@Avril_FSD@@SA_NPAVFramework_Server@2@@Z")]
-        public static extern bool Get_flag_Avril_FSD_ServerConcurrency_Initialised(IntPtr obj);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_program_WriteEnableStack_ServerInputAction@CLIBServerIOConcurrnecy@Avril_FSD@@SAPAXXZ")]
-        public static extern IntPtr Get_program_WriteEnableStack_ServerInputAction();
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_program_WriteEnableStack_ServerOutputRecieve@CLIBServerIOConcurrnecy@Avril_FSD@@SAPAXXZ")]
-        public static extern IntPtr Get_program_WriteEnableStack_ServerOutputRecieve();
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Pop_Stack_Output@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@@Z")]
-        public static extern void Pop_Stack_Output(IntPtr obj);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Push_Stack_InputPraises@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@@Z")]
-        public static extern void Push_Stack_InputPraises(IntPtr obj);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Select_Set_Intput_Subset@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@D@Z")]
-        public static extern void Select_Set_Intput_Subset(IntPtr obj, byte praiseEventId);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Set_flag_IsNewInputDataReady@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@_N@Z")]
-        public static extern void Set_flag_IsNewInputDataReady(IntPtr obj, bool value);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Set_flag_IsNewOutputDataReady@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@_N@Z")]
-        public static extern void Set_flag_IsNewOutputDataReady(IntPtr obj, bool value);
-
-        // Praise Event Id
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_PraiseEventId@CLIBServerIOConcurrnecy@Avril_FSD@@SADPAVFramework_Server@2@@Z")]
-        public static extern byte Get_PraiseEventId(IntPtr obj);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Set_PraiseEventId@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@D@Z")]
-        public static extern void Set_PraiseEventId(IntPtr obj, byte value);
-    }
-
-// Praise 0 Data
-    [SuppressUnmanagedCodeSecurity]
-    internal static class Library_For_Praise_0_Events
-    {
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_Praise0_Input_IsPingActive@CLIBServerIOConcurrnecy@Avril_FSD@@SA_NPAVFramework_Server@2@@Z")]
-        public static extern bool Get_Praise0_Input_IsPingActive(IntPtr obj);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Set_Praise0_Input_IsPingActive@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@_N@Z")]
-        public static extern void Set_Praise0_Input_IsPingActive(IntPtr obj, bool value);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_Praise0_Output_IsPingActive@CLIBServerIOConcurrnecy@Avril_FSD@@SA_NPAVFramework_Server@2@@Z")]
-        public static extern void Get_Praise0_Output_IsPingActive(IntPtr obj);
-
-        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Set_Praise0_Output_IsPingActive@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@_N@Z")]
-        public static extern void Set_Praise0_Output_IsPingActive(IntPtr obj, bool value);
-    }
-// Praise 1 Data
-    [SuppressUnmanagedCodeSecurity]
-    internal static class Library_For_Praise_1_Events
-    {
-
-    }
-    // Praise 2 Data
-    [SuppressUnmanagedCodeSecurity]
-    internal static class Library_For_Praise_2_Events
-    {
-
-    }
-
-}
-````
-
-## Implementation
-<img width="1550" height="829" alt="flow chart" src="https://github.com/user-attachments/assets/c1bcd56a-79b0-402c-9cae-2c6c3caa3421" />
-
-### Server Shell App.
-
-#### Execute Server.
+## Server Shell App.
+### Execute Server.
 https://github.com/OpenAvril/OpenAvrilCFSD-TEMPLATE-for-Concurrenct-Full-Stack-Development/blob/master/APP_ServerAssembly/engine/Execute.cs
 ````
 namespace Avril_FSD.ServerAssembly
@@ -171,7 +78,7 @@ namespace Avril_FSD.ServerAssembly
 }
 ````
 
-#### Loading Server Shell Framework.
+### Loading Server Shell Framework.
 https://github.com/OpenAvril/OpenAvrilCFSD-TEMPLATE-for-Concurrenct-Full-Stack-Development/blob/master/APP_ServerAssembly/gameInstance/Game_Instance.cs
 ````
 namespace Avril_FSD.ServerAssembly
@@ -257,7 +164,7 @@ namespace Avril_FSD.ServerAssembly
 }
 ````
 
-### Client Shell App.
+## Client Shell App.
 
 ### Execute Client.
 https://github.com/OpenAvril/OpenAvrilCFSD-TEMPLATE-for-Concurrenct-Full-Stack-Development/blob/master/APP_ClientAssembly/engine/Execute.cs
@@ -324,7 +231,7 @@ namespace Avril_FSD.ClientAssembly
 }
 ````
 
-#### Loading Client Shell Framwork - Scanner For Mouse and Keyboard.
+### Loading Client Shell Framwork - Scanner For Mouse and Keyboard.
 https://github.com/OpenAvril/OpenAvrilCFSD-TEMPLATE-for-Concurrenct-Full-Stack-Development/blob/master/APP_ClientAssembly/gameInstance/Game_Instance.cs
 ````
 namespace Avril_FSD.ClientAssembly
@@ -403,11 +310,11 @@ namespace Avril_FSD.ClientAssembly
 }
 ````
 
-#### STACK: Client Input Action.
+### STACK: Client Input Action.
 line 9:	private List<Avril_FSD.ClientAssembly.Inputs.Input> _stack_Client_InputSend;
 https://github.com/OpenAvril/OpenAvrilCFSD-TEMPLATE-for-Concurrenct-Full-Stack-Development/blob/master/APP_ClientAssembly/engine/Input_Instance.cs
 
-#### THREAD: NETWORKING Client Input Action Send.
+### THREAD: NETWORKING Client Input Action Send.
 https://github.com/OpenFSD/Avril_Full_Stack_Development_Template/blob/master/APP_ClientAssembly/Networking_Client.cs
 ````
 	if (obj.Get_client().Get_data().Get_data_Control().Get_flag_IsLoaded_Stack_InputAction() == true)
@@ -422,9 +329,9 @@ https://github.com/OpenFSD/Avril_Full_Stack_Development_Template/blob/master/APP
 	}
 ````
 
-### Server Shell App.
+## Server Shell App.
 
-#### THREAD: NETWORKING Server Input Action Recieve.
+### THREAD: NETWORKING Server Input Action Recieve.
 https://github.com/OpenAvril/OpenAvrilCFSD-TEMPLATE-for-Concurrenct-Full-Stack-Development/blob/master/APP_ServerAssembly/Networking_Server.cs
 ````
 	Avril_FSD.Library_For_WriteEnableForThreadsAt_SERVERINPUTACTION.Write_Start(Avril_FSD.Library_For_Server_Concurrency.Get_program_WriteEnableStack_ServerInputAction(), 0);
@@ -441,9 +348,9 @@ https://github.com/OpenAvril/OpenAvrilCFSD-TEMPLATE-for-Concurrenct-Full-Stack-D
 	Avril_FSD.Library_For_WriteEnableForThreadsAt_SERVERINPUTACTION.Write_End(Avril_FSD.Library_For_Server_Concurrency.Get_program_WriteEnableStack_ServerInputAction(), 0);
 ````
 
-### LIB_Concurrent_IO_Server.
+## LIB_Concurrent_IO_Server.
 
-#### THREAD: Server Concurreny Loop.
+### THREAD: Server Concurreny Loop.
 ````
 void Avril_FSD::Concurrent::Thread_Concurrency(Avril_FSD::Framework_Server* obj, __int8 concurrent_coreId)
 {
@@ -508,13 +415,13 @@ void Avril_FSD::Concurrent::Thread_Concurrency(Avril_FSD::Framework_Server* obj,
 }
 ````
 
-#### STACK Server Shell Output Action.
+### STACK Server Shell Output Action.
 line 11: 	private List<Avril_FSD.ServerAssembly.Outputs.Output> _stack_Client_OutputRecieves;
 https://github.com/OpenAvril/OpenAvrilCFSD-TEMPLATE-for-Concurrenct-Full-Stack-Development/blob/master/APP_ServerAssembly/engine/Data.cs
 
-### Server Shell App.
+## Server Shell App.
 
-#### THREAD: NETWORKING Server Output Action Send.
+### THREAD: NETWORKING Server Output Action Send.
 ````
 	if (obj.Get_server().Get_data().Get_data_Control().Get_flag_IsLoaded_Stack_OutputAction())
 	{
@@ -530,9 +437,9 @@ https://github.com/OpenAvril/OpenAvrilCFSD-TEMPLATE-for-Concurrenct-Full-Stack-D
 		Avril_FSD.Library_For_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.Write_End(Avril_FSD.Library_For_Server_Concurrency.Get_program_WriteEnableStack_Serv
 ````
 
-### Client Shell App.
+## Client Shell App.
 
-#### THREAD: NETWORKING Client Output Action Recieve.
+### THREAD: NETWORKING Client Output Action Recieve.
 ````
 		Avril_FSD.Library_For_WriteEnableForThreadsAt_SERVERINPUTACTION.Write_Start(Avril_FSD.Library_For_Server_Concurrency.Get_program_WriteEnableStack_ServerInputAction(), 0);
 		byte[] buffer = new byte[1024];
@@ -568,11 +475,11 @@ https://github.com/OpenAvril/OpenAvrilCFSD-TEMPLATE-for-Concurrenct-Full-Stack-D
                             Avril_FSD.Library_For_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE.Write_End(obj.Get_client().Get_execute().Get_program_WriteQue_C_OR(), 1);
 ````
 
-#### STACK: Client Shell Output Recieve.
+### STACK: Client Shell Output Recieve.
 line 8:	private Avril_FSD.ClientAssembly.Outputs.Output[] _doublebuffer_Client_Output_Recieve;
 https://github.com/OpenAvril/OpenAvrilCFSD-TEMPLATE-for-Concurrenct-Full-Stack-Development/blob/master/APP_ClientAssembly/engine/Output_Instance.cs
 
-#### THREAD: Client Concurrency.
+### THREAD: Client Concurrency.
 https://github.com/OpenAvril/OpenAvrilCFSD-TEMPLATE-for-Concurrenct-Full-Stack-Development/blob/master/APP_ClientAssembly/engine/Concurrent.cs
 ````
 public void Thread_Concurrent(byte threadId)
